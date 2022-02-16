@@ -66,10 +66,10 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/RichPHPTests-Assert-Assert.html"
         },                {
-            "fqsen": "\\RichPHPTests\\Assert\\Assert\u003A\u003AassertThat\u0028\u0029",
-            "name": "assertThat",
+            "fqsen": "\\RichPHPTests\\Assert\\Assert\u003A\u003Aassert\u0028\u0029",
+            "name": "assert",
             "summary": "",
-            "url": "classes/RichPHPTests-Assert-Assert.html#method_assertThat"
+            "url": "classes/RichPHPTests-Assert-Assert.html#method_assert"
         },                {
             "fqsen": "\\RichPHPTests\\Assert\\Traits\\AssertArrayTrait",
             "name": "AssertArrayTrait",
