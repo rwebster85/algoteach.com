@@ -1,0 +1,6 @@
+{
+    "name": "Some Test Suite",
+    "exclude_tests": [
+        "SomeTest2"
+    ]
+}
