@@ -84,5 +84,14 @@ SomeTest::testArrayIsEmpty : File: SomeTest.php - Line: 44 - Expected: 0 - Actua
 
 You can include a `bootstrap.php` file in your root `path\to\tests` directory if required. This can be used to carry out any additional logic or setup for the entire test suite, for example to autoload any classes or define constants.
 
+## Credits & References
+
+* PHP documentation generated using phpDocumentor.
+    * van Riel, M. (2021). phpDocumentor (3.3) [PHP documentation generator]. phpDocumentor. https://phpdoc.org/
+* File and class structure of framework based primarily on PHPUnit, but also JUnit and XCTest.
+    * Apple Inc. (2019). XCTest [Swift Unit Testing Framework]. Apple Inc. https://developer.apple.com/documentation/xctest
+    * Beck, K., Gamma, E., Saff, D., & Vasudevan, K. (2021). JUnit [Java Unit Testing Framework]. The JUnit Team. https://junit.org/
+    * Bergmann, S. (2021). PHPUnit [PHP Unit Testing Framework]. Sebastian Bergmann. https://phpunit.de/
+
 ## Purpose
 **RichPHPTests** serves as an additional project for the Innovation Project submission for Richard Webster's dissertation for 2022, University of Chester module CO6008.
