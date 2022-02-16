@@ -55,6 +55,31 @@ class SomeTest extends TestCase
 
 Available assertion methods can be found in the [Includes\Assert\Traits](Includes/Assert/Traits) folder. Assert methods are separated out into a relevant `trait`.
 
+## Example CLI Output
+
+When run from the command line, assuming no fatal errors were raised, the output will look something like this for all passing tests:
+
+```powershell
+> php "path\to\RichPHPTests.php" "path\to\tests\folder"
+
+Running test suite: Some Test Suite
+Tests complete.
+Tests ran: 9, Passed: 9, Failed: 0. Skipped Files: 1
+```
+
+Or if any tests failed, the output will look like this:
+
+```powershell
+> php "path\to\RichPHPTests.php" "path\to\tests\folder"
+
+Running test suite: Some Test Suite
+Tests complete.
+Tests ran: 9, Passed: 7, Failed: 2. Skipped Files: 1
+The following tests failed:
+SomeTest::testStringMatches2 : File: SomeTest.php - Line: 24 - Expected: 'String2' - Actual: 'String1' - Error: Strings are not the same.
+SomeTest::testArrayIsEmpty : File: SomeTest.php - Line: 44 - Expected: 0 - Actual: 1 - Error: Array is not the right size.
+```
+
 ## Additional Information
 
 You can include a `bootstrap.php` file in the root `tests` directory if required. This can be used to carry out any additional logic or setup for the entire test suite, for example to autoload any classes or define constants.
