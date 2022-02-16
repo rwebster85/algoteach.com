@@ -1,6 +1,7 @@
 <?php
-
-declare(strict_types=1);
+/**
+ * This file sets up the class autoloader and runs the application.
+ */
 
 namespace RichPHPTests;
 
