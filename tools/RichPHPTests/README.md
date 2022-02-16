@@ -84,6 +84,9 @@ SomeTest::testArrayIsEmpty : File: SomeTest.php - Line: 44 - Expected: 0 - Actua
 
 You can include a `bootstrap.php` file in your root `path\to\tests` directory if required. This can be used to carry out any additional logic or setup for the entire test suite, for example to autoload any classes or define constants.
 
+## Purpose
+**RichPHPTests** serves as an additional project for the Innovation Project submission for Richard Webster's dissertation for 2022, University of Chester module CO6008.
+
 ## Credits & APA References
 
 PHP documentation generated using phpDocumentor.
@@ -94,5 +97,9 @@ File and class structure of framework based primarily on PHPUnit, but also JUnit
 * Beck, K., Gamma, E., Saff, D., & Vasudevan, K. (2021). JUnit [Java Unit Testing Framework]. The JUnit Team. https://junit.org/
 * Bergmann, S. (2021). PHPUnit [PHP Unit Testing Framework]. Sebastian Bergmann. https://phpunit.de/
 
-## Purpose
-**RichPHPTests** serves as an additional project for the Innovation Project submission for Richard Webster's dissertation for 2022, University of Chester module CO6008.
+#### Specific Code Adaptations
+TestUtil::isTestMethod()
+* Bergmann, S. (2020). PHPUnit – The PHP Testing Framework. PHPUnit. Retrieved 5 January 2022, from https://phpunit.de/
+
+SourceChecker::isCli()
+* Moon, S. (2020, July 30). How to Check if php is running from cli (command line). BinaryTides. Retrieved 4 January 2022, from https://www.binarytides.com/php-check-running-cli/
