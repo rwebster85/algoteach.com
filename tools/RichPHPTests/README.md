@@ -14,7 +14,7 @@ Inside the `tests` folder is where you place your required tests `config.json` f
 
 This accepts the name for the test suite as well as any excluded test classes (comma separated array), like so:
 
-```
+```json
 {
     "name": "Some Test Suite",
     "exclude_tests": [
@@ -37,7 +37,7 @@ Each test method name must start with `test`, have public visibility, be non-sta
 
 Example:
 
-```
+```php
 <?php
 
 declare(strict_types=1);
