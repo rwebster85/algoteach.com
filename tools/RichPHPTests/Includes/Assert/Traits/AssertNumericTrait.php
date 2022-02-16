@@ -8,21 +8,21 @@ trait AssertNumericTrait
 {
     protected static function assertIsInt(mixed $value): void
     {
-        static::assertThat(is_int($value), true, 'Value is not an integer.');
+        static::assert(is_int($value), true, 'Value is not an integer.');
     }
 
     protected static function assertIsNotInt(mixed $value): void
     {
-        static::assertThat(is_int($value), false, 'Value is an integer.');
+        static::assert(is_int($value), false, 'Value is an integer.');
     }
 
     protected static function assertIsFloat(mixed $value): void
     {
-        static::assertThat(is_float($value), true, 'Value is not a float.');
+        static::assert(is_float($value), true, 'Value is not a float.');
     }
 
     protected static function assertIsNotFloat(mixed $value): void
     {
-        static::assertThat(is_float($value), false, 'Value is a float.');
+        static::assert(is_float($value), false, 'Value is a float.');
     }
 }

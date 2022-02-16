@@ -8,12 +8,12 @@ trait AssertEqualityTrait
 {
     protected static function assertEquals(mixed $value, mixed $condition): void
     {
-        static::assertThat($value, $condition, 'Values are not the same.');
+        static::assert($value, $condition, 'Values are not the same.');
     }
 
     protected static function assertNotEquals(mixed $value, mixed $condition): void
     {
         $not_equals = ($value !== $condition);
-        static::assertThat($not_equals, true, 'Values are the same.');
+        static::assert($not_equals, true, 'Values are the same.');
     }
 }

@@ -8,21 +8,21 @@ trait AssertBoolTrait
 {
     protected static function assertTrue(mixed $value): void
     {
-        static::assertThat($value, true, 'Value is not TRUE.');
+        static::assert($value, true, 'Value is not TRUE.');
     }
 
     protected static function assertFalse(mixed $value): void
     {
-        static::assertThat($value, false, 'Value is not FALSE.');
+        static::assert($value, false, 'Value is not FALSE.');
     }
 
     protected static function assertIsBool(mixed $value): void
     {
-        static::assertThat(is_bool($value), true, 'Value is not a boolean.');
+        static::assert(is_bool($value), true, 'Value is not a boolean.');
     }
 
     protected static function assertIsNotBool(mixed $value): void
     {
-        static::assertThat(is_bool($value), false, 'Value is a boolean.');
+        static::assert(is_bool($value), false, 'Value is a boolean.');
     }
 }

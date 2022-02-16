@@ -22,7 +22,7 @@ abstract class Assert
     use AssertObjectTrait;
     use AssertStringTrait;
 
-    private static function assertThat(mixed $value, mixed $expected, string $error_message): void
+    private static function assert(mixed $value, mixed $expected, string $error_message): void
     {
         $pass = ($value === $expected);
         (new TestResult($value, $expected, $error_message, $pass));
