@@ -4,7 +4,7 @@ A custom PHP unit and integration testing framework to support running test suit
 
 ## Basic Usage
 From the command line:
-```
+```console
 php path\to\RichPHPTests.php path\to\tests
 ```
 
@@ -59,7 +59,7 @@ Available assertion methods can be found in the [Includes\Assert\Traits](Include
 
 When run from the command line, assuming no fatal errors were raised, the output will look something like this for all passing tests:
 
-```powershell
+```console
 > php "path\to\RichPHPTests.php" "path\to\tests\folder"
 
 Running test suite: Some Test Suite
@@ -69,7 +69,7 @@ Tests ran: 9, Passed: 9, Failed: 0. Skipped Files: 1
 
 Or if any tests failed, the output will look like this:
 
-```powershell
+```console
 > php "path\to\RichPHPTests.php" "path\to\tests\folder"
 
 Running test suite: Some Test Suite
