@@ -8,9 +8,9 @@ From the command line:
 php path\to\RichPHPTests.php path\to\tests
 ```
 
-Tests are discovered recursively within the `tests` folder supplied.
+Tests are discovered recursively within the `path\to\tests` folder supplied.
 
-Inside the `tests` folder is where you place your required tests `config.json` file.
+Inside the `path\to\tests` folder is where you place your required tests `config.json` file.
 
 This accepts the name for the test suite as well as any excluded test classes (comma separated array), like so:
 
@@ -82,7 +82,7 @@ SomeTest::testArrayIsEmpty : File: SomeTest.php - Line: 44 - Expected: 0 - Actua
 
 ## Additional Information
 
-You can include a `bootstrap.php` file in the root `tests` directory if required. This can be used to carry out any additional logic or setup for the entire test suite, for example to autoload any classes or define constants.
+You can include a `bootstrap.php` file in your root `path\to\tests` directory if required. This can be used to carry out any additional logic or setup for the entire test suite, for example to autoload any classes or define constants.
 
 ## Purpose
 **RichPHPTests** serves as an additional project for the Innovation Project submission for Richard Webster's dissertation for 2022, University of Chester module CO6008.
