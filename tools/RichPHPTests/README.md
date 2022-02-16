@@ -92,7 +92,7 @@ You can include a `bootstrap.php` file in your root `path\to\tests` directory if
 PHP documentation generated using phpDocumentor.
 * van Riel, M. (2021). phpDocumentor (3.3) [PHP documentation generator]. phpDocumentor. https://phpdoc.org/
 
-File and class structure of framework based primarily on PHPUnit, but also JUnit and XCTest. In-text citations are in place wherever specific code is adapted.
+File and class structure of framework based primarily on PHPUnit, but also JUnit and XCTest. In-text citations are in place wherever specific code has been adapted.
 * Apple Inc. (2019). XCTest [Swift Unit Testing Framework]. Apple Inc. https://developer.apple.com/documentation/xctest
 * Beck, K., Gamma, E., Saff, D., & Vasudevan, K. (2021). JUnit [Java Unit Testing Framework]. The JUnit Team. https://junit.org/
 * Bergmann, S. (2021). PHPUnit [PHP Unit Testing Framework]. Sebastian Bergmann. https://phpunit.de/
