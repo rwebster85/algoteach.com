@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace MyUnitTests;
+
 use RichPHPTests\TestCase;
 
 class SomeTest extends TestCase

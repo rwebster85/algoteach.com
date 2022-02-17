@@ -26,6 +26,7 @@ final class TestsConfiguration
         if (file_exists($this->config_file)) {
             $this->config = json_decode(file_get_contents($this->config_file), true);
             $this->setName();
+            $this->setNameSpace();
             $this->setBootstrap();
             $this->setExcludedClasses();
             $this->setExcludedTests();
@@ -42,6 +43,16 @@ final class TestsConfiguration
     public function getName(): string
     {
         return $this->name;
+    }
+
+    private function setNamespace(): void
+    {
+        $this->namespace = (string) ($this->config['namespace'] ?? '');
+    }
+
+    public function getNamespace(): string
+    {
+        return $this->namespace;
     }
 
     public function setBootstrap(): void

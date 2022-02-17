@@ -1,7 +1,8 @@
 {
     "name": "Some Test Suite",
+    "namespace": "MyUnitTests",
     "excluded_classes": [
-        "SomeTest2"
+        "MyUnitTests\\SomeTest2"
     ],
     "excluded_tests": [
         "SomeTest::testIsTrue"

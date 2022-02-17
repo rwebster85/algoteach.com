@@ -9,6 +9,9 @@ use RecursiveIteratorIterator;
 
 final class TestSuite
 {
+    /**
+     * @var TestClass[]
+     */
     private array $tests;
 
     private array $excluded_classes;
@@ -40,15 +43,16 @@ final class TestSuite
         
         $files = new RecursiveIteratorIterator($folder);
 
+        /** @var \SplFileInfo $file */
         foreach($files as $file) {
-            // $file is an SplFileInfo object
             if (
-                $file->getFileName() != 'bootstrap.php'
+                $file->getFilename() != 'bootstrap.php'
                 && $file->getExtension() == 'php'
             ) {
                 $test = new TestClass(
                     $file->getFileName(),
                     str_replace('.php', '', $file->getFileName()),
+                    $this->config->getNamespace(),
                     $file->getPath() . DIRECTORY_SEPARATOR
                 );
                 $tests[] = $test;
@@ -58,6 +62,11 @@ final class TestSuite
         return $tests;
     }
 
+    /**
+     * Get an array to test classes.
+     * 
+     * @return TestClass[]
+     */
     public function getTests(): array
     {
         return $this->tests;
@@ -65,24 +74,26 @@ final class TestSuite
 
     public function run(): void
     {
-        foreach ($this->tests as $test) {
-            if (!file_exists($test->getFullPath())) {
+        /** @var TestClass $test_class */
+        foreach ($this->tests as $test_class) {
+            if (!file_exists($test_class->getFullPath())) {
                 continue;
             }
 
-            if (in_array($test->getClassName(), $this->excluded_classes)) {
+            $qualified_name = $test_class->qualifiedClassName();
+
+            if (in_array($qualified_name, $this->excluded_classes)) {
                 Application::getTestResults()->addSkippedFile();
                 continue;
             }
 
-            include_once $test->getFullPath();
+            include_once $test_class->getFullPath();
 
             if (
-                class_exists($test->getClassName())
-                && TestUtil::isTestClass($test->getClassName())
+                class_exists($qualified_name)
+                && TestUtil::isTestClass($qualified_name)
             ) {
-                $class_name = $test->getClassName();
-                $test_class = new $class_name($this->config);
+                $test_class = new $qualified_name($this->config);
                 $test_class->buildTests();
                 $test_class->run();
             }
