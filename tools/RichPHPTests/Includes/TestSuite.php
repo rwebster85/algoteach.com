@@ -14,18 +14,29 @@ final class TestSuite
      * 
      * @var TestClass[]
      */
-    private array $tests = [];
+    private array $test_classes = [];
 
     /**
+     * An array of strings containing the fully qualified class names of each test class to skip, given in the config file.
+     * 
      * @var string[]
      */
     private array $excluded_classes;
 
     /**
+     * An array of strings containing the fully qualified method names of each test to skip, given in the config file.
+     * 
      * @var string[]
      */
     private array $excluded_tests;
 
+    /**
+     * @uses TestsConfiguration::getExcludedClasses()
+     * @uses TestsConfiguration::getExcludedTests()
+     * @uses TestSuite::setTests()
+     * 
+     * @var string[]
+     */
     public function __construct(
         private TestsConfiguration $config
     ) {
@@ -34,15 +45,35 @@ final class TestSuite
         $this->setTests();
     }
 
+    /**
+     * Assigns TestSuite::$test_classes to all valid test classes found from the test folder.
+     * 
+     * @uses TestsConfiguration::getTestsFolder()
+     * @uses TestSuite::getTestsFromPath()
+     * 
+     * @return void
+     */
     private function setTests(): void
     {
         $test_path = $this->config->getTestsFolder();
-        $this->tests = $this->getTestsFromPath($test_path);
+        $this->test_classes = $this->getTestsFromPath($test_path);
     }
 
+    /**
+     * Generates an array of TestClass objects for all valid test classes in the given $path.
+     * 
+     * @param string $path
+     * 
+     * @uses \RecursiveDirectoryIterator
+     * @uses \RecursiveIteratorIterator
+     * @uses \SplFileInfo
+     * @uses TestClass
+     * 
+     * @return TestClass[]
+     */
     private function getTestsFromPath(string $path): array
     {
-        $tests = [];
+        $test_classes = [];
 
         $folder = new RecursiveDirectoryIterator(
             $path,
@@ -63,27 +94,38 @@ final class TestSuite
                     $this->config->getNamespace(),
                     $file->getPath() . DIRECTORY_SEPARATOR
                 );
-                $tests[] = $test;
+                $test_classes[] = $test;
             }
         }
 
-        return $tests;
+        return $test_classes;
     }
 
     /**
-     * Get an array to test classes.
+     * Get an array of stored TestClass objects.
+     * 
+     * @uses TestSuite::$test_classes
      * 
      * @return TestClass[]
      */
-    public function getTests(): array
+    public function getTestClasses(): array
     {
-        return $this->tests;
+        return $this->test_classes;
     }
 
+    /**
+     * Iterates over TestSuite::$test_classes, verifies the files exist, includes them, then calls run() on each of the classes.
+     * 
+     * @uses \file_exists()
+     * @uses Application::getTestResults()
+     * @uses TestUtil::isTestClass()
+     * 
+     * @return void
+     */
     public function run(): void
     {
         /** @var TestClass $test_class */
-        foreach ($this->tests as $test_class) {
+        foreach ($this->test_classes as $test_class) {
             if (!file_exists($test_class->getFullPath())) {
                 continue;
             }
