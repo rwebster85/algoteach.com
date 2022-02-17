@@ -28,7 +28,7 @@ This accepts the name for the test suite as well as any excluded test classes or
 
 Excluded class names do not need the `.php` extension added.
 
-Excluded tests (methods) need the test class name with the method name, separated by double colons.
+Excluded tests (methods) need the test class name with the method name, separated by a double colon.
 
 ## Writing Tests
 
