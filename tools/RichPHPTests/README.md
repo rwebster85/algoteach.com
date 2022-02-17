@@ -53,7 +53,23 @@ class SomeTest extends TestCase
 }
 ```
 
-Available assertion methods can be found in the [Includes\Assert\Traits](Includes/Assert/Traits) folder. Assert methods are separated out into a relevant `trait`.
+Available assertion methods can be found in the [Includes\Assert\Assert.php](Includes/Assert/Assert.php) class.
+
+### Setup and Teardown
+
+You can add methods to your test classes for setting up and tearing down any variables needed for each test.
+
+The `setUp()` and `tearDown()` methods are called before and after every test method, respectively. `setUpClass()` is called only once before any test methods in a class, and `tearDownClass()` is called only once after all test methods in a class have run. Make note of the visibility and retun types.
+
+```php
+protected function setUp(): void {}
+
+protected function tearDown(): void {}
+
+public function setUpClass(): void {}
+
+public function tearDownClass(): void {}
+```
 
 ## Example CLI Output
 
