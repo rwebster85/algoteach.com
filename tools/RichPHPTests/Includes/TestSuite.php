@@ -11,11 +11,14 @@ final class TestSuite
 {
     private array $tests;
 
+    private array $excluded_classes;
+
     private array $excluded_tests;
 
     public function __construct(
         private TestsConfiguration $config
     ) {
+        $this->excluded_classes = $config->getExcludedClasses();
         $this->excluded_tests = $config->getExcludedTests();
         $this->setTests();
     }
@@ -67,7 +70,7 @@ final class TestSuite
                 continue;
             }
 
-            if (in_array($test->getClassName(), $this->excluded_tests)) {
+            if (in_array($test->getClassName(), $this->excluded_classes)) {
                 Application::getTestResults()->addSkippedFile();
                 continue;
             }
@@ -79,7 +82,7 @@ final class TestSuite
                 && TestUtil::isTestClass($test->getClassName())
             ) {
                 $class_name = $test->getClassName();
-                $test_class = new $class_name();
+                $test_class = new $class_name($this->config);
                 $test_class->buildTests();
                 $test_class->run();
             }

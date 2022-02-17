@@ -21,6 +21,8 @@ final class TestResults implements TestResultsInterface
 
     private int $skipped_files = 0;
 
+    private int $skipped_tests = 0;
+
     public function addResult(TestResult $result): void
     {
         $this->results[$result->test_class][] = $result;
@@ -37,6 +39,11 @@ final class TestResults implements TestResultsInterface
     public function addSkippedFile(): void
     {
         $this->skipped_files++;
+    }
+
+    public function addSkippedTest(): void
+    {
+        $this->skipped_tests++;
     }
 
     public function getResults(): array
@@ -64,6 +71,11 @@ final class TestResults implements TestResultsInterface
         return $this->skipped_files;
     }
 
+    public function getSkippedTests(): int
+    {
+        return $this->skipped_tests;
+    }
+
     public function printResults(): void
     {
         $results = $this->getResults();
@@ -72,8 +84,9 @@ final class TestResults implements TestResultsInterface
         $total_pass = $this->getTotalPassed();
         $total_fail = $this->getTotalFailed();
         $total_skipped = $this->getSkippedFiles();
+        $total_skipped_tests = $this->getSkippedTests();
 
-        print("Tests ran: {$total_tests}, Passed: {$total_pass}, Failed: {$total_fail}. Skipped Files: {$total_skipped}" . PHP_EOL);
+        print("Tests ran: {$total_tests}, Passed: {$total_pass}, Failed: {$total_fail}. Skipped Files: {$total_skipped} - Skipped Tests: {$total_skipped_tests}" . PHP_EOL);
 
         if ($total_fail > 0) {
             print("The following tests failed:" . PHP_EOL);

@@ -291,6 +291,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/RichPHPTests-Interfaces-TestResultsInterface.html#method_addSkippedFile"
         },                {
+            "fqsen": "\\RichPHPTests\\Interfaces\\TestResultsInterface\u003A\u003AaddSkippedTest\u0028\u0029",
+            "name": "addSkippedTest",
+            "summary": "",
+            "url": "classes/RichPHPTests-Interfaces-TestResultsInterface.html#method_addSkippedTest"
+        },                {
             "fqsen": "\\RichPHPTests\\Interfaces\\TestResultsInterface\u003A\u003AgetResults\u0028\u0029",
             "name": "getResults",
             "summary": "",
@@ -315,6 +320,11 @@ Search.appendIndex(
             "name": "getSkippedFiles",
             "summary": "",
             "url": "classes/RichPHPTests-Interfaces-TestResultsInterface.html#method_getSkippedFiles"
+        },                {
+            "fqsen": "\\RichPHPTests\\Interfaces\\TestResultsInterface\u003A\u003AgetSkippedTests\u0028\u0029",
+            "name": "getSkippedTests",
+            "summary": "",
+            "url": "classes/RichPHPTests-Interfaces-TestResultsInterface.html#method_getSkippedTests"
         },                {
             "fqsen": "\\RichPHPTests\\Interfaces\\TestResultsInterface\u003A\u003AprintResults\u0028\u0029",
             "name": "printResults",
@@ -400,6 +410,11 @@ Search.appendIndex(
             "name": "testMethods",
             "summary": "",
             "url": "classes/RichPHPTests-TestCase.html#property_testMethods"
+        },                {
+            "fqsen": "\\RichPHPTests\\TestCase\u003A\u003A\u0024excluded_tests",
+            "name": "excluded_tests",
+            "summary": "",
+            "url": "classes/RichPHPTests-TestCase.html#property_excluded_tests"
         },                {
             "fqsen": "\\RichPHPTests\\TestClass",
             "name": "TestClass",
@@ -526,6 +541,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/RichPHPTests-TestResults.html#method_addSkippedFile"
         },                {
+            "fqsen": "\\RichPHPTests\\TestResults\u003A\u003AaddSkippedTest\u0028\u0029",
+            "name": "addSkippedTest",
+            "summary": "",
+            "url": "classes/RichPHPTests-TestResults.html#method_addSkippedTest"
+        },                {
             "fqsen": "\\RichPHPTests\\TestResults\u003A\u003AgetResults\u0028\u0029",
             "name": "getResults",
             "summary": "",
@@ -550,6 +570,11 @@ Search.appendIndex(
             "name": "getSkippedFiles",
             "summary": "",
             "url": "classes/RichPHPTests-TestResults.html#method_getSkippedFiles"
+        },                {
+            "fqsen": "\\RichPHPTests\\TestResults\u003A\u003AgetSkippedTests\u0028\u0029",
+            "name": "getSkippedTests",
+            "summary": "",
+            "url": "classes/RichPHPTests-TestResults.html#method_getSkippedTests"
         },                {
             "fqsen": "\\RichPHPTests\\TestResults\u003A\u003AprintResults\u0028\u0029",
             "name": "printResults",
@@ -580,6 +605,11 @@ Search.appendIndex(
             "name": "skipped_files",
             "summary": "",
             "url": "classes/RichPHPTests-TestResults.html#property_skipped_files"
+        },                {
+            "fqsen": "\\RichPHPTests\\TestResults\u003A\u003A\u0024skipped_tests",
+            "name": "skipped_tests",
+            "summary": "",
+            "url": "classes/RichPHPTests-TestResults.html#property_skipped_tests"
         },                {
             "fqsen": "\\RichPHPTests\\TestsConfiguration",
             "name": "TestsConfiguration",
@@ -616,10 +646,20 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/RichPHPTests-TestsConfiguration.html#method_getBootstrap"
         },                {
+            "fqsen": "\\RichPHPTests\\TestsConfiguration\u003A\u003AsetExcludedClasses\u0028\u0029",
+            "name": "setExcludedClasses",
+            "summary": "",
+            "url": "classes/RichPHPTests-TestsConfiguration.html#method_setExcludedClasses"
+        },                {
             "fqsen": "\\RichPHPTests\\TestsConfiguration\u003A\u003AsetExcludedTests\u0028\u0029",
             "name": "setExcludedTests",
             "summary": "",
             "url": "classes/RichPHPTests-TestsConfiguration.html#method_setExcludedTests"
+        },                {
+            "fqsen": "\\RichPHPTests\\TestsConfiguration\u003A\u003AgetExcludedClasses\u0028\u0029",
+            "name": "getExcludedClasses",
+            "summary": "",
+            "url": "classes/RichPHPTests-TestsConfiguration.html#method_getExcludedClasses"
         },                {
             "fqsen": "\\RichPHPTests\\TestsConfiguration\u003A\u003AgetExcludedTests\u0028\u0029",
             "name": "getExcludedTests",
@@ -640,6 +680,11 @@ Search.appendIndex(
             "name": "name",
             "summary": "",
             "url": "classes/RichPHPTests-TestsConfiguration.html#property_name"
+        },                {
+            "fqsen": "\\RichPHPTests\\TestsConfiguration\u003A\u003A\u0024excluded_classes",
+            "name": "excluded_classes",
+            "summary": "",
+            "url": "classes/RichPHPTests-TestsConfiguration.html#property_excluded_classes"
         },                {
             "fqsen": "\\RichPHPTests\\TestsConfiguration\u003A\u003A\u0024excluded_tests",
             "name": "excluded_tests",
@@ -695,6 +740,11 @@ Search.appendIndex(
             "name": "tests",
             "summary": "",
             "url": "classes/RichPHPTests-TestSuite.html#property_tests"
+        },                {
+            "fqsen": "\\RichPHPTests\\TestSuite\u003A\u003A\u0024excluded_classes",
+            "name": "excluded_classes",
+            "summary": "",
+            "url": "classes/RichPHPTests-TestSuite.html#property_excluded_classes"
         },                {
             "fqsen": "\\RichPHPTests\\TestSuite\u003A\u003A\u0024excluded_tests",
             "name": "excluded_tests",

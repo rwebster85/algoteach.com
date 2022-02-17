@@ -10,6 +10,8 @@ final class TestsConfiguration
 
     private string $name;
 
+    private array $excluded_classes;
+
     private array $excluded_tests;
 
     private string $bootstrap = '';
@@ -25,6 +27,7 @@ final class TestsConfiguration
             $this->config = json_decode(file_get_contents($this->config_file), true);
             $this->setName();
             $this->setBootstrap();
+            $this->setExcludedClasses();
             $this->setExcludedTests();
         }
 
@@ -54,9 +57,19 @@ final class TestsConfiguration
         return $this->bootstrap;
     }
 
+    private function setExcludedClasses(): void
+    {
+        $this->excluded_classes = (array) ($this->config['excluded_classes'] ?? []);
+    }
+
     private function setExcludedTests(): void
     {
-        $this->excluded_tests = (array) ($this->config['exclude_tests'] ?? []);
+        $this->excluded_tests = (array) ($this->config['excluded_tests'] ?? []);
+    }
+
+    public function getExcludedClasses(): array
+    {
+        return $this->excluded_classes;
     }
 
     public function getExcludedTests(): array

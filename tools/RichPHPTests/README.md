@@ -12,18 +12,23 @@ Tests are discovered recursively within the `path\to\tests` folder supplied.
 
 Inside the `path\to\tests` folder is where you place your required tests `config.json` file.
 
-This accepts the name for the test suite as well as any excluded test classes (comma separated array), like so:
+This accepts the name for the test suite as well as any excluded test classes or methods (comma separated arrays), like so:
 
 ```json
 {
     "name": "Some Test Suite",
-    "exclude_tests": [
+    "excluded_classes": [
         "SomeTest2"
+    ],
+    "excluded_tests": [
+        "SomeTest::testIsTrue"
     ]
 }
 ```
 
-Excluded files do not need the `.php` extension added.
+Excluded class names do not need the `.php` extension added.
+
+Excluded tests (methods) need the test class name with the method name, separated by double colons.
 
 ## Writing Tests
 
@@ -80,7 +85,7 @@ When run from the command line, assuming no fatal errors were raised, the output
 
 Running test suite: Some Test Suite
 Tests complete.
-Tests ran: 9, Passed: 9, Failed: 0. Skipped Files: 1
+Tests ran: 9, Passed: 9, Failed: 0. Skipped Files: 1 - Skipped Tests: 0
 ```
 
 Or if any tests failed, the output will look like this:
@@ -90,7 +95,7 @@ Or if any tests failed, the output will look like this:
 
 Running test suite: Some Test Suite
 Tests complete.
-Tests ran: 9, Passed: 7, Failed: 2. Skipped Files: 1
+Tests ran: 9, Passed: 7, Failed: 2. Skipped Files: 1, Skipped
 The following tests failed:
 SomeTest::testStringMatches2 : File: SomeTest.php - Line: 24 - Expected: 'String2' - Actual: 'String1' - Error: Strings are not the same.
 SomeTest::testArrayIsEmpty : File: SomeTest.php - Line: 44 - Expected: 0 - Actual: 1 - Error: Array is not the right size.

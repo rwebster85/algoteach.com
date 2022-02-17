@@ -8,13 +8,18 @@ use ReflectionClass;
 use RichPHPTests\Assert\Assert;
 use RichPHPTests\TestUtil;
 use ReflectionMethod;
-use ReflectionObject;
+use RichPHPTests\TestsConfiguration;
 
 abstract class TestCase extends Assert
 {
     private array $testMethods = [];
+    
+    private array $excluded_tests = [];
 
-    public function __construct() {}
+    public function __construct(TestsConfiguration $config)
+    {
+        $this->excluded_tests = $config->getExcludedTests();
+    }
 
     /**
      * Runs before any tests are carried out for the class.
@@ -127,10 +132,16 @@ abstract class TestCase extends Assert
 
     public function buildTests(): void
     {
-        $methods = (new ReflectionClass($this))->getMethods(ReflectionMethod::IS_PUBLIC);
+        $reflection_class = new ReflectionClass($this);
+        $methods = $reflection_class->getMethods(ReflectionMethod::IS_PUBLIC);
         foreach ($methods as $method) {
             if (TestUtil::isTestMethod($method)) {
-                $this->addMethod($method);
+                $test_name = $reflection_class->getName() . '::' . $method->getName();
+                if (!in_array($test_name, $this->excluded_tests)) {
+                    $this->addMethod($method);
+                } else {
+                    Application::getTestResults()->addSkippedTest();
+                }
             }
         }
     }

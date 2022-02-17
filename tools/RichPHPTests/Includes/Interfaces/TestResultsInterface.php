@@ -12,6 +12,8 @@ interface TestResultsInterface
 
     public function addSkippedFile(): void;
 
+    public function addSkippedTest(): void;
+
     public function getResults(): array;
 
     public function getTotalPassed(): int;
@@ -21,6 +23,8 @@ interface TestResultsInterface
     public function getTotalTests(): int;
 
     public function getSkippedFiles(): int;
+
+    public function getSkippedTests(): int;
 
     public function printResults(): void;
 }

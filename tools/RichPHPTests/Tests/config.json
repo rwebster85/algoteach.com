@@ -1,6 +1,9 @@
 {
     "name": "Some Test Suite",
-    "exclude_tests": [
+    "excluded_classes": [
         "SomeTest2"
+    ],
+    "excluded_tests": [
+        "SomeTest::testIsTrue"
     ]
 }
