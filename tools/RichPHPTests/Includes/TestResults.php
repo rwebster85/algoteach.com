@@ -6,6 +6,9 @@ namespace RichPHPTests;
 
 use RichPHPTests\Interfaces\TestResultsInterface;
 
+use const PHP_EOL;
+use const DIRECTORY_SEPARATOR;
+
 final class TestResults implements TestResultsInterface
 {
     private array $results = [];
