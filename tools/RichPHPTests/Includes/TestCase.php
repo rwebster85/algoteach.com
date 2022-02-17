@@ -66,7 +66,11 @@ abstract class TestCase extends Assert
      */
     private function doSetUpClass(): void
     {
-        if (TestUtil::testClassHasMethod(new ReflectionMethod($this, 'setUpClass'))) {
+        $method = new ReflectionMethod($this, 'setUpClass');
+        if (
+            TestUtil::testClassHasMethod(new ReflectionMethod($this, 'setUpClass'))
+            && $method->getReturnType()->getName() === 'void'
+        ) {
             $this->setUpClass();
         }
     }
@@ -78,7 +82,11 @@ abstract class TestCase extends Assert
      */
     private function doTearDownClass(): void
     {
-        if (TestUtil::testClassHasMethod(new ReflectionMethod($this, 'tearDownClass'))) {
+        $method = new ReflectionMethod($this, 'tearDownClass');
+        if (
+            TestUtil::testClassHasMethod(new ReflectionMethod($this, 'setUpClass'))
+            && $method->getReturnType()->getName() === 'void'
+        ) {
             $this->tearDownClass();
         }
     }
@@ -90,7 +98,12 @@ abstract class TestCase extends Assert
      */
     private function doSetup(): void
     {
-        if (TestUtil::testClassHasMethod(new ReflectionMethod($this, 'setUp'))) {
+        $method = new ReflectionMethod($this, 'setUp');
+
+        if (
+            TestUtil::testClassHasMethod($method)
+            && $method->getReturnType()->getName() === 'void'
+        ) {
             $this->setUp();
         }
     }
@@ -102,7 +115,12 @@ abstract class TestCase extends Assert
      */
     private function doTearDown(): void
     {
-        if (TestUtil::testClassHasMethod(new ReflectionMethod($this, 'tearDown'))) {
+        $method = new ReflectionMethod($this, 'tearDown');
+
+        if (
+            TestUtil::testClassHasMethod($method)
+            && $method->getReturnType()->getName() === 'void'
+        ) {
             $this->tearDown();
         }
     }
