@@ -59,7 +59,7 @@ Available assertion methods can be found in the [Includes\Assert\Assert.php](Inc
 
 You can add methods to your test classes for setting up and tearing down any variables needed for each test.
 
-The `setUp()` and `tearDown()` methods are called before and after every test method, respectively. `setUpClass()` is called only once before any test methods in a class, and `tearDownClass()` is called only once after all test methods in a class have run. Make note of the visibility and retun types.
+The `setUp()` and `tearDown()` methods are called before and after every test method, respectively. `setUpClass()` is called only once before any test methods in a class, and `tearDownClass()` is called only once after all test methods in a class have run. Make note of the visibility and return types.
 
 ```php
 protected function setUp(): void {}
