@@ -5,8 +5,10 @@
 
 namespace RichPHPTests;
 
+$sep = DIRECTORY_SEPARATOR;
+
 // Include the Autoloader file
-require_once $path . 'Includes' . DIRECTORY_SEPARATOR . 'Autoload' . DIRECTORY_SEPARATOR. 'Autoloader.php';
+require_once $path . 'Includes' . $sep . 'Autoload' . $sep. 'Autoloader.php';
 (new Autoloader([
     'RichPHPTests' => $path . 'Includes',
 ]))->register();
