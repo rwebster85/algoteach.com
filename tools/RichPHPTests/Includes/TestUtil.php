@@ -27,7 +27,7 @@ class TestUtil
     //end of adapted code
 
     /**
-     * Checks that a test class has a method, rather than the parent class.
+     * Checks that a test class has a method, rather than the parent TestCase class.
      * 
      * @param ReflectionMethod $method
      * 

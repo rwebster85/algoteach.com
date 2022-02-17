@@ -718,7 +718,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\RichPHPTests\\TestUtil\u003A\u003AtestClassHasMethod\u0028\u0029",
             "name": "testClassHasMethod",
-            "summary": "Checks\u0020that\u0020a\u0020test\u0020class\u0020has\u0020a\u0020method,\u0020rather\u0020than\u0020the\u0020parent\u0020class.",
+            "summary": "Checks\u0020that\u0020a\u0020test\u0020class\u0020has\u0020a\u0020method,\u0020rather\u0020than\u0020the\u0020parent\u0020TestCase\u0020class.",
             "url": "classes/RichPHPTests-TestUtil.html#method_testClassHasMethod"
         },                {
             "fqsen": "\\RichPHPTests\\TestUtil\u003A\u003AisTestClass\u0028\u0029",
