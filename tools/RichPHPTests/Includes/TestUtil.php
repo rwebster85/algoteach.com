@@ -27,7 +27,19 @@ class TestUtil
     //end of adapted code
 
     /**
-     * Verifies that a discovered test class is valid.
+     * Checks that a test class has a method, rather than the parent class.
+     * 
+     * @param ReflectionMethod $method
+     * 
+     * @return bool
+     */
+    public static function testClassHasMethod(ReflectionMethod $method): bool
+    {
+        return ($method->getDeclaringClass()->getName() !== 'RichPHPTests\TestCase');
+    }
+
+    /**
+     * Verifies that a class name is a sub class of TestCase.
      * 
      * @param string $class_name
      * 
