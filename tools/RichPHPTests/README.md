@@ -17,18 +17,19 @@ This accepts the name for the test suite as well as any excluded test classes or
 ```json
 {
     "name": "Some Test Suite",
+    "namespace": "MyUnitTests",
     "excluded_classes": [
-        "SomeTest2"
+        "MyUnitTests\\SomeTest2"
     ],
     "excluded_tests": [
-        "SomeTest::testIsTrue"
+        "MyUnitTests\\SomeTest::testIsTrue"
     ]
 }
 ```
 
-Excluded class names do not need the `.php` extension added.
+Excluded class names do not need the `.php` extension added, but should be fully qualified including namespace if applicable.
 
-Excluded tests (methods) need the test class name with the method name, separated by a double colon.
+Excluded tests (methods) need the fully qualified test class name with the method name, separated by a double colon.
 
 ## Writing Tests
 
@@ -59,6 +60,8 @@ class SomeTest extends TestCase
 ```
 
 Available assertion methods can be found in the [Includes\Assert\Assert.php](Includes/Assert/Assert.php) class.
+
+Namespacing unit tests is support. Ensure the namespace of your test files matches that specified in the `config.json` folder.
 
 ### Setup and Teardown
 

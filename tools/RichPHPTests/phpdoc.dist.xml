@@ -17,5 +17,6 @@
             </ignore>
         </api>
     </version>
+    <setting name="use-cache" value="false"/>
     <setting name="graphs.enabled" value="true"/>
 </phpdocumentor>

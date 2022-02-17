@@ -5,6 +5,6 @@
         "MyUnitTests\\SomeTest2"
     ],
     "excluded_tests": [
-        "SomeTest::testIsTrue"
+        "MyUnitTests\\SomeTest::testArrayHas2Elements"
     ]
 }

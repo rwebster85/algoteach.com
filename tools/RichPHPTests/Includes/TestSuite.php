@@ -10,12 +10,20 @@ use RecursiveIteratorIterator;
 final class TestSuite
 {
     /**
+     * Array of TestClass objects.
+     * 
      * @var TestClass[]
      */
-    private array $tests;
+    private array $tests = [];
 
+    /**
+     * @var string[]
+     */
     private array $excluded_classes;
 
+    /**
+     * @var string[]
+     */
     private array $excluded_tests;
 
     public function __construct(

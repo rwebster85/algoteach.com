@@ -64,10 +64,6 @@
                 
             </li>
                     <li>
-                <a href="namespaces/richphptests-enums.html" class="">Enums</a>
-                
-            </li>
-                    <li>
                 <a href="namespaces/richphptests-interfaces.html" class="">Interfaces</a>
                 
             </li>
@@ -165,7 +161,7 @@
     <span>
                         &nbsp;: array&lt;string|int, mixed&gt;            </span>
 </dt>
-<dd></dd>
+<dd>Array of TestClass objects.</dd>
 
                 <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/RichPHPTests-TestSuite.html#method___construct">__construct()</a>
@@ -177,9 +173,9 @@
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/RichPHPTests-TestSuite.html#method_getTests">getTests()</a>
     <span>
-                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
+                                &nbsp;: array&lt;string|int, <a href="classes/RichPHPTests-TestClass.html"><abbr title="\RichPHPTests\TestClass">TestClass</abbr></a>&gt;    </span>
 </dt>
-<dd></dd>
+<dd>Get an array to test classes.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/RichPHPTests-TestSuite.html#method_run">run()</a>
@@ -230,7 +226,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestSuite.php"><a href="files/includes-testsuite.html"><abbr title="Includes/TestSuite.php">TestSuite.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">19</span>
+    <span class="phpdocumentor-element-found-in__line">30</span>
 
     </aside>
 
@@ -264,7 +260,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestSuite.php"><a href="files/includes-testsuite.html"><abbr title="Includes/TestSuite.php">TestSuite.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">14</span>
+    <span class="phpdocumentor-element-found-in__line">22</span>
 
     </aside>
 
@@ -275,10 +271,8 @@
     <span class="phpdocumentor-signature__name">$excluded_classes</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -298,7 +292,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestSuite.php"><a href="files/includes-testsuite.html"><abbr title="Includes/TestSuite.php">TestSuite.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">16</span>
+    <span class="phpdocumentor-element-found-in__line">27</span>
 
     </aside>
 
@@ -309,10 +303,8 @@
     <span class="phpdocumentor-signature__name">$excluded_tests</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -332,21 +324,20 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestSuite.php"><a href="files/includes-testsuite.html"><abbr title="Includes/TestSuite.php">TestSuite.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">12</span>
+    <span class="phpdocumentor-element-found-in__line">17</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Array of TestClass objects.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
     <span class="phpdocumentor-signature__name">$tests</span>
-    </code>
+     = <span class="phpdocumentor-signature__default-value">[]</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -370,7 +361,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestSuite.php"><a href="files/includes-testsuite.html"><abbr title="Includes/TestSuite.php">TestSuite.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">18</span>
+    <span class="phpdocumentor-element-found-in__line">29</span>
 
     </aside>
 
@@ -414,22 +405,22 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestSuite.php"><a href="files/includes-testsuite.html"><abbr title="Includes/TestSuite.php">TestSuite.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">61</span>
+    <span class="phpdocumentor-element-found-in__line">78</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Get an array to test classes.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getTests</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+                <span class="phpdocumentor-signature__name">getTests</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/RichPHPTests-TestClass.html"><abbr title="\RichPHPTests\TestClass">TestClass</abbr></a>&gt;</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
     
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/RichPHPTests-TestClass.html"><abbr title="\RichPHPTests\TestClass">TestClass</abbr></a>&gt;</span>
             &mdash;
         
     
@@ -447,7 +438,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestSuite.php"><a href="files/includes-testsuite.html"><abbr title="Includes/TestSuite.php">TestSuite.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">66</span>
+    <span class="phpdocumentor-element-found-in__line">83</span>
 
     </aside>
 
@@ -480,7 +471,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestSuite.php"><a href="files/includes-testsuite.html"><abbr title="Includes/TestSuite.php">TestSuite.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">32</span>
+    <span class="phpdocumentor-element-found-in__line">43</span>
 
     </aside>
 
@@ -524,7 +515,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestSuite.php"><a href="files/includes-testsuite.html"><abbr title="Includes/TestSuite.php">TestSuite.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">26</span>
+    <span class="phpdocumentor-element-found-in__line">37</span>
 
     </aside>
 

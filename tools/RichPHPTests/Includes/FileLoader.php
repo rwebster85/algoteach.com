@@ -9,8 +9,6 @@ use function file_exists;
 final class FileLoader
 {
     /**
-     * Array of file path strings for loading.
-     * 
      * @var string[]
      */
     private array $files = [];

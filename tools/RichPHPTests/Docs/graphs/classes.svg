@@ -24,7 +24,7 @@
 <polygon fill="none" stroke="black" points="58,-340 58,-412 158,-412 158,-340 58,-340"/>
 <text text-anchor="middle" x="108" y="-399.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Assert</text>
 </g>
-<g id="clust5" class="cluster">
+<g id="clust4" class="cluster">
 <title>cluster_\RichPHPTests\Interfaces</title>
 <polygon fill="none" stroke="black" points="24,-178 24,-250 192,-250 192,-178 24,-178"/>
 <text text-anchor="middle" x="108" y="-237.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Interfaces</text>
