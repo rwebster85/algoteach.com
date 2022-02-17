@@ -16,6 +16,13 @@ abstract class TestCase extends Assert
     
     private array $excluded_tests = [];
 
+    /**
+     * Accepts a TestsConfiguration object to assign excluded test methods for this test class.
+     * 
+     * @uses TestCase::$excluded_tests
+     * 
+     * @param TestsConfiguration $config
+     */
     public function __construct(TestsConfiguration $config)
     {
         $this->excluded_tests = $config->getExcludedTests();
@@ -49,6 +56,17 @@ abstract class TestCase extends Assert
      */
     protected function tearDown(): void {}
 
+    /**
+     * Iterates through the test methods and calls each one. Also calls all the setUp tearDown checking methods. 
+     * 
+     * @uses TestCase::$excluded_tests
+     * @uses TestCase::doSetUpClass()
+     * @uses TestCase::doSetup()
+     * @uses TestCase::doTearDown()
+     * @uses TestCase::doTearDownClass()
+     * 
+     * @return void
+     */
     public function run(): void
     {
         $this->doSetUpClass();
@@ -65,7 +83,9 @@ abstract class TestCase extends Assert
     }
 
     /**
-     * Calls the `setUpClass()` method only if it is declared in the test class.
+     * Calls the setUpClass() method only if it is declared in the test class.
+     * 
+     * @uses TestCase::setUpClass()
      * 
      * @return void
      */
@@ -81,7 +101,9 @@ abstract class TestCase extends Assert
     }
 
     /**
-     * Calls the `tearDownClass()` method only if it is declared in the test class.
+     * Calls the tearDownClass() method only if it is declared in the test class.
+     * 
+     * @uses TestCase::tearDownClass()
      * 
      * @return void
      */
@@ -97,7 +119,9 @@ abstract class TestCase extends Assert
     }
 
     /**
-     * Runs before each test and calls `setUp()` only if that method exists in the test class.
+     * Runs before each test and calls setUp() only if that method exists in the test class.
+     * 
+     * @uses TestCase::setUp()
      * 
      * @return void
      */
@@ -114,7 +138,9 @@ abstract class TestCase extends Assert
     }
 
     /**
-     * Runs after each test and calls `tearDown()` only if that method exists in the test class.
+     * Runs after each test and calls tearDown() only if that method exists in the test class.
+     * 
+     * @uses TestCase::tearDown()
      * 
      * @return void
      */
@@ -130,6 +156,16 @@ abstract class TestCase extends Assert
         }
     }
 
+    /**
+     * Creates an array of all valid test methods to call on the test class.
+     * 
+     * Checks to see if any are in the config excluded tests array.
+     * 
+     * @uses TestUtil::isTestMethod()
+     * @uses TestCase::$excluded_tests
+     * 
+     * @return void
+     */
     public function buildTests(): void
     {
         $reflection_class = new ReflectionClass($this);

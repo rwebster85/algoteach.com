@@ -11,6 +11,13 @@ use const DIRECTORY_SEPARATOR;
 
 final class TestResults implements TestResultsInterface
 {
+    /**
+     * Array of key/value pairs of results. Key is the name of the class tested, value is an array of TestResult objects.
+     * 
+     * @uses TestResult
+     * 
+     * @var array<string, TestResult[]>
+     */
     private array $results = [];
 
     private int $total_tests = 0;
@@ -46,6 +53,11 @@ final class TestResults implements TestResultsInterface
         $this->skipped_tests++;
     }
 
+    /**
+     * Returns an array of key value pairs. Key is the name of the class tested, value is an array of TestResult objects.
+     * 
+     * @return array<string, TestResult[]>
+     */
     public function getResults(): array
     {
         return $this->results;
@@ -80,6 +92,8 @@ final class TestResults implements TestResultsInterface
     {
         $results = $this->getResults();
 
+        //var_dump($results);
+
         $total_tests = $this->getTotalTests();
         $total_pass = $this->getTotalPassed();
         $total_fail = $this->getTotalFailed();
@@ -90,16 +104,18 @@ final class TestResults implements TestResultsInterface
 
         if ($total_fail > 0) {
             print("The following tests failed:" . PHP_EOL);
-            foreach ($results as $class) {
-                foreach ($class as $result) {
+            /** @var TestClass $tested_class */
+            foreach ($results as $tested_class) {
+                /** @var TestResult $result */
+                foreach ($tested_class as $result) {
                     if (!$result->testPassed()) {
-                        $class = $result->test_class;
-                        $test = $result->test_name;
-                        $line = $result->line;
-                        $error = $result->errorMessage();
+                        $class    = $result->test_class;
+                        $test     = $result->test_name;
+                        $line     = $result->line;
+                        $error    = $result->errorMessage();
                         $expected = $result->parseVarForOutput($result->expected);
-                        $actual = $result->parseVarForOutput($result->actual);
-                        $file = substr($result->test_file, strrpos($result->test_file, DIRECTORY_SEPARATOR) + 1);
+                        $actual   = $result->parseVarForOutput($result->actual);
+                        $file     = substr($result->test_file, strrpos($result->test_file, DIRECTORY_SEPARATOR) + 1);
                         print("$class::$test : File: {$file} - Line: {$line} - Expected: {$expected} - Actual: {$actual} - Error: {$error}" . PHP_EOL);
                     }
                 }
