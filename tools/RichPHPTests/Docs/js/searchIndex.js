@@ -371,10 +371,50 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/RichPHPTests-TestCase.html#method___construct"
         },                {
+            "fqsen": "\\RichPHPTests\\TestCase\u003A\u003AsetUpClass\u0028\u0029",
+            "name": "setUpClass",
+            "summary": "Runs\u0020before\u0020any\u0020tests\u0020are\u0020carried\u0020out\u0020for\u0020the\u0020class.",
+            "url": "classes/RichPHPTests-TestCase.html#method_setUpClass"
+        },                {
+            "fqsen": "\\RichPHPTests\\TestCase\u003A\u003AtearDownClass\u0028\u0029",
+            "name": "tearDownClass",
+            "summary": "Runs\u0020after\u0020all\u0020tests\u0020are\u0020carried\u0020out\u0020for\u0020the\u0020class.",
+            "url": "classes/RichPHPTests-TestCase.html#method_tearDownClass"
+        },                {
+            "fqsen": "\\RichPHPTests\\TestCase\u003A\u003AsetUp\u0028\u0029",
+            "name": "setUp",
+            "summary": "Runs\u0020before\u0020each\u0020test\u0020is\u0020carried\u0020out.",
+            "url": "classes/RichPHPTests-TestCase.html#method_setUp"
+        },                {
+            "fqsen": "\\RichPHPTests\\TestCase\u003A\u003AtearDown\u0028\u0029",
+            "name": "tearDown",
+            "summary": "Runs\u0020after\u0020each\u0020test\u0020is\u0020carried\u0020out.",
+            "url": "classes/RichPHPTests-TestCase.html#method_tearDown"
+        },                {
             "fqsen": "\\RichPHPTests\\TestCase\u003A\u003Arun\u0028\u0029",
             "name": "run",
             "summary": "",
             "url": "classes/RichPHPTests-TestCase.html#method_run"
+        },                {
+            "fqsen": "\\RichPHPTests\\TestCase\u003A\u003AdoSetUpClass\u0028\u0029",
+            "name": "doSetUpClass",
+            "summary": "Calls\u0020the\u0020\u0060setUpClass\u0028\u0029\u0060\u0020method\u0020only\u0020if\u0020it\u0020is\u0020declared\u0020in\u0020the\u0020test\u0020class.",
+            "url": "classes/RichPHPTests-TestCase.html#method_doSetUpClass"
+        },                {
+            "fqsen": "\\RichPHPTests\\TestCase\u003A\u003AdoTearDownClass\u0028\u0029",
+            "name": "doTearDownClass",
+            "summary": "Calls\u0020the\u0020\u0060tearDownClass\u0028\u0029\u0060\u0020method\u0020only\u0020if\u0020it\u0020is\u0020declared\u0020in\u0020the\u0020test\u0020class.",
+            "url": "classes/RichPHPTests-TestCase.html#method_doTearDownClass"
+        },                {
+            "fqsen": "\\RichPHPTests\\TestCase\u003A\u003AdoSetup\u0028\u0029",
+            "name": "doSetup",
+            "summary": "Runs\u0020before\u0020each\u0020test\u0020and\u0020calls\u0020\u0060setUp\u0028\u0029\u0060\u0020only\u0020if\u0020that\u0020method\u0020exists\u0020in\u0020the\u0020test\u0020class.",
+            "url": "classes/RichPHPTests-TestCase.html#method_doSetup"
+        },                {
+            "fqsen": "\\RichPHPTests\\TestCase\u003A\u003AdoTearDown\u0028\u0029",
+            "name": "doTearDown",
+            "summary": "Runs\u0020after\u0020each\u0020test\u0020and\u0020calls\u0020\u0060tearDown\u0028\u0029\u0060\u0020only\u0020if\u0020that\u0020method\u0020exists\u0020in\u0020the\u0020test\u0020class.",
+            "url": "classes/RichPHPTests-TestCase.html#method_doTearDown"
         },                {
             "fqsen": "\\RichPHPTests\\TestCase\u003A\u003AbuildTests\u0028\u0029",
             "name": "buildTests",
@@ -390,11 +430,6 @@ Search.appendIndex(
             "name": "testMethods",
             "summary": "",
             "url": "classes/RichPHPTests-TestCase.html#property_testMethods"
-        },                {
-            "fqsen": "\\RichPHPTests\\TestCase\u003A\u003A\u0024some_var",
-            "name": "some_var",
-            "summary": "",
-            "url": "classes/RichPHPTests-TestCase.html#property_some_var"
         },                {
             "fqsen": "\\RichPHPTests\\TestClass",
             "name": "TestClass",
@@ -711,9 +746,14 @@ Search.appendIndex(
             "summary": "Verifies\u0020that\u0020a\u0020test\u0020method\u0020from\u0020a\u0020test\u0020class\u0020meets\u0020the\u0020necessary\u0020criteria.",
             "url": "classes/RichPHPTests-TestUtil.html#method_isTestMethod"
         },                {
+            "fqsen": "\\RichPHPTests\\TestUtil\u003A\u003AtestClassHasMethod\u0028\u0029",
+            "name": "testClassHasMethod",
+            "summary": "Checks\u0020that\u0020a\u0020test\u0020class\u0020has\u0020a\u0020method,\u0020rather\u0020than\u0020the\u0020parent\u0020class.",
+            "url": "classes/RichPHPTests-TestUtil.html#method_testClassHasMethod"
+        },                {
             "fqsen": "\\RichPHPTests\\TestUtil\u003A\u003AisTestClass\u0028\u0029",
             "name": "isTestClass",
-            "summary": "Verifies\u0020that\u0020a\u0020discovered\u0020test\u0020class\u0020is\u0020valid.",
+            "summary": "Verifies\u0020that\u0020a\u0020class\u0020name\u0020is\u0020a\u0020sub\u0020class\u0020of\u0020TestCase.",
             "url": "classes/RichPHPTests-TestUtil.html#method_isTestClass"
         },                {
             "fqsen": "\\",

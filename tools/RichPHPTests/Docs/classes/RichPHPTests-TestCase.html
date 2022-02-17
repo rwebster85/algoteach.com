@@ -122,7 +122,7 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestCase.php"><a href="files/includes-testcase.html"><abbr title="Includes/TestCase.php">TestCase.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">12</span>
+    <span class="phpdocumentor-element-found-in__line">13</span>
 
     </aside>
 
@@ -142,14 +142,7 @@
 </h3>
 
 <dl class="phpdocumentor-table-of-contents">
-                    <dt class="phpdocumentor-table-of-contents__entry -property -public">
-    <a href="classes/RichPHPTests-TestCase.html#property_some_var">$some_var</a>
-    <span>
-                        &nbsp;: int            </span>
-</dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+                    <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a href="classes/RichPHPTests-TestCase.html#property_testMethods">$testMethods</a>
     <span>
                         &nbsp;: array&lt;string|int, mixed&gt;            </span>
@@ -176,6 +169,20 @@
                                 &nbsp;: void    </span>
 </dt>
 <dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/RichPHPTests-TestCase.html#method_setUpClass">setUpClass()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+<dd>Runs before any tests are carried out for the class.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/RichPHPTests-TestCase.html#method_tearDownClass">tearDownClass()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+<dd>Runs after all tests are carried out for the class.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
     <a href="classes/RichPHPTests-Assert-Traits-AssertArrayTrait.html#method_assertArrayHasKey">assertArrayHasKey()</a>
@@ -352,6 +359,20 @@
 </dt>
 <dd></dd>
 
+            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
+    <a href="classes/RichPHPTests-TestCase.html#method_setUp">setUp()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+<dd>Runs before each test is carried out.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
+    <a href="classes/RichPHPTests-TestCase.html#method_tearDown">tearDown()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+<dd>Runs after each test is carried out.</dd>
+
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
     <a href="classes/RichPHPTests-TestCase.html#method_addMethod">addMethod()</a>
     <span>
@@ -365,6 +386,34 @@
                                 &nbsp;: void    </span>
 </dt>
 <dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a href="classes/RichPHPTests-TestCase.html#method_doSetup">doSetup()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+<dd>Runs before each test and calls `setUp()` only if that method exists in the test class.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a href="classes/RichPHPTests-TestCase.html#method_doSetUpClass">doSetUpClass()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+<dd>Calls the `setUpClass()` method only if it is declared in the test class.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a href="classes/RichPHPTests-TestCase.html#method_doTearDown">doTearDown()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+<dd>Runs after each test and calls `tearDown()` only if that method exists in the test class.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a href="classes/RichPHPTests-TestCase.html#method_doTearDownClass">doTearDownClass()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+<dd>Calls the `tearDownClass()` method only if it is declared in the test class.</dd>
 
         </dl>
 
@@ -382,40 +431,6 @@
         class="
             phpdocumentor-element
             -property
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="property_some_var">
-        $some_var
-        <a href="classes/RichPHPTests-TestCase.html#property_some_var" class="headerlink"><i class="fas fa-link"></i></a>
-        <span class="phpdocumentor-element__modifiers">
-                                </span>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestCase.php"><a href="files/includes-testcase.html"><abbr title="Includes/TestCase.php">TestCase.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">16</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-        <span class="phpdocumentor-signature__type">int</span>
-    <span class="phpdocumentor-signature__name">$some_var</span>
-    </code>
-
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
-    
-
-</article>
-                    <article
-        class="
-            phpdocumentor-element
-            -property
             -private
                                                         "
 >
@@ -428,7 +443,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestCase.php"><a href="files/includes-testcase.html"><abbr title="Includes/TestCase.php">TestCase.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">14</span>
+    <span class="phpdocumentor-element-found-in__line">15</span>
 
     </aside>
 
@@ -466,7 +481,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestCase.php"><a href="files/includes-testcase.html"><abbr title="Includes/TestCase.php">TestCase.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">18</span>
+    <span class="phpdocumentor-element-found-in__line">17</span>
 
     </aside>
 
@@ -499,7 +514,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestCase.php"><a href="files/includes-testcase.html"><abbr title="Includes/TestCase.php">TestCase.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">29</span>
+    <span class="phpdocumentor-element-found-in__line">110</span>
 
     </aside>
 
@@ -532,7 +547,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestCase.php"><a href="files/includes-testcase.html"><abbr title="Includes/TestCase.php">TestCase.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">20</span>
+    <span class="phpdocumentor-element-found-in__line">47</span>
 
     </aside>
 
@@ -543,6 +558,72 @@
 
         <section class="phpdocumentor-description"></section>
 
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setUpClass">
+        setUpClass()
+        <a href="classes/RichPHPTests-TestCase.html#method_setUpClass" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestCase.php"><a href="files/includes-testcase.html"><abbr title="Includes/TestCase.php">TestCase.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">24</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Runs before any tests are carried out for the class.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setUpClass</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_tearDownClass">
+        tearDownClass()
+        <a href="classes/RichPHPTests-TestCase.html#method_tearDownClass" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestCase.php"><a href="files/includes-testcase.html"><abbr title="Includes/TestCase.php">TestCase.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">31</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Runs after all tests are carried out for the class.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">tearDownClass</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    
     
     
 
@@ -1743,6 +1824,72 @@
                     <article
         class="phpdocumentor-element
             -method
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setUp">
+        setUp()
+        <a href="classes/RichPHPTests-TestCase.html#method_setUp" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestCase.php"><a href="files/includes-testcase.html"><abbr title="Includes/TestCase.php">TestCase.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">38</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Runs before each test is carried out.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+                <span class="phpdocumentor-signature__name">setUp</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_tearDown">
+        tearDown()
+        <a href="classes/RichPHPTests-TestCase.html#method_tearDown" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestCase.php"><a href="files/includes-testcase.html"><abbr title="Includes/TestCase.php">TestCase.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">45</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Runs after each test is carried out.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+                <span class="phpdocumentor-signature__name">tearDown</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
             -private
                                                         "
 >
@@ -1753,7 +1900,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestCase.php"><a href="files/includes-testcase.html"><abbr title="Includes/TestCase.php">TestCase.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">40</span>
+    <span class="phpdocumentor-element-found-in__line">120</span>
 
     </aside>
 
@@ -1836,6 +1983,138 @@
             </dd>
             </dl>
 
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_doSetup">
+        doSetup()
+        <a href="classes/RichPHPTests-TestCase.html#method_doSetup" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestCase.php"><a href="files/includes-testcase.html"><abbr title="Includes/TestCase.php">TestCase.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">91</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Runs before each test and calls `setUp()` only if that method exists in the test class.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+                <span class="phpdocumentor-signature__name">doSetup</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_doSetUpClass">
+        doSetUpClass()
+        <a href="classes/RichPHPTests-TestCase.html#method_doSetUpClass" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestCase.php"><a href="files/includes-testcase.html"><abbr title="Includes/TestCase.php">TestCase.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">67</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Calls the `setUpClass()` method only if it is declared in the test class.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+                <span class="phpdocumentor-signature__name">doSetUpClass</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_doTearDown">
+        doTearDown()
+        <a href="classes/RichPHPTests-TestCase.html#method_doTearDown" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestCase.php"><a href="files/includes-testcase.html"><abbr title="Includes/TestCase.php">TestCase.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">103</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Runs after each test and calls `tearDown()` only if that method exists in the test class.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+                <span class="phpdocumentor-signature__name">doTearDown</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_doTearDownClass">
+        doTearDownClass()
+        <a href="classes/RichPHPTests-TestCase.html#method_doTearDownClass" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestCase.php"><a href="files/includes-testcase.html"><abbr title="Includes/TestCase.php">TestCase.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">79</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Calls the `tearDownClass()` method only if it is declared in the test class.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+                <span class="phpdocumentor-signature__name">doTearDownClass</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    
+    
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
