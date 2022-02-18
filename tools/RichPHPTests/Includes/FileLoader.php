@@ -9,18 +9,22 @@ use function file_exists;
 final class FileLoader
 {
     /**
+     * The files to be loaded.
+     * 
      * @var string[]
      */
-    private array $files = [];
+    private array $files;
 
     /**
      * Accepts an array of strings as file paths to load.
      * 
-     * @param string[] $files
+     * @param string[] $filepaths
+     * 
+     * @return void
      */
-    public function __construct(string ...$files)
+    public function __construct(string ...$filepaths)
     {
-        $this->files = $files;
+        $this->files = $filepaths;
     }
 
     /**
