@@ -16,6 +16,10 @@ abstract class TestCase extends Assert
     
     private array $excluded_tests = [];
 
+    private ?bool $hasTestSetUp;
+
+    private ?bool $hasTestTearDown;
+
     /**
      * Accepts a TestsConfiguration object to assign excluded test methods for this test class.
      * 
@@ -121,18 +125,23 @@ abstract class TestCase extends Assert
     /**
      * Runs before each test and calls setUp() only if that method exists in the test class.
      * 
+     * Stores in TestCase::$hasTestSetUp whether a valid setUp is to be used.
+     * 
      * @uses TestCase::setUp()
      * 
      * @return void
      */
     private function doSetup(): void
     {
-        $method = new ReflectionMethod($this, 'setUp');
+        if (!isset($this->hasTestSetUp)) {
+            $method = new ReflectionMethod($this, 'setUp');
+            $this->hasTestSetUp = (
+                TestUtil::testClassHasMethod($method)
+                && $method->getReturnType()->getName() === 'void'
+            );
+        }
 
-        if (
-            TestUtil::testClassHasMethod($method)
-            && $method->getReturnType()->getName() === 'void'
-        ) {
+        if ($this->hasTestSetUp == true) {
             $this->setUp();
         }
     }
@@ -140,18 +149,23 @@ abstract class TestCase extends Assert
     /**
      * Runs after each test and calls tearDown() only if that method exists in the test class.
      * 
+     * Stores in TestCase::$hasTestTearDown whether a valid tearDown is to be used.
+     * 
      * @uses TestCase::tearDown()
      * 
      * @return void
      */
     private function doTearDown(): void
     {
-        $method = new ReflectionMethod($this, 'tearDown');
+        if (!isset($this->hasTestTearDown)) {
+            $method = new ReflectionMethod($this, 'setUp');
+            $this->hasTestTearDown = (
+                TestUtil::testClassHasMethod($method)
+                && $method->getReturnType()->getName() === 'void'
+            );
+        }
 
-        if (
-            TestUtil::testClassHasMethod($method)
-            && $method->getReturnType()->getName() === 'void'
-        ) {
+        if ($this->hasTestTearDown == true) {
             $this->tearDown();
         }
     }
