@@ -98,7 +98,7 @@ Or if any tests failed, the output will look like this:
 
 Running test suite: Some Test Suite
 Tests complete.
-Tests ran: 9, Passed: 7, Failed: 2. Skipped Files: 1, Skipped
+Tests ran: 9, Passed: 7, Failed: 2. Skipped Files: 1, Skipped Tests: 0
 The following tests failed:
 SomeTest::testStringMatches2 : File: SomeTest.php - Line: 24 - Expected: 'String2' - Actual: 'String1' - Error: Strings are not the same.
 SomeTest::testArrayIsEmpty : File: SomeTest.php - Line: 44 - Expected: 0 - Actual: 1 - Error: Array is not the right size.
