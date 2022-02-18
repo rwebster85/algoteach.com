@@ -27,7 +27,7 @@ class TestUtil
     //end of adapted code
 
     /**
-     * Checks that a test class has a method, rather than the parent TestCase class.
+     * Checks that a concrete test class has a method, rather than the parent TestCase class.
      * 
      * @param ReflectionMethod $method
      * 
@@ -35,19 +35,21 @@ class TestUtil
      */
     public static function testClassHasMethod(ReflectionMethod $method): bool
     {
-        return ($method->getDeclaringClass()->getName() !== 'RichPHPTests\TestCase');
+        return ($method->getDeclaringClass()->isSubclassOf('RichPHPTests\TestCase'));
     }
 
     /**
-     * Verifies that a class name is a sub class of TestCase.
+     * Verifies that a class (object or a class name) is a sub class of TestCase.
      * 
-     * @param string $class_name
+     * @param object|string $class
      * 
      * @return bool
      */
-    public static function isTestClass(string $class_name): bool
+    public static function isTestClass(object|string $class): bool
     {
-        $class = new ReflectionClass($class_name);
+        if (is_string($class) || !$class instanceof ReflectionClass) {
+            $class = new ReflectionClass($class);
+        }
         return ($class->isSubclassOf('RichPHPTests\TestCase'));
     }
 }
