@@ -258,7 +258,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\RichPHPTests\\FileLoader\u003A\u003A\u0024files",
             "name": "files",
-            "summary": "",
+            "summary": "The\u0020files\u0020to\u0020be\u0020loaded.",
             "url": "classes/RichPHPTests-FileLoader.html#property_files"
         },                {
             "fqsen": "\\RichPHPTests\\Interfaces\\TestResultsInterface",
@@ -400,6 +400,16 @@ Search.appendIndex(
             "name": "excluded_tests",
             "summary": "",
             "url": "classes/RichPHPTests-TestCase.html#property_excluded_tests"
+        },                {
+            "fqsen": "\\RichPHPTests\\TestCase\u003A\u003A\u0024hasTestSetUp",
+            "name": "hasTestSetUp",
+            "summary": "",
+            "url": "classes/RichPHPTests-TestCase.html#property_hasTestSetUp"
+        },                {
+            "fqsen": "\\RichPHPTests\\TestCase\u003A\u003A\u0024hasTestTearDown",
+            "name": "hasTestTearDown",
+            "summary": "",
+            "url": "classes/RichPHPTests-TestCase.html#property_hasTestTearDown"
         },                {
             "fqsen": "\\RichPHPTests\\TestClass",
             "name": "TestClass",
@@ -778,12 +788,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\RichPHPTests\\TestUtil\u003A\u003AtestClassHasMethod\u0028\u0029",
             "name": "testClassHasMethod",
-            "summary": "Checks\u0020that\u0020a\u0020test\u0020class\u0020has\u0020a\u0020method,\u0020rather\u0020than\u0020the\u0020parent\u0020TestCase\u0020class.",
+            "summary": "Checks\u0020that\u0020a\u0020concrete\u0020test\u0020class\u0020has\u0020a\u0020method,\u0020rather\u0020than\u0020the\u0020parent\u0020TestCase\u0020class.",
             "url": "classes/RichPHPTests-TestUtil.html#method_testClassHasMethod"
         },                {
             "fqsen": "\\RichPHPTests\\TestUtil\u003A\u003AisTestClass\u0028\u0029",
             "name": "isTestClass",
-            "summary": "Verifies\u0020that\u0020a\u0020class\u0020name\u0020is\u0020a\u0020sub\u0020class\u0020of\u0020TestCase.",
+            "summary": "Verifies\u0020that\u0020a\u0020class\u0020\u0028object\u0020or\u0020a\u0020class\u0020name\u0029\u0020is\u0020a\u0020sub\u0020class\u0020of\u0020TestCase.",
             "url": "classes/RichPHPTests-TestUtil.html#method_isTestClass"
         },                {
             "fqsen": "\\",

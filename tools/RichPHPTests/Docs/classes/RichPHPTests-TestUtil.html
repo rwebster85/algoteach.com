@@ -140,7 +140,7 @@
     <span>
                                 &nbsp;: bool    </span>
 </dt>
-<dd>Verifies that a class name is a sub class of TestCase.</dd>
+<dd>Verifies that a class (object or a class name) is a sub class of TestCase.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/RichPHPTests-TestUtil.html#method_isTestMethod">isTestMethod()</a>
@@ -154,7 +154,7 @@
     <span>
                                 &nbsp;: bool    </span>
 </dt>
-<dd>Checks that a test class has a method, rather than the parent TestCase class.</dd>
+<dd>Checks that a concrete test class has a method, rather than the parent TestCase class.</dd>
 
         </dl>
 
@@ -186,18 +186,18 @@
 
     </aside>
 
-        <p class="phpdocumentor-summary">Verifies that a class name is a sub class of TestCase.</p>
+        <p class="phpdocumentor-summary">Verifies that a class (object or a class name) is a sub class of TestCase.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">isTestClass</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$class_name</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">isTestClass</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">object|string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$class</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
 
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$class_name</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                <span class="phpdocumentor-signature__argument__name">$class</span>
+                : <span class="phpdocumentor-signature__argument__return-type">object|string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                 
@@ -272,7 +272,7 @@
 
     </aside>
 
-        <p class="phpdocumentor-summary">Checks that a test class has a method, rather than the parent TestCase class.</p>
+        <p class="phpdocumentor-summary">Checks that a concrete test class has a method, rather than the parent TestCase class.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
