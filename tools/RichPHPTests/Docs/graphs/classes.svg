@@ -24,15 +24,15 @@
 <polygon fill="none" stroke="black" points="51,-394 51,-466 165,-466 165,-394 51,-394"/>
 <text text-anchor="middle" x="108" y="-453.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Abstracts</text>
 </g>
-<g id="clust4" class="cluster">
-<title>cluster_\RichPHPTests\Attributes</title>
-<polygon fill="none" stroke="black" points="265,-664 265,-844 385,-844 385,-664 265,-664"/>
-<text text-anchor="middle" x="325" y="-831.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Attributes</text>
-</g>
 <g id="clust5" class="cluster">
 <title>cluster_\RichPHPTests\Interfaces</title>
 <polygon fill="none" stroke="black" points="24,-178 24,-250 192,-250 192,-178 24,-178"/>
 <text text-anchor="middle" x="108" y="-237.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Interfaces</text>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_\RichPHPTests\Attributes</title>
+<polygon fill="none" stroke="black" points="265,-664 265,-844 385,-844 385,-664 265,-664"/>
+<text text-anchor="middle" x="325" y="-831.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Attributes</text>
 </g>
 <!-- \\RichPHPTests\\Abstracts\\AbstractTest -->
 <g id="node1" class="node">

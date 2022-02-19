@@ -68,7 +68,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\RichPHPTests\\Attributes\\Skip",
             "name": "Skip",
-            "summary": "",
+            "summary": "The\u0020Skip\u0020attribute\u0020can\u0020be\u0020applied\u0020to\u0020test\u0020classes\u0020or\u0020methods\u0020to\u0020have\u0020them\u0020excluded\u0020from\u0020the\u0020test\u0020run.",
             "url": "classes/RichPHPTests-Attributes-Skip.html"
         },                {
             "fqsen": "\\RichPHPTests\\Attributes\\Skip\u003A\u003A__construct\u0028\u0029",
@@ -891,15 +891,15 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/default.html"
         },                {
-            "fqsen": "\\RichPHPTests",
-            "name": "RichPHPTests",
-            "summary": "",
-            "url": "namespaces/richphptests.html"
-        },                {
             "fqsen": "\\RichPHPTests\\Abstracts",
             "name": "Abstracts",
             "summary": "",
             "url": "namespaces/richphptests-abstracts.html"
+        },                {
+            "fqsen": "\\RichPHPTests",
+            "name": "RichPHPTests",
+            "summary": "",
+            "url": "namespaces/richphptests.html"
         },                {
             "fqsen": "\\RichPHPTests\\Attributes",
             "name": "Attributes",

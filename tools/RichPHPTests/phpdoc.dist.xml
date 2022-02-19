@@ -12,6 +12,7 @@
     <version number="latest">
         <api format="php">
             <source dsn=".">
+                <path>Includes</path>
             </source>
             <ignore hidden="true">
                 <path>Tests/**/*</path>

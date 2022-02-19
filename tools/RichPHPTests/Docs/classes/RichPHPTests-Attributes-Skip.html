@@ -120,12 +120,27 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Attributes/Skip.php"><a href="files/includes-attributes-skip.html"><abbr title="Includes/Attributes/Skip.php">Skip.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">7</span>
+    <span class="phpdocumentor-element-found-in__line">26</span>
 
     </aside>
 
-        
-    <section class="phpdocumentor-description"></section>
+            <p class="phpdocumentor-summary">The Skip attribute can be applied to test classes or methods to have them excluded from the test run.</p>
+
+    <section class="phpdocumentor-description"><p>Example Usage:</p>
+<pre class="prettyprint"><code class="language-php">use RichPHPTests\Attributes; // import the attributes namespace
+use RichPHPTests\TestCase;
+
+#[Attributes\Skip] // skip this class
+class SomeTest extends TestCase
+{
+    #[Attributes\Skip] // skip this test
+    public function testSomeFunction(): void
+    {
+        // ...
+    }
+}
+</code></pre>
+</section>
 
 
 
@@ -173,7 +188,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Attributes/Skip.php"><a href="files/includes-attributes-skip.html"><abbr title="Includes/Attributes/Skip.php">Skip.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">9</span>
+    <span class="phpdocumentor-element-found-in__line">28</span>
 
     </aside>
 
