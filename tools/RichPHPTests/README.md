@@ -36,8 +36,6 @@ Test classes and methods can also be skipped by using the `Skip` attribute.
 ```php
 <?php
 
-declare(strict_types=1);
-
 use RichPHPTests\Attributes;
 use RichPHPTests\TestCase;
 
@@ -66,8 +64,6 @@ Example:
 
 ```php
 <?php
-
-declare(strict_types=1);
 
 use RichPHPTests\TestCase;
 
