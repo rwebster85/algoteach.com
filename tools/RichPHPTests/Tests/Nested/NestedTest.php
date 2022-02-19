@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use RichPHPTests\Attributes;
 use RichPHPTests\TestCase;
 
 class NestedTest extends TestCase
@@ -16,6 +17,7 @@ class NestedTest extends TestCase
         test(false)->isFalse();
     }
 
+    #[Attributes\Skip]
     public function testInArray(): void
     {
         $array = ['hello', 'world'];

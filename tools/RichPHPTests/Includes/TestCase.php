@@ -245,7 +245,7 @@ abstract class TestCase
         foreach ($methods as $method) {
             if (TestUtil::isTestMethod($method)) {
                 $test_name = $reflection_class->getName() . '::' . $method->getName();
-                if (!in_array($test_name, $this->excluded_tests)) {
+                if (!$this->isTestSkipped($test_name, $method)) {
                     $this->addMethod($method);
                 } else {
                     Application::getTestResults()->addSkippedTest();
@@ -254,6 +254,11 @@ abstract class TestCase
         }
 
         $this->built = true;
+    }
+
+    private function isTestSkipped(string $test_name, ReflectionMethod $method): bool
+    {
+        return (in_array($test_name, $this->excluded_tests) || TestUtil::hasSkippedAttribute($method));
     }
 
     private function addMethod(ReflectionMethod $method): void

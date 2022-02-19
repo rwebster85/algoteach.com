@@ -6,6 +6,7 @@ namespace RichPHPTests;
 
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
+use ReflectionClass;
 
 final class TestSuite
 {
@@ -132,12 +133,12 @@ final class TestSuite
 
             $qualified_name = $test_class->qualifiedClassName();
 
-            if (in_array($qualified_name, $this->excluded_classes)) {
+            include_once $test_class->getFullPath();
+
+            if ($this->isTestClassExcluded($qualified_name)) {
                 Application::getTestResults()->addSkippedFile();
                 continue;
             }
-
-            include_once $test_class->getFullPath();
 
             if (
                 class_exists($qualified_name)
@@ -146,5 +147,10 @@ final class TestSuite
                 $test_class = new $qualified_name($this->config);
             }
         }
+    }
+
+    private function isTestClassExcluded(string $qualified_name): bool
+    {
+        return (in_array($qualified_name, $this->excluded_classes) || TestUtil::hasSkippedAttribute(new ReflectionClass($qualified_name)));
     }
 }

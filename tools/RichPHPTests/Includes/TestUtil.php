@@ -52,4 +52,10 @@ class TestUtil
         }
         return ($class->isSubclassOf('RichPHPTests\TestCase'));
     }
+
+    public static function hasSkippedAttribute(ReflectionClass|ReflectionMethod $class_or_method): bool
+    {
+        $attributes = $class_or_method->getAttributes('RichPHPTests\Attributes\Skip');
+        return !empty($attributes);
+    }
 }

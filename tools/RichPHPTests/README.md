@@ -31,6 +31,27 @@ Excluded class names do not need the `.php` extension added, but should be fully
 
 Excluded tests (methods) need the fully qualified test class name with the method name, separated by a double colon.
 
+Test classes and methods can also be skipped by using the `Skip` attribute.
+
+```php
+<?php
+
+declare(strict_types=1);
+
+use RichPHPTests\Attributes;
+use RichPHPTests\TestCase;
+
+#[Attributes\Skip] // skip this class
+class SomeTest extends TestCase
+{
+    #[Attributes\Skip] // skip this test
+    public function testSomeFunction(): void
+    {
+        // ...
+    }
+}
+```
+
 ## Writing Tests
 
 Test examples can be found inside the `Tests` folder for this tool.

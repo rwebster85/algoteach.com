@@ -1,6 +1,11 @@
 Search.appendIndex(
     [
                 {
+            "fqsen": "\\RichPHPTests\\Abstracts\\AbstractTest",
+            "name": "AbstractTest",
+            "summary": "",
+            "url": "classes/RichPHPTests-Abstracts-AbstractTest.html"
+        },                {
             "fqsen": "\\RichPHPTests\\Application",
             "name": "Application",
             "summary": "",
@@ -61,140 +66,35 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/RichPHPTests-Application.html#property_configuration"
         },                {
-            "fqsen": "\\RichPHPTests\\Assert\\Assert",
-            "name": "Assert",
+            "fqsen": "\\RichPHPTests\\Attributes\\Skip",
+            "name": "Skip",
             "summary": "",
-            "url": "classes/RichPHPTests-Assert-Assert.html"
+            "url": "classes/RichPHPTests-Attributes-Skip.html"
         },                {
-            "fqsen": "\\RichPHPTests\\Assert\\Assert\u003A\u003AassertIsArray\u0028\u0029",
-            "name": "assertIsArray",
+            "fqsen": "\\RichPHPTests\\Attributes\\Skip\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
             "summary": "",
-            "url": "classes/RichPHPTests-Assert-Assert.html#method_assertIsArray"
+            "url": "classes/RichPHPTests-Attributes-Skip.html#method___construct"
         },                {
-            "fqsen": "\\RichPHPTests\\Assert\\Assert\u003A\u003AassertIsNotArray\u0028\u0029",
-            "name": "assertIsNotArray",
+            "fqsen": "\\RichPHPTests\\Attributes\\TestHasAfter",
+            "name": "TestHasAfter",
             "summary": "",
-            "url": "classes/RichPHPTests-Assert-Assert.html#method_assertIsNotArray"
+            "url": "classes/RichPHPTests-Attributes-TestHasAfter.html"
         },                {
-            "fqsen": "\\RichPHPTests\\Assert\\Assert\u003A\u003AassertArrayHasKey\u0028\u0029",
-            "name": "assertArrayHasKey",
+            "fqsen": "\\RichPHPTests\\Attributes\\TestHasAfter\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
             "summary": "",
-            "url": "classes/RichPHPTests-Assert-Assert.html#method_assertArrayHasKey"
+            "url": "classes/RichPHPTests-Attributes-TestHasAfter.html#method___construct"
         },                {
-            "fqsen": "\\RichPHPTests\\Assert\\Assert\u003A\u003AassertArrayNotHasKey\u0028\u0029",
-            "name": "assertArrayNotHasKey",
+            "fqsen": "\\RichPHPTests\\Attributes\\TestHasBefore",
+            "name": "TestHasBefore",
             "summary": "",
-            "url": "classes/RichPHPTests-Assert-Assert.html#method_assertArrayNotHasKey"
+            "url": "classes/RichPHPTests-Attributes-TestHasBefore.html"
         },                {
-            "fqsen": "\\RichPHPTests\\Assert\\Assert\u003A\u003AassertArrayHasValue\u0028\u0029",
-            "name": "assertArrayHasValue",
+            "fqsen": "\\RichPHPTests\\Attributes\\TestHasBefore\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
             "summary": "",
-            "url": "classes/RichPHPTests-Assert-Assert.html#method_assertArrayHasValue"
-        },                {
-            "fqsen": "\\RichPHPTests\\Assert\\Assert\u003A\u003AassertArrayHasNotValue\u0028\u0029",
-            "name": "assertArrayHasNotValue",
-            "summary": "",
-            "url": "classes/RichPHPTests-Assert-Assert.html#method_assertArrayHasNotValue"
-        },                {
-            "fqsen": "\\RichPHPTests\\Assert\\Assert\u003A\u003AassertArrayIsSize\u0028\u0029",
-            "name": "assertArrayIsSize",
-            "summary": "",
-            "url": "classes/RichPHPTests-Assert-Assert.html#method_assertArrayIsSize"
-        },                {
-            "fqsen": "\\RichPHPTests\\Assert\\Assert\u003A\u003AassertTrue\u0028\u0029",
-            "name": "assertTrue",
-            "summary": "",
-            "url": "classes/RichPHPTests-Assert-Assert.html#method_assertTrue"
-        },                {
-            "fqsen": "\\RichPHPTests\\Assert\\Assert\u003A\u003AassertFalse\u0028\u0029",
-            "name": "assertFalse",
-            "summary": "",
-            "url": "classes/RichPHPTests-Assert-Assert.html#method_assertFalse"
-        },                {
-            "fqsen": "\\RichPHPTests\\Assert\\Assert\u003A\u003AassertIsBool\u0028\u0029",
-            "name": "assertIsBool",
-            "summary": "",
-            "url": "classes/RichPHPTests-Assert-Assert.html#method_assertIsBool"
-        },                {
-            "fqsen": "\\RichPHPTests\\Assert\\Assert\u003A\u003AassertIsNotBool\u0028\u0029",
-            "name": "assertIsNotBool",
-            "summary": "",
-            "url": "classes/RichPHPTests-Assert-Assert.html#method_assertIsNotBool"
-        },                {
-            "fqsen": "\\RichPHPTests\\Assert\\Assert\u003A\u003AassertEquals\u0028\u0029",
-            "name": "assertEquals",
-            "summary": "",
-            "url": "classes/RichPHPTests-Assert-Assert.html#method_assertEquals"
-        },                {
-            "fqsen": "\\RichPHPTests\\Assert\\Assert\u003A\u003AassertNotEquals\u0028\u0029",
-            "name": "assertNotEquals",
-            "summary": "",
-            "url": "classes/RichPHPTests-Assert-Assert.html#method_assertNotEquals"
-        },                {
-            "fqsen": "\\RichPHPTests\\Assert\\Assert\u003A\u003AassertIsInt\u0028\u0029",
-            "name": "assertIsInt",
-            "summary": "",
-            "url": "classes/RichPHPTests-Assert-Assert.html#method_assertIsInt"
-        },                {
-            "fqsen": "\\RichPHPTests\\Assert\\Assert\u003A\u003AassertIsNotInt\u0028\u0029",
-            "name": "assertIsNotInt",
-            "summary": "",
-            "url": "classes/RichPHPTests-Assert-Assert.html#method_assertIsNotInt"
-        },                {
-            "fqsen": "\\RichPHPTests\\Assert\\Assert\u003A\u003AassertIsFloat\u0028\u0029",
-            "name": "assertIsFloat",
-            "summary": "",
-            "url": "classes/RichPHPTests-Assert-Assert.html#method_assertIsFloat"
-        },                {
-            "fqsen": "\\RichPHPTests\\Assert\\Assert\u003A\u003AassertIsNotFloat\u0028\u0029",
-            "name": "assertIsNotFloat",
-            "summary": "",
-            "url": "classes/RichPHPTests-Assert-Assert.html#method_assertIsNotFloat"
-        },                {
-            "fqsen": "\\RichPHPTests\\Assert\\Assert\u003A\u003AassertIsObject\u0028\u0029",
-            "name": "assertIsObject",
-            "summary": "",
-            "url": "classes/RichPHPTests-Assert-Assert.html#method_assertIsObject"
-        },                {
-            "fqsen": "\\RichPHPTests\\Assert\\Assert\u003A\u003AassertIsNotObject\u0028\u0029",
-            "name": "assertIsNotObject",
-            "summary": "",
-            "url": "classes/RichPHPTests-Assert-Assert.html#method_assertIsNotObject"
-        },                {
-            "fqsen": "\\RichPHPTests\\Assert\\Assert\u003A\u003AassertIsString\u0028\u0029",
-            "name": "assertIsString",
-            "summary": "",
-            "url": "classes/RichPHPTests-Assert-Assert.html#method_assertIsString"
-        },                {
-            "fqsen": "\\RichPHPTests\\Assert\\Assert\u003A\u003AassertIsNotString\u0028\u0029",
-            "name": "assertIsNotString",
-            "summary": "",
-            "url": "classes/RichPHPTests-Assert-Assert.html#method_assertIsNotString"
-        },                {
-            "fqsen": "\\RichPHPTests\\Assert\\Assert\u003A\u003AassertStringsMatch\u0028\u0029",
-            "name": "assertStringsMatch",
-            "summary": "",
-            "url": "classes/RichPHPTests-Assert-Assert.html#method_assertStringsMatch"
-        },                {
-            "fqsen": "\\RichPHPTests\\Assert\\Assert\u003A\u003AassertStringsNotMatch\u0028\u0029",
-            "name": "assertStringsNotMatch",
-            "summary": "",
-            "url": "classes/RichPHPTests-Assert-Assert.html#method_assertStringsNotMatch"
-        },                {
-            "fqsen": "\\RichPHPTests\\Assert\\Assert\u003A\u003AassertStringContains\u0028\u0029",
-            "name": "assertStringContains",
-            "summary": "",
-            "url": "classes/RichPHPTests-Assert-Assert.html#method_assertStringContains"
-        },                {
-            "fqsen": "\\RichPHPTests\\Assert\\Assert\u003A\u003AassertStringNotContains\u0028\u0029",
-            "name": "assertStringNotContains",
-            "summary": "",
-            "url": "classes/RichPHPTests-Assert-Assert.html#method_assertStringNotContains"
-        },                {
-            "fqsen": "\\RichPHPTests\\Assert\\Assert\u003A\u003Aassert\u0028\u0029",
-            "name": "assert",
-            "summary": "",
-            "url": "classes/RichPHPTests-Assert-Assert.html#method_assert"
+            "url": "classes/RichPHPTests-Attributes-TestHasBefore.html#method___construct"
         },                {
             "fqsen": "\\RichPHPTests\\Autoloader",
             "name": "Autoloader",
@@ -261,6 +161,11 @@ Search.appendIndex(
             "summary": "The\u0020files\u0020to\u0020be\u0020loaded.",
             "url": "classes/RichPHPTests-FileLoader.html#property_files"
         },                {
+            "fqsen": "\\test\u0028\u0029",
+            "name": "test",
+            "summary": "Creates\u0020a\u0020new\u0020test.\u0020Called\u0020from\u0020test\u0020functions\u0020in\u0020test\u0020classes.",
+            "url": "namespaces/default.html#function_test"
+        },                {
             "fqsen": "\\RichPHPTests\\Interfaces\\TestResultsInterface",
             "name": "TestResultsInterface",
             "summary": "",
@@ -326,6 +231,151 @@ Search.appendIndex(
             "summary": "Check\u0020whether\u0020or\u0020not\u0020the\u0020executation\u0020is\u0020via\u0020command\u0020line.",
             "url": "classes/RichPHPTests-SourceChecker.html#method_isCli"
         },                {
+            "fqsen": "\\RichPHPTests\\Test",
+            "name": "Test",
+            "summary": "",
+            "url": "classes/RichPHPTests-Test.html"
+        },                {
+            "fqsen": "\\RichPHPTests\\Test\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/RichPHPTests-Test.html#method___construct"
+        },                {
+            "fqsen": "\\RichPHPTests\\Test\u003A\u003AisArray\u0028\u0029",
+            "name": "isArray",
+            "summary": "",
+            "url": "classes/RichPHPTests-Test.html#method_isArray"
+        },                {
+            "fqsen": "\\RichPHPTests\\Test\u003A\u003AisNotArray\u0028\u0029",
+            "name": "isNotArray",
+            "summary": "",
+            "url": "classes/RichPHPTests-Test.html#method_isNotArray"
+        },                {
+            "fqsen": "\\RichPHPTests\\Test\u003A\u003AarrayHasKey\u0028\u0029",
+            "name": "arrayHasKey",
+            "summary": "",
+            "url": "classes/RichPHPTests-Test.html#method_arrayHasKey"
+        },                {
+            "fqsen": "\\RichPHPTests\\Test\u003A\u003AarrayNotHasKey\u0028\u0029",
+            "name": "arrayNotHasKey",
+            "summary": "",
+            "url": "classes/RichPHPTests-Test.html#method_arrayNotHasKey"
+        },                {
+            "fqsen": "\\RichPHPTests\\Test\u003A\u003AarrayHasValue\u0028\u0029",
+            "name": "arrayHasValue",
+            "summary": "",
+            "url": "classes/RichPHPTests-Test.html#method_arrayHasValue"
+        },                {
+            "fqsen": "\\RichPHPTests\\Test\u003A\u003AarrayNotHasValue\u0028\u0029",
+            "name": "arrayNotHasValue",
+            "summary": "",
+            "url": "classes/RichPHPTests-Test.html#method_arrayNotHasValue"
+        },                {
+            "fqsen": "\\RichPHPTests\\Test\u003A\u003AarrayIsSize\u0028\u0029",
+            "name": "arrayIsSize",
+            "summary": "",
+            "url": "classes/RichPHPTests-Test.html#method_arrayIsSize"
+        },                {
+            "fqsen": "\\RichPHPTests\\Test\u003A\u003AisTrue\u0028\u0029",
+            "name": "isTrue",
+            "summary": "",
+            "url": "classes/RichPHPTests-Test.html#method_isTrue"
+        },                {
+            "fqsen": "\\RichPHPTests\\Test\u003A\u003AisFalse\u0028\u0029",
+            "name": "isFalse",
+            "summary": "",
+            "url": "classes/RichPHPTests-Test.html#method_isFalse"
+        },                {
+            "fqsen": "\\RichPHPTests\\Test\u003A\u003AisBool\u0028\u0029",
+            "name": "isBool",
+            "summary": "",
+            "url": "classes/RichPHPTests-Test.html#method_isBool"
+        },                {
+            "fqsen": "\\RichPHPTests\\Test\u003A\u003AisNotBool\u0028\u0029",
+            "name": "isNotBool",
+            "summary": "",
+            "url": "classes/RichPHPTests-Test.html#method_isNotBool"
+        },                {
+            "fqsen": "\\RichPHPTests\\Test\u003A\u003Aequals\u0028\u0029",
+            "name": "equals",
+            "summary": "",
+            "url": "classes/RichPHPTests-Test.html#method_equals"
+        },                {
+            "fqsen": "\\RichPHPTests\\Test\u003A\u003AnotEquals\u0028\u0029",
+            "name": "notEquals",
+            "summary": "",
+            "url": "classes/RichPHPTests-Test.html#method_notEquals"
+        },                {
+            "fqsen": "\\RichPHPTests\\Test\u003A\u003AisInt\u0028\u0029",
+            "name": "isInt",
+            "summary": "",
+            "url": "classes/RichPHPTests-Test.html#method_isInt"
+        },                {
+            "fqsen": "\\RichPHPTests\\Test\u003A\u003AisNotInt\u0028\u0029",
+            "name": "isNotInt",
+            "summary": "",
+            "url": "classes/RichPHPTests-Test.html#method_isNotInt"
+        },                {
+            "fqsen": "\\RichPHPTests\\Test\u003A\u003AisFloat\u0028\u0029",
+            "name": "isFloat",
+            "summary": "",
+            "url": "classes/RichPHPTests-Test.html#method_isFloat"
+        },                {
+            "fqsen": "\\RichPHPTests\\Test\u003A\u003AisNotFloat\u0028\u0029",
+            "name": "isNotFloat",
+            "summary": "",
+            "url": "classes/RichPHPTests-Test.html#method_isNotFloat"
+        },                {
+            "fqsen": "\\RichPHPTests\\Test\u003A\u003AisObject\u0028\u0029",
+            "name": "isObject",
+            "summary": "",
+            "url": "classes/RichPHPTests-Test.html#method_isObject"
+        },                {
+            "fqsen": "\\RichPHPTests\\Test\u003A\u003AisNotObject\u0028\u0029",
+            "name": "isNotObject",
+            "summary": "",
+            "url": "classes/RichPHPTests-Test.html#method_isNotObject"
+        },                {
+            "fqsen": "\\RichPHPTests\\Test\u003A\u003AisString\u0028\u0029",
+            "name": "isString",
+            "summary": "",
+            "url": "classes/RichPHPTests-Test.html#method_isString"
+        },                {
+            "fqsen": "\\RichPHPTests\\Test\u003A\u003AisNotString\u0028\u0029",
+            "name": "isNotString",
+            "summary": "",
+            "url": "classes/RichPHPTests-Test.html#method_isNotString"
+        },                {
+            "fqsen": "\\RichPHPTests\\Test\u003A\u003AstringMatches\u0028\u0029",
+            "name": "stringMatches",
+            "summary": "",
+            "url": "classes/RichPHPTests-Test.html#method_stringMatches"
+        },                {
+            "fqsen": "\\RichPHPTests\\Test\u003A\u003AstringNotMatch\u0028\u0029",
+            "name": "stringNotMatch",
+            "summary": "",
+            "url": "classes/RichPHPTests-Test.html#method_stringNotMatch"
+        },                {
+            "fqsen": "\\RichPHPTests\\Test\u003A\u003AstringContains\u0028\u0029",
+            "name": "stringContains",
+            "summary": "",
+            "url": "classes/RichPHPTests-Test.html#method_stringContains"
+        },                {
+            "fqsen": "\\RichPHPTests\\Test\u003A\u003AstringNotContains\u0028\u0029",
+            "name": "stringNotContains",
+            "summary": "",
+            "url": "classes/RichPHPTests-Test.html#method_stringNotContains"
+        },                {
+            "fqsen": "\\RichPHPTests\\Test\u003A\u003Aassert\u0028\u0029",
+            "name": "assert",
+            "summary": "",
+            "url": "classes/RichPHPTests-Test.html#method_assert"
+        },                {
+            "fqsen": "\\RichPHPTests\\Test\u003A\u003A\u0024value",
+            "name": "value",
+            "summary": "",
+            "url": "classes/RichPHPTests-Test.html#property_value"
+        },                {
             "fqsen": "\\RichPHPTests\\TestCase",
             "name": "TestCase",
             "summary": "",
@@ -356,10 +406,20 @@ Search.appendIndex(
             "summary": "Runs\u0020after\u0020each\u0020test\u0020is\u0020carried\u0020out.",
             "url": "classes/RichPHPTests-TestCase.html#method_tearDown"
         },                {
-            "fqsen": "\\RichPHPTests\\TestCase\u003A\u003Arun\u0028\u0029",
-            "name": "run",
-            "summary": "Iterates\u0020through\u0020the\u0020test\u0020methods\u0020and\u0020calls\u0020each\u0020one.\u0020Also\u0020calls\u0020all\u0020the\u0020setUp\u0020tearDown\u0020checking\u0020methods.",
-            "url": "classes/RichPHPTests-TestCase.html#method_run"
+            "fqsen": "\\RichPHPTests\\TestCase\u003A\u003ArunTest\u0028\u0029",
+            "name": "runTest",
+            "summary": "",
+            "url": "classes/RichPHPTests-TestCase.html#method_runTest"
+        },                {
+            "fqsen": "\\RichPHPTests\\TestCase\u003A\u003ArunBeforeTest\u0028\u0029",
+            "name": "runBeforeTest",
+            "summary": "",
+            "url": "classes/RichPHPTests-TestCase.html#method_runBeforeTest"
+        },                {
+            "fqsen": "\\RichPHPTests\\TestCase\u003A\u003ArunAfterTest\u0028\u0029",
+            "name": "runAfterTest",
+            "summary": "",
+            "url": "classes/RichPHPTests-TestCase.html#method_runAfterTest"
         },                {
             "fqsen": "\\RichPHPTests\\TestCase\u003A\u003AdoSetUpClass\u0028\u0029",
             "name": "doSetUpClass",
@@ -386,30 +446,50 @@ Search.appendIndex(
             "summary": "Creates\u0020an\u0020array\u0020of\u0020all\u0020valid\u0020test\u0020methods\u0020to\u0020call\u0020on\u0020the\u0020test\u0020class.",
             "url": "classes/RichPHPTests-TestCase.html#method_buildTests"
         },                {
+            "fqsen": "\\RichPHPTests\\TestCase\u003A\u003AisTestSkipped\u0028\u0029",
+            "name": "isTestSkipped",
+            "summary": "",
+            "url": "classes/RichPHPTests-TestCase.html#method_isTestSkipped"
+        },                {
             "fqsen": "\\RichPHPTests\\TestCase\u003A\u003AaddMethod\u0028\u0029",
             "name": "addMethod",
             "summary": "",
             "url": "classes/RichPHPTests-TestCase.html#method_addMethod"
         },                {
+            "fqsen": "\\RichPHPTests\\TestCase\u003A\u003Arun\u0028\u0029",
+            "name": "run",
+            "summary": "Iterates\u0020through\u0020the\u0020test\u0020methods\u0020and\u0020calls\u0020each\u0020one.\u0020Also\u0020calls\u0020all\u0020the\u0020setUp\u0020tearDown\u0020checking\u0020methods.",
+            "url": "classes/RichPHPTests-TestCase.html#method_run"
+        },                {
             "fqsen": "\\RichPHPTests\\TestCase\u003A\u003A\u0024testMethods",
             "name": "testMethods",
-            "summary": "",
+            "summary": "The\u0020array\u0020of\u0020all\u0020the\u0020test\u0020methods\u0020that\u0020will\u0020be\u0020called.",
             "url": "classes/RichPHPTests-TestCase.html#property_testMethods"
         },                {
             "fqsen": "\\RichPHPTests\\TestCase\u003A\u003A\u0024excluded_tests",
             "name": "excluded_tests",
-            "summary": "",
+            "summary": "The\u0020array\u0020of\u0020all\u0020excluded\u0020tests\u0020found\u0020in\u0020the\u0020test\u0020class.",
             "url": "classes/RichPHPTests-TestCase.html#property_excluded_tests"
         },                {
             "fqsen": "\\RichPHPTests\\TestCase\u003A\u003A\u0024hasTestSetUp",
             "name": "hasTestSetUp",
-            "summary": "",
+            "summary": "Set\u0020to\u0020true\u0020on\u0020build\u0020if\u0020there\u0020is\u0020a\u0020setUp\u0028\u0029\u0020method\u0020in\u0020the\u0020test\u0020class.",
             "url": "classes/RichPHPTests-TestCase.html#property_hasTestSetUp"
         },                {
             "fqsen": "\\RichPHPTests\\TestCase\u003A\u003A\u0024hasTestTearDown",
             "name": "hasTestTearDown",
-            "summary": "",
+            "summary": "Set\u0020to\u0020true\u0020on\u0020build\u0020if\u0020there\u0020is\u0020a\u0020tearDown\u0028\u0029\u0020method\u0020in\u0020the\u0020test\u0020class.",
             "url": "classes/RichPHPTests-TestCase.html#property_hasTestTearDown"
+        },                {
+            "fqsen": "\\RichPHPTests\\TestCase\u003A\u003A\u0024built",
+            "name": "built",
+            "summary": "Set\u0020to\u0020true\u0020when\u0020all\u0020the\u0020tests\u0020are\u0020ready\u0020to\u0020be\u0020run.",
+            "url": "classes/RichPHPTests-TestCase.html#property_built"
+        },                {
+            "fqsen": "\\RichPHPTests\\TestCase\u003A\u003A\u0024hasRun",
+            "name": "hasRun",
+            "summary": "Set\u0020to\u0020true\u0020when\u0020the\u0020tests\u0020int\u0020eh\u0020test\u0020class\u0020have\u0020all\u0020run.",
+            "url": "classes/RichPHPTests-TestCase.html#property_hasRun"
         },                {
             "fqsen": "\\RichPHPTests\\TestClass",
             "name": "TestClass",
@@ -756,6 +836,11 @@ Search.appendIndex(
             "summary": "Iterates\u0020over\u0020TestSuite\u003A\u003A\u0024test_classes,\u0020verifies\u0020the\u0020files\u0020exist,\u0020includes\u0020them,\u0020then\u0020calls\u0020run\u0028\u0029\u0020on\u0020each\u0020of\u0020the\u0020classes.",
             "url": "classes/RichPHPTests-TestSuite.html#method_run"
         },                {
+            "fqsen": "\\RichPHPTests\\TestSuite\u003A\u003AisTestClassExcluded\u0028\u0029",
+            "name": "isTestClassExcluded",
+            "summary": "",
+            "url": "classes/RichPHPTests-TestSuite.html#method_isTestClassExcluded"
+        },                {
             "fqsen": "\\RichPHPTests\\TestSuite\u003A\u003A\u0024test_classes",
             "name": "test_classes",
             "summary": "Array\u0020of\u0020TestClass\u0020objects.",
@@ -796,6 +881,11 @@ Search.appendIndex(
             "summary": "Verifies\u0020that\u0020a\u0020class\u0020\u0028object\u0020or\u0020a\u0020class\u0020name\u0029\u0020is\u0020a\u0020sub\u0020class\u0020of\u0020TestCase.",
             "url": "classes/RichPHPTests-TestUtil.html#method_isTestClass"
         },                {
+            "fqsen": "\\RichPHPTests\\TestUtil\u003A\u003AhasSkippedAttribute\u0028\u0029",
+            "name": "hasSkippedAttribute",
+            "summary": "",
+            "url": "classes/RichPHPTests-TestUtil.html#method_hasSkippedAttribute"
+        },                {
             "fqsen": "\\",
             "name": "\\",
             "summary": "",
@@ -806,10 +896,15 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/richphptests.html"
         },                {
-            "fqsen": "\\RichPHPTests\\Assert",
-            "name": "Assert",
+            "fqsen": "\\RichPHPTests\\Abstracts",
+            "name": "Abstracts",
             "summary": "",
-            "url": "namespaces/richphptests-assert.html"
+            "url": "namespaces/richphptests-abstracts.html"
+        },                {
+            "fqsen": "\\RichPHPTests\\Attributes",
+            "name": "Attributes",
+            "summary": "",
+            "url": "namespaces/richphptests-attributes.html"
         },                {
             "fqsen": "\\RichPHPTests\\Interfaces",
             "name": "Interfaces",
