@@ -2,6 +2,10 @@
 
 A custom PHP unit and integration testing framework to support running test suites via CLI and WI.
 
+## Requirements
+
+Minimum required PHP version 8.0.
+
 ## Basic Usage
 From the command line:
 ```console
