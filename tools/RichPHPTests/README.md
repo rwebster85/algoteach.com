@@ -39,7 +39,7 @@ Each test class should have its own file, with the test class having as many tes
 
 Test classes must extend the `TestCase` class in the framework, with proper namespacing.
 
-Each test method name must start with `test`, have public visibility, be non-static, and return void.
+Each test method name must start with `test`, for example `testSomeFunction()` have public visibility, be non-static, and return void.
 
 Example:
 
@@ -52,14 +52,19 @@ use RichPHPTests\TestCase;
 
 class SomeTest extends TestCase
 {
-    public function testIsTrue(): void
+    public function testSomeTest(): void
     {
-        $this->assertTrue(true);
+        $variable = true;
+        test($variable)->isTrue();
     }
 }
 ```
 
-Available assertion methods can be found in the [Includes\Assert\Assert.php](Includes/Assert/Assert.php) class.
+The syntax for actually performing a test is `test($some_value)->testMethod()`. In the example above, checking if a variable is `true` requires the code `test($variable)->isTrue()`.
+
+When calling the function `test()`, it returns a new instance of the `Test` class. The variable passed in this function call is stored in the class as `$value`.
+
+Available test methods can be found in the [Includes\Test.php](Includes/Test.php) class.
 
 Namespacing unit tests is support. Ensure the namespace of your test files matches that specified in the `config.json` folder.
 
