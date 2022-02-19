@@ -28,28 +28,34 @@ namespace RichPHPTests;
  * ... add the path to the class files for the \Foo\Bar\ namespace prefix
  * as follows:
  *
- *      <?php
- *      // instantiate the loader
- *      $loader = new \Example\Psr4AutoloaderClass;
+ * 
+ * ```php
+ * // instantiate the loader
+ * $loader = new \Example\Psr4AutoloaderClass;
  *
- *      // register the autoloader
- *      $loader->register();
+ * // register the autoloader
+ * $loader->register();
  *
- *      // register the base directories for the namespace prefix
- *      $loader->addNamespace('Foo\Bar', '/path/to/packages/foo-bar/src');
- *      $loader->addNamespace('Foo\Bar', '/path/to/packages/foo-bar/tests');
- *
+ * // register the base directories for the namespace prefix
+ * $loader->addNamespace('Foo\Bar', '/path/to/packages/foo-bar/src');
+ * $loader->addNamespace('Foo\Bar', '/path/to/packages/foo-bar/tests');
+ * ```
+ * 
+ * 
  * The following line would cause the autoloader to attempt to load the
  * \Foo\Bar\Qux\Quux class from /path/to/packages/foo-bar/src/Qux/Quux.php:
  *
- *      <?php
- *      new \Foo\Bar\Qux\Quux;
+* ```php
+ * new \Foo\Bar\Qux\Quux;
+ * ```
  *
+ * 
  * The following line would cause the autoloader to attempt to load the
  * \Foo\Bar\Qux\QuuxTest class from /path/to/packages/foo-bar/tests/Qux/QuuxTest.php:
  *
- *      <?php
- *      new \Foo\Bar\Qux\QuuxTest;
+ * ```php
+ * new \Foo\Bar\Qux\QuuxTest;
+ * ```
  */
 class Autoloader
 {
