@@ -1,10 +1,10 @@
 {
     "name": "Some Test Suite",
-    "namespace": "MyUnitTests",
+    "namespace": "",
     "excluded_classes": [
-        "MyUnitTests\\SomeTest2"
+        "SomeTest"
     ],
     "excluded_tests": [
-        "MyUnitTests\\SomeTest::testArrayHas2Elements"
+        "SomeTest::testArrayHas2Elements"
     ]
 }

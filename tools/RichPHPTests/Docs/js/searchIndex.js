@@ -493,7 +493,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\RichPHPTests\\TestResult\u003A\u003AparseVarForOutput\u0028\u0029",
             "name": "parseVarForOutput",
-            "summary": "",
+            "summary": "Generates\u0020a\u0020string\u0020representation\u0020for\u0020output\u0020of\u0020the\u0020passed\u0020in\u0020the\u0020variable.",
             "url": "classes/RichPHPTests-TestResult.html#method_parseVarForOutput"
         },                {
             "fqsen": "\\RichPHPTests\\TestResult\u003A\u003A\u0024line",

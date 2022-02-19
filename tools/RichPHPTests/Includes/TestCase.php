@@ -5,20 +5,54 @@ declare(strict_types=1);
 namespace RichPHPTests;
 
 use ReflectionClass;
-use RichPHPTests\Assert\Assert;
-use RichPHPTests\TestUtil;
 use ReflectionMethod;
+use RichPHPTests\Attributes;
+use RichPHPTests\TestUtil;
 use RichPHPTests\TestsConfiguration;
 
-abstract class TestCase extends Assert
+abstract class TestCase
 {
+    /**
+     * The array of all the test methods that will be called.
+     * 
+     * @var string[]
+     */
     private array $testMethods = [];
     
+    /**
+     * The array of all excluded tests found in the test class.
+     * 
+     * @var array
+     */
     private array $excluded_tests = [];
 
+    /**
+     * Set to true on build if there is a setUp() method in the test class.
+     * 
+     * @var bool|null
+     */
     private ?bool $hasTestSetUp;
 
+    /**
+     * Set to true on build if there is a tearDown() method in the test class.
+     * 
+     * @var bool|null
+     */
     private ?bool $hasTestTearDown;
+
+    /**
+     * Set to true when all the tests are ready to be run.
+     * 
+     * @var bool
+     */
+    private bool $built = false;
+
+    /**
+     * Set to true when the tests int eh test class have all run.
+     * 
+     * @var bool
+     */
+    private bool $hasRun = false;
 
     /**
      * Accepts a TestsConfiguration object to assign excluded test methods for this test class.
@@ -27,9 +61,12 @@ abstract class TestCase extends Assert
      * 
      * @param TestsConfiguration $config
      */
-    public function __construct(TestsConfiguration $config)
+    final public function __construct(TestsConfiguration $config)
     {
         $this->excluded_tests = $config->getExcludedTests();
+        $this->buildTests();
+        $this->run();
+        //print("TestCase constructed." . PHP_EOL);
     }
 
     /**
@@ -60,30 +97,47 @@ abstract class TestCase extends Assert
      */
     protected function tearDown(): void {}
 
-    /**
-     * Iterates through the test methods and calls each one. Also calls all the setUp tearDown checking methods. 
-     * 
-     * @uses TestCase::$excluded_tests
-     * @uses TestCase::doSetUpClass()
-     * @uses TestCase::doSetup()
-     * @uses TestCase::doTearDown()
-     * @uses TestCase::doTearDownClass()
-     * 
-     * @return void
-     */
-    public function run(): void
+    private function runTest(string $method): void
     {
-        $this->doSetUpClass();
+        $this->runBeforeTest($method);
+        $this->{$method}();
+        $this->runAfterTest($method);
+    }
 
-        foreach ($this->testMethods as $method) {
-            if (method_exists($this, $method)) {
-                $this->doSetup();
-                $this->{$method}();
-                $this->doTearDown();
+    private function runBeforeTest(string $method): void
+    {
+        $reflect = new ReflectionMethod($this, $method);
+        $before = $reflect->getAttributes('RichPHPTests\Attributes\TestHasBefore');
+        $before = !empty($before) ? $before[0] : '';
+        if ($before) {
+            $method_before = $before->getArguments();
+            $method_before = !empty($method_before) ? $method_before[0] : null;
+            if (
+                $method_before
+                && method_exists($this, $method_before)
+                && TestUtil::testClassHasMethod(new ReflectionMethod($this, $method_before))
+            ) {
+                $this->{$method_before}();
             }
         }
+    }
 
-        $this->doTearDownClass();
+    private function runAfterTest(string $method): void
+    {
+        $reflect = new ReflectionMethod($this, $method);
+        $after = $reflect->getAttributes('RichPHPTests\Attributes\TestHasBefore');
+        $after = !empty($after) ? $after[0] : '';
+        if ($after) {
+            $method_after = $after->getArguments();
+            $method_after = !empty($method_after) ? $method_after[0] : null;
+            if (
+                $method_after
+                && method_exists($this, $method_after)
+                && TestUtil::testClassHasMethod(new ReflectionMethod($this, $method_after))
+            ) {
+                $this->{$method_after}();
+            }
+        }
     }
 
     /**
@@ -180,8 +234,12 @@ abstract class TestCase extends Assert
      * 
      * @return void
      */
-    public function buildTests(): void
+    private function buildTests(): void
     {
+        if ($this->built == true ) {
+            return;
+        }
+
         $reflection_class = new ReflectionClass($this);
         $methods = $reflection_class->getMethods(ReflectionMethod::IS_PUBLIC);
         foreach ($methods as $method) {
@@ -194,10 +252,44 @@ abstract class TestCase extends Assert
                 }
             }
         }
+
+        $this->built = true;
     }
 
     private function addMethod(ReflectionMethod $method): void
     {
         $this->testMethods[] = $method->getName();
+    }
+
+    /**
+     * Iterates through the test methods and calls each one. Also calls all the setUp tearDown checking methods. 
+     * 
+     * @uses TestCase::$excluded_tests
+     * @uses TestCase::doSetUpClass()
+     * @uses TestCase::doSetup()
+     * @uses TestCase::doTearDown()
+     * @uses TestCase::doTearDownClass()
+     * 
+     * @return void
+     */
+    private function run(): void
+    {
+        if ($this->hasRun == true) {
+            return;
+        }
+
+        $this->doSetUpClass();
+
+        foreach ($this->testMethods as $method) {
+            if (method_exists($this, $method)) {
+                $this->doSetup();
+                $this->runTest($method);
+                $this->doTearDown();
+            }
+        }
+
+        $this->doTearDownClass();
+
+        $this->hasRun = true;
     }
 }

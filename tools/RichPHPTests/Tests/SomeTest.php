@@ -2,15 +2,26 @@
 
 declare(strict_types=1);
 
-namespace MyUnitTests;
-
 use RichPHPTests\TestCase;
+use RichPHPTests\Attributes;
 
 class SomeTest extends TestCase
 {
+    #[Attributes\TestHasBefore('runBeforeTestIsTrue')]
+    #[Attributes\TestHasAfter('runAfterTestIsTrue')]
     public function testIsTrue(): void
     {
         $this->assertTrue(true);
+    }
+
+    public function runBeforeTestIsTrue(): void
+    {
+        print('We ran before' . PHP_EOL);
+    }
+
+    public function runAfterTestIsTrue(): void
+    {
+        print('We ran after' . PHP_EOL);
     }
 
     public function testIsFalse(): void

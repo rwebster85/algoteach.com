@@ -22,10 +22,10 @@ class TestResult
         public string $error_message,
         private bool $pass
     ) {
-        $trace = debug_backtrace()[3];
+        $trace = debug_backtrace()[4];
 
-        $this->test_name = $trace['function'] ?? '';
-        $this->test_class = $trace['class'] ?? '';
+        $this->test_name = ($trace['function'] ?? '');
+        $this->test_class = ($trace['class'] ?? '');
 
         if ($this->test_name && $this->test_class) {
             $reflection_method = new ReflectionMethod($this->test_class, $this->test_name);
@@ -46,13 +46,22 @@ class TestResult
         return $this->pass;
     }
 
+    /**
+     * Generates a string representation for output of the passed in the variable.
+     * 
+     * Bools become 'true' or 'false', numbers as string versions, and strings are wrapped in single quotes.
+     * 
+     * @param mixed $var
+     * 
+     * @return string
+     */
     public function parseVarForOutput(mixed $var): string
     {
         return match(gettype($var)) {
-            'boolean' => ($var === true ? 'true' : 'false'),
+            'boolean'           => ($var === true ? 'true' : 'false'),
             'integer', 'double' => (string) $var,
-            'string'  => "'" . $var . "'",
-            default => ''
+            'string'            => "'" . $var . "'",
+            default             => ''
         };
     }
 }

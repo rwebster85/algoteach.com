@@ -144,8 +144,6 @@ final class TestSuite
                 && TestUtil::isTestClass($qualified_name)
             ) {
                 $test_class = new $qualified_name($this->config);
-                $test_class->buildTests();
-                $test_class->run();
             }
         }
     }

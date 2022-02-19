@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use RichPHPTests\TestCase;
 
-class SomeTest2 extends TestCase
+class NestedTest extends TestCase
 {
     public function testIsTrue(): void
     {
@@ -14,5 +14,11 @@ class SomeTest2 extends TestCase
     public function testIsFalse(): void
     {
         test(false)->isFalse();
+    }
+
+    public function testInArray(): void
+    {
+        $array = ['hello', 'world'];
+        test($array)->arrayHasValue('hello');
     }
 }

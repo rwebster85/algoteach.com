@@ -13,6 +13,11 @@ require_once $path . 'Includes' . $sep . 'Autoload' . $sep. 'Autoloader.php';
     'RichPHPTests' => $path . 'Includes',
 ]))->register();
 
+(new FileLoader(
+    $path . 'Includes' . $sep . 'Functions' . $sep . 'functions.php'
+))->loadFiles();
+
+
 $config = new TestsConfiguration($config_file, $tests_folder);
 $config->buildConfig();
 
