@@ -8,6 +8,10 @@ use RichPHPTests\Abstracts\AbstractTest;
 
 final class Test extends AbstractTest
 {
+    final public function __construct(
+        protected mixed $value
+    ) {}
+
     public function isArray(): void
     {
         $this->assert(is_array($this->value), true, 'Value is not an array.');
