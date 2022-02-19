@@ -9,7 +9,7 @@ use RichPHPTests\Abstracts\AbstractTest;
 final class Test extends AbstractTest
 {
     final public function __construct(
-        protected mixed $value
+        private mixed $value
     ) {}
 
     public function isArray(): void
