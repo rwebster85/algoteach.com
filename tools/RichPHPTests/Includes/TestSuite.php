@@ -151,6 +151,9 @@ final class TestSuite
 
     private function isTestClassExcluded(string $qualified_name): bool
     {
-        return (in_array($qualified_name, $this->excluded_classes) || TestUtil::hasSkippedAttribute(new ReflectionClass($qualified_name)));
+        return (
+            in_array($qualified_name, $this->excluded_classes)
+            || TestUtil::hasSkippedAttribute(new ReflectionClass($qualified_name))
+        );
     }
 }
