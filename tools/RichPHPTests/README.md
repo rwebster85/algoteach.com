@@ -14,7 +14,44 @@ php path\to\RichPHPTests.php path\to\tests
 
 Tests are discovered recursively within the `path\to\tests` folder supplied.
 
+## Writing Tests
+
+Test examples can be found inside the `Tests` folder for this tool.
+
+Each test class should have its own file, with the test class having as many test methods as required.
+
+Test classes must extend the `TestCase` class in the framework, with proper namespacing.
+
+Each test method name must start with `test`, for example `testSomeFunction()`, have public visibility, be non-static, and return void.
+
+Example:
+
+```php
+<?php
+
+use RichPHPTests\TestCase;
+
+class SomeTest extends TestCase
+{
+    public function testSomeFunction(): void
+    {
+        $variable = true;
+        test($variable)->isTrue();
+    }
+}
+```
+
+The syntax for actually performing a test is `test($some_value)->testMethod()`. In the example above, checking if a variable is `true` requires the code `test($variable)->isTrue()`.
+
+When calling the function `test()`, it returns a new instance of the `Test` class. The variable passed in this function call is stored in the class as `$value`.
+
+Available test methods can be found in the [Includes\Test.php](Includes/Test.php) class.
+
+## Configuration
+
 Inside the `path\to\tests` folder is where you place your required tests `config.json` file.
+
+Namespacing unit tests is support. Ensure the namespace of your test files matches that specified in the `config.json` folder.
 
 This accepts the name for the test suite as well as any excluded test classes or methods (comma separated arrays), like so:
 
@@ -53,41 +90,6 @@ class SomeTest extends TestCase
     }
 }
 ```
-
-## Writing Tests
-
-Test examples can be found inside the `Tests` folder for this tool.
-
-Each test class should have its own file, with the test class having as many test methods as required.
-
-Test classes must extend the `TestCase` class in the framework, with proper namespacing.
-
-Each test method name must start with `test`, for example `testSomeFunction()`, have public visibility, be non-static, and return void.
-
-Example:
-
-```php
-<?php
-
-use RichPHPTests\TestCase;
-
-class SomeTest extends TestCase
-{
-    public function testSomeFunction(): void
-    {
-        $variable = true;
-        test($variable)->isTrue();
-    }
-}
-```
-
-The syntax for actually performing a test is `test($some_value)->testMethod()`. In the example above, checking if a variable is `true` requires the code `test($variable)->isTrue()`.
-
-When calling the function `test()`, it returns a new instance of the `Test` class. The variable passed in this function call is stored in the class as `$value`.
-
-Available test methods can be found in the [Includes\Test.php](Includes/Test.php) class.
-
-Namespacing unit tests is support. Ensure the namespace of your test files matches that specified in the `config.json` folder.
 
 ### Setup and Teardown
 
