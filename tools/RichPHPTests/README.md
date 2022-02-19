@@ -39,7 +39,7 @@ Each test class should have its own file, with the test class having as many tes
 
 Test classes must extend the `TestCase` class in the framework, with proper namespacing.
 
-Each test method name must start with `test`, for example `testSomeFunction()` have public visibility, be non-static, and return void.
+Each test method name must start with `test`, for example `testSomeFunction()`, have public visibility, be non-static, and return void.
 
 Example:
 
@@ -52,7 +52,7 @@ use RichPHPTests\TestCase;
 
 class SomeTest extends TestCase
 {
-    public function testSomeTest(): void
+    public function testSomeFunction(): void
     {
         $variable = true;
         test($variable)->isTrue();
