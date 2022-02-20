@@ -25,7 +25,7 @@ use Attribute;
  * }
  * ```
  */
-#[Attribute]
+#[Attribute(Attribute::TARGET_METHOD | Attribute::TARGET_CLASS)]
 class Skip
 {
     public function __construct() {}
