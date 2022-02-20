@@ -22,6 +22,8 @@ Each test class should have its own file, with the test class having as many tes
 
 Test classes must extend the `TestCase` class in the framework, with proper namespacing.
 
+Test classes should be PSR-4 compliant, meaning the namespace should match the folder structure they reside in.
+
 Each test method name must start with `test`, for example `testSomeFunction()`, have public visibility, be non-static, and return void.
 
 Example:
@@ -51,7 +53,7 @@ Available test methods can be found in the [Includes\Test.php](Includes/Test.php
 
 Inside the `path\to\tests` folder is where you place your required tests `config.json` file.
 
-Namespacing unit tests is support. Ensure the namespace of your test files matches that specified in the `config.json` folder.
+Namespacing unit tests is supported. Ensure the namespace of your test files matches that specified in the `config.json` folder.
 
 This accepts the name for the test suite as well as any excluded test classes or methods (comma separated arrays), like so:
 
