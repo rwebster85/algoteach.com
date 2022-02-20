@@ -36,7 +36,7 @@ After selecting the originating directory the user will be asked for a location 
 
 ## Configuration
 
-Inside the folder needing to be archived should be a  `project.json` file that contains an array like the following example:
+Inside the folder needing to be archived can be placed a  `project.json` file that contains an array like the following example:
 
 ```json
 {
@@ -58,7 +58,7 @@ Inside the folder needing to be archived should be a  `project.json` file that c
 }
 ```
 
-You can have specific files excluded from the archive, specific folders, and specific file types.
+You can have specific files excluded from the archive, specific folders, and specific file types. This file is not a requirement and without any configuration the ZIP archive will just contain all files/folders from the given directory.
 
 ## Purpose
 **RichPyBuild** serves as an additional custom tool to be submitted against Richard Webster's Innovation Project dissertation for 2022, University of Chester module CO6008.

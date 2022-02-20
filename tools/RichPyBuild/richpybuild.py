@@ -7,7 +7,7 @@ import tkinter.simpledialog
 import tkinter.messagebox
 import json
 
-def zipdir(path, zipf, build_file):
+def zipdir(path, zip, build_file):
 
     exclude_files = []
     exclude_extensions = []
@@ -27,7 +27,7 @@ def zipdir(path, zipf, build_file):
         [files.remove(f) for f in list(files) if f in exclude_files or pathlib.Path(f).suffix in exclude_extensions]
 
         for file in files:
-            zipf.write(
+            zip.write(
                 os.path.join(root, file),
                 os.path.relpath(os.path.join(root, file), 
                     os.path.join(path, '..')
@@ -74,13 +74,13 @@ def run(folder = ""):
         if "richpybuild" in json_file:
             build = json_file["richpybuild"]
 
-    zipf = zipfile.ZipFile(
+    zip = zipfile.ZipFile(
         file_name + ".zip",
         "w",
         zipfile.ZIP_DEFLATED
     )
-    zipdir(project_folder, zipf, build)
-    zipf.close()
+    zipdir(project_folder, zip, build)
+    zip.close()
 
     if os.path.exists(file_name + ".zip"):
         print("Completed successfully")
