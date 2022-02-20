@@ -7,7 +7,7 @@
             "RichPHPTests": "Includes"
         },
         "files": [
-            "Includes\\Functions\\functions.php"
+            "Includes/Functions/functions.php"
         ]
     },
     "requirements" : [
