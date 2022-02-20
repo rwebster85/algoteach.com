@@ -137,7 +137,7 @@ SomeTest::testArrayIsEmpty : File: SomeTest.php - Line: 44 - Expected: 0 - Actua
 You can include a `bootstrap.php` file in your root `path\to\tests` directory if required. This can be used to carry out any additional logic or setup for the entire test suite, for example to autoload any classes or define constants.
 
 ## Purpose
-**RichPHPTests** serves as an additional project to be submitted against Richard Webster's Innovation Project dissertation for 2022, University of Chester module CO6008.
+**RichPHPTests** serves as an additional custom tool to be submitted against Richard Webster's Innovation Project dissertation for 2022, University of Chester module CO6008.
 
 ## Credits & APA References
 
