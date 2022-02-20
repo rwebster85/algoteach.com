@@ -20,6 +20,7 @@
         }
     ],
     "richpybuild": {
+        "keep_dir": true,
         "exclude_files" : [],
         "exclude_extensions" : [],
         "exclude_folders" : []

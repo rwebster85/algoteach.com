@@ -53,12 +53,46 @@ Inside the folder needing to be archived can be placed a  `project.json` file th
             ".github",
             ".vscode",
             "tests"
-        ]
+        ],
+        "keep_dir": true
     }
 }
 ```
 
 You can have specific files excluded from the archive, specific folders, and specific file types. This file is not a requirement and without any configuration the ZIP archive will just contain all files/folders from the given directory.
+
+The `"keep_dir"` option means the ZIP archive will have a folder named after the source directory with the files inside it. Default is `true` For example:
+
+If the folder structure of the source was like this:
+
+```markdown
+SourceFolder/
+    File1
+    File2
+    Folder1/
+        File3
+```
+
+Then the folder structure in the archive for `"keep_dir": true` would be:
+
+```markdown
+Archive.zip/
+    SourceFolder/
+        File1
+        File2
+        Folder1/
+            File3
+```
+
+For `"keep_dir": false` the archive folder would be:
+
+```markdown
+Archive.zip/
+    File1
+    File2
+    Folder1/
+        File3
+```
 
 ## Purpose
 **RichPyBuild** serves as an additional custom tool to be submitted against Richard Webster's Innovation Project dissertation for 2022, University of Chester module CO6008.
