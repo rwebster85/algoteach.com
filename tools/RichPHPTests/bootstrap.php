@@ -7,16 +7,14 @@ namespace RichPHPTests;
 
 $sep = DIRECTORY_SEPARATOR;
 
-// Include the Autoloader file
-require_once $path . 'Includes' . $sep . 'Autoload' . $sep. 'Autoloader.php';
-(new Autoloader([
-    'RichPHPTests' => $path . 'Includes',
-]))->register();
+require_once 'Includes' . $sep . 'Project.php';
+$project = new Project(__DIR__ . $sep . 'project.json', __DIR__);
+$project->buildProject();
 
-(new FileLoader(
-    $path . 'Includes' . $sep . 'Functions' . $sep . 'functions.php'
-))->loadFiles();
+require_once 'Includes' . $sep . 'Autoload' . $sep . 'Autoloader.php';
+(new Autoload\Autoloader($project->getAutoloaderSources()))->register();
 
+(new FileLoader(...$project->getFileSources()))->loadFiles();
 
 $config = new TestsConfiguration($config_file, $tests_folder);
 $config->buildConfig();
