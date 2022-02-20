@@ -61,7 +61,7 @@ Inside the folder needing to be archived can be placed a  `project.json` file th
 
 You can have specific files excluded from the archive, specific folders, and specific file types. This file is not a requirement and without any configuration the ZIP archive will just contain all files/folders from the given directory.
 
-The `"keep_dir"` option means the ZIP archive will have a folder named after the source directory with the files inside it. Default is `true` For example:
+The `"keep_dir"` option means the ZIP archive will have a folder named after the source directory with the files inside it. Default is `true`.
 
 If the folder structure of the source was like this:
 
