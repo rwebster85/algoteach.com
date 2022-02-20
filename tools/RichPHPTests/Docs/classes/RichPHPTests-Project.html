@@ -107,7 +107,7 @@
 
     <article class="phpdocumentor-element -class">
         <h2 class="phpdocumentor-content__title">
-    TestsConfiguration
+    Project
 
     
             <div class="phpdocumentor-element__package">
@@ -121,14 +121,58 @@
     </h2>
 
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestsConfiguration.php"><a href="files/includes-testsconfiguration.html"><abbr title="Includes/TestsConfiguration.php">TestsConfiguration.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Project.php"><a href="files/includes-project.html"><abbr title="Includes/Project.php">Project.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">7</span>
+    <span class="phpdocumentor-element-found-in__line">66</span>
 
     </aside>
 
-        
-    <section class="phpdocumentor-description"></section>
+            <p class="phpdocumentor-summary">An object that stores information about the current project such as name, version number, and autoload/manual directories.</p>
+
+    <section class="phpdocumentor-description"><p>Also includes details relating to any project requirements.</p>
+<p>Information is parsed from the <code class="prettyprint">project.json</code> file in the project root directory.</p>
+<p>Example usage from the root directory:</p>
+<pre class="prettyprint"><code class="language-php">$path = __DIR__ . DIRECTORY_SEPARATOR;
+$project = new Project($path . 'project.json', __DIR__);
+</code></pre>
+<p>Eample <code class="prettyprint">project.json</code> file:</p>
+<pre class="prettyprint"><code class="language-json">{
+    &quot;name&quot;: &quot;RichPHPTests&quot;,
+    &quot;version&quot;: &quot;1.0.0&quot;,
+    &quot;required_php&quot;: &quot;8.0.0&quot;,
+    &quot;sources&quot;: {
+        &quot;autoload&quot;: {
+            &quot;RichPHPTests&quot;: &quot;Includes&quot;
+        },
+        &quot;files&quot;: [
+            &quot;Includes/Functions/functions.php&quot;
+        ]
+    },
+    &quot;requirements&quot; : [
+        {
+            &quot;type_id&quot;   : &quot;php_min_ver&quot;,
+            &quot;type_name&quot; : &quot;Minimum PHP Version&quot;,
+            &quot;name&quot;      : &quot;Version 8.0.0&quot;,
+            &quot;url&quot;       : &quot;https://www.php.net/manual/en/migration74.php&quot;,
+            &quot;value&quot;     : &quot;8.0.0&quot;
+        }
+    ],
+    &quot;pybuild&quot;: {
+        &quot;exclude_files&quot; : [],
+        &quot;exclude_extensions&quot; : [],
+        &quot;exclude_folders&quot; : []
+    }
+}
+</code></pre>
+<p>Compatible with the included custom RichPyBuild tool for creating project archives, and the Autoloader and FileLoader classes.</p>
+<p>Example usage with the Autoloader:</p>
+<pre class="prettyprint"><code class="language-php">require_once 'Path\To\Autoloader.php';
+(new Autoloader($project-&gt;getAutoloaderSources()))-&gt;register();
+</code></pre>
+<p>Example usage with the FileLoader:</p>
+<pre class="prettyprint"><code class="language-php">(new FileLoader(...$project-&gt;getFileSources()))-&gt;loadFiles();
+</code></pre>
+</section>
 
 
 
@@ -144,140 +188,161 @@
 
 <dl class="phpdocumentor-table-of-contents">
                     <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/RichPHPTests-TestsConfiguration.html#property_bootstrap">$bootstrap</a>
-    <span>
-                        &nbsp;: string            </span>
-</dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/RichPHPTests-TestsConfiguration.html#property_config">$config</a>
+    <a href="classes/RichPHPTests-Project.html#property_autoload_sources">$autoload_sources</a>
     <span>
                         &nbsp;: array&lt;string|int, mixed&gt;            </span>
 </dt>
 <dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/RichPHPTests-TestsConfiguration.html#property_config_file">$config_file</a>
-    <span>
-                        &nbsp;: string            </span>
-</dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/RichPHPTests-TestsConfiguration.html#property_excluded_classes">$excluded_classes</a>
+    <a href="classes/RichPHPTests-Project.html#property_config">$config</a>
     <span>
                         &nbsp;: array&lt;string|int, mixed&gt;            </span>
 </dt>
 <dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/RichPHPTests-TestsConfiguration.html#property_excluded_tests">$excluded_tests</a>
-    <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;            </span>
-</dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/RichPHPTests-TestsConfiguration.html#property_name">$name</a>
+    <a href="classes/RichPHPTests-Project.html#property_config_path">$config_path</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
 <dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/RichPHPTests-TestsConfiguration.html#property_tests_folder">$tests_folder</a>
+    <a href="classes/RichPHPTests-Project.html#property_file_sources">$file_sources</a>
+    <span>
+                        &nbsp;: array&lt;string|int, mixed&gt;            </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/RichPHPTests-Project.html#property_main_directory">$main_directory</a>
+    <span>
+                        &nbsp;: string            </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/RichPHPTests-Project.html#property_name">$name</a>
+    <span>
+                        &nbsp;: string            </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/RichPHPTests-Project.html#property_requirements">$requirements</a>
+    <span>
+                        &nbsp;: array&lt;string|int, mixed&gt;            </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/RichPHPTests-Project.html#property_sep">$sep</a>
+    <span>
+                        &nbsp;: string            </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/RichPHPTests-Project.html#property_version">$version</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
 <dd></dd>
 
                 <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichPHPTests-TestsConfiguration.html#method___construct">__construct()</a>
+    <a href="classes/RichPHPTests-Project.html#method___construct">__construct()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd></dd>
+<dd>Builds a new Project containing the paths for files and the autoloader. Also assigns project specific details such as name and version number.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichPHPTests-TestsConfiguration.html#method_buildConfig">buildConfig()</a>
-    <span>
-                                &nbsp;: bool    </span>
-</dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichPHPTests-TestsConfiguration.html#method_getBootstrap">getBootstrap()</a>
-    <span>
-                                &nbsp;: string    </span>
-</dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichPHPTests-TestsConfiguration.html#method_getExcludedClasses">getExcludedClasses()</a>
+    <a href="classes/RichPHPTests-Project.html#method_getAutoloaderSources">getAutoloaderSources()</a>
     <span>
                                 &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
 <dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichPHPTests-TestsConfiguration.html#method_getExcludedTests">getExcludedTests()</a>
+    <a href="classes/RichPHPTests-Project.html#method_getFileSources">getFileSources()</a>
     <span>
                                 &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
 <dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichPHPTests-TestsConfiguration.html#method_getName">getName()</a>
+    <a href="classes/RichPHPTests-Project.html#method_getMainDirectory">getMainDirectory()</a>
     <span>
                                 &nbsp;: string    </span>
 </dt>
 <dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichPHPTests-TestsConfiguration.html#method_getNamespace">getNamespace()</a>
+    <a href="classes/RichPHPTests-Project.html#method_getName">getName()</a>
     <span>
                                 &nbsp;: string    </span>
 </dt>
 <dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichPHPTests-TestsConfiguration.html#method_getTestsFolder">getTestsFolder()</a>
+    <a href="classes/RichPHPTests-Project.html#method_getRequirements">getRequirements()</a>
+    <span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/RichPHPTests-Project.html#method_getVersion">getVersion()</a>
     <span>
                                 &nbsp;: string    </span>
 </dt>
 <dd></dd>
 
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichPHPTests-TestsConfiguration.html#method_setBootstrap">setBootstrap()</a>
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a href="classes/RichPHPTests-Project.html#method_formatSlashes">formatSlashes()</a>
+    <span>
+                                &nbsp;: string    </span>
+</dt>
+<dd>Normalises forward and/or backward slashes to the system directory separator.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a href="classes/RichPHPTests-Project.html#method_parseConfig">parseConfig()</a>
+    <span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a href="classes/RichPHPTests-Project.html#method_setAutoloaderSources">setAutoloaderSources()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
 <dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
-    <a href="classes/RichPHPTests-TestsConfiguration.html#method_setExcludedClasses">setExcludedClasses()</a>
+    <a href="classes/RichPHPTests-Project.html#method_setFileSources">setFileSources()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
 <dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
-    <a href="classes/RichPHPTests-TestsConfiguration.html#method_setExcludedTests">setExcludedTests()</a>
+    <a href="classes/RichPHPTests-Project.html#method_setName">setName()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
 <dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
-    <a href="classes/RichPHPTests-TestsConfiguration.html#method_setName">setName()</a>
+    <a href="classes/RichPHPTests-Project.html#method_setRequirements">setRequirements()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
 <dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
-    <a href="classes/RichPHPTests-TestsConfiguration.html#method_setNamespace">setNamespace()</a>
+    <a href="classes/RichPHPTests-Project.html#method_setVersion">setVersion()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
@@ -293,7 +358,7 @@
     <section class="phpdocumentor-properties">
         <h3 class="phpdocumentor-elements__header" id="properties">
             Properties
-            <a href="classes/RichPHPTests-TestsConfiguration.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/RichPHPTests-Project.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
                     <article
         class="
@@ -302,25 +367,25 @@
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_bootstrap">
-        $bootstrap
-        <a href="classes/RichPHPTests-TestsConfiguration.html#property_bootstrap" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_autoload_sources">
+        $autoload_sources
+        <a href="classes/RichPHPTests-Project.html#property_autoload_sources" class="headerlink"><i class="fas fa-link"></i></a>
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestsConfiguration.php"><a href="files/includes-testsconfiguration.html"><abbr title="Includes/TestsConfiguration.php">TestsConfiguration.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Project.php"><a href="files/includes-project.html"><abbr title="Includes/Project.php">Project.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">17</span>
+    <span class="phpdocumentor-element-found-in__line">70</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">string</span>
-    <span class="phpdocumentor-signature__name">$bootstrap</span>
-     = <span class="phpdocumentor-signature__default-value">&#039;&#039;</span></code>
+        <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
+    <span class="phpdocumentor-signature__name">$autoload_sources</span>
+     = <span class="phpdocumentor-signature__default-value">[]</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -338,14 +403,14 @@
 >
     <h4 class="phpdocumentor-element__name" id="property_config">
         $config
-        <a href="classes/RichPHPTests-TestsConfiguration.html#property_config" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/RichPHPTests-Project.html#property_config" class="headerlink"><i class="fas fa-link"></i></a>
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestsConfiguration.php"><a href="files/includes-testsconfiguration.html"><abbr title="Includes/TestsConfiguration.php">TestsConfiguration.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Project.php"><a href="files/includes-project.html"><abbr title="Includes/Project.php">Project.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">9</span>
+    <span class="phpdocumentor-element-found-in__line">68</span>
 
     </aside>
 
@@ -354,7 +419,7 @@
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
     <span class="phpdocumentor-signature__name">$config</span>
-    </code>
+     = <span class="phpdocumentor-signature__default-value">[]</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -370,16 +435,16 @@
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_config_file">
-        $config_file
-        <a href="classes/RichPHPTests-TestsConfiguration.html#property_config_file" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_config_path">
+        $config_path
+        <a href="classes/RichPHPTests-Project.html#property_config_path" class="headerlink"><i class="fas fa-link"></i></a>
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestsConfiguration.php"><a href="files/includes-testsconfiguration.html"><abbr title="Includes/TestsConfiguration.php">TestsConfiguration.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Project.php"><a href="files/includes-project.html"><abbr title="Includes/Project.php">Project.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">20</span>
+    <span class="phpdocumentor-element-found-in__line">89</span>
 
     </aside>
 
@@ -387,7 +452,7 @@
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type">string</span>
-    <span class="phpdocumentor-signature__name">$config_file</span>
+    <span class="phpdocumentor-signature__name">$config_path</span>
     </code>
 
         <section class="phpdocumentor-description"></section>
@@ -404,16 +469,16 @@
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_excluded_classes">
-        $excluded_classes
-        <a href="classes/RichPHPTests-TestsConfiguration.html#property_excluded_classes" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_file_sources">
+        $file_sources
+        <a href="classes/RichPHPTests-Project.html#property_file_sources" class="headerlink"><i class="fas fa-link"></i></a>
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestsConfiguration.php"><a href="files/includes-testsconfiguration.html"><abbr title="Includes/TestsConfiguration.php">TestsConfiguration.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Project.php"><a href="files/includes-project.html"><abbr title="Includes/Project.php">Project.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">13</span>
+    <span class="phpdocumentor-element-found-in__line">72</span>
 
     </aside>
 
@@ -421,8 +486,8 @@
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
-    <span class="phpdocumentor-signature__name">$excluded_classes</span>
-    </code>
+    <span class="phpdocumentor-signature__name">$file_sources</span>
+     = <span class="phpdocumentor-signature__default-value">[]</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -438,24 +503,24 @@
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_excluded_tests">
-        $excluded_tests
-        <a href="classes/RichPHPTests-TestsConfiguration.html#property_excluded_tests" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_main_directory">
+        $main_directory
+        <a href="classes/RichPHPTests-Project.html#property_main_directory" class="headerlink"><i class="fas fa-link"></i></a>
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestsConfiguration.php"><a href="files/includes-testsconfiguration.html"><abbr title="Includes/TestsConfiguration.php">TestsConfiguration.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Project.php"><a href="files/includes-project.html"><abbr title="Includes/Project.php">Project.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">15</span>
+    <span class="phpdocumentor-element-found-in__line">90</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
-    <span class="phpdocumentor-signature__name">$excluded_tests</span>
+        <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">$main_directory</span>
     </code>
 
         <section class="phpdocumentor-description"></section>
@@ -474,14 +539,14 @@
 >
     <h4 class="phpdocumentor-element__name" id="property_name">
         $name
-        <a href="classes/RichPHPTests-TestsConfiguration.html#property_name" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/RichPHPTests-Project.html#property_name" class="headerlink"><i class="fas fa-link"></i></a>
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestsConfiguration.php"><a href="files/includes-testsconfiguration.html"><abbr title="Includes/TestsConfiguration.php">TestsConfiguration.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Project.php"><a href="files/includes-project.html"><abbr title="Includes/Project.php">Project.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">11</span>
+    <span class="phpdocumentor-element-found-in__line">74</span>
 
     </aside>
 
@@ -506,16 +571,50 @@
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_tests_folder">
-        $tests_folder
-        <a href="classes/RichPHPTests-TestsConfiguration.html#property_tests_folder" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_requirements">
+        $requirements
+        <a href="classes/RichPHPTests-Project.html#property_requirements" class="headerlink"><i class="fas fa-link"></i></a>
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestsConfiguration.php"><a href="files/includes-testsconfiguration.html"><abbr title="Includes/TestsConfiguration.php">TestsConfiguration.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Project.php"><a href="files/includes-project.html"><abbr title="Includes/Project.php">Project.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">21</span>
+    <span class="phpdocumentor-element-found-in__line">78</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
+    <span class="phpdocumentor-signature__name">$requirements</span>
+    </code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_sep">
+        $sep
+        <a href="classes/RichPHPTests-Project.html#property_sep" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Project.php"><a href="files/includes-project.html"><abbr title="Includes/Project.php">Project.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">80</span>
 
     </aside>
 
@@ -523,7 +622,41 @@
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type">string</span>
-    <span class="phpdocumentor-signature__name">$tests_folder</span>
+    <span class="phpdocumentor-signature__name">$sep</span>
+     = <span class="phpdocumentor-signature__default-value">\DIRECTORY_SEPARATOR</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_version">
+        $version
+        <a href="classes/RichPHPTests-Project.html#property_version" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Project.php"><a href="files/includes-project.html"><abbr title="Includes/Project.php">Project.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">76</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">$version</span>
     </code>
 
         <section class="phpdocumentor-description"></section>
@@ -538,7 +671,7 @@
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
-            <a href="classes/RichPHPTests-TestsConfiguration.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/RichPHPTests-Project.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
                     <article
         class="phpdocumentor-element
@@ -548,38 +681,40 @@
 >
     <h4 class="phpdocumentor-element__name" id="method___construct">
         __construct()
-        <a href="classes/RichPHPTests-TestsConfiguration.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/RichPHPTests-Project.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestsConfiguration.php"><a href="files/includes-testsconfiguration.html"><abbr title="Includes/TestsConfiguration.php">TestsConfiguration.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Project.php"><a href="files/includes-project.html"><abbr title="Includes/Project.php">Project.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">19</span>
+    <span class="phpdocumentor-element-found-in__line">88</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Builds a new Project containing the paths for files and the autoloader. Also assigns project specific details such as name and version number.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$config_file</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$tests_folder</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href=""><abbr title=""></abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$config_path</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href=""><abbr title=""></abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$main_directory</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$config_file</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                <span class="phpdocumentor-signature__argument__name">$config_path</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href=""><abbr title=""></abbr></a></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>The path to the project.json configuration file</p>
+</section>
 
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$tests_folder</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                <span class="phpdocumentor-signature__argument__name">$main_directory</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href=""><abbr title=""></abbr></a></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>The full path to the main directory of the project</p>
+</section>
 
             </dd>
             </dl>
@@ -598,21 +733,21 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_buildConfig">
-        buildConfig()
-        <a href="classes/RichPHPTests-TestsConfiguration.html#method_buildConfig" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_getAutoloaderSources">
+        getAutoloaderSources()
+        <a href="classes/RichPHPTests-Project.html#method_getAutoloaderSources" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestsConfiguration.php"><a href="files/includes-testsconfiguration.html"><abbr title="Includes/TestsConfiguration.php">TestsConfiguration.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Project.php"><a href="files/includes-project.html"><abbr title="Includes/Project.php">Project.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">24</span>
+    <span class="phpdocumentor-element-found-in__line">174</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">buildConfig</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+                <span class="phpdocumentor-signature__name">getAutoloaderSources</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -620,7 +755,7 @@
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">bool</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
             &mdash;
         
     
@@ -631,21 +766,54 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_getBootstrap">
-        getBootstrap()
-        <a href="classes/RichPHPTests-TestsConfiguration.html#method_getBootstrap" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_getFileSources">
+        getFileSources()
+        <a href="classes/RichPHPTests-Project.html#method_getFileSources" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestsConfiguration.php"><a href="files/includes-testsconfiguration.html"><abbr title="Includes/TestsConfiguration.php">TestsConfiguration.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Project.php"><a href="files/includes-project.html"><abbr title="Includes/Project.php">Project.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">66</span>
+    <span class="phpdocumentor-element-found-in__line">179</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getBootstrap</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+                <span class="phpdocumentor-signature__name">getFileSources</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getMainDirectory">
+        getMainDirectory()
+        <a href="classes/RichPHPTests-Project.html#method_getMainDirectory" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Project.php"><a href="files/includes-project.html"><abbr title="Includes/Project.php">Project.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">107</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getMainDirectory</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -664,80 +832,14 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_getExcludedClasses">
-        getExcludedClasses()
-        <a href="classes/RichPHPTests-TestsConfiguration.html#method_getExcludedClasses" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestsConfiguration.php"><a href="files/includes-testsconfiguration.html"><abbr title="Includes/TestsConfiguration.php">TestsConfiguration.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">81</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getExcludedClasses</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_getExcludedTests">
-        getExcludedTests()
-        <a href="classes/RichPHPTests-TestsConfiguration.html#method_getExcludedTests" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestsConfiguration.php"><a href="files/includes-testsconfiguration.html"><abbr title="Includes/TestsConfiguration.php">TestsConfiguration.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">86</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getExcludedTests</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
     <h4 class="phpdocumentor-element__name" id="method_getName">
         getName()
-        <a href="classes/RichPHPTests-TestsConfiguration.html#method_getName" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/RichPHPTests-Project.html#method_getName" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestsConfiguration.php"><a href="files/includes-testsconfiguration.html"><abbr title="Includes/TestsConfiguration.php">TestsConfiguration.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Project.php"><a href="files/includes-project.html"><abbr title="Includes/Project.php">Project.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">43</span>
+    <span class="phpdocumentor-element-found-in__line">117</span>
 
     </aside>
 
@@ -763,21 +865,54 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_getNamespace">
-        getNamespace()
-        <a href="classes/RichPHPTests-TestsConfiguration.html#method_getNamespace" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_getRequirements">
+        getRequirements()
+        <a href="classes/RichPHPTests-Project.html#method_getRequirements" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestsConfiguration.php"><a href="files/includes-testsconfiguration.html"><abbr title="Includes/TestsConfiguration.php">TestsConfiguration.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Project.php"><a href="files/includes-project.html"><abbr title="Includes/Project.php">Project.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">53</span>
+    <span class="phpdocumentor-element-found-in__line">137</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getNamespace</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+                <span class="phpdocumentor-signature__name">getRequirements</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getVersion">
+        getVersion()
+        <a href="classes/RichPHPTests-Project.html#method_getVersion" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Project.php"><a href="files/includes-project.html"><abbr title="Includes/Project.php">Project.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">127</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getVersion</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -793,24 +928,69 @@
                     <article
         class="phpdocumentor-element
             -method
-            -public
+            -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_getTestsFolder">
-        getTestsFolder()
-        <a href="classes/RichPHPTests-TestsConfiguration.html#method_getTestsFolder" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_formatSlashes">
+        formatSlashes()
+        <a href="classes/RichPHPTests-Project.html#method_formatSlashes" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestsConfiguration.php"><a href="files/includes-testsconfiguration.html"><abbr title="Includes/TestsConfiguration.php">TestsConfiguration.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Project.php"><a href="files/includes-project.html"><abbr title="Includes/Project.php">Project.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">91</span>
+    <span class="phpdocumentor-element-found-in__line">191</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Normalises forward and/or backward slashes to the system directory separator.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+                <span class="phpdocumentor-signature__name">formatSlashes</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$path</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$path</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The normalised path</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_parseConfig">
+        parseConfig()
+        <a href="classes/RichPHPTests-Project.html#method_parseConfig" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Project.php"><a href="files/includes-project.html"><abbr title="Includes/Project.php">Project.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">102</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getTestsFolder</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+    <span class="phpdocumentor-signature__visibility">private</span>
+                <span class="phpdocumentor-signature__name">parseConfig</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -818,7 +998,7 @@
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">string</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
             &mdash;
         
     
@@ -826,24 +1006,24 @@
                     <article
         class="phpdocumentor-element
             -method
-            -public
+            -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_setBootstrap">
-        setBootstrap()
-        <a href="classes/RichPHPTests-TestsConfiguration.html#method_setBootstrap" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_setAutoloaderSources">
+        setAutoloaderSources()
+        <a href="classes/RichPHPTests-Project.html#method_setAutoloaderSources" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestsConfiguration.php"><a href="files/includes-testsconfiguration.html"><abbr title="Includes/TestsConfiguration.php">TestsConfiguration.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Project.php"><a href="files/includes-project.html"><abbr title="Includes/Project.php">Project.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">58</span>
+    <span class="phpdocumentor-element-found-in__line">142</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setBootstrap</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+    <span class="phpdocumentor-signature__visibility">private</span>
+                <span class="phpdocumentor-signature__name">setAutoloaderSources</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -862,54 +1042,21 @@
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_setExcludedClasses">
-        setExcludedClasses()
-        <a href="classes/RichPHPTests-TestsConfiguration.html#method_setExcludedClasses" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_setFileSources">
+        setFileSources()
+        <a href="classes/RichPHPTests-Project.html#method_setFileSources" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestsConfiguration.php"><a href="files/includes-testsconfiguration.html"><abbr title="Includes/TestsConfiguration.php">TestsConfiguration.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Project.php"><a href="files/includes-project.html"><abbr title="Includes/Project.php">Project.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">71</span>
+    <span class="phpdocumentor-element-found-in__line">158</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-                <span class="phpdocumentor-signature__name">setExcludedClasses</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">void</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -private
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_setExcludedTests">
-        setExcludedTests()
-        <a href="classes/RichPHPTests-TestsConfiguration.html#method_setExcludedTests" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestsConfiguration.php"><a href="files/includes-testsconfiguration.html"><abbr title="Includes/TestsConfiguration.php">TestsConfiguration.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">76</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
-                <span class="phpdocumentor-signature__name">setExcludedTests</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                <span class="phpdocumentor-signature__name">setFileSources</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -930,12 +1077,12 @@
 >
     <h4 class="phpdocumentor-element__name" id="method_setName">
         setName()
-        <a href="classes/RichPHPTests-TestsConfiguration.html#method_setName" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/RichPHPTests-Project.html#method_setName" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestsConfiguration.php"><a href="files/includes-testsconfiguration.html"><abbr title="Includes/TestsConfiguration.php">TestsConfiguration.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Project.php"><a href="files/includes-project.html"><abbr title="Includes/Project.php">Project.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">38</span>
+    <span class="phpdocumentor-element-found-in__line">112</span>
 
     </aside>
 
@@ -961,21 +1108,54 @@
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_setNamespace">
-        setNamespace()
-        <a href="classes/RichPHPTests-TestsConfiguration.html#method_setNamespace" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_setRequirements">
+        setRequirements()
+        <a href="classes/RichPHPTests-Project.html#method_setRequirements" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestsConfiguration.php"><a href="files/includes-testsconfiguration.html"><abbr title="Includes/TestsConfiguration.php">TestsConfiguration.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Project.php"><a href="files/includes-project.html"><abbr title="Includes/Project.php">Project.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">48</span>
+    <span class="phpdocumentor-element-found-in__line">132</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-                <span class="phpdocumentor-signature__name">setNamespace</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                <span class="phpdocumentor-signature__name">setRequirements</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setVersion">
+        setVersion()
+        <a href="classes/RichPHPTests-Project.html#method_setVersion" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Project.php"><a href="files/includes-project.html"><abbr title="Includes/Project.php">Project.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">122</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+                <span class="phpdocumentor-signature__name">setVersion</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1066,7 +1246,7 @@
 </section>
             </div>
         </div>
-        <a href="classes/RichPHPTests-TestsConfiguration.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/RichPHPTests-Project.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 

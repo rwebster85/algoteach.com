@@ -96,54 +96,54 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/RichPHPTests-Attributes-TestHasBefore.html#method___construct"
         },                {
-            "fqsen": "\\RichPHPTests\\Autoloader",
+            "fqsen": "\\RichPHPTests\\Autoload\\Autoloader",
             "name": "Autoloader",
             "summary": "An\u0020example\u0020of\u0020a\u0020general\u002Dpurpose\u0020implementation\u0020that\u0020includes\u0020the\u0020optional\nfunctionality\u0020of\u0020allowing\u0020multiple\u0020base\u0020directories\u0020for\u0020a\u0020single\u0020namespace\nprefix.",
-            "url": "classes/RichPHPTests-Autoloader.html"
+            "url": "classes/RichPHPTests-Autoload-Autoloader.html"
         },                {
-            "fqsen": "\\RichPHPTests\\Autoloader\u003A\u003A__construct\u0028\u0029",
+            "fqsen": "\\RichPHPTests\\Autoload\\Autoloader\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
             "summary": "",
-            "url": "classes/RichPHPTests-Autoloader.html#method___construct"
+            "url": "classes/RichPHPTests-Autoload-Autoloader.html#method___construct"
         },                {
-            "fqsen": "\\RichPHPTests\\Autoloader\u003A\u003Aregister\u0028\u0029",
+            "fqsen": "\\RichPHPTests\\Autoload\\Autoloader\u003A\u003Aregister\u0028\u0029",
             "name": "register",
             "summary": "Register\u0020loader\u0020with\u0020SPL\u0020autoloader\u0020stack.",
-            "url": "classes/RichPHPTests-Autoloader.html#method_register"
+            "url": "classes/RichPHPTests-Autoload-Autoloader.html#method_register"
         },                {
-            "fqsen": "\\RichPHPTests\\Autoloader\u003A\u003AaddNamespace\u0028\u0029",
+            "fqsen": "\\RichPHPTests\\Autoload\\Autoloader\u003A\u003AaddNamespace\u0028\u0029",
             "name": "addNamespace",
             "summary": "Adds\u0020a\u0020base\u0020directory\u0020for\u0020a\u0020namespace\u0020prefix.",
-            "url": "classes/RichPHPTests-Autoloader.html#method_addNamespace"
+            "url": "classes/RichPHPTests-Autoload-Autoloader.html#method_addNamespace"
         },                {
-            "fqsen": "\\RichPHPTests\\Autoloader\u003A\u003AloadClass\u0028\u0029",
+            "fqsen": "\\RichPHPTests\\Autoload\\Autoloader\u003A\u003AloadClass\u0028\u0029",
             "name": "loadClass",
             "summary": "Loads\u0020the\u0020class\u0020file\u0020for\u0020a\u0020given\u0020class\u0020name.",
-            "url": "classes/RichPHPTests-Autoloader.html#method_loadClass"
+            "url": "classes/RichPHPTests-Autoload-Autoloader.html#method_loadClass"
         },                {
-            "fqsen": "\\RichPHPTests\\Autoloader\u003A\u003AloadMappedFile\u0028\u0029",
+            "fqsen": "\\RichPHPTests\\Autoload\\Autoloader\u003A\u003AloadMappedFile\u0028\u0029",
             "name": "loadMappedFile",
             "summary": "Load\u0020the\u0020mapped\u0020file\u0020for\u0020a\u0020namespace\u0020prefix\u0020and\u0020relative\u0020class.",
-            "url": "classes/RichPHPTests-Autoloader.html#method_loadMappedFile"
+            "url": "classes/RichPHPTests-Autoload-Autoloader.html#method_loadMappedFile"
         },                {
-            "fqsen": "\\RichPHPTests\\Autoloader\u003A\u003ArequireFile\u0028\u0029",
+            "fqsen": "\\RichPHPTests\\Autoload\\Autoloader\u003A\u003ArequireFile\u0028\u0029",
             "name": "requireFile",
             "summary": "If\u0020a\u0020file\u0020exists,\u0020require\u0020it\u0020from\u0020the\u0020file\u0020system.",
-            "url": "classes/RichPHPTests-Autoloader.html#method_requireFile"
+            "url": "classes/RichPHPTests-Autoload-Autoloader.html#method_requireFile"
         },                {
-            "fqsen": "\\RichPHPTests\\Autoloader\u003A\u003A\u0024prefixes",
+            "fqsen": "\\RichPHPTests\\Autoload\\Autoloader\u003A\u003A\u0024prefixes",
             "name": "prefixes",
             "summary": "An\u0020associative\u0020array\u0020where\u0020the\u0020key\u0020is\u0020a\u0020namespace\u0020prefix\u0020and\u0020the\u0020value\nis\u0020an\u0020array\u0020of\u0020base\u0020directories\u0020for\u0020classes\u0020in\u0020that\u0020namespace.",
-            "url": "classes/RichPHPTests-Autoloader.html#property_prefixes"
+            "url": "classes/RichPHPTests-Autoload-Autoloader.html#property_prefixes"
         },                {
             "fqsen": "\\RichPHPTests\\FileLoader",
             "name": "FileLoader",
-            "summary": "",
+            "summary": "Used\u0020for\u0020manually\u0020including\u0020files\u0020that\u0020can\u0027t\u0020be\u0020auto\u0020loaded,\u0020since\u0020the\u0020Autoloader\u0020class\u0020is\u0020PSR\u002D4\u0020compliant.\u0020For\u0020example\u0020files\u0020containing\u0020only\u0020functions\u0020must\u0020be\u0020manually\u0020included.",
             "url": "classes/RichPHPTests-FileLoader.html"
         },                {
             "fqsen": "\\RichPHPTests\\FileLoader\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "Accepts\u0020an\u0020array\u0020of\u0020strings\u0020as\u0020file\u0020paths\u0020to\u0020load.",
+            "summary": "Accepts\u0020an\u0020variadic\u0020array\u0020of\u0020strings\u0020as\u0020file\u0020paths\u0020to\u0020load.",
             "url": "classes/RichPHPTests-FileLoader.html#method___construct"
         },                {
             "fqsen": "\\RichPHPTests\\FileLoader\u003A\u003AloadFiles\u0028\u0029",
@@ -220,6 +220,126 @@ Search.appendIndex(
             "name": "printResults",
             "summary": "",
             "url": "classes/RichPHPTests-Interfaces-TestResultsInterface.html#method_printResults"
+        },                {
+            "fqsen": "\\RichPHPTests\\Project",
+            "name": "Project",
+            "summary": "An\u0020object\u0020that\u0020stores\u0020information\u0020about\u0020the\u0020current\u0020project\u0020such\u0020as\u0020name,\u0020version\u0020number,\u0020and\u0020autoload\/manual\u0020directories.",
+            "url": "classes/RichPHPTests-Project.html"
+        },                {
+            "fqsen": "\\RichPHPTests\\Project\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Builds\u0020a\u0020new\u0020Project\u0020containing\u0020the\u0020paths\u0020for\u0020files\u0020and\u0020the\u0020autoloader.\u0020Also\u0020assigns\u0020project\u0020specific\u0020details\u0020such\u0020as\u0020name\u0020and\u0020version\u0020number.",
+            "url": "classes/RichPHPTests-Project.html#method___construct"
+        },                {
+            "fqsen": "\\RichPHPTests\\Project\u003A\u003AparseConfig\u0028\u0029",
+            "name": "parseConfig",
+            "summary": "",
+            "url": "classes/RichPHPTests-Project.html#method_parseConfig"
+        },                {
+            "fqsen": "\\RichPHPTests\\Project\u003A\u003AgetMainDirectory\u0028\u0029",
+            "name": "getMainDirectory",
+            "summary": "",
+            "url": "classes/RichPHPTests-Project.html#method_getMainDirectory"
+        },                {
+            "fqsen": "\\RichPHPTests\\Project\u003A\u003AsetName\u0028\u0029",
+            "name": "setName",
+            "summary": "",
+            "url": "classes/RichPHPTests-Project.html#method_setName"
+        },                {
+            "fqsen": "\\RichPHPTests\\Project\u003A\u003AgetName\u0028\u0029",
+            "name": "getName",
+            "summary": "",
+            "url": "classes/RichPHPTests-Project.html#method_getName"
+        },                {
+            "fqsen": "\\RichPHPTests\\Project\u003A\u003AsetVersion\u0028\u0029",
+            "name": "setVersion",
+            "summary": "",
+            "url": "classes/RichPHPTests-Project.html#method_setVersion"
+        },                {
+            "fqsen": "\\RichPHPTests\\Project\u003A\u003AgetVersion\u0028\u0029",
+            "name": "getVersion",
+            "summary": "",
+            "url": "classes/RichPHPTests-Project.html#method_getVersion"
+        },                {
+            "fqsen": "\\RichPHPTests\\Project\u003A\u003AsetRequirements\u0028\u0029",
+            "name": "setRequirements",
+            "summary": "",
+            "url": "classes/RichPHPTests-Project.html#method_setRequirements"
+        },                {
+            "fqsen": "\\RichPHPTests\\Project\u003A\u003AgetRequirements\u0028\u0029",
+            "name": "getRequirements",
+            "summary": "",
+            "url": "classes/RichPHPTests-Project.html#method_getRequirements"
+        },                {
+            "fqsen": "\\RichPHPTests\\Project\u003A\u003AsetAutoloaderSources\u0028\u0029",
+            "name": "setAutoloaderSources",
+            "summary": "",
+            "url": "classes/RichPHPTests-Project.html#method_setAutoloaderSources"
+        },                {
+            "fqsen": "\\RichPHPTests\\Project\u003A\u003AsetFileSources\u0028\u0029",
+            "name": "setFileSources",
+            "summary": "",
+            "url": "classes/RichPHPTests-Project.html#method_setFileSources"
+        },                {
+            "fqsen": "\\RichPHPTests\\Project\u003A\u003AgetAutoloaderSources\u0028\u0029",
+            "name": "getAutoloaderSources",
+            "summary": "",
+            "url": "classes/RichPHPTests-Project.html#method_getAutoloaderSources"
+        },                {
+            "fqsen": "\\RichPHPTests\\Project\u003A\u003AgetFileSources\u0028\u0029",
+            "name": "getFileSources",
+            "summary": "",
+            "url": "classes/RichPHPTests-Project.html#method_getFileSources"
+        },                {
+            "fqsen": "\\RichPHPTests\\Project\u003A\u003AformatSlashes\u0028\u0029",
+            "name": "formatSlashes",
+            "summary": "Normalises\u0020forward\u0020and\/or\u0020backward\u0020slashes\u0020to\u0020the\u0020system\u0020directory\u0020separator.",
+            "url": "classes/RichPHPTests-Project.html#method_formatSlashes"
+        },                {
+            "fqsen": "\\RichPHPTests\\Project\u003A\u003A\u0024config",
+            "name": "config",
+            "summary": "",
+            "url": "classes/RichPHPTests-Project.html#property_config"
+        },                {
+            "fqsen": "\\RichPHPTests\\Project\u003A\u003A\u0024autoload_sources",
+            "name": "autoload_sources",
+            "summary": "",
+            "url": "classes/RichPHPTests-Project.html#property_autoload_sources"
+        },                {
+            "fqsen": "\\RichPHPTests\\Project\u003A\u003A\u0024file_sources",
+            "name": "file_sources",
+            "summary": "",
+            "url": "classes/RichPHPTests-Project.html#property_file_sources"
+        },                {
+            "fqsen": "\\RichPHPTests\\Project\u003A\u003A\u0024name",
+            "name": "name",
+            "summary": "",
+            "url": "classes/RichPHPTests-Project.html#property_name"
+        },                {
+            "fqsen": "\\RichPHPTests\\Project\u003A\u003A\u0024version",
+            "name": "version",
+            "summary": "",
+            "url": "classes/RichPHPTests-Project.html#property_version"
+        },                {
+            "fqsen": "\\RichPHPTests\\Project\u003A\u003A\u0024requirements",
+            "name": "requirements",
+            "summary": "",
+            "url": "classes/RichPHPTests-Project.html#property_requirements"
+        },                {
+            "fqsen": "\\RichPHPTests\\Project\u003A\u003A\u0024sep",
+            "name": "sep",
+            "summary": "",
+            "url": "classes/RichPHPTests-Project.html#property_sep"
+        },                {
+            "fqsen": "\\RichPHPTests\\Project\u003A\u003A\u0024config_path",
+            "name": "config_path",
+            "summary": "",
+            "url": "classes/RichPHPTests-Project.html#property_config_path"
+        },                {
+            "fqsen": "\\RichPHPTests\\Project\u003A\u003A\u0024main_directory",
+            "name": "main_directory",
+            "summary": "",
+            "url": "classes/RichPHPTests-Project.html#property_main_directory"
         },                {
             "fqsen": "\\RichPHPTests\\SourceChecker",
             "name": "SourceChecker",
@@ -905,6 +1025,11 @@ Search.appendIndex(
             "name": "Attributes",
             "summary": "",
             "url": "namespaces/richphptests-attributes.html"
+        },                {
+            "fqsen": "\\RichPHPTests\\Autoload",
+            "name": "Autoload",
+            "summary": "",
+            "url": "namespaces/richphptests-autoload.html"
         },                {
             "fqsen": "\\RichPHPTests\\Interfaces",
             "name": "Interfaces",

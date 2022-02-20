@@ -68,6 +68,10 @@
                 
             </li>
                     <li>
+                <a href="namespaces/richphptests-autoload.html" class="">Autoload</a>
+                
+            </li>
+                    <li>
                 <a href="namespaces/richphptests-interfaces.html" class="">Interfaces</a>
                 
             </li>
@@ -119,12 +123,23 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/FileLoader.php"><a href="files/includes-fileloader.html"><abbr title="Includes/FileLoader.php">FileLoader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">9</span>
+    <span class="phpdocumentor-element-found-in__line">26</span>
 
     </aside>
 
-        
-    <section class="phpdocumentor-description"></section>
+            <p class="phpdocumentor-summary">Used for manually including files that can&#039;t be auto loaded, since the Autoloader class is PSR-4 compliant. For example files containing only functions must be manually included.</p>
+
+    <section class="phpdocumentor-description"><p>Accepts a variadic array of strings to enforce a typed array of strings.</p>
+<p>Example usage:</p>
+<pre class="prettyprint"><code class="language-php">$files = [
+    'File1.php',
+    'Files2.php'
+];
+
+$file_loader = new FileLoader(...$files);
+$file_loader-&gt;loadFiles();
+</code></pre>
+</section>
 
 
 
@@ -151,7 +166,7 @@
     <span>
                                 &nbsp;: void    </span>
 </dt>
-<dd>Accepts an array of strings as file paths to load.</dd>
+<dd>Accepts an variadic array of strings as file paths to load.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/RichPHPTests-FileLoader.html#method_loadFiles">loadFiles()</a>
@@ -195,7 +210,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/FileLoader.php"><a href="files/includes-fileloader.html"><abbr title="Includes/FileLoader.php">FileLoader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">16</span>
+    <span class="phpdocumentor-element-found-in__line">33</span>
 
     </aside>
 
@@ -232,11 +247,11 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/FileLoader.php"><a href="files/includes-fileloader.html"><abbr title="Includes/FileLoader.php">FileLoader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">25</span>
+    <span class="phpdocumentor-element-found-in__line">42</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Accepts an array of strings as file paths to load.</p>
+        <p class="phpdocumentor-summary">Accepts an variadic array of strings as file paths to load.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -275,7 +290,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/FileLoader.php"><a href="files/includes-fileloader.html"><abbr title="Includes/FileLoader.php">FileLoader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">38</span>
+    <span class="phpdocumentor-element-found-in__line">55</span>
 
     </aside>
 
@@ -330,7 +345,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/FileLoader.php"><a href="files/includes-fileloader.html"><abbr title="Includes/FileLoader.php">FileLoader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">54</span>
+    <span class="phpdocumentor-element-found-in__line">71</span>
 
     </aside>
 
