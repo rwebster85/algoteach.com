@@ -6,12 +6,13 @@
 namespace RichPHPTests;
 
 $sep = DIRECTORY_SEPARATOR;
+$path = __DIR__ . $sep;
+$includes = __DIR__ . $sep . 'Includes';
 
-require_once 'Includes' . $sep . 'Project.php';
-$project = new Project(__DIR__ . $sep . 'project.json', __DIR__);
-$project->buildProject();
+require_once $includes . $sep . 'Project.php';
+$project = new Project($path . 'project.json', __DIR__);
 
-require_once 'Includes' . $sep . 'Autoload' . $sep . 'Autoloader.php';
+require_once $includes . $sep . 'Autoload' . $sep . 'Autoloader.php';
 (new Autoload\Autoloader($project->getAutoloaderSources()))->register();
 
 (new FileLoader(...$project->getFileSources()))->loadFiles();
