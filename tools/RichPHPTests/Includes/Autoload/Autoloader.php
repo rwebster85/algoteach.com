@@ -5,7 +5,7 @@
 
 declare(strict_types=1);
 
-namespace RichPHPTests;
+namespace RichPHPTests\Autoload;
 
 /**
  * An example of a general-purpose implementation that includes the optional
