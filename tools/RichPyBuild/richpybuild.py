@@ -29,7 +29,8 @@ def zipdir(path, zip, build_file):
         for file in files:
             zip.write(
                 os.path.join(root, file),
-                os.path.relpath(os.path.join(root, file), 
+                os.path.relpath(
+                    os.path.join(root, file), 
                     os.path.join(path, '..')
                 )
             )
