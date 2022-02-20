@@ -19,7 +19,9 @@ final class TestsConfiguration
     public function __construct(
         private string $config_file,
         private string $tests_folder
-    ) {}
+    ) {
+        $this->buildConfig();
+    }
 
     public function buildConfig(): bool
     {
