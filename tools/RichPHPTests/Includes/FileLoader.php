@@ -6,6 +6,23 @@ namespace RichPHPTests;
 
 use function file_exists;
 
+/**
+ * Used for manually including files that can't be auto loaded, since the Autoloader class is PSR-4 compliant. For example files containing only functions must be manually included.
+ * 
+ * Accepts a variadic array of strings to enforce a typed array of strings.
+ * 
+ * Example usage:
+ * 
+ * ```php
+ * $files = [
+ *     'File1.php',
+ *     'Files2.php'
+ * ];
+ * 
+ * $file_loader = new FileLoader(...$files);
+ * $file_loader->loadFiles();
+ * ```
+ */
 final class FileLoader
 {
     /**
@@ -16,7 +33,7 @@ final class FileLoader
     private array $files;
 
     /**
-     * Accepts an array of strings as file paths to load.
+     * Accepts an variadic array of strings as file paths to load.
      * 
      * @param string[] $filepaths
      * 
