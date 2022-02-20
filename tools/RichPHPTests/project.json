@@ -1,0 +1,27 @@
+{
+    "name": "RichPHPTests",
+    "version": "1.0.0",
+    "required_php": "8.0.0",
+    "sources": {
+        "autoload": {
+            "RichPHPTests": "Includes"
+        },
+        "files": [
+            "Includes\\Functions\\functions.php"
+        ]
+    },
+    "requirements" : [
+        {
+            "type_id"   : "php_min_ver",
+            "type_name" : "Minimum PHP Version",
+            "name"      : "Version 8.0.0",
+            "url"       : "https://www.php.net/manual/en/migration74.php",
+            "value"     : "8.0.0"
+        }
+    ],
+    "pybuild": {
+        "exclude_files" : [],
+        "exclude_extensions" : [],
+        "exclude_folders" : []
+    }
+}
