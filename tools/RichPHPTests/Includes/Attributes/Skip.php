@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace RichPHPTests\Attributes;
 
+use Attribute;
+
 /**
  * The Skip attribute can be applied to test classes or methods to have them excluded from the test run.
  * 
@@ -23,6 +25,7 @@ namespace RichPHPTests\Attributes;
  * }
  * ```
  */
+#[Attribute]
 class Skip
 {
     public function __construct() {}
