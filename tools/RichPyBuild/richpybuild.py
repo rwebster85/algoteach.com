@@ -27,8 +27,6 @@ def zipdir(path, zip, build_file):
     if "keep_dir" in build_file:
         keep_dir = bool(build_file["keep_dir"])
 
-    keep_dir = False
-
     if keep_dir == False:
         path_join = ''
 
