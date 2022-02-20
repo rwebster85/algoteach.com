@@ -71,8 +71,8 @@ def run(folder = ""):
     if os.path.exists(project_file_path):
         project_file = open(project_file_path)
         json_file = json.load(project_file)
-        if "pybuild" in json_file:
-            build = json_file["pybuild"]
+        if "richpybuild" in json_file:
+            build = json_file["richpybuild"]
 
     zipf = zipfile.ZipFile(
         file_name + ".zip",

@@ -42,7 +42,7 @@ use const DIRECTORY_SEPARATOR;
  *             "value"     : "8.0.0"
  *         }
  *     ],
- *     "pybuild": {
+ *     "richpybuild": {
  *         "exclude_files" : [],
  *         "exclude_extensions" : [],
  *         "exclude_folders" : []
