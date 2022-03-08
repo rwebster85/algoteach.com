@@ -1,4 +1,14 @@
 <?php
+
+/*
+ * This file is part of RichPHPTests.
+ *
+ * Copyright (c) Richard Webster
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 /*
  * Autoloader class adapted from PHP Framework Interop Group, 2016
  */
@@ -204,3 +214,4 @@ class Autoloader
         return false;
     }
 }
+//end of adapted code

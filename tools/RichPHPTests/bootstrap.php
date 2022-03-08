@@ -1,6 +1,12 @@
 <?php
-/**
- * This file sets up the class autoloader and runs the application.
+
+/*
+ * This file is part of RichPHPTests.
+ *
+ * Copyright (c) Richard Webster
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace RichPHPTests;

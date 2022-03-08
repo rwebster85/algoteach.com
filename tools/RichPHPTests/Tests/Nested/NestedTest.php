@@ -17,6 +17,11 @@ class NestedTest extends TestCase
         test(false)->isFalse();
     }
 
+    public function testIsArray(): void
+    {
+        test(false)->isArray();
+    }
+
     #[Attributes\Skip]
     public function testInArray(): void
     {

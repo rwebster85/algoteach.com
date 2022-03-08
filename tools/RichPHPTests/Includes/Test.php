@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of RichPHPTests.
+ *
+ * Copyright (c) Richard Webster
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 declare(strict_types=1);
 
 namespace RichPHPTests;
@@ -14,7 +23,9 @@ final class Test extends AbstractTest
 
     public function isArray(): void
     {
-        $this->assert(is_array($this->value), true, 'Value is not an array.');
+        $actual   = gettype($this->value);
+        $expected = 'array';
+        $this->assert($actual, $expected, "Value is of type '$actual', not an array.");
     }
 
     public function isNotArray(mixed $value): void
