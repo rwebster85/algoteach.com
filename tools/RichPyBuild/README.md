@@ -2,6 +2,8 @@
 
 A tool for creating ZIP archives of folders, configurable to excludes files, folders, or file types.
 
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
 ## Requirements
 
 Requires Python 3.
