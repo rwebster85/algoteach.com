@@ -40,7 +40,7 @@ abstract class AbstractAlgorithm implements AlgorithmInterface
     final public function appendExamplesToContent(string $content): string
     {
         if (empty($this->code_examples)) {
-            return '';
+            return $content;
         }
 
         ob_start();
