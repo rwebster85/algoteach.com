@@ -96,7 +96,7 @@
 
     <article class="phpdocumentor-element -class">
         <h2 class="phpdocumentor-content__title">
-    AlgorithmPackageManager
+    AlgorithmPackageLoader
 
     
             <div class="phpdocumentor-element__package">
@@ -106,16 +106,16 @@
                             </ul>
         </div>
     
+            <span class="phpdocumentor-element__implements">
+            implements
+                            <a href="classes/RichWeb-Algorithms-Interfaces-HasRunnerInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\HasRunnerInterface">HasRunnerInterface</abbr></a>                    </span>
     
-            <span class="phpdocumentor-element__extends">
-            Uses
-                            <a href="classes/RichWeb-Algorithms-Traits-Formatting-FilePaths.html"><abbr title="\RichWeb\Algorithms\Traits\Formatting\FilePaths">FilePaths</abbr></a>                    </span>
     </h2>
 
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/AlgorithmPackageManager.php"><a href="files/includes-algorithmpackagemanager.html"><abbr title="Includes/AlgorithmPackageManager.php">AlgorithmPackageManager.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/AlgorithmPackageLoader.php"><a href="files/includes-algorithmpackageloader.html"><abbr title="Includes/AlgorithmPackageLoader.php">AlgorithmPackageLoader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">24</span>
+    <span class="phpdocumentor-element-found-in__line">20</span>
 
     </aside>
 
@@ -127,6 +127,18 @@
 
 
 
+<h3 id="interfaces_class_traits">
+    Interfaces, Classes, Traits and Enums
+    <a href="#interfaces_class_traits" class="headerlink"><i class="fas fa-link"></i></a>
+</h3>
+
+<dl class="phpdocumentor-table-of-contents">
+            <dt class="phpdocumentor-table-of-contents__entry -interface"><a href="classes/RichWeb-Algorithms-Interfaces-HasRunnerInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\HasRunnerInterface">HasRunnerInterface</abbr></a></dt>
+        <dd></dd>
+    
+    
+    
+    </dl>
 
 
 <h3 id="toc">
@@ -136,65 +148,58 @@
 
 <dl class="phpdocumentor-table-of-contents">
                     <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/RichWeb-Algorithms-AlgorithmPackageManager.html#property_loader">$loader</a>
-    <span>
-                        &nbsp;: <a href="classes/RichWeb-Algorithms-AlgorithmPackageLoader.html"><abbr title="\RichWeb\Algorithms\AlgorithmPackageLoader">AlgorithmPackageLoader</abbr></a>            </span>
-</dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/RichWeb-Algorithms-AlgorithmPackageManager.html#property_main_directory">$main_directory</a>
-    <span>
-                        &nbsp;: string            </span>
-</dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/RichWeb-Algorithms-AlgorithmPackageManager.html#property_package_folder">$package_folder</a>
-    <span>
-                        &nbsp;: string            </span>
-</dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/RichWeb-Algorithms-AlgorithmPackageManager.html#property_packages">$packages</a>
+    <a href="classes/RichWeb-Algorithms-AlgorithmPackageLoader.html#property_packages">$packages</a>
     <span>
                         &nbsp;: array&lt;string|int, mixed&gt;            </span>
 </dt>
 <dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/RichWeb-Algorithms-AlgorithmPackageManager.html#property_syntax">$syntax</a>
+    <a href="classes/RichWeb-Algorithms-AlgorithmPackageLoader.html#property_syntax">$syntax</a>
     <span>
-                        &nbsp;: <a href="classes/RichWeb-Algorithms-Abstracts-AbstractSyntaxHighlighter.html"><abbr title="\RichWeb\Algorithms\Abstracts\AbstractSyntaxHighlighter">AbstractSyntaxHighlighter</abbr></a>            </span>
+                        &nbsp;: <a href="classes/RichWeb-Algorithms-Interfaces-SyntaxHighlighterInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface">SyntaxHighlighterInterface</abbr></a>            </span>
 </dt>
 <dd></dd>
 
                 <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichWeb-Algorithms-AlgorithmPackageManager.html#method___construct">__construct()</a>
+    <a href="classes/RichWeb-Algorithms-AlgorithmPackageLoader.html#method___construct">__construct()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
 <dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichWeb-Algorithms-AlgorithmPackageManager.html#method_getPackages">getPackages()</a>
+    <a href="classes/RichWeb-Algorithms-AlgorithmPackageLoader.html#method_action">action()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/RichWeb-Algorithms-AlgorithmPackageLoader.html#method_getPackages">getPackages()</a>
     <span>
                                 &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
 <dd></dd>
 
-            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
-    <a href="classes/RichWeb-Algorithms-Traits-Formatting-FilePaths.html#method_formatSlashes">formatSlashes()</a>
-    <span>
-                                &nbsp;: string    </span>
-</dt>
-<dd>Normalises forward and/or backward slashes to the system directory separator.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -private">
-    <a href="classes/RichWeb-Algorithms-AlgorithmPackageManager.html#method_parsePackages">parsePackages()</a>
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/RichWeb-Algorithms-AlgorithmPackageLoader.html#method_loadPackage">loadPackage()</a>
     <span>
                                 &nbsp;: void    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/RichWeb-Algorithms-AlgorithmPackageLoader.html#method_run">run()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+<dd>Runs the class init functions not handled during construction.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a href="classes/RichWeb-Algorithms-AlgorithmPackageLoader.html#method_postHasPackage">postHasPackage()</a>
+    <span>
+                                &nbsp;: bool|string    </span>
 </dt>
 <dd></dd>
 
@@ -208,110 +213,8 @@
     <section class="phpdocumentor-properties">
         <h3 class="phpdocumentor-elements__header" id="properties">
             Properties
-            <a href="classes/RichWeb-Algorithms-AlgorithmPackageManager.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/RichWeb-Algorithms-AlgorithmPackageLoader.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
-                    <article
-        class="
-            phpdocumentor-element
-            -property
-            -private
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="property_loader">
-        $loader
-        <a href="classes/RichWeb-Algorithms-AlgorithmPackageManager.html#property_loader" class="headerlink"><i class="fas fa-link"></i></a>
-        <span class="phpdocumentor-element__modifiers">
-                                </span>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/AlgorithmPackageManager.php"><a href="files/includes-algorithmpackagemanager.html"><abbr title="Includes/AlgorithmPackageManager.php">AlgorithmPackageManager.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">30</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type"><a href="classes/RichWeb-Algorithms-AlgorithmPackageLoader.html"><abbr title="\RichWeb\Algorithms\AlgorithmPackageLoader">AlgorithmPackageLoader</abbr></a></span>
-    <span class="phpdocumentor-signature__name">$loader</span>
-    </code>
-
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
-    
-
-</article>
-                    <article
-        class="
-            phpdocumentor-element
-            -property
-            -private
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="property_main_directory">
-        $main_directory
-        <a href="classes/RichWeb-Algorithms-AlgorithmPackageManager.html#property_main_directory" class="headerlink"><i class="fas fa-link"></i></a>
-        <span class="phpdocumentor-element__modifiers">
-                                </span>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/AlgorithmPackageManager.php"><a href="files/includes-algorithmpackagemanager.html"><abbr title="Includes/AlgorithmPackageManager.php">AlgorithmPackageManager.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">38</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">string</span>
-    <span class="phpdocumentor-signature__name">$main_directory</span>
-    </code>
-
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
-    
-
-</article>
-                    <article
-        class="
-            phpdocumentor-element
-            -property
-            -private
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="property_package_folder">
-        $package_folder
-        <a href="classes/RichWeb-Algorithms-AlgorithmPackageManager.html#property_package_folder" class="headerlink"><i class="fas fa-link"></i></a>
-        <span class="phpdocumentor-element__modifiers">
-                                </span>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/AlgorithmPackageManager.php"><a href="files/includes-algorithmpackagemanager.html"><abbr title="Includes/AlgorithmPackageManager.php">AlgorithmPackageManager.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">28</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">string</span>
-    <span class="phpdocumentor-signature__name">$package_folder</span>
-    </code>
-
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
-    
-
-</article>
                     <article
         class="
             phpdocumentor-element
@@ -321,14 +224,14 @@
 >
     <h4 class="phpdocumentor-element__name" id="property_packages">
         $packages
-        <a href="classes/RichWeb-Algorithms-AlgorithmPackageManager.html#property_packages" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/RichWeb-Algorithms-AlgorithmPackageLoader.html#property_packages" class="headerlink"><i class="fas fa-link"></i></a>
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/AlgorithmPackageManager.php"><a href="files/includes-algorithmpackagemanager.html"><abbr title="Includes/AlgorithmPackageManager.php">AlgorithmPackageManager.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/AlgorithmPackageLoader.php"><a href="files/includes-algorithmpackageloader.html"><abbr title="Includes/AlgorithmPackageLoader.php">AlgorithmPackageLoader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">35</span>
+    <span class="phpdocumentor-element-found-in__line">26</span>
 
     </aside>
 
@@ -339,8 +242,10 @@
     <span class="phpdocumentor-signature__name">$packages</span>
     </code>
 
-    
-    
+        <section class="phpdocumentor-description"></section>
+
+        <section class="phpdocumentor-description"></section>
+
     
 
 </article>
@@ -353,21 +258,21 @@
 >
     <h4 class="phpdocumentor-element__name" id="property_syntax">
         $syntax
-        <a href="classes/RichWeb-Algorithms-AlgorithmPackageManager.html#property_syntax" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/RichWeb-Algorithms-AlgorithmPackageLoader.html#property_syntax" class="headerlink"><i class="fas fa-link"></i></a>
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/AlgorithmPackageManager.php"><a href="files/includes-algorithmpackagemanager.html"><abbr title="Includes/AlgorithmPackageManager.php">AlgorithmPackageManager.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/AlgorithmPackageLoader.php"><a href="files/includes-algorithmpackageloader.html"><abbr title="Includes/AlgorithmPackageLoader.php">AlgorithmPackageLoader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">39</span>
+    <span class="phpdocumentor-element-found-in__line">27</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type"><a href="classes/RichWeb-Algorithms-Abstracts-AbstractSyntaxHighlighter.html"><abbr title="\RichWeb\Algorithms\Abstracts\AbstractSyntaxHighlighter">AbstractSyntaxHighlighter</abbr></a></span>
+        <span class="phpdocumentor-signature__type"><a href="classes/RichWeb-Algorithms-Interfaces-SyntaxHighlighterInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface">SyntaxHighlighterInterface</abbr></a></span>
     <span class="phpdocumentor-signature__name">$syntax</span>
     </code>
 
@@ -383,7 +288,7 @@
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
-            <a href="classes/RichWeb-Algorithms-AlgorithmPackageManager.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/RichWeb-Algorithms-AlgorithmPackageLoader.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
                     <article
         class="phpdocumentor-element
@@ -393,27 +298,26 @@
 >
     <h4 class="phpdocumentor-element__name" id="method___construct">
         __construct()
-        <a href="classes/RichWeb-Algorithms-AlgorithmPackageManager.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/RichWeb-Algorithms-AlgorithmPackageLoader.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/AlgorithmPackageManager.php"><a href="files/includes-algorithmpackagemanager.html"><abbr title="Includes/AlgorithmPackageManager.php">AlgorithmPackageManager.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/AlgorithmPackageLoader.php"><a href="files/includes-algorithmpackageloader.html"><abbr title="Includes/AlgorithmPackageLoader.php">AlgorithmPackageLoader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">37</span>
+    <span class="phpdocumentor-element-found-in__line">25</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$main_directory</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/RichWeb-Algorithms-Abstracts-AbstractSyntaxHighlighter.html"><abbr title="\RichWeb\Algorithms\Abstracts\AbstractSyntaxHighlighter">AbstractSyntaxHighlighter</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$syntax</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$packages</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/RichWeb-Algorithms-Interfaces-SyntaxHighlighterInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface">SyntaxHighlighterInterface</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$syntax</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$main_directory</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                <span class="phpdocumentor-signature__argument__name">$packages</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"></section>
@@ -421,7 +325,7 @@
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$syntax</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/RichWeb-Algorithms-Abstracts-AbstractSyntaxHighlighter.html"><abbr title="\RichWeb\Algorithms\Abstracts\AbstractSyntaxHighlighter">AbstractSyntaxHighlighter</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/RichWeb-Algorithms-Interfaces-SyntaxHighlighterInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface">SyntaxHighlighterInterface</abbr></a></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"></section>
@@ -443,14 +347,47 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_getPackages">
-        getPackages()
-        <a href="classes/RichWeb-Algorithms-AlgorithmPackageManager.html#method_getPackages" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_action">
+        action()
+        <a href="classes/RichWeb-Algorithms-AlgorithmPackageLoader.html#method_action" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/AlgorithmPackageManager.php"><a href="files/includes-algorithmpackagemanager.html"><abbr title="Includes/AlgorithmPackageManager.php">AlgorithmPackageManager.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/AlgorithmPackageLoader.php"><a href="files/includes-algorithmpackageloader.html"><abbr title="Includes/AlgorithmPackageLoader.php">AlgorithmPackageLoader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">49</span>
+    <span class="phpdocumentor-element-found-in__line">35</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">action</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getPackages">
+        getPackages()
+        <a href="classes/RichWeb-Algorithms-AlgorithmPackageLoader.html#method_getPackages" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/AlgorithmPackageLoader.php"><a href="files/includes-algorithmpackageloader.html"><abbr title="Includes/AlgorithmPackageLoader.php">AlgorithmPackageLoader.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">51</span>
 
     </aside>
 
@@ -473,60 +410,86 @@
                     <article
         class="phpdocumentor-element
             -method
-            -protected
+            -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_formatSlashes">
-        formatSlashes()
-        <a href="classes/RichWeb-Algorithms-Traits-Formatting-FilePaths.html#method_formatSlashes" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_loadPackage">
+        loadPackage()
+        <a href="classes/RichWeb-Algorithms-AlgorithmPackageLoader.html#method_loadPackage" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Traits/Formatting/FilePaths.php"><a href="files/includes-traits-formatting-filepaths.html"><abbr title="Includes/Traits/Formatting/FilePaths.php">FilePaths.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/AlgorithmPackageLoader.php"><a href="files/includes-algorithmpackageloader.html"><abbr title="Includes/AlgorithmPackageLoader.php">AlgorithmPackageLoader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">27</span>
+    <span class="phpdocumentor-element-found-in__line">56</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Normalises forward and/or backward slashes to the system directory separator.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">protected</span>
-                <span class="phpdocumentor-signature__name">formatSlashes</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$path</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
-
     
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">loadPackage</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$name</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$post_id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$path</span>
+                <span class="phpdocumentor-signature__argument__name">$name</span>
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$post_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
             </dd>
             </dl>
 
     
-    <h5 class="phpdocumentor-tag-list__heading" id="tags">
-        Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
-    </h5>
-    <dl class="phpdocumentor-tag-list">
-                                    <dt class="phpdocumentor-tag-list__entry">
-                    <span class="phpdocumentor-tag__name">uses</span>
-                </dt>
-                <dd class="phpdocumentor-tag-list__definition">
-                                                                                    <span class="phpdocumentor-tag-link"><abbr title="\str_replace()">str_replace()</abbr></span>
-                                        
-                                             
-                                    </dd>
-                        </dl>
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">string</span>
+    <span class="phpdocumentor-signature__response_type">void</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>The normalised path</p>
-</section>
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_run">
+        run()
+        <a href="classes/RichWeb-Algorithms-AlgorithmPackageLoader.html#method_run" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/AlgorithmPackageLoader.php"><a href="files/includes-algorithmpackageloader.html"><abbr title="Includes/AlgorithmPackageLoader.php">AlgorithmPackageLoader.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">30</span>
 
+    </aside>
+
+        <p class="phpdocumentor-summary">Runs the class init functions not handled during construction.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">run</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash;
+        
     
 </article>
                     <article
@@ -535,29 +498,40 @@
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_parsePackages">
-        parsePackages()
-        <a href="classes/RichWeb-Algorithms-AlgorithmPackageManager.html#method_parsePackages" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_postHasPackage">
+        postHasPackage()
+        <a href="classes/RichWeb-Algorithms-AlgorithmPackageLoader.html#method_postHasPackage" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/AlgorithmPackageManager.php"><a href="files/includes-algorithmpackagemanager.html"><abbr title="Includes/AlgorithmPackageManager.php">AlgorithmPackageManager.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/AlgorithmPackageLoader.php"><a href="files/includes-algorithmpackageloader.html"><abbr title="Includes/AlgorithmPackageLoader.php">AlgorithmPackageLoader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">54</span>
+    <span class="phpdocumentor-element-found-in__line">46</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-                <span class="phpdocumentor-signature__name">parsePackages</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                <span class="phpdocumentor-signature__name">postHasPackage</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$post_id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|string</span></code>
 
         <section class="phpdocumentor-description"></section>
 
-    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$post_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">void</span>
+    <span class="phpdocumentor-signature__response_type">bool|string</span>
             &mdash;
         
     
@@ -640,7 +614,7 @@
 </section>
             </div>
         </div>
-        <a href="classes/RichWeb-Algorithms-AlgorithmPackageManager.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/RichWeb-Algorithms-AlgorithmPackageLoader.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 

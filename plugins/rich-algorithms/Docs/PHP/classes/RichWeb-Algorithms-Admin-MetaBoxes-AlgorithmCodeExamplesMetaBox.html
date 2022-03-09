@@ -114,7 +114,7 @@
     
             <span class="phpdocumentor-element__extends">
             Uses
-                            <a href="classes/RichWeb-Algorithms-Traits-Formatting-Strings.html"><abbr title="\RichWeb\Algorithms\Traits\Formatting\Strings">Strings</abbr></a>                    </span>
+                            <a href="classes/RichWeb-Algorithms-Traits-Formatting-FilePaths.html"><abbr title="\RichWeb\Algorithms\Traits\Formatting\FilePaths">FilePaths</abbr></a>,                             <a href="classes/RichWeb-Algorithms-Traits-Formatting-Strings.html"><abbr title="\RichWeb\Algorithms\Traits\Formatting\Strings">Strings</abbr></a>                    </span>
     </h2>
 
         <aside class="phpdocumentor-element-found-in">
@@ -190,6 +190,13 @@
 <dd>Runs the class init functions not handled during construction.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#method_getCodeExampleInfoEditor">getCodeExampleInfoEditor()</a>
+    <span>
+                                &nbsp;: string    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#method_getCodeExamples">getCodeExamples()</a>
     <span>
                                 &nbsp;: array&lt;string|int, mixed&gt;    </span>
@@ -230,6 +237,13 @@
                                 &nbsp;: string    </span>
 </dt>
 <dd>Escapes any HTML entities within a string for safe output.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
+    <a href="classes/RichWeb-Algorithms-Traits-Formatting-FilePaths.html#method_formatSlashes">formatSlashes()</a>
+    <span>
+                                &nbsp;: string    </span>
+</dt>
+<dd>Normalises forward and/or backward slashes to the system directory separator.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
     <a href="classes/RichWeb-Algorithms-Traits-Formatting-Strings.html#method_sanitise">sanitise()</a>
@@ -280,7 +294,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">30</span>
+    <span class="phpdocumentor-element-found-in__line">31</span>
 
     </aside>
 
@@ -314,7 +328,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">27</span>
+    <span class="phpdocumentor-element-found-in__line">28</span>
 
     </aside>
 
@@ -348,7 +362,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">31</span>
+    <span class="phpdocumentor-element-found-in__line">32</span>
 
     </aside>
 
@@ -386,7 +400,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">29</span>
+    <span class="phpdocumentor-element-found-in__line">30</span>
 
     </aside>
 
@@ -438,7 +452,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">36</span>
+    <span class="phpdocumentor-element-found-in__line">37</span>
 
     </aside>
 
@@ -471,7 +485,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">94</span>
+    <span class="phpdocumentor-element-found-in__line">118</span>
 
     </aside>
 
@@ -544,6 +558,58 @@
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getCodeExampleInfoEditor">
+        getCodeExampleInfoEditor()
+        <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#method_getCodeExampleInfoEditor" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">78</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getCodeExampleInfoEditor</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$content</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$key</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$content</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$key</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getCodeExamples">
         getCodeExamples()
         <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#method_getCodeExamples" class="headerlink"><i class="fas fa-link"></i></a>
@@ -551,7 +617,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">77</span>
+    <span class="phpdocumentor-element-found-in__line">101</span>
 
     </aside>
 
@@ -584,7 +650,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">82</span>
+    <span class="phpdocumentor-element-found-in__line">106</span>
 
     </aside>
 
@@ -617,7 +683,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">48</span>
+    <span class="phpdocumentor-element-found-in__line">49</span>
 
     </aside>
 
@@ -660,7 +726,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">108</span>
+    <span class="phpdocumentor-element-found-in__line">132</span>
 
     </aside>
 
@@ -703,7 +769,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">138</span>
+    <span class="phpdocumentor-element-found-in__line">162</span>
 
     </aside>
 
@@ -780,6 +846,65 @@
     <span class="phpdocumentor-signature__response_type">string</span>
             &mdash;
         
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_formatSlashes">
+        formatSlashes()
+        <a href="classes/RichWeb-Algorithms-Traits-Formatting-FilePaths.html#method_formatSlashes" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Traits/Formatting/FilePaths.php"><a href="files/includes-traits-formatting-filepaths.html"><abbr title="Includes/Traits/Formatting/FilePaths.php">FilePaths.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">27</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Normalises forward and/or backward slashes to the system directory separator.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+                <span class="phpdocumentor-signature__name">formatSlashes</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$path</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$path</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">uses</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                    <span class="phpdocumentor-tag-link"><abbr title="\str_replace()">str_replace()</abbr></span>
+                                        
+                                             
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The normalised path</p>
+</section>
+
     
 </article>
                     <article
@@ -913,7 +1038,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">66</span>
+    <span class="phpdocumentor-element-found-in__line">67</span>
 
     </aside>
 
@@ -921,7 +1046,7 @@
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-                <span class="phpdocumentor-signature__name">getCodeExampleElement</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$key</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$lang</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$code</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+                <span class="phpdocumentor-signature__name">getCodeExampleElement</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$key</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$lang</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$code</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$info</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
 
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
@@ -946,6 +1071,14 @@
                  = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
                 
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$info</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
             </dd>
             </dl>
 
