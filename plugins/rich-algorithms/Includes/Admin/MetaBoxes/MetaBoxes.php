@@ -15,8 +15,9 @@ namespace RichWeb\Algorithms\Admin\MetaBoxes;
 
 use RichWeb\Algorithms\Abstracts\AbstractSyntaxHighlighter;
 use RichWeb\Algorithms\AlgorithmPackageManager;
+use RichWeb\Algorithms\Interfaces\HasRunnerInterface;
 
-final class MetaBoxes
+final class MetaBoxes implements HasRunnerInterface
 {
     public function __construct(
         private string $main_directory,
