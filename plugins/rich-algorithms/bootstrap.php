@@ -36,6 +36,7 @@ define('RICH_ALGO_PATH', plugin_dir_path(RICH_ALGO_FILE));
 define('RICH_ALGO_PLUGIN_PATH', plugin_basename(dirname(RICH_ALGO_FILE)));
 define('RICH_ALGO_PLUGIN_BASENAME', plugin_basename(RICH_ALGO_FILE));
 
+require_once $includes . 'Interfaces' . $sep . 'AutoloaderInterface.php';
 require_once $includes . 'Loaders' . $sep . 'Autoloader.php';
 (new Autoloader($project->getAutoloaderSources()))->register();
 
