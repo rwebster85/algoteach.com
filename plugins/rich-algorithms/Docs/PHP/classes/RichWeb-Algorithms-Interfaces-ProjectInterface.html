@@ -92,31 +92,24 @@
                     <ul class="phpdocumentor-breadcrumbs">
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/richweb.html">RichWeb</a></li>
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/richweb-algorithms.html">Algorithms</a></li>
-            <li class="phpdocumentor-breadcrumb"><a href="namespaces/richweb-algorithms-admin.html">Admin</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/richweb-algorithms-interfaces.html">Interfaces</a></li>
     </ul>
 
-    <article class="phpdocumentor-element -class">
+    <article class="phpdocumentor-element -interface">
         <h2 class="phpdocumentor-content__title">
-    AlgorithmPostType
-
-        <span class="phpdocumentor-element__extends">
-        extends <a href="classes/RichWeb-Algorithms-Admin-Abstracts-AbstractPostType.html"><abbr title="\RichWeb\Algorithms\Admin\Abstracts\AbstractPostType">AbstractPostType</abbr></a>
-    </span>
-    
-            <div class="phpdocumentor-element__package">
-            in package
+    ProjectInterface
+                <div class="phpdocumentor-element__package">
+            in
             <ul class="phpdocumentor-breadcrumbs">
-                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Application.html">Application</a></li>
+                                    <li><a href="packages/Application.html">Application</a></li>
                             </ul>
         </div>
-    
-    
     </h2>
 
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/AlgorithmPostType.php"><a href="files/includes-admin-algorithmposttype.html"><abbr title="Includes/Admin/AlgorithmPostType.php">AlgorithmPostType.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Interfaces/ProjectInterface.php"><a href="files/includes-interfaces-projectinterface.html"><abbr title="Includes/Interfaces/ProjectInterface.php">ProjectInterface.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">18</span>
+    <span class="phpdocumentor-element-found-in__line">16</span>
 
     </aside>
 
@@ -137,53 +130,53 @@
 
 <dl class="phpdocumentor-table-of-contents">
                         <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichWeb-Algorithms-Admin-AlgorithmPostType.html#method___construct">__construct()</a>
-    <span>
-                                &nbsp;: mixed    </span>
-</dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichWeb-Algorithms-Admin-AlgorithmPostType.html#method_archivePageTitle">archivePageTitle()</a>
-    <span>
-                                &nbsp;: string|null    </span>
-</dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichWeb-Algorithms-Admin-AlgorithmPostType.html#method_register">register()</a>
+    <a href="classes/RichWeb-Algorithms-Interfaces-ProjectInterface.html#method_buildProject">buildProject()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
-<dd>Register the post type. Called via WP action.</dd>
+<dd>Builds the project information.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichWeb-Algorithms-Admin-Abstracts-AbstractPostType.html#method_run">run()</a>
-    <span>
-                                &nbsp;: void    </span>
-</dt>
-<dd>Runs the class init functions not handled during construction.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichWeb-Algorithms-Admin-AlgorithmPostType.html#method_showExcerptOnArchives">showExcerptOnArchives()</a>
-    <span>
-                                &nbsp;: string|null    </span>
-</dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
-    <a href="classes/RichWeb-Algorithms-Admin-AlgorithmPostType.html#method_actions">actions()</a>
-    <span>
-                                &nbsp;: void    </span>
-</dt>
-<dd>Called by `run()` and is used to set up all the actions for the post type.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -private">
-    <a href="classes/RichWeb-Algorithms-Admin-AlgorithmPostType.html#method_capabilities">capabilities()</a>
+    <a href="classes/RichWeb-Algorithms-Interfaces-ProjectInterface.html#method_getAutoloaderSources">getAutoloaderSources()</a>
     <span>
                                 &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
-<dd></dd>
+<dd>Returns the sources used by the Autoloader.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/RichWeb-Algorithms-Interfaces-ProjectInterface.html#method_getFileSources">getFileSources()</a>
+    <span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
+</dt>
+<dd>Returns the sources used by the Fileloader.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/RichWeb-Algorithms-Interfaces-ProjectInterface.html#method_getMainDirectory">getMainDirectory()</a>
+    <span>
+                                &nbsp;: string    </span>
+</dt>
+<dd>Returns the full path to the main project directory.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/RichWeb-Algorithms-Interfaces-ProjectInterface.html#method_getName">getName()</a>
+    <span>
+                                &nbsp;: string    </span>
+</dt>
+<dd>Returns the name of this project.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/RichWeb-Algorithms-Interfaces-ProjectInterface.html#method_getRequirements">getRequirements()</a>
+    <span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
+</dt>
+<dd>Returns an array of the requirements needed for this project to run.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/RichWeb-Algorithms-Interfaces-ProjectInterface.html#method_getVersion">getVersion()</a>
+    <span>
+                                &nbsp;: string    </span>
+</dt>
+<dd>Returns the version of this project.</dd>
 
         </dl>
 
@@ -191,12 +184,10 @@
 
         
 
-        
-
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
-            <a href="classes/RichWeb-Algorithms-Admin-AlgorithmPostType.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/RichWeb-Algorithms-Interfaces-ProjectInterface.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
                     <article
         class="phpdocumentor-element
@@ -204,99 +195,22 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method___construct">
-        __construct()
-        <a href="classes/RichWeb-Algorithms-Admin-AlgorithmPostType.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_buildProject">
+        buildProject()
+        <a href="classes/RichWeb-Algorithms-Interfaces-ProjectInterface.html#method_buildProject" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/AlgorithmPostType.php"><a href="files/includes-admin-algorithmposttype.html"><abbr title="Includes/Admin/AlgorithmPostType.php">AlgorithmPostType.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Interfaces/ProjectInterface.php"><a href="files/includes-interfaces-projectinterface.html"><abbr title="Includes/Interfaces/ProjectInterface.php">ProjectInterface.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">20</span>
+    <span class="phpdocumentor-element-found-in__line">23</span>
 
     </aside>
 
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_archivePageTitle">
-        archivePageTitle()
-        <a href="classes/RichWeb-Algorithms-Admin-AlgorithmPostType.html#method_archivePageTitle" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/AlgorithmPostType.php"><a href="files/includes-admin-algorithmposttype.html"><abbr title="Includes/Admin/AlgorithmPostType.php">AlgorithmPostType.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">29</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">archivePageTitle</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$title</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|null</span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$title</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">string|null</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_register">
-        register()
-        <a href="classes/RichWeb-Algorithms-Admin-AlgorithmPostType.html#method_register" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/AlgorithmPostType.php"><a href="files/includes-admin-algorithmposttype.html"><abbr title="Includes/Admin/AlgorithmPostType.php">AlgorithmPostType.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">49</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Register the post type. Called via WP action.</p>
+        <p class="phpdocumentor-summary">Builds the project information.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">register</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                <span class="phpdocumentor-signature__name">buildProject</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     
     
@@ -314,139 +228,194 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_run">
-        run()
-        <a href="classes/RichWeb-Algorithms-Admin-Abstracts-AbstractPostType.html#method_run" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_getAutoloaderSources">
+        getAutoloaderSources()
+        <a href="classes/RichWeb-Algorithms-Interfaces-ProjectInterface.html#method_getAutoloaderSources" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/Abstracts/AbstractPostType.php"><a href="files/includes-admin-abstracts-abstractposttype.html"><abbr title="Includes/Admin/Abstracts/AbstractPostType.php">AbstractPostType.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Interfaces/ProjectInterface.php"><a href="files/includes-interfaces-projectinterface.html"><abbr title="Includes/Interfaces/ProjectInterface.php">ProjectInterface.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">24</span>
+    <span class="phpdocumentor-element-found-in__line">58</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Runs the class init functions not handled during construction.</p>
+        <p class="phpdocumentor-summary">Returns the sources used by the Autoloader.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">run</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                <span class="phpdocumentor-signature__name">getAutoloaderSources</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
     
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">void</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_showExcerptOnArchives">
-        showExcerptOnArchives()
-        <a href="classes/RichWeb-Algorithms-Admin-AlgorithmPostType.html#method_showExcerptOnArchives" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/AlgorithmPostType.php"><a href="files/includes-admin-algorithmposttype.html"><abbr title="Includes/Admin/AlgorithmPostType.php">AlgorithmPostType.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">38</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">showExcerptOnArchives</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$content</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|null</span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$content</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">string|null</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -protected
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_actions">
-        actions()
-        <a href="classes/RichWeb-Algorithms-Admin-AlgorithmPostType.html#method_actions" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/AlgorithmPostType.php"><a href="files/includes-admin-algorithmposttype.html"><abbr title="Includes/Admin/AlgorithmPostType.php">AlgorithmPostType.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">22</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Called by `run()` and is used to set up all the actions for the post type.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">protected</span>
-                <span class="phpdocumentor-signature__name">actions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
-
-    
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">void</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -private
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_capabilities">
-        capabilities()
-        <a href="classes/RichWeb-Algorithms-Admin-AlgorithmPostType.html#method_capabilities" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/AlgorithmPostType.php"><a href="files/includes-admin-algorithmposttype.html"><abbr title="Includes/Admin/AlgorithmPostType.php">AlgorithmPostType.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">108</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
-                <span class="phpdocumentor-signature__name">capabilities</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
-
-        <section class="phpdocumentor-description"></section>
-
     
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getFileSources">
+        getFileSources()
+        <a href="classes/RichWeb-Algorithms-Interfaces-ProjectInterface.html#method_getFileSources" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Interfaces/ProjectInterface.php"><a href="files/includes-interfaces-projectinterface.html"><abbr title="Includes/Interfaces/ProjectInterface.php">ProjectInterface.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">65</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Returns the sources used by the Fileloader.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getFileSources</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getMainDirectory">
+        getMainDirectory()
+        <a href="classes/RichWeb-Algorithms-Interfaces-ProjectInterface.html#method_getMainDirectory" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Interfaces/ProjectInterface.php"><a href="files/includes-interfaces-projectinterface.html"><abbr title="Includes/Interfaces/ProjectInterface.php">ProjectInterface.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">30</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Returns the full path to the main project directory.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getMainDirectory</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getName">
+        getName()
+        <a href="classes/RichWeb-Algorithms-Interfaces-ProjectInterface.html#method_getName" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Interfaces/ProjectInterface.php"><a href="files/includes-interfaces-projectinterface.html"><abbr title="Includes/Interfaces/ProjectInterface.php">ProjectInterface.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">37</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Returns the name of this project.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getName</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getRequirements">
+        getRequirements()
+        <a href="classes/RichWeb-Algorithms-Interfaces-ProjectInterface.html#method_getRequirements" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Interfaces/ProjectInterface.php"><a href="files/includes-interfaces-projectinterface.html"><abbr title="Includes/Interfaces/ProjectInterface.php">ProjectInterface.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">51</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Returns an array of the requirements needed for this project to run.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getRequirements</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getVersion">
+        getVersion()
+        <a href="classes/RichWeb-Algorithms-Interfaces-ProjectInterface.html#method_getVersion" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Interfaces/ProjectInterface.php"><a href="files/includes-interfaces-projectinterface.html"><abbr title="Includes/Interfaces/ProjectInterface.php">ProjectInterface.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">44</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Returns the version of this project.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getVersion</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string</span>
             &mdash;
         
     
@@ -529,7 +498,7 @@
 </section>
             </div>
         </div>
-        <a href="classes/RichWeb-Algorithms-Admin-AlgorithmPostType.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/RichWeb-Algorithms-Interfaces-ProjectInterface.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 
