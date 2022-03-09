@@ -100,7 +100,7 @@ final class AlgorithmCodeExamplesMetaBox extends AbstractMetaBox
 
     public function getCodeExamples(): array
     {
-        return get_post_meta($this->getPostId(), 'richweb_algorithm_code_examples', true);
+        return (array) get_post_meta($this->getPostId(), 'richweb_algorithm_code_examples', true);
     }
 
     public function getPostId(): int
