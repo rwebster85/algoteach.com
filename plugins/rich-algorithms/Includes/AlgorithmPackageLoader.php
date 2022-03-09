@@ -14,10 +14,11 @@ declare(strict_types=1);
 namespace RichWeb\Algorithms;
 
 use RichWeb\Algorithms\AlgorithmPackage;
+use RichWeb\Algorithms\Interfaces\AlgorithmPackageLoaderInterface;
 use RichWeb\Algorithms\Interfaces\HasRunnerInterface;
 use RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface;
 
-final class AlgorithmPackageLoader implements HasRunnerInterface
+final class AlgorithmPackageLoader implements AlgorithmPackageLoaderInterface, HasRunnerInterface
 {
     /**
      * @var array<string, AlgorithmPackage>
@@ -29,10 +30,17 @@ final class AlgorithmPackageLoader implements HasRunnerInterface
 
     public function run(): void
     {
-        add_action('template_redirect', [$this, 'action']);
+        add_action('template_redirect', [$this, 'loadPackageForPost']);
     }
 
-    public function action(): void
+    /**
+     * Loads the package for the current global post, hooked from 'template_redirect' WP Action
+     * 
+     * @see https://developer.wordpress.org/reference/hooks/template_redirect/ WP Action
+     * 
+     * @return void
+     */
+    public function loadPackageForPost(): void
     {
         if (is_singular('richweb_algorithm')) {
             $post_id = absint(get_the_ID() ?? 0);

@@ -16,18 +16,20 @@ namespace RichWeb\Algorithms;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
 use RichWeb\Algorithms\AlgorithmPackage;
+use RichWeb\Algorithms\Interfaces\AlgorithmPackageLoaderInterface;
+use RichWeb\Algorithms\Interfaces\AlgorithmPackageManagerInterface;
+use RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface;
 use RichWeb\Algorithms\Traits\Formatting\FilePaths;
-use RichWeb\Algorithms\Abstracts\AbstractSyntaxHighlighter;
 
 use const DIRECTORY_SEPARATOR;
 
-final class AlgorithmPackageManager
+final class AlgorithmPackageManager implements AlgorithmPackageManagerInterface
 {
     use FilePaths;
 
     private string $package_folder;
 
-    private AlgorithmPackageLoader $loader;
+    private AlgorithmPackageLoaderInterface $loader;
 
     /**
      * @var array<string, AlgorithmPackage>
@@ -36,7 +38,7 @@ final class AlgorithmPackageManager
 
     public function __construct(
         private string $main_directory,
-        private AbstractSyntaxHighlighter $syntax
+        private SyntaxHighlighterInterface $syntax
     ) {
         $this->package_folder = $this->formatSlashes($main_directory . '/Algorithms/');
 

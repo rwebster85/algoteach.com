@@ -13,9 +13,10 @@ declare(strict_types=1);
 
 namespace RichWeb\Algorithms\Abstracts;
 
+use RichWeb\Algorithms\Interfaces\PluginInterface;
 use RichWeb\Algorithms\Project;
 
-abstract class AbstractPlugin
+abstract class AbstractPlugin implements PluginInterface
 {
     protected Project $project;
 

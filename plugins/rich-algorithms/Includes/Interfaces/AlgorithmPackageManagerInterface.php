@@ -13,14 +13,14 @@ declare(strict_types=1);
 
 namespace RichWeb\Algorithms\Interfaces;
 
-use RichWeb\Algorithms\Project;
+use RichWeb\Algorithms\AlgorithmPackage;
 
-interface SingletonInterface
+interface AlgorithmPackageManagerInterface
 {
     /**
-     * Main Class Instance.
-     *
-     * Ensures only one instance of this class is loaded or can be loaded.
+     * Returns all the algorithm packages found.
+     * 
+     * @return array<string, AlgorithmPackage>
      */
-    public static function instance(?Project $project): ?self;
+    public function getPackages(): array;
 }

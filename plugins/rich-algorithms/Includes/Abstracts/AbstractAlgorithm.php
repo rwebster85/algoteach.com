@@ -13,9 +13,9 @@ declare(strict_types=1);
 
 namespace RichWeb\Algorithms\Abstracts;
 
-use RichWeb\Algorithms\AlgorithmPackage;
 use RichWeb\Algorithms\CodeExample;
 use RichWeb\Algorithms\Interfaces\AlgorithmInterface;
+use RichWeb\Algorithms\Interfaces\AlgorithmPackageInterface;
 use RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface;
 
 abstract class AbstractAlgorithm implements AlgorithmInterface
@@ -23,7 +23,7 @@ abstract class AbstractAlgorithm implements AlgorithmInterface
     private array $code_examples;
 
     final public function __construct(
-        private AlgorithmPackage $package,
+        private AlgorithmPackageInterface $package,
         private int $post_id,
         private SyntaxHighlighterInterface $syntax
     ) {

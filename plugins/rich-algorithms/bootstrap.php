@@ -25,6 +25,7 @@ use RichWeb\Algorithms\{
 $sep = DIRECTORY_SEPARATOR;
 $includes = 'Includes' . $sep;
 
+require_once $includes . 'Interfaces' . $sep . 'ProjectInterface.php';
 require_once $includes . 'Project.php';
 $project = new Project(__DIR__ . $sep . 'project.json', __DIR__);
 $project->buildProject();

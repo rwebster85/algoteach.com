@@ -13,11 +13,12 @@ declare(strict_types=1);
 
 namespace RichWeb\Algorithms;
 
+use RichWeb\Algorithms\Interfaces\CodeExampleInterface;
 use RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface;
 use RichWeb\Algorithms\Traits\Formatting;
 use Stringable;
 
-class CodeExample implements Stringable
+class CodeExample implements CodeExampleInterface, Stringable
 {
     use Formatting\FilePaths;
     use Formatting\Strings;

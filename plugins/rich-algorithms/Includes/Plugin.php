@@ -14,9 +14,11 @@ declare(strict_types=1);
 namespace RichWeb\Algorithms;
 
 use RichWeb\Algorithms\Abstracts\AbstractSingletonPlugin;
-use RichWeb\Algorithms\Setup\Setup;
+use RichWeb\Algorithms\Interfaces\AlgorithmPackageManagerInterface;
 use RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface;
 use RichWeb\Algorithms\PrismSyntaxHighlighter;
+use RichWeb\Algorithms\Setup\Setup;
+
 use RichWeb\Algorithms\Admin\{
     AlgorithmPostType,
     MetaBoxes\MetaBoxes
@@ -29,7 +31,7 @@ final class Plugin extends AbstractSingletonPlugin
      */
     private string $file = RICH_ALGO_FILE;
 
-    private AlgorithmPackageManager $algorithm_package_manager;
+    private AlgorithmPackageManagerInterface $algorithm_package_manager;
 
     private SyntaxHighlighterInterface $syntax;
 
@@ -108,7 +110,7 @@ final class Plugin extends AbstractSingletonPlugin
         return $this->syntax;
     }
 
-    public function packageManager(): AlgorithmPackageManager
+    public function packageManager(): AlgorithmPackageManagerInterface
     {
         return $this->algorithm_package_manager;
     }
