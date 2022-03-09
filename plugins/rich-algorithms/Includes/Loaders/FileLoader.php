@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace RichWeb\Algorithms\Loaders;
 
+use RichWeb\Algorithms\Interfaces\FileLoaderInterface;
 use function file_exists;
 
 /**
@@ -32,7 +33,7 @@ use function file_exists;
  * $file_loader->loadFiles();
  * ```
  */
-final class FileLoader
+final class FileLoader implements FileLoaderInterface
 {
     /**
      * The files to be loaded.
