@@ -13,55 +13,12 @@ declare(strict_types=1);
 
 namespace RichWeb\Algorithms\Packages;
 
-use RichWeb\Algorithms\AlgorithmPackage;
-use RichWeb\Algorithms\CodeExample;
-use RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface;
+use RichWeb\Algorithms\Abstracts\AbstractAlgorithm;
 
-final class Example
+final class Example extends AbstractAlgorithm
 {
-    private array $code_examples;
-
-    public function __construct(
-        private AlgorithmPackage $package,
-        private int $post_id,
-        private SyntaxHighlighterInterface $syntax
-    ) {
-        $this->buildCodeExamples();
-        add_filter('the_content', [$this, 'appendExamplesToContent']);
-    }
-
-    public function appendExamplesToContent(string $content): string
+    protected function run(): void
     {
-        if (empty($this->code_examples)) {
-            return '';
-        }
-
-        ob_start();
-
-        echo '<div class="rich-algo-frontend-examples-wrap">';
-
-        /** @var CodeExample $example */
-        foreach ($this->code_examples as $example) {
-            echo $example;
-        }
-
-        echo '</div>';
-
-        $after = ob_get_clean();
-        return $content . $after;
-    }
-
-    private function buildCodeExamples(): void
-    {
-        $examples = get_post_meta($this->post_id, 'richweb_algorithm_code_examples', true);
-
-        foreach ($examples as $example) {
-            $this->code_examples[] = new CodeExample($example, $this->syntax);
-        }
-    }
-
-    public function getCodeExamples(): array
-    {
-        return $this->code_examples;
+        
     }
 }
