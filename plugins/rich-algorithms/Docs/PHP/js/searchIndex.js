@@ -33,7 +33,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Abstracts\\AbstractAlgorithm\u003A\u003Arun\u0028\u0029",
             "name": "run",
-            "summary": "Can\u0020bo\u0020be\u0020implemented\u0020in\u0020the\u0020concrete\u0020class\u0020for\u0020additional\u0020functionality.\u0020Always\u0020called\u0020during\u0020construction.",
+            "summary": "Can\u0020be\u0020implemented\u0020in\u0020the\u0020concrete\u0020class\u0020for\u0020additional\u0020functionality.\u0020Always\u0020called\u0020during\u0020construction.",
             "url": "classes/RichWeb-Algorithms-Abstracts-AbstractAlgorithm.html#method_run"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Abstracts\\AbstractAlgorithm\u003A\u003A\u0024code_examples",

@@ -60,7 +60,7 @@ abstract class AbstractAlgorithm implements AlgorithmInterface
 
     private function buildCodeExamples(): void
     {
-        $examples = get_post_meta($this->post_id, 'richweb_algorithm_code_examples', true);
+        $examples = (array) get_post_meta($this->post_id, 'richweb_algorithm_code_examples', true);
 
         foreach ($examples as $example) {
             $this->code_examples[] = new CodeExample($example, $this->syntax);
@@ -73,7 +73,7 @@ abstract class AbstractAlgorithm implements AlgorithmInterface
     }
 
     /**
-     * Can bo be implemented in the concrete class for additional functionality. Always called during construction.
+     * Can be implemented in the concrete class for additional functionality. Always called during construction.
      * 
      * @return void
      */
