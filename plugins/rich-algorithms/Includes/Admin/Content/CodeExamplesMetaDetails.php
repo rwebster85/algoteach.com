@@ -13,11 +13,9 @@ declare(strict_types=1);
 
 use RichWeb\Algorithms\Admin\MetaBoxes\AlgorithmCodeExamplesMetaBox;
 
-/**
- * @var AlgorithmCodeExamplesMetaBox $this
- **/
+$code_examples = $this->getCodeExamples();
 
-$code_examples = $this->getCodeExamples(); ?>
+/** @var AlgorithmCodeExamplesMetaBox $this **/ ?>
 
 <div class="rich-algo-meta-outer">
     <div id="rich-algo-example-sortable">
@@ -26,7 +24,8 @@ $code_examples = $this->getCodeExamples(); ?>
                 $key = absint($key);
                 $lang = $this->escHtml(($example['lang'] ?? ''));
                 $code = ($example['content'] ?? '');
-                echo $this->getCodeExampleElement($key, $lang, $code);
+                $info = ($example['info'] ?? '');
+                echo $this->getCodeExampleElement($key, $lang, $code, $info);
             }
         } ?>
     </div>

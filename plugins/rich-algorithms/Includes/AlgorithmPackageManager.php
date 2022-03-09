@@ -17,6 +17,7 @@ use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
 use RichWeb\Algorithms\AlgorithmPackage;
 use RichWeb\Algorithms\Traits\Formatting\FilePaths;
+use RichWeb\Algorithms\Abstracts\AbstractSyntaxHighlighter;
 
 use const DIRECTORY_SEPARATOR;
 
@@ -26,18 +27,23 @@ final class AlgorithmPackageManager
 
     private string $package_folder;
 
+    private AlgorithmPackageLoader $loader;
+
     /**
      * @var array<string, AlgorithmPackage>
      */
     private array $packages;
 
-    public function __construct(string $main_directory)
-    {
+    public function __construct(
+        private string $main_directory,
+        private AbstractSyntaxHighlighter $syntax
+    ) {
         $this->package_folder = $this->formatSlashes($main_directory . '/Algorithms/');
 
         $this->parsePackages();
 
-        $this->loadPackage('Example Algorithm');
+        $this->loader = new AlgorithmPackageLoader($this->packages, $this->syntax);
+        $this->loader->run();
     }
 
     public function getPackages(): array
@@ -68,19 +74,5 @@ final class AlgorithmPackageManager
         }
 
         $this->packages = $packages;
-    }
-
-    public function loadPackage(string $name): void
-    {
-        if (array_key_exists($name, $this->packages)) {
-            /** @var AlgorithmPackage $package */
-            $package = $this->packages[$name];
-            $path = $package->getPath();
-            if (file_exists($path)) {
-                require_once $path;
-                $class = $package->getQualifiedClassName();
-                (new $class());
-            }
-        }
     }
 }

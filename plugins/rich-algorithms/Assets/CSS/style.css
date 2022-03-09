@@ -1,4 +1,71 @@
 pre[class*=language-] {
-    padding-bottom: 0;
+    margin-bottom: 1em!important;
+}
+
+code[class*=language-]  {
+    padding-left: 0;
+}
+
+.rich-algo-frontend-examples-wrap {
+    position: relative;
+    margin-top: 50px;
+}
+.rich-algo-frontend-code-example {
+    position: relative;
+    padding-top: 20px;
+}
+
+.rich-algo-frontend-code-example-info {
+    padding-bottom: 25px;
+}
+
+.rich-algo-frontend-code-example-info p:last-child {
+    margin-bottom: 0;
+}
+
+.rich-algo-frontend-code-wrap {
+    position: relative;
+}
+
+.rich-algo-frontend-code-language {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background-color: #8292a2;
+    padding: 2px 5px;
+    color: #000;
+    font-size: 14px;
+    border-top-right-radius: 0.3em;
+}
+
+.rich-algo-frontend-code-example-textarea {
+    display: none!important;
+}
+
+p.rich-algo-frontend-code-toolbar {
     margin-bottom: 2em;
+}
+
+.rich-algo-copy i {
+    width: 17px;
+    margin-right: 3px;
+    font-size: 14px;
+}
+
+.rich-algo-copy i::after {
+    content: "\f0c5";
+}
+
+.rich-algo-copy.copied i::after {
+    content: "\f00c";
+}
+
+.rich-algo-frontend-code-example {
+    border-top: 1px solid #ccc;
+}
+
+.rich-algo-frontend-code-example:last-child {
+    border-bottom: 1px solid #ccc;
 }

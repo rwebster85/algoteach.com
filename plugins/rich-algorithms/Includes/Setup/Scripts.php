@@ -53,6 +53,9 @@ class Scripts extends AbstractScripts
 
         $timestamp = time();
 
+        wp_register_script('rich-algo-script', $assets . 'JS/rich-algo.js', ['jquery'], $timestamp, true);
+        wp_enqueue_script('rich-algo-script');
+
         wp_register_style('rich-algo-style', $assets . 'CSS/style.css', [], $timestamp);
         wp_enqueue_style('rich-algo-style');
     }

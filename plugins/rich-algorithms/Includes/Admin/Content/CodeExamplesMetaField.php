@@ -13,11 +13,9 @@ declare(strict_types=1);
 
 use RichWeb\Algorithms\Admin\MetaBoxes\AlgorithmCodeExamplesMetaBox;
 
-/**
- * @var AlgorithmCodeExamplesMetaBox $this
- **/
+$languages = $this->supportedLanguages();
 
-$languages = $this->supportedLanguages(); ?>
+/** @var AlgorithmCodeExamplesMetaBox $this **/ ?>
 
 <div class="rich-algo-example-wrap" id="rich-algo-example-wrap-<?php echo $key; ?>" data-example-id="<?php echo $key; ?>">
     <span title="Move Code Example" class="rich-algo-sort-button dashicons dashicons-move"></span>
@@ -38,6 +36,13 @@ $languages = $this->supportedLanguages(); ?>
                 echo '<option value="' . $this->escHtml($language) . '"' . $selected . '>' . $name . '</option>';
             } ?>
         </select>
+    </div>
+
+    <hr>
+
+    <div class="rich-algo-meta-field-wrap">
+        <label class="rich-algo-meta-field-label mar-10" for="richweb_algorithm_code_examples[<?php echo $key; ?>][info]">Additional information</label>
+        <?php echo $this->getCodeExampleInfoEditor($info, $key); ?>
     </div>
     <hr>
 

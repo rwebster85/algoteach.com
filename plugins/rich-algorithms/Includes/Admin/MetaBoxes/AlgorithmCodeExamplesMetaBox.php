@@ -15,14 +15,15 @@ namespace RichWeb\Algorithms\Admin\MetaBoxes;
 
 use RichWeb\Algorithms\Admin\Abstracts\AbstractMetaBox;
 use RichWeb\Algorithms\Abstracts\AbstractSyntaxHighlighter;
-use RichWeb\Algorithms\Traits\Formatting\Strings;
+use RichWeb\Algorithms\Traits\Formatting;
 
 /**
  * This Meta Box outputs the algorithm package selection.
  */
 final class AlgorithmCodeExamplesMetaBox extends AbstractMetaBox
 {
-    use Strings;
+    use Formatting\FilePaths;
+    use Formatting\Strings;
 
     private int $post_id;
 
@@ -63,15 +64,38 @@ final class AlgorithmCodeExamplesMetaBox extends AbstractMetaBox
      * 
      * @return string
      */
-    private function getCodeExampleElement(int $key, string $lang = '', string $code = ''): string
+    private function getCodeExampleElement(int $key, string $lang = '', string $code = '', string $info = ''): string
     {
         ob_start();
 
-        include dirname(__FILE__) . '\..\Content\CodeExamplesMetaField.php';
+        include dirname(__FILE__) . $this->formatSlashes('\..\Content\CodeExamplesMetaField.php');
 
         $content = ob_get_clean();
 
         return $content;
+    }
+
+    public function getCodeExampleInfoEditor($content, $key): string
+    {
+        ob_start();
+        echo '<div class="rich-algo-meta-field-info-wrap">';
+        $editor_id = 'richweb_algorithm_code_examples-'.$key.'';
+        $editor_name = 'richweb_algorithm_code_examples['.$key.'][info]';
+        $settings = array(
+            'media_buttons' => false,
+            'quicktags' => true,
+            'teeny' => true,
+            'editor_height' => 200,
+            'textarea_name' => $editor_name
+        );
+    
+        wp_editor($content, $editor_id, $settings);
+    
+        echo '</div>';
+    
+        $editor = ob_get_clean();
+        
+        return $editor;
     }
 
     public function getCodeExamples(): array
