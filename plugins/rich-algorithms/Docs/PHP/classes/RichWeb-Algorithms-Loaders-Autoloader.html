@@ -107,13 +107,16 @@
                             </ul>
         </div>
     
+            <span class="phpdocumentor-element__implements">
+            implements
+                            <a href="classes/RichWeb-Algorithms-Interfaces-AutoloaderInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\AutoloaderInterface">AutoloaderInterface</abbr></a>                    </span>
     
     </h2>
 
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Loaders/Autoloader.php"><a href="files/includes-loaders-autoloader.html"><abbr title="Includes/Loaders/Autoloader.php">Autoloader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">70</span>
+    <span class="phpdocumentor-element-found-in__line">72</span>
 
     </aside>
 
@@ -160,6 +163,18 @@ $loader-&gt;addNamespace('Foo\Bar', '/path/to/packages/foo-bar/tests');
 
 
 
+<h3 id="interfaces_class_traits">
+    Interfaces, Classes, Traits and Enums
+    <a href="#interfaces_class_traits" class="headerlink"><i class="fas fa-link"></i></a>
+</h3>
+
+<dl class="phpdocumentor-table-of-contents">
+            <dt class="phpdocumentor-table-of-contents__entry -interface"><a href="classes/RichWeb-Algorithms-Interfaces-AutoloaderInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\AutoloaderInterface">AutoloaderInterface</abbr></a></dt>
+        <dd></dd>
+    
+    
+    
+    </dl>
 
 
 <h3 id="toc">
@@ -193,7 +208,7 @@ is an array of base directories for classes in that namespace.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/RichWeb-Algorithms-Loaders-Autoloader.html#method_loadClass">loadClass()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: string|bool    </span>
 </dt>
 <dd>Loads the class file for a given class name.</dd>
 
@@ -207,7 +222,7 @@ is an array of base directories for classes in that namespace.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
     <a href="classes/RichWeb-Algorithms-Loaders-Autoloader.html#method_loadMappedFile">loadMappedFile()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: string|bool    </span>
 </dt>
 <dd>Load the mapped file for a namespace prefix and relative class.</dd>
 
@@ -246,7 +261,7 @@ is an array of base directories for classes in that namespace.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Loaders/Autoloader.php"><a href="files/includes-loaders-autoloader.html"><abbr title="Includes/Loaders/Autoloader.php">Autoloader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">78</span>
+    <span class="phpdocumentor-element-found-in__line">80</span>
 
     </aside>
 
@@ -284,7 +299,7 @@ is an array of base directories for classes in that namespace.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Loaders/Autoloader.php"><a href="files/includes-loaders-autoloader.html"><abbr title="Includes/Loaders/Autoloader.php">Autoloader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">80</span>
+    <span class="phpdocumentor-element-found-in__line">82</span>
 
     </aside>
 
@@ -328,7 +343,7 @@ is an array of base directories for classes in that namespace.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Loaders/Autoloader.php"><a href="files/includes-loaders-autoloader.html"><abbr title="Includes/Loaders/Autoloader.php">Autoloader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">108</span>
+    <span class="phpdocumentor-element-found-in__line">111</span>
 
     </aside>
 
@@ -394,7 +409,7 @@ than last.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Loaders/Autoloader.php"><a href="files/includes-loaders-autoloader.html"><abbr title="Includes/Loaders/Autoloader.php">Autoloader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">136</span>
+    <span class="phpdocumentor-element-found-in__line">139</span>
 
     </aside>
 
@@ -402,7 +417,7 @@ than last.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">loadClass</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$class</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                <span class="phpdocumentor-signature__name">loadClass</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$class</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|bool</span></code>
 
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
@@ -421,10 +436,9 @@ than last.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
+    <span class="phpdocumentor-signature__response_type">string|bool</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>The mapped file name on success, or boolean false on
-failure.</p>
+            <section class="phpdocumentor-description"><p>The mapped file name on success, or boolean false on failure.</p>
 </section>
 
     
@@ -442,7 +456,7 @@ failure.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Loaders/Autoloader.php"><a href="files/includes-loaders-autoloader.html"><abbr title="Includes/Loaders/Autoloader.php">Autoloader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">92</span>
+    <span class="phpdocumentor-element-found-in__line">94</span>
 
     </aside>
 
@@ -475,7 +489,7 @@ failure.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Loaders/Autoloader.php"><a href="files/includes-loaders-autoloader.html"><abbr title="Includes/Loaders/Autoloader.php">Autoloader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">174</span>
+    <span class="phpdocumentor-element-found-in__line">177</span>
 
     </aside>
 
@@ -483,7 +497,7 @@ failure.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">protected</span>
-                <span class="phpdocumentor-signature__name">loadMappedFile</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$prefix</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$relative_class</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                <span class="phpdocumentor-signature__name">loadMappedFile</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$prefix</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$relative_class</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|bool</span></code>
 
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
@@ -511,10 +525,9 @@ failure.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
+    <span class="phpdocumentor-signature__response_type">string|bool</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>Boolean false if no mapped file can be loaded, or the
-name of the mapped file that was loaded.</p>
+            <section class="phpdocumentor-description"><p>Boolean false if no mapped file can be loaded, or the name of the mapped file that was loaded.</p>
 </section>
 
     
@@ -532,7 +545,7 @@ name of the mapped file that was loaded.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Loaders/Autoloader.php"><a href="files/includes-loaders-autoloader.html"><abbr title="Includes/Loaders/Autoloader.php">Autoloader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">208</span>
+    <span class="phpdocumentor-element-found-in__line">212</span>
 
     </aside>
 

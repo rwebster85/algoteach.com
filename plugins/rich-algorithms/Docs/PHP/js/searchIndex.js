@@ -1,6 +1,61 @@
 Search.appendIndex(
     [
                 {
+            "fqsen": "\\RichWeb\\Algorithms\\Abstracts\\AbstractAlgorithm",
+            "name": "AbstractAlgorithm",
+            "summary": "",
+            "url": "classes/RichWeb-Algorithms-Abstracts-AbstractAlgorithm.html"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Abstracts\\AbstractAlgorithm\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/RichWeb-Algorithms-Abstracts-AbstractAlgorithm.html#method___construct"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Abstracts\\AbstractAlgorithm\u003A\u003Aactions\u0028\u0029",
+            "name": "actions",
+            "summary": "Hooks\u0020into\u0020the\u0020necessary\u0020WP\u0020actions.",
+            "url": "classes/RichWeb-Algorithms-Abstracts-AbstractAlgorithm.html#method_actions"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Abstracts\\AbstractAlgorithm\u003A\u003AappendExamplesToContent\u0028\u0029",
+            "name": "appendExamplesToContent",
+            "summary": "Hooked\u0020into\u0020from\u0020the\u0020WP\u0020hook\u0020\u0027the_content\u0027.\u0020Appends\u0020all\u0020the\u0020code\u0020examples\u0020for\u0020an\u0020Algorithm\u0020to\u0020the\u0020bottom\u0020of\u0020the\u0020post.",
+            "url": "classes/RichWeb-Algorithms-Abstracts-AbstractAlgorithm.html#method_appendExamplesToContent"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Abstracts\\AbstractAlgorithm\u003A\u003AbuildCodeExamples\u0028\u0029",
+            "name": "buildCodeExamples",
+            "summary": "",
+            "url": "classes/RichWeb-Algorithms-Abstracts-AbstractAlgorithm.html#method_buildCodeExamples"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Abstracts\\AbstractAlgorithm\u003A\u003AgetCodeExamples\u0028\u0029",
+            "name": "getCodeExamples",
+            "summary": "Returns\u0020an\u0020array\u0020of\u0020\\RichWeb\\Algorithms\\CodeExample\u0020objects\u0020for\u0020a\u0020post.",
+            "url": "classes/RichWeb-Algorithms-Abstracts-AbstractAlgorithm.html#method_getCodeExamples"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Abstracts\\AbstractAlgorithm\u003A\u003Arun\u0028\u0029",
+            "name": "run",
+            "summary": "Can\u0020bo\u0020be\u0020implemented\u0020in\u0020the\u0020concrete\u0020class\u0020for\u0020additional\u0020functionality.\u0020Always\u0020called\u0020during\u0020construction.",
+            "url": "classes/RichWeb-Algorithms-Abstracts-AbstractAlgorithm.html#method_run"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Abstracts\\AbstractAlgorithm\u003A\u003A\u0024code_examples",
+            "name": "code_examples",
+            "summary": "",
+            "url": "classes/RichWeb-Algorithms-Abstracts-AbstractAlgorithm.html#property_code_examples"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Abstracts\\AbstractAlgorithm\u003A\u003A\u0024package",
+            "name": "package",
+            "summary": "",
+            "url": "classes/RichWeb-Algorithms-Abstracts-AbstractAlgorithm.html#property_package"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Abstracts\\AbstractAlgorithm\u003A\u003A\u0024post_id",
+            "name": "post_id",
+            "summary": "",
+            "url": "classes/RichWeb-Algorithms-Abstracts-AbstractAlgorithm.html#property_post_id"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Abstracts\\AbstractAlgorithm\u003A\u003A\u0024syntax",
+            "name": "syntax",
+            "summary": "",
+            "url": "classes/RichWeb-Algorithms-Abstracts-AbstractAlgorithm.html#property_syntax"
+        },                {
             "fqsen": "\\RichWeb\\Algorithms\\Abstracts\\AbstractPlugin",
             "name": "AbstractPlugin",
             "summary": "",
@@ -68,7 +123,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Abstracts\\AbstractScripts\u003A\u003Arun\u0028\u0029",
             "name": "run",
-            "summary": "",
+            "summary": "Runs\u0020the\u0020class\u0020init\u0020functions\u0020not\u0020handled\u0020during\u0020construction.",
             "url": "classes/RichWeb-Algorithms-Abstracts-AbstractScripts.html#method_run"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Abstracts\\AbstractScripts\u003A\u003Aactions\u0028\u0029",
@@ -175,6 +230,16 @@ Search.appendIndex(
             "name": "actions",
             "summary": "Called\u0020by\u0020\u0060run\u0028\u0029\u0060\u0020and\u0020is\u0020used\u0020to\u0020set\u0020up\u0020all\u0020the\u0020actions\u0020for\u0020the\u0020post\u0020type.",
             "url": "classes/RichWeb-Algorithms-Admin-AlgorithmPostType.html#method_actions"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Admin\\AlgorithmPostType\u003A\u003AarchivePageTitle\u0028\u0029",
+            "name": "archivePageTitle",
+            "summary": "",
+            "url": "classes/RichWeb-Algorithms-Admin-AlgorithmPostType.html#method_archivePageTitle"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Admin\\AlgorithmPostType\u003A\u003AshowExcerptOnArchives\u0028\u0029",
+            "name": "showExcerptOnArchives",
+            "summary": "",
+            "url": "classes/RichWeb-Algorithms-Admin-AlgorithmPostType.html#method_showExcerptOnArchives"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Admin\\AlgorithmPostType\u003A\u003Aregister\u0028\u0029",
             "name": "register",
@@ -595,6 +660,56 @@ Search.appendIndex(
             "name": "syntax",
             "summary": "",
             "url": "classes/RichWeb-Algorithms-CodeExample.html#property_syntax"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Interfaces\\AlgorithmInterface",
+            "name": "AlgorithmInterface",
+            "summary": "",
+            "url": "classes/RichWeb-Algorithms-Interfaces-AlgorithmInterface.html"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Interfaces\\AlgorithmInterface\u003A\u003Aactions\u0028\u0029",
+            "name": "actions",
+            "summary": "Hooks\u0020into\u0020the\u0020necessary\u0020WP\u0020actions.",
+            "url": "classes/RichWeb-Algorithms-Interfaces-AlgorithmInterface.html#method_actions"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Interfaces\\AlgorithmInterface\u003A\u003AappendExamplesToContent\u0028\u0029",
+            "name": "appendExamplesToContent",
+            "summary": "Hooked\u0020into\u0020from\u0020the\u0020WP\u0020hook\u0020\u0027the_content\u0027.\u0020Appends\u0020all\u0020the\u0020code\u0020examples\u0020for\u0020an\u0020Algorithm\u0020to\u0020the\u0020bottom\u0020of\u0020the\u0020post.",
+            "url": "classes/RichWeb-Algorithms-Interfaces-AlgorithmInterface.html#method_appendExamplesToContent"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Interfaces\\AlgorithmInterface\u003A\u003AgetCodeExamples\u0028\u0029",
+            "name": "getCodeExamples",
+            "summary": "Returns\u0020an\u0020array\u0020of\u0020\\RichWeb\\Algorithms\\CodeExample\u0020objects\u0020for\u0020a\u0020post.",
+            "url": "classes/RichWeb-Algorithms-Interfaces-AlgorithmInterface.html#method_getCodeExamples"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Interfaces\\AutoloaderInterface",
+            "name": "AutoloaderInterface",
+            "summary": "",
+            "url": "classes/RichWeb-Algorithms-Interfaces-AutoloaderInterface.html"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Interfaces\\AutoloaderInterface\u003A\u003Aregister\u0028\u0029",
+            "name": "register",
+            "summary": "Register\u0020loader\u0020with\u0020SPL\u0020autoloader\u0020stack.",
+            "url": "classes/RichWeb-Algorithms-Interfaces-AutoloaderInterface.html#method_register"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Interfaces\\AutoloaderInterface\u003A\u003AaddNamespace\u0028\u0029",
+            "name": "addNamespace",
+            "summary": "Adds\u0020a\u0020base\u0020directory\u0020for\u0020a\u0020namespace\u0020prefix.",
+            "url": "classes/RichWeb-Algorithms-Interfaces-AutoloaderInterface.html#method_addNamespace"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Interfaces\\AutoloaderInterface\u003A\u003AloadClass\u0028\u0029",
+            "name": "loadClass",
+            "summary": "Loads\u0020the\u0020class\u0020file\u0020for\u0020a\u0020given\u0020class\u0020name.",
+            "url": "classes/RichWeb-Algorithms-Interfaces-AutoloaderInterface.html#method_loadClass"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Interfaces\\FileLoaderInterface",
+            "name": "FileLoaderInterface",
+            "summary": "",
+            "url": "classes/RichWeb-Algorithms-Interfaces-FileLoaderInterface.html"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Interfaces\\FileLoaderInterface\u003A\u003AloadFiles\u0028\u0029",
+            "name": "loadFiles",
+            "summary": "Loads\u0020all\u0020the\u0020registered\u0020files.",
+            "url": "classes/RichWeb-Algorithms-Interfaces-FileLoaderInterface.html#method_loadFiles"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Interfaces\\HasRunnerInterface",
             "name": "HasRunnerInterface",

@@ -92,31 +92,24 @@
                     <ul class="phpdocumentor-breadcrumbs">
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/richweb.html">RichWeb</a></li>
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/richweb-algorithms.html">Algorithms</a></li>
-            <li class="phpdocumentor-breadcrumb"><a href="namespaces/richweb-algorithms-setup.html">Setup</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/richweb-algorithms-interfaces.html">Interfaces</a></li>
     </ul>
 
-    <article class="phpdocumentor-element -class">
+    <article class="phpdocumentor-element -interface">
         <h2 class="phpdocumentor-content__title">
-    PrismSyntaxtHighlighterScripts
-
-        <span class="phpdocumentor-element__extends">
-        extends <a href="classes/RichWeb-Algorithms-Abstracts-AbstractScripts.html"><abbr title="\RichWeb\Algorithms\Abstracts\AbstractScripts">AbstractScripts</abbr></a>
-    </span>
-    
-            <div class="phpdocumentor-element__package">
-            in package
+    AutoloaderInterface
+                <div class="phpdocumentor-element__package">
+            in
             <ul class="phpdocumentor-breadcrumbs">
-                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Application.html">Application</a></li>
+                                    <li><a href="packages/Application.html">Application</a></li>
                             </ul>
         </div>
-    
-    
     </h2>
 
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Setup/PrismSyntaxtHighlighterScripts.php"><a href="files/includes-setup-prismsyntaxthighlighterscripts.html"><abbr title="Includes/Setup/PrismSyntaxtHighlighterScripts.php">PrismSyntaxtHighlighterScripts.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Interfaces/AutoloaderInterface.php"><a href="files/includes-interfaces-autoloaderinterface.html"><abbr title="Includes/Interfaces/AutoloaderInterface.php">AutoloaderInterface.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">18</span>
+    <span class="phpdocumentor-element-found-in__line">20</span>
 
     </aside>
 
@@ -137,39 +130,25 @@
 
 <dl class="phpdocumentor-table-of-contents">
                         <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichWeb-Algorithms-Setup-PrismSyntaxtHighlighterScripts.html#method___construct">__construct()</a>
+    <a href="classes/RichWeb-Algorithms-Interfaces-AutoloaderInterface.html#method_addNamespace">addNamespace()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: void    </span>
 </dt>
-<dd></dd>
+<dd>Adds a base directory for a namespace prefix.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichWeb-Algorithms-Setup-PrismSyntaxtHighlighterScripts.html#method_enqueueAdminScripts">enqueueAdminScripts()</a>
+    <a href="classes/RichWeb-Algorithms-Interfaces-AutoloaderInterface.html#method_loadClass">loadClass()</a>
     <span>
-                                &nbsp;: void    </span>
+                                &nbsp;: string|bool    </span>
 </dt>
-<dd>Enqueues the scripts and styles for admin pages. Hooked from &#039;admin_enqueue_scripts&#039; action.</dd>
+<dd>Loads the class file for a given class name.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichWeb-Algorithms-Setup-PrismSyntaxtHighlighterScripts.html#method_enqueueFrontendScripts">enqueueFrontendScripts()</a>
+    <a href="classes/RichWeb-Algorithms-Interfaces-AutoloaderInterface.html#method_register">register()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
-<dd>Enqueues the scripts and styles for the frontend. Hooked from &#039;wp_enqueue_scripts&#039; action.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichWeb-Algorithms-Abstracts-AbstractScripts.html#method_run">run()</a>
-    <span>
-                                &nbsp;: void    </span>
-</dt>
-<dd>Runs the class init functions not handled during construction.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -private">
-    <a href="classes/RichWeb-Algorithms-Abstracts-AbstractScripts.html#method_actions">actions()</a>
-    <span>
-                                &nbsp;: void    </span>
-</dt>
-<dd>The action hooks to set up on initialisation.</dd>
+<dd>Register loader with SPL autoloader stack.</dd>
 
         </dl>
 
@@ -177,12 +156,10 @@
 
         
 
-        
-
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
-            <a href="classes/RichWeb-Algorithms-Setup-PrismSyntaxtHighlighterScripts.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/RichWeb-Algorithms-Interfaces-AutoloaderInterface.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
                     <article
         class="phpdocumentor-element
@@ -190,65 +167,54 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method___construct">
-        __construct()
-        <a href="classes/RichWeb-Algorithms-Setup-PrismSyntaxtHighlighterScripts.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_addNamespace">
+        addNamespace()
+        <a href="classes/RichWeb-Algorithms-Interfaces-AutoloaderInterface.html#method_addNamespace" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Setup/PrismSyntaxtHighlighterScripts.php"><a href="files/includes-setup-prismsyntaxthighlighterscripts.html"><abbr title="Includes/Setup/PrismSyntaxtHighlighterScripts.php">PrismSyntaxtHighlighterScripts.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Interfaces/AutoloaderInterface.php"><a href="files/includes-interfaces-autoloaderinterface.html"><abbr title="Includes/Interfaces/AutoloaderInterface.php">AutoloaderInterface.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">20</span>
+    <span class="phpdocumentor-element-found-in__line">41</span>
 
     </aside>
 
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_enqueueAdminScripts">
-        enqueueAdminScripts()
-        <a href="classes/RichWeb-Algorithms-Setup-PrismSyntaxtHighlighterScripts.html#method_enqueueAdminScripts" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Setup/PrismSyntaxtHighlighterScripts.php"><a href="files/includes-setup-prismsyntaxthighlighterscripts.html"><abbr title="Includes/Setup/PrismSyntaxtHighlighterScripts.php">PrismSyntaxtHighlighterScripts.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">22</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Enqueues the scripts and styles for admin pages. Hooked from &#039;admin_enqueue_scripts&#039; action.</p>
+        <p class="phpdocumentor-summary">Adds a base directory for a namespace prefix.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">enqueueAdminScripts</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$hook</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                <span class="phpdocumentor-signature__name">addNamespace</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$prefix</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$base_dir</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$prepend</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$hook</span>
+                <span class="phpdocumentor-signature__argument__name">$prefix</span>
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>The namespace prefix.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$base_dir</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>A base directory for class files in the
+namespace.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$prepend</span>
+                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">false</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>If true, prepend the base directory to the stack
+instead of appending it; this causes it to be searched first rather
+than last.</p>
+</section>
 
             </dd>
             </dl>
@@ -267,31 +233,45 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_enqueueFrontendScripts">
-        enqueueFrontendScripts()
-        <a href="classes/RichWeb-Algorithms-Setup-PrismSyntaxtHighlighterScripts.html#method_enqueueFrontendScripts" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_loadClass">
+        loadClass()
+        <a href="classes/RichWeb-Algorithms-Interfaces-AutoloaderInterface.html#method_loadClass" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Setup/PrismSyntaxtHighlighterScripts.php"><a href="files/includes-setup-prismsyntaxthighlighterscripts.html"><abbr title="Includes/Setup/PrismSyntaxtHighlighterScripts.php">PrismSyntaxtHighlighterScripts.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Interfaces/AutoloaderInterface.php"><a href="files/includes-interfaces-autoloaderinterface.html"><abbr title="Includes/Interfaces/AutoloaderInterface.php">AutoloaderInterface.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">24</span>
+    <span class="phpdocumentor-element-found-in__line">50</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Enqueues the scripts and styles for the frontend. Hooked from &#039;wp_enqueue_scripts&#039; action.</p>
+        <p class="phpdocumentor-summary">Loads the class file for a given class name.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">enqueueFrontendScripts</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                <span class="phpdocumentor-signature__name">loadClass</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$class</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|bool</span></code>
 
     
-    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$class</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The fully-qualified class name.</p>
+</section>
+
+            </dd>
+            </dl>
+
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">void</span>
+    <span class="phpdocumentor-signature__response_type">string|bool</span>
             &mdash;
-        
+            <section class="phpdocumentor-description"><p>The mapped file name on success, or boolean false on failure.</p>
+</section>
+
     
 </article>
                     <article
@@ -300,55 +280,22 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_run">
-        run()
-        <a href="classes/RichWeb-Algorithms-Abstracts-AbstractScripts.html#method_run" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_register">
+        register()
+        <a href="classes/RichWeb-Algorithms-Interfaces-AutoloaderInterface.html#method_register" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Abstracts/AbstractScripts.php"><a href="files/includes-abstracts-abstractscripts.html"><abbr title="Includes/Abstracts/AbstractScripts.php">AbstractScripts.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Interfaces/AutoloaderInterface.php"><a href="files/includes-interfaces-autoloaderinterface.html"><abbr title="Includes/Interfaces/AutoloaderInterface.php">AutoloaderInterface.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">24</span>
+    <span class="phpdocumentor-element-found-in__line">27</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Runs the class init functions not handled during construction.</p>
+        <p class="phpdocumentor-summary">Register loader with SPL autoloader stack.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">run</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
-
-    
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">void</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -private
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_actions">
-        actions()
-        <a href="classes/RichWeb-Algorithms-Abstracts-AbstractScripts.html#method_actions" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Abstracts/AbstractScripts.php"><a href="files/includes-abstracts-abstractscripts.html"><abbr title="Includes/Abstracts/AbstractScripts.php">AbstractScripts.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">32</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">The action hooks to set up on initialisation.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
-                <span class="phpdocumentor-signature__name">actions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                <span class="phpdocumentor-signature__name">register</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     
     
@@ -438,7 +385,7 @@
 </section>
             </div>
         </div>
-        <a href="classes/RichWeb-Algorithms-Setup-PrismSyntaxtHighlighterScripts.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/RichWeb-Algorithms-Interfaces-AutoloaderInterface.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 

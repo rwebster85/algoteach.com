@@ -92,36 +92,29 @@
                     <ul class="phpdocumentor-breadcrumbs">
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/richweb.html">RichWeb</a></li>
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/richweb-algorithms.html">Algorithms</a></li>
-            <li class="phpdocumentor-breadcrumb"><a href="namespaces/richweb-algorithms-setup.html">Setup</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/richweb-algorithms-interfaces.html">Interfaces</a></li>
     </ul>
 
-    <article class="phpdocumentor-element -class">
+    <article class="phpdocumentor-element -interface">
         <h2 class="phpdocumentor-content__title">
-    Scripts
-
-        <span class="phpdocumentor-element__extends">
-        extends <a href="classes/RichWeb-Algorithms-Abstracts-AbstractScripts.html"><abbr title="\RichWeb\Algorithms\Abstracts\AbstractScripts">AbstractScripts</abbr></a>
-    </span>
-    
-            <div class="phpdocumentor-element__package">
-            in package
+    FileLoaderInterface
+                <div class="phpdocumentor-element__package">
+            in
             <ul class="phpdocumentor-breadcrumbs">
-                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Application.html">Application</a></li>
+                                    <li><a href="packages/Application.html">Application</a></li>
                             </ul>
         </div>
-    
-    
     </h2>
 
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Setup/Scripts.php"><a href="files/includes-setup-scripts.html"><abbr title="Includes/Setup/Scripts.php">Scripts.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Interfaces/FileLoaderInterface.php"><a href="files/includes-interfaces-fileloaderinterface.html"><abbr title="Includes/Interfaces/FileLoaderInterface.php">FileLoaderInterface.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">21</span>
+    <span class="phpdocumentor-element-found-in__line">16</span>
 
     </aside>
 
-            <p class="phpdocumentor-summary">Loads the JS and CSS files needed by the plugin.</p>
-
+        
+    <section class="phpdocumentor-description"></section>
 
 
 
@@ -137,39 +130,11 @@
 
 <dl class="phpdocumentor-table-of-contents">
                         <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichWeb-Algorithms-Setup-Scripts.html#method___construct">__construct()</a>
-    <span>
-                                &nbsp;: mixed    </span>
-</dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichWeb-Algorithms-Setup-Scripts.html#method_enqueueAdminScripts">enqueueAdminScripts()</a>
+    <a href="classes/RichWeb-Algorithms-Interfaces-FileLoaderInterface.html#method_loadFiles">loadFiles()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
-<dd>Enqueues the scripts and styles for admin pages. Hooked from &#039;admin_enqueue_scripts&#039; action.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichWeb-Algorithms-Setup-Scripts.html#method_enqueueFrontendScripts">enqueueFrontendScripts()</a>
-    <span>
-                                &nbsp;: void    </span>
-</dt>
-<dd>Enqueues the scripts and styles for the frontend. Hooked from &#039;wp_enqueue_scripts&#039; action.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichWeb-Algorithms-Abstracts-AbstractScripts.html#method_run">run()</a>
-    <span>
-                                &nbsp;: void    </span>
-</dt>
-<dd>Runs the class init functions not handled during construction.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -private">
-    <a href="classes/RichWeb-Algorithms-Abstracts-AbstractScripts.html#method_actions">actions()</a>
-    <span>
-                                &nbsp;: void    </span>
-</dt>
-<dd>The action hooks to set up on initialisation.</dd>
+<dd>Loads all the registered files.</dd>
 
         </dl>
 
@@ -177,12 +142,10 @@
 
         
 
-        
-
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
-            <a href="classes/RichWeb-Algorithms-Setup-Scripts.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/RichWeb-Algorithms-Interfaces-FileLoaderInterface.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
                     <article
         class="phpdocumentor-element
@@ -190,165 +153,22 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method___construct">
-        __construct()
-        <a href="classes/RichWeb-Algorithms-Setup-Scripts.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_loadFiles">
+        loadFiles()
+        <a href="classes/RichWeb-Algorithms-Interfaces-FileLoaderInterface.html#method_loadFiles" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Setup/Scripts.php"><a href="files/includes-setup-scripts.html"><abbr title="Includes/Setup/Scripts.php">Scripts.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Interfaces/FileLoaderInterface.php"><a href="files/includes-interfaces-fileloaderinterface.html"><abbr title="Includes/Interfaces/FileLoaderInterface.php">FileLoaderInterface.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">23</span>
 
     </aside>
 
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_enqueueAdminScripts">
-        enqueueAdminScripts()
-        <a href="classes/RichWeb-Algorithms-Setup-Scripts.html#method_enqueueAdminScripts" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Setup/Scripts.php"><a href="files/includes-setup-scripts.html"><abbr title="Includes/Setup/Scripts.php">Scripts.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">25</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Enqueues the scripts and styles for admin pages. Hooked from &#039;admin_enqueue_scripts&#039; action.</p>
+        <p class="phpdocumentor-summary">Loads all the registered files.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">enqueueAdminScripts</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$hook</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
-
-    
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$hook</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">void</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_enqueueFrontendScripts">
-        enqueueFrontendScripts()
-        <a href="classes/RichWeb-Algorithms-Setup-Scripts.html#method_enqueueFrontendScripts" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Setup/Scripts.php"><a href="files/includes-setup-scripts.html"><abbr title="Includes/Setup/Scripts.php">Scripts.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">50</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Enqueues the scripts and styles for the frontend. Hooked from &#039;wp_enqueue_scripts&#039; action.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">enqueueFrontendScripts</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
-
-    
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">void</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_run">
-        run()
-        <a href="classes/RichWeb-Algorithms-Abstracts-AbstractScripts.html#method_run" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Abstracts/AbstractScripts.php"><a href="files/includes-abstracts-abstractscripts.html"><abbr title="Includes/Abstracts/AbstractScripts.php">AbstractScripts.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">24</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Runs the class init functions not handled during construction.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">run</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
-
-    
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">void</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -private
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_actions">
-        actions()
-        <a href="classes/RichWeb-Algorithms-Abstracts-AbstractScripts.html#method_actions" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Abstracts/AbstractScripts.php"><a href="files/includes-abstracts-abstractscripts.html"><abbr title="Includes/Abstracts/AbstractScripts.php">AbstractScripts.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">32</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">The action hooks to set up on initialisation.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
-                <span class="phpdocumentor-signature__name">actions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                <span class="phpdocumentor-signature__name">loadFiles</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     
     
@@ -438,7 +258,7 @@
 </section>
             </div>
         </div>
-        <a href="classes/RichWeb-Algorithms-Setup-Scripts.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/RichWeb-Algorithms-Interfaces-FileLoaderInterface.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 
