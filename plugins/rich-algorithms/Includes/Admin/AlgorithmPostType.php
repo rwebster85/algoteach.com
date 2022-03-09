@@ -22,6 +22,28 @@ final class AlgorithmPostType extends AbstractPostType
     protected function actions(): void
     {
         add_action('init', [$this, 'register'], 50);
+        add_filter('get_the_archive_title', [$this, 'archivePageTitle']);
+        add_filter('the_content', [$this, 'showExcerptOnArchives']);
+    }
+
+    public function archivePageTitle(string $title): ?string
+    {
+        if (is_post_type_archive('richweb_algorithm')) {
+            return post_type_archive_title('', false);
+        }
+
+        return $title;
+    }
+
+    public function showExcerptOnArchives(string $content): ?string
+    {
+        if (is_post_type_archive('richweb_algorithm')) {
+            if (has_excerpt()) {
+                return the_excerpt();
+            }
+        }
+
+        return $content;
     }
 
     public function register(): void
@@ -54,7 +76,7 @@ final class AlgorithmPostType extends AbstractPostType
             'filter_items_list'     => __('Filter Algorithms list', 'rich-algo'),
         ];
         $rewrite = [
-            'slug'                  => 'algorithm',
+            'slug'                  => 'algorithms',
             'with_front'            => true,
             'pages'                 => true,
             'feeds'                 => true,
@@ -63,7 +85,7 @@ final class AlgorithmPostType extends AbstractPostType
             'label'               => __('Algorithm', 'rich-algo'),
             'description'         => __('Algorithms', 'rich-algo'),
             'labels'              => apply_filters('richweb_algorithm_labels', $labels),
-            'supports'            => array('title', 'editor'),
+            'supports'            => array('title', 'editor', 'excerpt', 'thumbnail'),
             'hierarchical'        => false,
             'public'              => true,
             'show_ui'             => true,
