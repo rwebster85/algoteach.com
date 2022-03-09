@@ -15,7 +15,7 @@ namespace RichWeb\Algorithms;
 
 use RichWeb\Algorithms\Abstracts\AbstractSingletonPlugin;
 use RichWeb\Algorithms\Setup\Setup;
-use RichWeb\Algorithms\Abstracts\AbstractSyntaxHighlighter;
+use RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface;
 use RichWeb\Algorithms\PrismSyntaxHighlighter;
 use RichWeb\Algorithms\Admin\{
     AlgorithmPostType,
@@ -31,7 +31,7 @@ final class Plugin extends AbstractSingletonPlugin
 
     private AlgorithmPackageManager $algorithm_package_manager;
 
-    private AbstractSyntaxHighlighter $syntax;
+    private SyntaxHighlighterInterface $syntax;
 
     protected function __construct(Project $project)
     {
@@ -103,7 +103,7 @@ final class Plugin extends AbstractSingletonPlugin
         do_action('rich_algo_loaded_modules');
     }
 
-    public function syntaxHighlighter(): AbstractSyntaxHighlighter
+    public function syntaxHighlighter(): SyntaxHighlighterInterface
     {
         return $this->syntax;
     }

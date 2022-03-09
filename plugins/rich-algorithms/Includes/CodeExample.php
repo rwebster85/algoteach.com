@@ -13,8 +13,8 @@ declare(strict_types=1);
 
 namespace RichWeb\Algorithms;
 
+use RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface;
 use RichWeb\Algorithms\Traits\Formatting;
-use RichWeb\Algorithms\Abstracts\AbstractSyntaxHighlighter;
 use Stringable;
 
 class CodeExample implements Stringable
@@ -30,7 +30,7 @@ class CodeExample implements Stringable
 
     public function __construct(
         private array $example,
-        private AbstractSyntaxHighlighter $syntax
+        private SyntaxHighlighterInterface $syntax
     ) {
         $this->code = ($example['content'] ?? '');
         $this->lang = ($example['lang'] ?? '');

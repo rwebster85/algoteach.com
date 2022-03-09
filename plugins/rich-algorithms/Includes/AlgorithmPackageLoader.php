@@ -15,7 +15,7 @@ namespace RichWeb\Algorithms;
 
 use RichWeb\Algorithms\AlgorithmPackage;
 use RichWeb\Algorithms\Interfaces\HasRunnerInterface;
-use RichWeb\Algorithms\Abstracts\AbstractSyntaxHighlighter;
+use RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface;
 
 final class AlgorithmPackageLoader implements HasRunnerInterface
 {
@@ -24,7 +24,7 @@ final class AlgorithmPackageLoader implements HasRunnerInterface
      */
     public function __construct(
         private array $packages,
-        private AbstractSyntaxHighlighter $syntax
+        private SyntaxHighlighterInterface $syntax
     ) {}
 
     public function run(): void

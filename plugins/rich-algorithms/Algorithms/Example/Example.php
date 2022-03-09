@@ -15,7 +15,7 @@ namespace RichWeb\Algorithms\Packages;
 
 use RichWeb\Algorithms\AlgorithmPackage;
 use RichWeb\Algorithms\CodeExample;
-use RichWeb\Algorithms\Abstracts\AbstractSyntaxHighlighter;
+use RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface;
 
 final class Example
 {
@@ -24,7 +24,7 @@ final class Example
     public function __construct(
         private AlgorithmPackage $package,
         private int $post_id,
-        private AbstractSyntaxHighlighter $syntax
+        private SyntaxHighlighterInterface $syntax
     ) {
         $this->buildCodeExamples();
         add_filter('the_content', [$this, 'appendExamplesToContent']);

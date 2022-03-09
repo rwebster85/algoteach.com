@@ -14,8 +14,9 @@ declare(strict_types=1);
 namespace RichWeb\Algorithms\Abstracts;
 
 use RichWeb\Algorithms\Abstracts\AbstractScripts;
+use RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface;
 
-abstract class AbstractSyntaxHighlighter
+abstract class AbstractSyntaxHighlighter implements SyntaxHighlighterInterface
 {
     /**
      * The scripts object that loads the necessary JS and CSS files.
