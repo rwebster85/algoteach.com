@@ -1,0 +1,100 @@
+.rich-algo-meta-field-wrap {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.rich-algo-admin-select {
+    width: 100%;
+}
+
+.rich-algo-meta-field-label {
+    font-weight: 600;
+    display: inline-block;
+    font-size: 15px;
+}
+
+.rich-algo-meta-field-label,
+.rich-algo-admin-select {
+    display: inline-block;
+}
+
+.rich-algo-meta-field-inline .rich-algo-meta-field-label {
+    margin-right: 20px;
+}
+
+.rich-algo-meta-field-wrap .width-200 {
+    max-width: 150px;
+}
+
+.rich-algo-meta-field-inline::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+.rich-algo-meta-field-wrap textarea {
+    width: 100%;
+    max-width: 100%;
+    resize: vertical;
+    min-height: 150px;
+}
+
+.mar-10 {
+    margin-bottom: 10px;
+}
+
+.pad-top-15 {
+    padding-top: 15px;
+}
+
+.rich-algo-sort-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: inline-block;
+    cursor: move;
+    font-size: 20px;
+    width: auto;
+    height: auto;
+    z-index: 10;
+    opacity: 0.6;
+}
+
+.rich-algo-example-wrap {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    position: relative;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.rich-algo-example-wrap h3 {
+    margin-top: 0;
+    display: inline-block;
+}
+
+#rich-algo-example-sortable {
+    position: relative;
+}
+
+#rich-algo-example-sortable-add {
+    padding-top: 5px;
+}
+
+#rich-algo-example-sortable .rich-algo-example-wrap {
+	transition: box-shadow 0.3s;
+}
+
+#rich-algo-example-sortable .rich-algo-example-wrap:first-of-type {
+    margin-top: 20px;
+}
+
+#rich-algo-example-sortable .rich-algo-example-wrap.placeholder {
+    background-color: #eee;
+    border: 2px dashed #ccc;
+}
+
+.rich-algo-example-wrap.ui-sortable-helper {
+    box-shadow: 0px 3px 16px 2px rgba(0, 0, 0, 0.53);
+}

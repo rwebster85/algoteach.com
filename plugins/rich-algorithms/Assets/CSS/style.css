@@ -1,0 +1,4 @@
+pre[class*=language-] {
+    padding-bottom: 0;
+    margin-bottom: 2em;
+}
