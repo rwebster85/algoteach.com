@@ -33,8 +33,13 @@ class AlgorithmScripts extends AbstractScripts
 
     public function enqueueFrontendScripts(): void
     {
+        $algorithm_path = $this->package->getConfigPath();
+
+        $scripts = plugins_url('/Assets/JS/', $algorithm_path);
+        $styles  = plugins_url('/Assets/CSS/', $algorithm_path);
+
         return;
-        
+
         $config_path = $this->package->getConfigPath();
 
         $assets = plugins_url('/Assets/', PLUGIN_FILE);
