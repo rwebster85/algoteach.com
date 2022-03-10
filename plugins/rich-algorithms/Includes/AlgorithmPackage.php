@@ -105,7 +105,7 @@ final class AlgorithmPackage implements AlgorithmPackageInterface
 
     private function setScripts(): void
     {
-        $this->scripts = (array) ($this->config['scrpts'] ?? []);
+        $this->scripts = (array) ($this->config['scripts'] ?? []);
     }
 
     public function getScripts(): array
