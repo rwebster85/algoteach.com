@@ -70,4 +70,18 @@ trait Strings
     {
         return esc_textarea($var);
     }
+
+    /**
+     * Sanitise content for allowed HTML elements, usually from post content.
+     * 
+     * @param string $var
+     * 
+     * @uses \wp_kses_post() WP Function
+     * 
+     * @return string
+     */
+    protected function ksesPost(string $var = ''): string
+    {
+        return wp_kses_post($var);
+    }
 }

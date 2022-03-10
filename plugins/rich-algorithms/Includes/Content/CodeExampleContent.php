@@ -18,7 +18,7 @@ use RichWeb\Algorithms\CodeExample;
 <div class="rich-algo-frontend-code-example">
     <div class="rich-algo-frontend-code-example-info">
         <h3><?php echo $this->escHtml($this->getLanguageFormatted()); ?> Implementation</h3>
-        <?php echo wp_kses_post($this->getInfoAutoP()); ?>
+        <?php echo $this->ksesPost($this->getInfoAutoP()); ?>
     </div>
     <div class="rich-algo-frontend-code-wrap">
         <span class="rich-algo-frontend-code-language"><?php echo $this->escHtml($this->getLanguageFormatted()); ?></span>
