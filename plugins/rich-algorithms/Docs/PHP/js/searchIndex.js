@@ -976,6 +976,31 @@ Search.appendIndex(
             "summary": "An\u0020associative\u0020array\u0020where\u0020the\u0020key\u0020is\u0020a\u0020namespace\u0020prefix\u0020and\u0020the\u0020value\nis\u0020an\u0020array\u0020of\u0020base\u0020directories\u0020for\u0020classes\u0020in\u0020that\u0020namespace.",
             "url": "classes/RichWeb-Algorithms-Loaders-Autoloader.html#property_prefixes"
         },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Loaders\\ContentLoader",
+            "name": "ContentLoader",
+            "summary": "Content\u0020loader\u0020includes\/requires\u0020Content\u0020PHP\u0020files\u0020\u0028views\u0029.",
+            "url": "classes/RichWeb-Algorithms-Loaders-ContentLoader.html"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Loaders\\ContentLoader\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "The\u0020path\u0020to\u0020a\u0020content\u0020file\u0020to\u0020load.",
+            "url": "classes/RichWeb-Algorithms-Loaders-ContentLoader.html#method___construct"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Loaders\\ContentLoader\u003A\u003AloadFile\u0028\u0029",
+            "name": "loadFile",
+            "summary": "Iterates\u0020through\u0020\u0024files\u0020and\u0020passes\u0020each\u0020to\u0020requireFile\u0028\u0029.",
+            "url": "classes/RichWeb-Algorithms-Loaders-ContentLoader.html#method_loadFile"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Loaders\\ContentLoader\u003A\u003A\u0024path",
+            "name": "path",
+            "summary": "",
+            "url": "classes/RichWeb-Algorithms-Loaders-ContentLoader.html#property_path"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Loaders\\ContentLoader\u003A\u003A\u0024require",
+            "name": "require",
+            "summary": "",
+            "url": "classes/RichWeb-Algorithms-Loaders-ContentLoader.html#property_require"
+        },                {
             "fqsen": "\\RichWeb\\Algorithms\\Loaders\\FileLoader",
             "name": "FileLoader",
             "summary": "Used\u0020for\u0020manually\u0020including\u0020files\u0020that\u0020can\u0027t\u0020be\u0020auto\u0020loaded,\u0020since\u0020the\u0020Autoloader\u0020class\u0020is\u0020PSR\u002D4\u0020compliant.\u0020For\u0020example\u0020files\u0020containing\u0020only\u0020functions\u0020must\u0020be\u0020manually\u0020included.",
@@ -1345,6 +1370,21 @@ Search.appendIndex(
             "name": "escHtml",
             "summary": "Escapes\u0020any\u0020HTML\u0020entities\u0020within\u0020a\u0020string\u0020for\u0020safe\u0020output.",
             "url": "classes/RichWeb-Algorithms-Traits-Formatting-Strings.html#method_escHtml"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Traits\\Formatting\\Strings\u003A\u003AescAttr\u0028\u0029",
+            "name": "escAttr",
+            "summary": "Escapes\u0020any\u0020HTML\u0020entities\u0020within\u0020a\u0020string\u0020for\u0020safe\u0020output\u0020as\u0020an\u0020HTML\u0020attribute.",
+            "url": "classes/RichWeb-Algorithms-Traits-Formatting-Strings.html#method_escAttr"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Traits\\Formatting\\Strings\u003A\u003AescTextarea\u0028\u0029",
+            "name": "escTextarea",
+            "summary": "Escapes\u0020any\u0020HTML\u0020entities\u0020within\u0020a\u0020string\u0020for\u0020safe\u0020output\u0020to\u0020a\u0020textarea\u0020element.",
+            "url": "classes/RichWeb-Algorithms-Traits-Formatting-Strings.html#method_escTextarea"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Traits\\Formatting\\Strings\u003A\u003AksesPost\u0028\u0029",
+            "name": "ksesPost",
+            "summary": "Sanitise\u0020content\u0020for\u0020allowed\u0020HTML\u0020elements,\u0020usually\u0020from\u0020post\u0020content.",
+            "url": "classes/RichWeb-Algorithms-Traits-Formatting-Strings.html#method_ksesPost"
         },                {
             "fqsen": "\\",
             "name": "\\",
