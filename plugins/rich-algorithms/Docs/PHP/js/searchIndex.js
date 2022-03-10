@@ -503,12 +503,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\CodeExamples\\CodeExamplesLoader\u003A\u003AappendExamplesToContent\u0028\u0029",
             "name": "appendExamplesToContent",
-            "summary": "",
+            "summary": "Hooked\u0020into\u0020from\u0020the\u0020WP\u0020hook\u0020\u0027the_content\u0027.\u0020Appends\u0020all\u0020the\u0020code\u0020examples\u0020for\u0020an\u0020Algorithm\u0020to\u0020post\u0020content.",
             "url": "classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#method_appendExamplesToContent"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\CodeExamples\\CodeExamplesLoader\u003A\u003AgetCodeExamples\u0028\u0029",
             "name": "getCodeExamples",
-            "summary": "",
+            "summary": "Returns\u0020an\u0020array\u0020of\u0020\\RichWeb\\Algorithms\\CodeExample\u0020objects\u0020for\u0020a\u0020post.",
             "url": "classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#method_getCodeExamples"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\CodeExamples\\CodeExamplesLoader\u003A\u003A\u0024code_examples",

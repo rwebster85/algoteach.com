@@ -14,6 +14,7 @@ declare(strict_types=1);
 namespace RichWeb\Algorithms\CodeExamples;
 
 use RichWeb\Algorithms\CodeExamples\CodeExample;
+use RichWeb\Algorithms\Interfaces\CodeExamplesLoaderInterface;
 use RichWeb\Algorithms\Interfaces\HasRunnerInterface;
 use RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface;
 use RichWeb\Algorithms\Traits\Posts\AlgorithmChecker;
@@ -21,7 +22,7 @@ use RichWeb\Algorithms\Traits\Posts\AlgorithmChecker;
 /**
  * Responsbile for loading code examples on the frontend if the post has any.
  */
-final class CodeExamplesLoader implements HasRunnerInterface
+final class CodeExamplesLoader implements CodeExamplesLoaderInterface, HasRunnerInterface
 {
     use AlgorithmChecker;
     

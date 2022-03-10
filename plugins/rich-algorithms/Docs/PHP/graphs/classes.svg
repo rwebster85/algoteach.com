@@ -29,11 +29,6 @@
 <polygon fill="none" stroke="black" points="75,-922 75,-1182 811,-1182 811,-922 75,-922"/>
 <text text-anchor="middle" x="443" y="-1169.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Admin</text>
 </g>
-<g id="clust7" class="cluster">
-<title>cluster_\RichWeb\Algorithms\Admin\Interfaces</title>
-<polygon fill="none" stroke="black" points="83,-1006 83,-1132 230,-1132 230,-1006 83,-1006"/>
-<text text-anchor="middle" x="156.5" y="-1119.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Interfaces</text>
-</g>
 <g id="clust6" class="cluster">
 <title>cluster_\RichWeb\Algorithms\Admin\Abstracts</title>
 <polygon fill="none" stroke="black" points="360.5,-1006 360.5,-1132 501.5,-1132 501.5,-1006 360.5,-1006"/>
@@ -44,6 +39,11 @@
 <polygon fill="none" stroke="black" points="581,-930 581,-1110 803,-1110 803,-930 581,-930"/>
 <text text-anchor="middle" x="692" y="-1097.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">MetaBoxes</text>
 </g>
+<g id="clust7" class="cluster">
+<title>cluster_\RichWeb\Algorithms\Admin\Interfaces</title>
+<polygon fill="none" stroke="black" points="83,-1006 83,-1132 230,-1132 230,-1006 83,-1006"/>
+<text text-anchor="middle" x="156.5" y="-1119.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Interfaces</text>
+</g>
 <g id="clust4" class="cluster">
 <title>cluster_\RichWeb\Algorithms\Abstracts</title>
 <polygon fill="none" stroke="black" points="367.5,-272 367.5,-506 792.5,-506 792.5,-272 367.5,-272"/>
@@ -51,43 +51,43 @@
 </g>
 <g id="clust10" class="cluster">
 <title>cluster_\RichWeb\Algorithms\Interfaces</title>
-<polygon fill="none" stroke="black" points="32,-40 32,-868 281,-868 281,-40 32,-40"/>
-<text text-anchor="middle" x="156.5" y="-855.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Interfaces</text>
+<polygon fill="none" stroke="black" points="32,-83 32,-911 281,-911 281,-83 32,-83"/>
+<text text-anchor="middle" x="156.5" y="-898.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Interfaces</text>
+</g>
+<g id="clust12" class="cluster">
+<title>cluster_\RichWeb\Algorithms\Packages</title>
+<polygon fill="none" stroke="black" points="337,-514 337,-694 525,-694 525,-514 337,-514"/>
+<text text-anchor="middle" x="431" y="-681.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Packages</text>
+</g>
+<g id="clust14" class="cluster">
+<title>cluster_\RichWeb\Algorithms\Traits</title>
+<polygon fill="none" stroke="black" points="898,-835 898,-1077 1055,-1077 1055,-835 898,-835"/>
+<text text-anchor="middle" x="976.5" y="-1064.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Traits</text>
+</g>
+<g id="clust16" class="cluster">
+<title>cluster_\RichWeb\Algorithms\Traits\Posts</title>
+<polygon fill="none" stroke="black" points="906,-977 906,-1049 1047,-1049 1047,-977 906,-977"/>
+<text text-anchor="middle" x="976.5" y="-1036.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Posts</text>
+</g>
+<g id="clust15" class="cluster">
+<title>cluster_\RichWeb\Algorithms\Traits\Formatting</title>
+<polygon fill="none" stroke="black" points="930,-843 930,-969 1023,-969 1023,-843 930,-843"/>
+<text text-anchor="middle" x="976.5" y="-956.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Formatting</text>
 </g>
 <g id="clust9" class="cluster">
 <title>cluster_\RichWeb\Algorithms\CodeExamples</title>
 <polygon fill="none" stroke="black" points="354,-788 354,-914 508,-914 508,-788 354,-788"/>
 <text text-anchor="middle" x="431" y="-901.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">CodeExamples</text>
 </g>
-<g id="clust11" class="cluster">
-<title>cluster_\RichWeb\Algorithms\Loaders</title>
-<polygon fill="none" stroke="black" points="371,-514 371,-694 491,-694 491,-514 371,-514"/>
-<text text-anchor="middle" x="431" y="-681.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Loaders</text>
-</g>
 <g id="clust13" class="cluster">
 <title>cluster_\RichWeb\Algorithms\Setup</title>
-<polygon fill="none" stroke="black" points="859,-535 859,-823 1094,-823 1094,-535 859,-535"/>
-<text text-anchor="middle" x="976.5" y="-810.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Setup</text>
+<polygon fill="none" stroke="black" points="859,-434 859,-722 1094,-722 1094,-434 859,-434"/>
+<text text-anchor="middle" x="976.5" y="-709.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Setup</text>
 </g>
-<g id="clust14" class="cluster">
-<title>cluster_\RichWeb\Algorithms\Traits</title>
-<polygon fill="none" stroke="black" points="898,-285 898,-527 1055,-527 1055,-285 898,-285"/>
-<text text-anchor="middle" x="976.5" y="-514.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Traits</text>
-</g>
-<g id="clust16" class="cluster">
-<title>cluster_\RichWeb\Algorithms\Traits\Posts</title>
-<polygon fill="none" stroke="black" points="906,-427 906,-499 1047,-499 1047,-427 906,-427"/>
-<text text-anchor="middle" x="976.5" y="-486.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Posts</text>
-</g>
-<g id="clust15" class="cluster">
-<title>cluster_\RichWeb\Algorithms\Traits\Formatting</title>
-<polygon fill="none" stroke="black" points="930,-293 930,-419 1023,-419 1023,-293 930,-293"/>
-<text text-anchor="middle" x="976.5" y="-406.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Formatting</text>
-</g>
-<g id="clust12" class="cluster">
-<title>cluster_\RichWeb\Algorithms\Packages</title>
-<polygon fill="none" stroke="black" points="337,-84 337,-264 525,-264 525,-84 337,-84"/>
-<text text-anchor="middle" x="431" y="-251.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Packages</text>
+<g id="clust11" class="cluster">
+<title>cluster_\RichWeb\Algorithms\Loaders</title>
+<polygon fill="none" stroke="black" points="371,-84 371,-264 491,-264 491,-84 371,-84"/>
+<text text-anchor="middle" x="431" y="-251.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Loaders</text>
 </g>
 <!-- \\RichWeb\\Algorithms\\Abstracts\\AbstractAlgorithm -->
 <g id="node1" class="node">
@@ -99,46 +99,46 @@
 <!-- \\RichWeb\\Algorithms\\Interfaces\\AlgorithmInterface -->
 <g id="node16" class="node">
 <title>\\RichWeb\\Algorithms\\Interfaces\\AlgorithmInterface</title>
-<polygon fill="none" stroke="black" points="225.5,-138 87.5,-138 87.5,-102 225.5,-102 225.5,-138"/>
-<text text-anchor="middle" x="156.5" y="-117.2" font-family="Courier,monospace" font-size="11.00">AlgorithmInterface</text>
+<polygon fill="none" stroke="black" points="225.5,-181 87.5,-181 87.5,-145 225.5,-145 225.5,-181"/>
+<text text-anchor="middle" x="156.5" y="-160.2" font-family="Courier,monospace" font-size="11.00">AlgorithmInterface</text>
 </g>
 <!-- \\RichWeb\\Algorithms\\Abstracts\\AbstractAlgorithm&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\AlgorithmInterface -->
 <g id="edge1" class="edge">
 <title>\\RichWeb\\Algorithms\\Abstracts\\AbstractAlgorithm&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\AlgorithmInterface</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M626.37,-348.32C609.66,-344.38 593.01,-337.32 581,-325 499.43,-241.26 609.89,-148.37 525,-68 494.6,-39.21 473.84,-51.5 432,-53"/>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M430,-53C388.16,-54.5 377.12,-56.03 337,-68 310.88,-75.79 306.89,-84.49 281,-93 266.55,-97.75 250.87,-101.91 235.68,-105.44"/>
-<polygon fill="none" stroke="black" points="234.78,-102.06 225.8,-107.68 236.32,-108.89 234.78,-102.06"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M626.37,-348.32C609.66,-344.38 593.01,-337.32 581,-325 499.43,-241.26 609.89,-148.37 525,-68 494.6,-39.21 473.79,-50.4 432,-53"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M430,-53C388.21,-55.6 373.31,-47.16 337,-68 303.04,-87.48 314.41,-115.58 281,-136 267.27,-144.39 251.29,-150.19 235.46,-154.19"/>
+<polygon fill="none" stroke="black" points="234.6,-150.8 225.64,-156.46 236.17,-157.62 234.6,-150.8"/>
 </g>
 <!-- \\RichWeb\\Algorithms\\Interfaces\\HasRunnerInterface -->
 <g id="node24" class="node">
 <title>\\RichWeb\\Algorithms\\Interfaces\\HasRunnerInterface</title>
-<polygon fill="none" stroke="black" points="225.5,-732 87.5,-732 87.5,-696 225.5,-696 225.5,-732"/>
-<text text-anchor="middle" x="156.5" y="-711.2" font-family="Courier,monospace" font-size="11.00">HasRunnerInterface</text>
+<polygon fill="none" stroke="black" points="225.5,-775 87.5,-775 87.5,-739 225.5,-739 225.5,-775"/>
+<text text-anchor="middle" x="156.5" y="-754.2" font-family="Courier,monospace" font-size="11.00">HasRunnerInterface</text>
 </g>
 <!-- \\RichWeb\\Algorithms\\Abstracts\\AbstractAlgorithm&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\HasRunnerInterface -->
 <g id="edge2" class="edge">
 <title>\\RichWeb\\Algorithms\\Abstracts\\AbstractAlgorithm&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\HasRunnerInterface</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M430,-53C388.63,-54.48 366.78,-29.25 337,-58 236.05,-155.47 373.76,-581.7 281,-687 269.36,-700.22 252.88,-707.8 235.74,-711.98"/>
-<polygon fill="none" stroke="black" points="234.69,-708.63 225.6,-714.07 236.1,-715.48 234.69,-708.63"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M430,-53C388.69,-55.57 366.7,-29.16 337,-58 229.49,-162.39 379.74,-617.28 281,-730 269.4,-743.25 252.93,-750.84 235.79,-755.03"/>
+<polygon fill="none" stroke="black" points="234.74,-751.67 225.66,-757.12 236.16,-758.53 234.74,-751.67"/>
 </g>
 <!-- \\RichWeb\\Algorithms\\Abstracts\\AbstractPlugin -->
 <g id="node2" class="node">
 <title>\\RichWeb\\Algorithms\\Abstracts\\AbstractPlugin</title>
-<polygon fill="none" stroke="black" points="486.5,-362 375.5,-362 375.5,-326 486.5,-326 486.5,-362"/>
-<text text-anchor="start" x="397" y="-347.2" font-family="Courier,monospace" font-size="11.00">«abstract»</text>
-<text text-anchor="start" x="383.5" y="-335.2" font-family="Courier,monospace" font-size="11.00">AbstractPlugin</text>
+<polygon fill="none" stroke="black" points="486.5,-359 375.5,-359 375.5,-323 486.5,-323 486.5,-359"/>
+<text text-anchor="start" x="397" y="-344.2" font-family="Courier,monospace" font-size="11.00">«abstract»</text>
+<text text-anchor="start" x="383.5" y="-332.2" font-family="Courier,monospace" font-size="11.00">AbstractPlugin</text>
 </g>
 <!-- \\RichWeb\\Algorithms\\Interfaces\\PluginInterface -->
 <g id="node26" class="node">
 <title>\\RichWeb\\Algorithms\\Interfaces\\PluginInterface</title>
-<polygon fill="none" stroke="black" points="215.5,-354 97.5,-354 97.5,-318 215.5,-318 215.5,-354"/>
-<text text-anchor="middle" x="156.5" y="-333.2" font-family="Courier,monospace" font-size="11.00">PluginInterface</text>
+<polygon fill="none" stroke="black" points="215.5,-343 97.5,-343 97.5,-307 215.5,-307 215.5,-343"/>
+<text text-anchor="middle" x="156.5" y="-322.2" font-family="Courier,monospace" font-size="11.00">PluginInterface</text>
 </g>
 <!-- \\RichWeb\\Algorithms\\Abstracts\\AbstractPlugin&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\PluginInterface -->
 <g id="edge3" class="edge">
 <title>\\RichWeb\\Algorithms\\Abstracts\\AbstractPlugin&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\PluginInterface</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M375.18,-342.39C332.13,-341.13 271.93,-339.36 225.75,-338"/>
-<polygon fill="none" stroke="black" points="225.62,-334.5 215.52,-337.7 225.42,-341.5 225.62,-334.5"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M375.18,-337.78C332.13,-335.25 271.93,-331.72 225.75,-329.01"/>
+<polygon fill="none" stroke="black" points="225.71,-325.5 215.52,-328.41 225.3,-332.49 225.71,-325.5"/>
 </g>
 <!-- \\RichWeb\\Algorithms\\Abstracts\\AbstractScripts -->
 <g id="node3" class="node">
@@ -150,20 +150,20 @@
 <!-- \\RichWeb\\Algorithms\\Abstracts\\AbstractScripts&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\HasRunnerInterface -->
 <g id="edge5" class="edge">
 <title>\\RichWeb\\Algorithms\\Abstracts\\AbstractScripts&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\HasRunnerInterface</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M632.79,-458.21C613.81,-454.68 594.25,-447.4 581,-433 473.45,-316.09 645.8,-183.15 525,-80 493.23,-52.87 367.87,-51.85 337,-80 236.91,-171.28 370.71,-585.5 281,-687 269.34,-700.2 252.85,-707.77 235.71,-711.96"/>
-<polygon fill="none" stroke="black" points="234.66,-708.6 225.57,-714.04 236.07,-715.45 234.66,-708.6"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M632.79,-458.21C613.81,-454.68 594.25,-447.4 581,-433 473.45,-316.09 645.8,-183.15 525,-80 493.23,-52.87 367.78,-51.75 337,-80 230.17,-178.02 376.68,-621.08 281,-730 269.38,-743.23 252.9,-750.82 235.77,-755.01"/>
+<polygon fill="none" stroke="black" points="234.72,-751.65 225.63,-757.09 236.13,-758.5 234.72,-751.65"/>
 </g>
 <!-- \\RichWeb\\Algorithms\\Interfaces\\ScriptsInterface -->
 <g id="node28" class="node">
 <title>\\RichWeb\\Algorithms\\Interfaces\\ScriptsInterface</title>
-<polygon fill="none" stroke="black" points="219,-462 94,-462 94,-426 219,-426 219,-462"/>
-<text text-anchor="middle" x="156.5" y="-441.2" font-family="Courier,monospace" font-size="11.00">ScriptsInterface</text>
+<polygon fill="none" stroke="black" points="219,-451 94,-451 94,-415 219,-415 219,-451"/>
+<text text-anchor="middle" x="156.5" y="-430.2" font-family="Courier,monospace" font-size="11.00">ScriptsInterface</text>
 </g>
 <!-- \\RichWeb\\Algorithms\\Abstracts\\AbstractScripts&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\ScriptsInterface -->
 <g id="edge4" class="edge">
 <title>\\RichWeb\\Algorithms\\Abstracts\\AbstractScripts&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\ScriptsInterface</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M632.89,-458.26C534.65,-455.31 336.04,-449.35 229.27,-446.15"/>
-<polygon fill="none" stroke="black" points="229.33,-442.65 219.23,-445.85 229.12,-449.65 229.33,-442.65"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M632.89,-457.06C534.65,-452.09 336.04,-442.04 229.27,-436.63"/>
+<polygon fill="none" stroke="black" points="229.39,-433.13 219.23,-436.12 229.04,-440.13 229.39,-433.13"/>
 </g>
 <!-- \\RichWeb\\Algorithms\\Abstracts\\AbstractSingletonPlugin -->
 <g id="node4" class="node">
@@ -175,20 +175,20 @@
 <!-- \\RichWeb\\Algorithms\\Abstracts\\AbstractSingletonPlugin&#45;&gt;\\RichWeb\\Algorithms\\Abstracts\\AbstractPlugin -->
 <g id="edge6" class="edge">
 <title>\\RichWeb\\Algorithms\\Abstracts\\AbstractSingletonPlugin&#45;&gt;\\RichWeb\\Algorithms\\Abstracts\\AbstractPlugin</title>
-<path fill="none" stroke="black" d="M615.74,-387.98C578.06,-378.96 532.9,-368.15 496.78,-359.51"/>
-<polygon fill="none" stroke="black" points="497.39,-356.05 486.85,-357.13 495.76,-362.86 497.39,-356.05"/>
+<path fill="none" stroke="black" d="M617.02,-387.94C604.97,-384.97 592.64,-381.91 581,-379 553.33,-372.08 522.8,-364.31 496.62,-357.62"/>
+<polygon fill="none" stroke="black" points="497.37,-354.19 486.81,-355.1 495.63,-360.98 497.37,-354.19"/>
 </g>
 <!-- \\RichWeb\\Algorithms\\Interfaces\\SingletonPluginInterface -->
 <g id="node29" class="node">
 <title>\\RichWeb\\Algorithms\\Interfaces\\SingletonPluginInterface</title>
-<polygon fill="none" stroke="black" points="246,-408 67,-408 67,-372 246,-372 246,-408"/>
-<text text-anchor="middle" x="156.5" y="-387.2" font-family="Courier,monospace" font-size="11.00">SingletonPluginInterface</text>
+<polygon fill="none" stroke="black" points="246,-397 67,-397 67,-361 246,-361 246,-397"/>
+<text text-anchor="middle" x="156.5" y="-376.2" font-family="Courier,monospace" font-size="11.00">SingletonPluginInterface</text>
 </g>
 <!-- \\RichWeb\\Algorithms\\Abstracts\\AbstractSingletonPlugin&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\SingletonPluginInterface -->
 <g id="edge7" class="edge">
 <title>\\RichWeb\\Algorithms\\Abstracts\\AbstractSingletonPlugin&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\SingletonPluginInterface</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M605.88,-403.45C510.74,-400.59 356.9,-395.98 256.48,-392.97"/>
-<polygon fill="none" stroke="black" points="256.42,-389.47 246.32,-392.66 256.21,-396.46 256.42,-389.47"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M605.88,-401.69C510.74,-396.88 356.9,-389.09 256.48,-384.01"/>
+<polygon fill="none" stroke="black" points="256.49,-380.51 246.32,-383.5 256.13,-387.5 256.49,-380.51"/>
 </g>
 <!-- \\RichWeb\\Algorithms\\Abstracts\\AbstractSyntaxHighlighter -->
 <g id="node5" class="node">
@@ -200,14 +200,14 @@
 <!-- \\RichWeb\\Algorithms\\Interfaces\\SyntaxHighlighterInterface -->
 <g id="node30" class="node">
 <title>\\RichWeb\\Algorithms\\Interfaces\\SyntaxHighlighterInterface</title>
-<polygon fill="none" stroke="black" points="252.5,-84 60.5,-84 60.5,-48 252.5,-48 252.5,-84"/>
-<text text-anchor="middle" x="156.5" y="-63.2" font-family="Courier,monospace" font-size="11.00">SyntaxHighlighterInterface</text>
+<polygon fill="none" stroke="black" points="252.5,-127 60.5,-127 60.5,-91 252.5,-91 252.5,-127"/>
+<text text-anchor="middle" x="156.5" y="-106.2" font-family="Courier,monospace" font-size="11.00">SyntaxHighlighterInterface</text>
 </g>
 <!-- \\RichWeb\\Algorithms\\Abstracts\\AbstractSyntaxHighlighter&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\SyntaxHighlighterInterface -->
 <g id="edge8" class="edge">
 <title>\\RichWeb\\Algorithms\\Abstracts\\AbstractSyntaxHighlighter&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\SyntaxHighlighterInterface</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M685.64,-279.98C670.16,-231.61 620.27,-99.1 525,-48 427.89,4.09 294.79,-22.2 218.29,-44.88"/>
-<polygon fill="none" stroke="black" points="216.89,-41.65 208.34,-47.91 218.92,-48.35 216.89,-41.65"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M685.64,-279.98C670.16,-231.61 620.27,-99.1 525,-48 417.82,9.49 269.79,-50.4 198.77,-86.24"/>
+<polygon fill="none" stroke="black" points="196.98,-83.23 189.68,-90.91 200.17,-89.46 196.98,-83.23"/>
 </g>
 <!-- \\RichWeb\\Algorithms\\Admin\\Abstracts\\AbstractMetaBox -->
 <g id="node6" class="node">
@@ -250,8 +250,8 @@
 <!-- \\RichWeb\\Algorithms\\Admin\\Abstracts\\AbstractPostType&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\HasRunnerInterface -->
 <g id="edge11" class="edge">
 <title>\\RichWeb\\Algorithms\\Admin\\Abstracts\\AbstractPostType&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\HasRunnerInterface</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M368.42,-1078.51C356.58,-1074.42 345.31,-1068.26 337,-1059 241.16,-952.18 380.38,-844.53 281,-741 268.99,-728.49 252.64,-721.13 235.76,-716.94"/>
-<polygon fill="none" stroke="black" points="236.3,-713.47 225.79,-714.81 234.84,-720.32 236.3,-713.47"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M368.12,-1078.17C356.45,-1074.1 345.32,-1068.03 337,-1059 252.48,-967.28 368.56,-872.83 281,-784 268.83,-771.65 252.41,-764.35 235.52,-760.17"/>
+<polygon fill="none" stroke="black" points="236.06,-756.7 225.55,-758.04 234.61,-763.55 236.06,-756.7"/>
 </g>
 <!-- \\RichWeb\\Algorithms\\Admin\\MetaBoxes\\AlgorithmCodeExamplesMetaBox -->
 <g id="node10" class="node">
@@ -286,7 +286,7 @@
 <!-- \\RichWeb\\Algorithms\\Admin\\MetaBoxes\\MetaBoxes&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\HasRunnerInterface -->
 <g id="edge15" class="edge">
 <title>\\RichWeb\\Algorithms\\Admin\\MetaBoxes\\MetaBoxes&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\HasRunnerInterface</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M653.4,-957.3C630.08,-956.16 600.87,-950.92 581,-934 526.82,-887.86 577.16,-832.4 525,-784 493.45,-754.72 474.06,-766.14 432,-757"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M680.05,-937.78C656.82,-901.03 598.62,-818.58 525,-784 487.48,-766.38 472.61,-785.3 432,-777"/>
 </g>
 <!-- \\RichWeb\\Algorithms\\Admin\\AlgorithmPostType -->
 <g id="node13" class="node">
@@ -309,14 +309,14 @@
 <!-- \\RichWeb\\Algorithms\\Interfaces\\CodeExampleInterface -->
 <g id="node21" class="node">
 <title>\\RichWeb\\Algorithms\\Interfaces\\CodeExampleInterface</title>
-<polygon fill="none" stroke="black" points="232.5,-840 80.5,-840 80.5,-804 232.5,-804 232.5,-840"/>
-<text text-anchor="middle" x="156.5" y="-819.2" font-family="Courier,monospace" font-size="11.00">CodeExampleInterface</text>
+<polygon fill="none" stroke="black" points="232.5,-883 80.5,-883 80.5,-847 232.5,-847 232.5,-883"/>
+<text text-anchor="middle" x="156.5" y="-862.2" font-family="Courier,monospace" font-size="11.00">CodeExampleInterface</text>
 </g>
 <!-- \\RichWeb\\Algorithms\\CodeExamples\\CodeExample&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\CodeExampleInterface -->
 <g id="edge16" class="edge">
 <title>\\RichWeb\\Algorithms\\CodeExamples\\CodeExample&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\CodeExampleInterface</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M385.31,-860.46C346.68,-853.94 289.79,-844.33 242.52,-836.35"/>
-<polygon fill="none" stroke="black" points="243.03,-832.89 232.59,-834.68 241.87,-839.79 243.03,-832.89"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M385.31,-867.51C346.76,-867.08 290.03,-866.46 242.82,-865.94"/>
+<polygon fill="none" stroke="black" points="242.63,-862.44 232.59,-865.83 242.55,-869.44 242.63,-862.44"/>
 </g>
 <!-- Stringable -->
 <g id="node48" class="node">
@@ -336,240 +336,247 @@
 <polygon fill="none" stroke="black" points="500,-832 362,-832 362,-796 500,-796 500,-832"/>
 <text text-anchor="middle" x="431" y="-811.2" font-family="Courier,monospace" font-size="11.00">CodeExamplesLoader</text>
 </g>
-<!-- \\RichWeb\\Algorithms\\CodeExamples\\CodeExamplesLoader&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\HasRunnerInterface -->
+<!-- \\RichWeb\\Algorithms\\Interfaces\\CodeExamplesLoaderInterface -->
+<g id="node22" class="node">
+<title>\\RichWeb\\Algorithms\\Interfaces\\CodeExamplesLoaderInterface</title>
+<polygon fill="none" stroke="black" points="256,-829 57,-829 57,-793 256,-793 256,-829"/>
+<text text-anchor="middle" x="156.5" y="-808.2" font-family="Courier,monospace" font-size="11.00">CodeExamplesLoaderInterface</text>
+</g>
+<!-- \\RichWeb\\Algorithms\\CodeExamples\\CodeExamplesLoader&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\CodeExamplesLoaderInterface -->
 <g id="edge18" class="edge">
+<title>\\RichWeb\\Algorithms\\CodeExamples\\CodeExamplesLoader&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\CodeExamplesLoaderInterface</title>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M361.94,-813.25C333.06,-812.93 298.68,-812.55 266.43,-812.2"/>
+<polygon fill="none" stroke="black" points="266.08,-808.7 256.04,-812.08 266,-815.69 266.08,-808.7"/>
+</g>
+<!-- \\RichWeb\\Algorithms\\CodeExamples\\CodeExamplesLoader&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\HasRunnerInterface -->
+<g id="edge19" class="edge">
 <title>\\RichWeb\\Algorithms\\CodeExamples\\CodeExamplesLoader&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\HasRunnerInterface</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M398.7,-795.9C369.19,-779.51 323.3,-755.74 281,-741 266.55,-735.96 250.81,-731.67 235.55,-728.08"/>
-<polygon fill="none" stroke="black" points="236.14,-724.63 225.62,-725.83 234.59,-731.45 236.14,-724.63"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M361.94,-799.76C323.57,-791.74 275.49,-781.68 235.59,-773.33"/>
+<polygon fill="none" stroke="black" points="236.14,-769.87 225.64,-771.25 234.71,-776.73 236.14,-769.87"/>
 </g>
 <!-- \\RichWeb\\Algorithms\\Interfaces\\AlgorithmPackageInterface -->
 <g id="node17" class="node">
 <title>\\RichWeb\\Algorithms\\Interfaces\\AlgorithmPackageInterface</title>
-<polygon fill="none" stroke="black" points="249,-246 64,-246 64,-210 249,-210 249,-246"/>
-<text text-anchor="middle" x="156.5" y="-225.2" font-family="Courier,monospace" font-size="11.00">AlgorithmPackageInterface</text>
+<polygon fill="none" stroke="black" points="249,-505 64,-505 64,-469 249,-469 249,-505"/>
+<text text-anchor="middle" x="156.5" y="-484.2" font-family="Courier,monospace" font-size="11.00">AlgorithmPackageInterface</text>
 </g>
 <!-- \\RichWeb\\Algorithms\\Interfaces\\AlgorithmPackageLoaderInterface -->
 <g id="node18" class="node">
 <title>\\RichWeb\\Algorithms\\Interfaces\\AlgorithmPackageLoaderInterface</title>
-<polygon fill="none" stroke="black" points="269.5,-300 43.5,-300 43.5,-264 269.5,-264 269.5,-300"/>
-<text text-anchor="middle" x="156.5" y="-279.2" font-family="Courier,monospace" font-size="11.00">AlgorithmPackageLoaderInterface</text>
+<polygon fill="none" stroke="black" points="269.5,-613 43.5,-613 43.5,-577 269.5,-577 269.5,-613"/>
+<text text-anchor="middle" x="156.5" y="-592.2" font-family="Courier,monospace" font-size="11.00">AlgorithmPackageLoaderInterface</text>
 </g>
 <!-- \\RichWeb\\Algorithms\\Interfaces\\AlgorithmPackageManagerInterface -->
 <g id="node19" class="node">
 <title>\\RichWeb\\Algorithms\\Interfaces\\AlgorithmPackageManagerInterface</title>
-<polygon fill="none" stroke="black" points="273,-192 40,-192 40,-156 273,-156 273,-192"/>
-<text text-anchor="middle" x="156.5" y="-171.2" font-family="Courier,monospace" font-size="11.00">AlgorithmPackageManagerInterface</text>
+<polygon fill="none" stroke="black" points="273,-559 40,-559 40,-523 273,-523 273,-559"/>
+<text text-anchor="middle" x="156.5" y="-538.2" font-family="Courier,monospace" font-size="11.00">AlgorithmPackageManagerInterface</text>
 </g>
 <!-- \\RichWeb\\Algorithms\\Interfaces\\AutoloaderInterface -->
 <g id="node20" class="node">
 <title>\\RichWeb\\Algorithms\\Interfaces\\AutoloaderInterface</title>
-<polygon fill="none" stroke="black" points="229,-570 84,-570 84,-534 229,-534 229,-570"/>
-<text text-anchor="middle" x="156.5" y="-549.2" font-family="Courier,monospace" font-size="11.00">AutoloaderInterface</text>
-</g>
-<!-- \\RichWeb\\Algorithms\\Interfaces\\CodeExamplesLoaderInterface -->
-<g id="node22" class="node">
-<title>\\RichWeb\\Algorithms\\Interfaces\\CodeExamplesLoaderInterface</title>
-<polygon fill="none" stroke="black" points="256,-516 57,-516 57,-480 256,-480 256,-516"/>
-<text text-anchor="middle" x="156.5" y="-495.2" font-family="Courier,monospace" font-size="11.00">CodeExamplesLoaderInterface</text>
+<polygon fill="none" stroke="black" points="229,-235 84,-235 84,-199 229,-199 229,-235"/>
+<text text-anchor="middle" x="156.5" y="-214.2" font-family="Courier,monospace" font-size="11.00">AutoloaderInterface</text>
 </g>
 <!-- \\RichWeb\\Algorithms\\Interfaces\\FileLoaderInterface -->
 <g id="node23" class="node">
 <title>\\RichWeb\\Algorithms\\Interfaces\\FileLoaderInterface</title>
-<polygon fill="none" stroke="black" points="229,-624 84,-624 84,-588 229,-588 229,-624"/>
-<text text-anchor="middle" x="156.5" y="-603.2" font-family="Courier,monospace" font-size="11.00">FileLoaderInterface</text>
+<polygon fill="none" stroke="black" points="229,-289 84,-289 84,-253 229,-253 229,-289"/>
+<text text-anchor="middle" x="156.5" y="-268.2" font-family="Courier,monospace" font-size="11.00">FileLoaderInterface</text>
 </g>
 <!-- \\RichWeb\\Algorithms\\Interfaces\\LanguagesInterface -->
 <g id="node25" class="node">
 <title>\\RichWeb\\Algorithms\\Interfaces\\LanguagesInterface</title>
-<polygon fill="none" stroke="black" points="225.5,-786 87.5,-786 87.5,-750 225.5,-750 225.5,-786"/>
-<text text-anchor="middle" x="156.5" y="-765.2" font-family="Courier,monospace" font-size="11.00">LanguagesInterface</text>
+<polygon fill="none" stroke="black" points="225.5,-721 87.5,-721 87.5,-685 225.5,-685 225.5,-721"/>
+<text text-anchor="middle" x="156.5" y="-700.2" font-family="Courier,monospace" font-size="11.00">LanguagesInterface</text>
 </g>
 <!-- \\RichWeb\\Algorithms\\Interfaces\\ProjectInterface -->
 <g id="node27" class="node">
 <title>\\RichWeb\\Algorithms\\Interfaces\\ProjectInterface</title>
-<polygon fill="none" stroke="black" points="219,-678 94,-678 94,-642 219,-642 219,-678"/>
-<text text-anchor="middle" x="156.5" y="-657.2" font-family="Courier,monospace" font-size="11.00">ProjectInterface</text>
+<polygon fill="none" stroke="black" points="219,-667 94,-667 94,-631 219,-631 219,-667"/>
+<text text-anchor="middle" x="156.5" y="-646.2" font-family="Courier,monospace" font-size="11.00">ProjectInterface</text>
 </g>
 <!-- \\RichWeb\\Algorithms\\Loaders\\Autoloader -->
 <g id="node31" class="node">
 <title>\\RichWeb\\Algorithms\\Loaders\\Autoloader</title>
-<polygon fill="none" stroke="black" points="473,-558 389,-558 389,-522 473,-522 473,-558"/>
-<text text-anchor="middle" x="431" y="-537.2" font-family="Courier,monospace" font-size="11.00">Autoloader</text>
+<polygon fill="none" stroke="black" points="473,-128 389,-128 389,-92 473,-92 473,-128"/>
+<text text-anchor="middle" x="431" y="-107.2" font-family="Courier,monospace" font-size="11.00">Autoloader</text>
 </g>
 <!-- \\RichWeb\\Algorithms\\Loaders\\Autoloader&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\AutoloaderInterface -->
-<g id="edge19" class="edge">
+<g id="edge20" class="edge">
 <title>\\RichWeb\\Algorithms\\Loaders\\Autoloader&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\AutoloaderInterface</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M388.91,-541.81C349.4,-543.55 288.58,-546.23 239.21,-548.4"/>
-<polygon fill="none" stroke="black" points="239.01,-544.91 229.18,-548.84 239.32,-551.9 239.01,-544.91"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M388.95,-117.47C372.12,-121.64 352.9,-127.89 337,-137 307.26,-154.03 311.29,-173.98 281,-190 268.07,-196.84 253.51,-201.94 239.04,-205.76"/>
+<polygon fill="none" stroke="black" points="237.94,-202.42 229.06,-208.2 239.6,-209.22 237.94,-202.42"/>
 </g>
 <!-- \\RichWeb\\Algorithms\\Loaders\\ContentLoader -->
 <g id="node32" class="node">
 <title>\\RichWeb\\Algorithms\\Loaders\\ContentLoader</title>
-<polygon fill="none" stroke="black" points="483,-612 379,-612 379,-576 483,-576 483,-612"/>
-<text text-anchor="middle" x="431" y="-591.2" font-family="Courier,monospace" font-size="11.00">ContentLoader</text>
+<polygon fill="none" stroke="black" points="483,-182 379,-182 379,-146 483,-146 483,-182"/>
+<text text-anchor="middle" x="431" y="-161.2" font-family="Courier,monospace" font-size="11.00">ContentLoader</text>
 </g>
 <!-- \\RichWeb\\Algorithms\\Loaders\\FileLoader -->
 <g id="node33" class="node">
 <title>\\RichWeb\\Algorithms\\Loaders\\FileLoader</title>
-<polygon fill="none" stroke="black" points="473,-666 389,-666 389,-630 473,-630 473,-666"/>
-<text text-anchor="middle" x="431" y="-645.2" font-family="Courier,monospace" font-size="11.00">FileLoader</text>
+<polygon fill="none" stroke="black" points="473,-236 389,-236 389,-200 473,-200 473,-236"/>
+<text text-anchor="middle" x="431" y="-215.2" font-family="Courier,monospace" font-size="11.00">FileLoader</text>
 </g>
 <!-- \\RichWeb\\Algorithms\\Loaders\\FileLoader&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\FileLoaderInterface -->
-<g id="edge20" class="edge">
+<g id="edge21" class="edge">
 <title>\\RichWeb\\Algorithms\\Loaders\\FileLoader&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\FileLoaderInterface</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M388.91,-641.67C349.4,-635.58 288.58,-626.2 239.21,-618.59"/>
-<polygon fill="none" stroke="black" points="239.59,-615.11 229.18,-617.05 238.53,-622.03 239.59,-615.11"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M388.91,-225.99C349.4,-233.68 288.58,-245.5 239.21,-255.11"/>
+<polygon fill="none" stroke="black" points="238.32,-251.71 229.18,-257.06 239.66,-258.59 238.32,-251.71"/>
 </g>
 <!-- \\RichWeb\\Algorithms\\Packages\\AlgorithmPackage -->
 <g id="node34" class="node">
 <title>\\RichWeb\\Algorithms\\Packages\\AlgorithmPackage</title>
-<polygon fill="none" stroke="black" points="493.5,-182 368.5,-182 368.5,-146 493.5,-146 493.5,-182"/>
-<text text-anchor="middle" x="431" y="-161.2" font-family="Courier,monospace" font-size="11.00">AlgorithmPackage</text>
+<polygon fill="none" stroke="black" points="493.5,-558 368.5,-558 368.5,-522 493.5,-522 493.5,-558"/>
+<text text-anchor="middle" x="431" y="-537.2" font-family="Courier,monospace" font-size="11.00">AlgorithmPackage</text>
 </g>
 <!-- \\RichWeb\\Algorithms\\Packages\\AlgorithmPackage&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\AlgorithmPackageInterface -->
-<g id="edge21" class="edge">
+<g id="edge22" class="edge">
 <title>\\RichWeb\\Algorithms\\Packages\\AlgorithmPackage&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\AlgorithmPackageInterface</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M368.47,-179.69C341.65,-186.43 309.81,-194.27 281,-201 271.46,-203.23 261.5,-205.5 251.54,-207.73"/>
-<polygon fill="none" stroke="black" points="250.61,-204.35 241.61,-209.94 252.13,-211.18 250.61,-204.35"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M368.17,-527.97C336.01,-521.72 295.89,-513.92 259.31,-506.8"/>
+<polygon fill="none" stroke="black" points="259.58,-503.29 249.09,-504.81 258.24,-510.16 259.58,-503.29"/>
 </g>
 <!-- \\RichWeb\\Algorithms\\Packages\\AlgorithmPackageLoader -->
 <g id="node35" class="node">
 <title>\\RichWeb\\Algorithms\\Packages\\AlgorithmPackageLoader</title>
-<polygon fill="none" stroke="black" points="513.5,-236 348.5,-236 348.5,-200 513.5,-200 513.5,-236"/>
-<text text-anchor="middle" x="431" y="-215.2" font-family="Courier,monospace" font-size="11.00">AlgorithmPackageLoader</text>
+<polygon fill="none" stroke="black" points="513.5,-666 348.5,-666 348.5,-630 513.5,-630 513.5,-666"/>
+<text text-anchor="middle" x="431" y="-645.2" font-family="Courier,monospace" font-size="11.00">AlgorithmPackageLoader</text>
 </g>
 <!-- \\RichWeb\\Algorithms\\Packages\\AlgorithmPackageLoader&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\AlgorithmPackageLoaderInterface -->
-<g id="edge22" class="edge">
+<g id="edge23" class="edge">
 <title>\\RichWeb\\Algorithms\\Packages\\AlgorithmPackageLoader&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\AlgorithmPackageLoaderInterface</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M359.23,-236.01C334.52,-242.18 306.57,-249.03 281,-255 271.46,-257.23 261.5,-259.5 251.54,-261.73"/>
-<polygon fill="none" stroke="black" points="250.61,-258.35 241.61,-263.94 252.13,-265.18 250.61,-258.35"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M348.24,-632.1C320.61,-626.73 289.41,-620.66 260.36,-615.01"/>
+<polygon fill="none" stroke="black" points="260.67,-611.5 250.19,-613.03 259.33,-618.37 260.67,-611.5"/>
 </g>
 <!-- \\RichWeb\\Algorithms\\Packages\\AlgorithmPackageLoader&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\HasRunnerInterface -->
-<g id="edge23" class="edge">
+<g id="edge24" class="edge">
 <title>\\RichWeb\\Algorithms\\Packages\\AlgorithmPackageLoader&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\HasRunnerInterface</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M376.21,-236.19C361.3,-243.77 346.59,-254.13 337,-268 230.11,-422.51 408.27,-548.79 281,-687 269.13,-699.89 252.66,-707.36 235.6,-711.55"/>
-<polygon fill="none" stroke="black" points="234.6,-708.18 225.52,-713.65 236.02,-715.04 234.6,-708.18"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M348.25,-664.32C344.36,-666.03 340.59,-667.92 337,-670 305.46,-688.32 312.7,-711.95 281,-730 267.1,-737.91 251.11,-743.51 235.34,-747.47"/>
+<polygon fill="none" stroke="black" points="234.52,-744.06 225.57,-749.72 236.1,-750.88 234.52,-744.06"/>
 </g>
 <!-- \\RichWeb\\Algorithms\\Packages\\AlgorithmPackageManager -->
 <g id="node36" class="node">
 <title>\\RichWeb\\Algorithms\\Packages\\AlgorithmPackageManager</title>
-<polygon fill="none" stroke="black" points="517,-128 345,-128 345,-92 517,-92 517,-128"/>
-<text text-anchor="middle" x="431" y="-107.2" font-family="Courier,monospace" font-size="11.00">AlgorithmPackageManager</text>
+<polygon fill="none" stroke="black" points="517,-612 345,-612 345,-576 517,-576 517,-612"/>
+<text text-anchor="middle" x="431" y="-591.2" font-family="Courier,monospace" font-size="11.00">AlgorithmPackageManager</text>
 </g>
 <!-- \\RichWeb\\Algorithms\\Packages\\AlgorithmPackageManager&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\AlgorithmPackageManagerInterface -->
-<g id="edge24" class="edge">
+<g id="edge25" class="edge">
 <title>\\RichWeb\\Algorithms\\Packages\\AlgorithmPackageManager&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\AlgorithmPackageManagerInterface</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M359.23,-128.01C334.52,-134.18 306.57,-141.03 281,-147 271.46,-149.23 261.5,-151.5 251.54,-153.73"/>
-<polygon fill="none" stroke="black" points="250.61,-150.35 241.61,-155.94 252.13,-157.18 250.61,-150.35"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M344.9,-577.45C318.2,-572.25 288.43,-566.46 260.62,-561.06"/>
+<polygon fill="none" stroke="black" points="260.95,-557.56 250.47,-559.08 259.62,-564.43 260.95,-557.56"/>
 </g>
 <!-- \\RichWeb\\Algorithms\\Setup\\AlgorithmScripts -->
 <g id="node37" class="node">
 <title>\\RichWeb\\Algorithms\\Setup\\AlgorithmScripts</title>
-<polygon fill="none" stroke="black" points="1039,-633 914,-633 914,-597 1039,-597 1039,-633"/>
-<text text-anchor="middle" x="976.5" y="-612.2" font-family="Courier,monospace" font-size="11.00">AlgorithmScripts</text>
+<polygon fill="none" stroke="black" points="1039,-532 914,-532 914,-496 1039,-496 1039,-532"/>
+<text text-anchor="middle" x="976.5" y="-511.2" font-family="Courier,monospace" font-size="11.00">AlgorithmScripts</text>
 </g>
 <!-- \\RichWeb\\Algorithms\\Setup\\AlgorithmScripts&#45;&gt;\\RichWeb\\Algorithms\\Abstracts\\AbstractScripts -->
-<g id="edge28" class="edge">
+<g id="edge29" class="edge">
 <title>\\RichWeb\\Algorithms\\Setup\\AlgorithmScripts&#45;&gt;\\RichWeb\\Algorithms\\Abstracts\\AbstractScripts</title>
-<path fill="none" stroke="black" d="M913.98,-605.89C895.73,-601.84 876.08,-596.09 859,-588 803.51,-561.72 749.07,-514.49 718.39,-485.33"/>
-<polygon fill="none" stroke="black" points="720.75,-482.75 711.11,-478.34 715.89,-487.79 720.75,-482.75"/>
+<path fill="none" stroke="black" d="M913.85,-502.22C868.78,-493.6 807.65,-481.92 761.13,-473.02"/>
+<polygon fill="none" stroke="black" points="761.62,-469.55 751.14,-471.11 760.3,-476.43 761.62,-469.55"/>
 </g>
 <!-- \\RichWeb\\Algorithms\\Setup\\Languages -->
 <g id="node38" class="node">
 <title>\\RichWeb\\Algorithms\\Setup\\Languages</title>
-<polygon fill="none" stroke="black" points="1015,-795 938,-795 938,-759 1015,-759 1015,-795"/>
-<text text-anchor="middle" x="976.5" y="-774.2" font-family="Courier,monospace" font-size="11.00">Languages</text>
+<polygon fill="none" stroke="black" points="1015,-640 938,-640 938,-604 1015,-604 1015,-640"/>
+<text text-anchor="middle" x="976.5" y="-619.2" font-family="Courier,monospace" font-size="11.00">Languages</text>
 </g>
 <!-- \\RichWeb\\Algorithms\\Setup\\Languages&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\HasRunnerInterface -->
-<g id="edge30" class="edge">
+<g id="edge31" class="edge">
 <title>\\RichWeb\\Algorithms\\Setup\\Languages&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\HasRunnerInterface</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M691,-777C662.14,-776.31 460.22,-763.05 432,-757"/>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M937.57,-777.58C883.34,-778.27 780.52,-779.09 693,-777"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M430,-757C364.63,-760.23 290.34,-759.97 235.86,-759.04"/>
+<polygon fill="none" stroke="black" points="235.64,-755.54 225.58,-758.86 235.51,-762.54 235.64,-755.54"/>
 </g>
 <!-- \\RichWeb\\Algorithms\\Setup\\Languages&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\LanguagesInterface -->
-<g id="edge29" class="edge">
+<g id="edge30" class="edge">
 <title>\\RichWeb\\Algorithms\\Setup\\Languages&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\LanguagesInterface</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M691,-777C529.21,-773.9 339.82,-770.84 235.82,-769.21"/>
-<polygon fill="none" stroke="black" points="235.77,-765.71 225.72,-769.05 235.66,-772.71 235.77,-765.71"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M937.82,-630.02C914.92,-635.07 885.16,-641.94 859,-649 670,-699.97 627.52,-766.59 432,-757"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M430,-757C388.66,-759.04 377.45,-760.79 337,-752 310.87,-746.32 306.59,-737.77 281,-730 266.44,-725.58 250.71,-721.57 235.52,-718.08"/>
+<polygon fill="none" stroke="black" points="236.15,-714.64 225.62,-715.86 234.61,-721.47 236.15,-714.64"/>
 </g>
 <!-- \\RichWeb\\Algorithms\\Setup\\PrismSyntaxtHighlighterScripts -->
 <g id="node39" class="node">
 <title>\\RichWeb\\Algorithms\\Setup\\PrismSyntaxtHighlighterScripts</title>
-<polygon fill="none" stroke="black" points="1086,-687 867,-687 867,-651 1086,-651 1086,-687"/>
-<text text-anchor="middle" x="976.5" y="-666.2" font-family="Courier,monospace" font-size="11.00">PrismSyntaxtHighlighterScripts</text>
+<polygon fill="none" stroke="black" points="1086,-586 867,-586 867,-550 1086,-550 1086,-586"/>
+<text text-anchor="middle" x="976.5" y="-565.2" font-family="Courier,monospace" font-size="11.00">PrismSyntaxtHighlighterScripts</text>
 </g>
 <!-- \\RichWeb\\Algorithms\\Setup\\PrismSyntaxtHighlighterScripts&#45;&gt;\\RichWeb\\Algorithms\\Abstracts\\AbstractScripts -->
-<g id="edge31" class="edge">
+<g id="edge32" class="edge">
 <title>\\RichWeb\\Algorithms\\Setup\\PrismSyntaxtHighlighterScripts&#45;&gt;\\RichWeb\\Algorithms\\Abstracts\\AbstractScripts</title>
-<path fill="none" stroke="black" d="M877.47,-650.99C871.05,-648.39 864.82,-645.41 859,-642 791.57,-602.54 735.85,-526.71 709.46,-486.52"/>
-<polygon fill="none" stroke="black" points="712.35,-484.55 703.98,-478.05 706.47,-488.34 712.35,-484.55"/>
+<path fill="none" stroke="black" d="M887.73,-549.92C877.94,-547.24 868.2,-544.26 859,-541 814.52,-525.22 766.33,-500.82 733.38,-482.92"/>
+<polygon fill="none" stroke="black" points="734.96,-479.79 724.51,-478.05 731.6,-485.93 734.96,-479.79"/>
 </g>
 <!-- \\RichWeb\\Algorithms\\Setup\\Scripts -->
 <g id="node40" class="node">
 <title>\\RichWeb\\Algorithms\\Setup\\Scripts</title>
-<polygon fill="none" stroke="black" points="1008.5,-579 944.5,-579 944.5,-543 1008.5,-543 1008.5,-579"/>
-<text text-anchor="middle" x="976.5" y="-558.2" font-family="Courier,monospace" font-size="11.00">Scripts</text>
+<polygon fill="none" stroke="black" points="1008.5,-478 944.5,-478 944.5,-442 1008.5,-442 1008.5,-478"/>
+<text text-anchor="middle" x="976.5" y="-457.2" font-family="Courier,monospace" font-size="11.00">Scripts</text>
 </g>
 <!-- \\RichWeb\\Algorithms\\Setup\\Scripts&#45;&gt;\\RichWeb\\Algorithms\\Abstracts\\AbstractScripts -->
-<g id="edge32" class="edge">
+<g id="edge33" class="edge">
 <title>\\RichWeb\\Algorithms\\Setup\\Scripts&#45;&gt;\\RichWeb\\Algorithms\\Abstracts\\AbstractScripts</title>
-<path fill="none" stroke="black" d="M944.46,-549.9C898.57,-533.5 811.74,-502.45 753.12,-481.49"/>
-<polygon fill="none" stroke="black" points="754.2,-478.16 743.6,-478.09 751.84,-484.75 754.2,-478.16"/>
+<path fill="none" stroke="black" d="M944.46,-460C900.65,-460 819.53,-460 761.26,-460"/>
+<polygon fill="none" stroke="black" points="761.03,-456.5 751.03,-460 761.03,-463.5 761.03,-456.5"/>
 </g>
 <!-- \\RichWeb\\Algorithms\\Setup\\Setup -->
 <g id="node41" class="node">
 <title>\\RichWeb\\Algorithms\\Setup\\Setup</title>
-<polygon fill="none" stroke="black" points="1003.5,-741 949.5,-741 949.5,-705 1003.5,-705 1003.5,-741"/>
-<text text-anchor="middle" x="976.5" y="-720.2" font-family="Courier,monospace" font-size="11.00">Setup</text>
+<polygon fill="none" stroke="black" points="1003.5,-694 949.5,-694 949.5,-658 1003.5,-658 1003.5,-694"/>
+<text text-anchor="middle" x="976.5" y="-673.2" font-family="Courier,monospace" font-size="11.00">Setup</text>
 </g>
 <!-- \\RichWeb\\Algorithms\\Setup\\Setup&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\HasRunnerInterface -->
-<g id="edge33" class="edge">
+<g id="edge34" class="edge">
 <title>\\RichWeb\\Algorithms\\Setup\\Setup&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\HasRunnerInterface</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M430,-757C389.55,-748.21 378.04,-757.41 337,-752 326.58,-750.63 279.17,-740.56 235.69,-731.14"/>
-<polygon fill="none" stroke="black" points="236.43,-727.72 225.91,-729.02 234.94,-734.56 236.43,-727.72"/>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M949.46,-726.51C855.28,-738.94 532.58,-778.87 432,-757"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M949.26,-683.58C855.08,-710.38 534.26,-797.89 432,-777"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M430,-777C365.26,-765.65 290.76,-760.72 236.04,-758.6"/>
+<polygon fill="none" stroke="black" points="235.84,-755.09 225.72,-758.22 235.58,-762.08 235.84,-755.09"/>
 </g>
 <!-- \\RichWeb\\Algorithms\\Traits\\Formatting\\FilePaths -->
 <g id="node42" class="node">
 <title>\\RichWeb\\Algorithms\\Traits\\Formatting\\FilePaths</title>
-<polygon fill="none" stroke="black" points="1015,-391 938,-391 938,-355 1015,-355 1015,-391"/>
-<text text-anchor="middle" x="976.5" y="-370.2" font-family="Courier,monospace" font-size="11.00">FilePaths</text>
+<polygon fill="none" stroke="black" points="1015,-941 938,-941 938,-905 1015,-905 1015,-941"/>
+<text text-anchor="middle" x="976.5" y="-920.2" font-family="Courier,monospace" font-size="11.00">FilePaths</text>
 </g>
 <!-- \\RichWeb\\Algorithms\\Traits\\Formatting\\Strings -->
 <g id="node43" class="node">
 <title>\\RichWeb\\Algorithms\\Traits\\Formatting\\Strings</title>
-<polygon fill="none" stroke="black" points="1008.5,-337 944.5,-337 944.5,-301 1008.5,-301 1008.5,-337"/>
-<text text-anchor="middle" x="976.5" y="-316.2" font-family="Courier,monospace" font-size="11.00">Strings</text>
+<polygon fill="none" stroke="black" points="1008.5,-887 944.5,-887 944.5,-851 1008.5,-851 1008.5,-887"/>
+<text text-anchor="middle" x="976.5" y="-866.2" font-family="Courier,monospace" font-size="11.00">Strings</text>
 </g>
 <!-- \\RichWeb\\Algorithms\\Traits\\Posts\\AlgorithmChecker -->
 <g id="node44" class="node">
 <title>\\RichWeb\\Algorithms\\Traits\\Posts\\AlgorithmChecker</title>
-<polygon fill="none" stroke="black" points="1039,-471 914,-471 914,-435 1039,-435 1039,-471"/>
-<text text-anchor="middle" x="976.5" y="-450.2" font-family="Courier,monospace" font-size="11.00">AlgorithmChecker</text>
+<polygon fill="none" stroke="black" points="1039,-1021 914,-1021 914,-985 1039,-985 1039,-1021"/>
+<text text-anchor="middle" x="976.5" y="-1000.2" font-family="Courier,monospace" font-size="11.00">AlgorithmChecker</text>
 </g>
 <!-- \\RichWeb\\Algorithms\\Plugin -->
 <g id="node45" class="node">
 <title>\\RichWeb\\Algorithms\\Plugin</title>
-<polygon fill="none" stroke="black" points="1005,-277 948,-277 948,-241 1005,-241 1005,-277"/>
-<text text-anchor="middle" x="976.5" y="-256.2" font-family="Courier,monospace" font-size="11.00">Plugin</text>
+<polygon fill="none" stroke="black" points="1005,-424 948,-424 948,-388 1005,-388 1005,-424"/>
+<text text-anchor="middle" x="976.5" y="-403.2" font-family="Courier,monospace" font-size="11.00">Plugin</text>
 </g>
 <!-- \\RichWeb\\Algorithms\\Plugin&#45;&gt;\\RichWeb\\Algorithms\\Abstracts\\AbstractSingletonPlugin -->
-<g id="edge25" class="edge">
+<g id="edge26" class="edge">
 <title>\\RichWeb\\Algorithms\\Plugin&#45;&gt;\\RichWeb\\Algorithms\\Abstracts\\AbstractSingletonPlugin</title>
-<path fill="none" stroke="black" d="M947.78,-259.94C922.27,-262.12 884.61,-268.86 859,-289 823.37,-317.02 847.01,-351.46 811,-379 803.97,-384.38 796.05,-388.72 787.73,-392.22"/>
-<polygon fill="none" stroke="black" points="786.32,-389.01 778.2,-395.82 788.79,-395.56 786.32,-389.01"/>
+<path fill="none" stroke="black" d="M947.9,-406C911.17,-406 844.35,-406 788.34,-406"/>
+<polygon fill="none" stroke="black" points="788.02,-402.5 778.02,-406 788.02,-409.5 788.02,-402.5"/>
 </g>
 <!-- \\RichWeb\\Algorithms\\PrismSyntaxHighlighter -->
 <g id="node46" class="node">
 <title>\\RichWeb\\Algorithms\\PrismSyntaxHighlighter</title>
-<polygon fill="none" stroke="black" points="1059,-223 894,-223 894,-187 1059,-187 1059,-223"/>
-<text text-anchor="middle" x="976.5" y="-202.2" font-family="Courier,monospace" font-size="11.00">PrismSyntaxHighlighter</text>
+<polygon fill="none" stroke="black" points="1059,-316 894,-316 894,-280 1059,-280 1059,-316"/>
+<text text-anchor="middle" x="976.5" y="-295.2" font-family="Courier,monospace" font-size="11.00">PrismSyntaxHighlighter</text>
 </g>
 <!-- \\RichWeb\\Algorithms\\PrismSyntaxHighlighter&#45;&gt;\\RichWeb\\Algorithms\\Abstracts\\AbstractSyntaxHighlighter -->
-<g id="edge26" class="edge">
+<g id="edge27" class="edge">
 <title>\\RichWeb\\Algorithms\\PrismSyntaxHighlighter&#45;&gt;\\RichWeb\\Algorithms\\Abstracts\\AbstractSyntaxHighlighter</title>
-<path fill="none" stroke="black" d="M893.92,-222.26C882.12,-225.23 870.2,-228.5 859,-232 819.13,-244.47 775.26,-262.09 742.63,-275.99"/>
-<polygon fill="none" stroke="black" points="741.12,-272.83 733.31,-279.99 743.88,-279.26 741.12,-272.83"/>
+<path fill="none" stroke="black" d="M893.79,-298C862.98,-298 827.55,-298 795.11,-298"/>
+<polygon fill="none" stroke="black" points="794.7,-294.5 784.7,-298 794.7,-301.5 794.7,-294.5"/>
 </g>
 <!-- \\RichWeb\\Algorithms\\Project -->
 <g id="node47" class="node">
@@ -578,10 +585,10 @@
 <text text-anchor="middle" x="431" y="-717.2" font-family="Courier,monospace" font-size="11.00">Project</text>
 </g>
 <!-- \\RichWeb\\Algorithms\\Project&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\ProjectInterface -->
-<g id="edge27" class="edge">
+<g id="edge28" class="edge">
 <title>\\RichWeb\\Algorithms\\Project&#45;&gt;\\RichWeb\\Algorithms\\Interfaces\\ProjectInterface</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M398.9,-713.09C368.76,-706.39 321.75,-695.97 281,-687 264.16,-683.29 246.02,-679.32 228.97,-675.59"/>
-<polygon fill="none" stroke="black" points="229.59,-672.14 219.07,-673.43 228.09,-678.98 229.59,-672.14"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M398.7,-713.76C380.52,-709.84 357.27,-704.34 337,-698 311.48,-690.01 306.59,-683.77 281,-676 264.41,-670.96 246.3,-666.46 229.19,-662.65"/>
+<polygon fill="none" stroke="black" points="229.76,-659.19 219.24,-660.48 228.27,-666.03 229.76,-659.19"/>
 </g>
 </g>
 </svg>

@@ -109,7 +109,7 @@
     
             <span class="phpdocumentor-element__implements">
             implements
-                            <a href="classes/RichWeb-Algorithms-Interfaces-HasRunnerInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\HasRunnerInterface">HasRunnerInterface</abbr></a>                    </span>
+                            <a href="classes/RichWeb-Algorithms-Interfaces-CodeExamplesLoaderInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\CodeExamplesLoaderInterface">CodeExamplesLoaderInterface</abbr></a>,                             <a href="classes/RichWeb-Algorithms-Interfaces-HasRunnerInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\HasRunnerInterface">HasRunnerInterface</abbr></a>                    </span>
     
             <span class="phpdocumentor-element__extends">
             Uses
@@ -119,7 +119,7 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/CodeExamples/CodeExamplesLoader.php"><a href="files/includes-codeexamples-codeexamplesloader.html"><abbr title="Includes/CodeExamples/CodeExamplesLoader.php">CodeExamplesLoader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">24</span>
+    <span class="phpdocumentor-element-found-in__line">25</span>
 
     </aside>
 
@@ -137,6 +137,8 @@
 </h3>
 
 <dl class="phpdocumentor-table-of-contents">
+            <dt class="phpdocumentor-table-of-contents__entry -interface"><a href="classes/RichWeb-Algorithms-Interfaces-CodeExamplesLoaderInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\CodeExamplesLoaderInterface">CodeExamplesLoaderInterface</abbr></a></dt>
+        <dd></dd>
             <dt class="phpdocumentor-table-of-contents__entry -interface"><a href="classes/RichWeb-Algorithms-Interfaces-HasRunnerInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\HasRunnerInterface">HasRunnerInterface</abbr></a></dt>
         <dd></dd>
     
@@ -177,14 +179,14 @@
     <span>
                                 &nbsp;: string    </span>
 </dt>
-<dd></dd>
+<dd>Hooked into from the WP hook &#039;the_content&#039;. Appends all the code examples for an Algorithm to post content.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#method_getCodeExamples">getCodeExamples()</a>
     <span>
                                 &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
-<dd></dd>
+<dd>Returns an array of \RichWeb\Algorithms\CodeExample objects for a post.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#method_loadCodeExamplesForPost">loadCodeExamplesForPost()</a>
@@ -242,7 +244,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/CodeExamples/CodeExamplesLoader.php"><a href="files/includes-codeexamples-codeexamplesloader.html"><abbr title="Includes/CodeExamples/CodeExamplesLoader.php">CodeExamplesLoader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">28</span>
+    <span class="phpdocumentor-element-found-in__line">29</span>
 
     </aside>
 
@@ -276,7 +278,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/CodeExamples/CodeExamplesLoader.php"><a href="files/includes-codeexamples-codeexamplesloader.html"><abbr title="Includes/CodeExamples/CodeExamplesLoader.php">CodeExamplesLoader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">31</span>
+    <span class="phpdocumentor-element-found-in__line">32</span>
 
     </aside>
 
@@ -314,7 +316,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/CodeExamples/CodeExamplesLoader.php"><a href="files/includes-codeexamples-codeexamplesloader.html"><abbr title="Includes/CodeExamples/CodeExamplesLoader.php">CodeExamplesLoader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">30</span>
+    <span class="phpdocumentor-element-found-in__line">31</span>
 
     </aside>
 
@@ -358,17 +360,17 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/CodeExamples/CodeExamplesLoader.php"><a href="files/includes-codeexamples-codeexamplesloader.html"><abbr title="Includes/CodeExamples/CodeExamplesLoader.php">CodeExamplesLoader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">70</span>
+    <span class="phpdocumentor-element-found-in__line">71</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Hooked into from the WP hook &#039;the_content&#039;. Appends all the code examples for an Algorithm to post content.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__final">final</span>        <span class="phpdocumentor-signature__name">appendExamplesToContent</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$content</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -376,8 +378,7 @@
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
+                
             </dd>
             </dl>
 
@@ -402,17 +403,17 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/CodeExamples/CodeExamplesLoader.php"><a href="files/includes-codeexamples-codeexamplesloader.html"><abbr title="Includes/CodeExamples/CodeExamplesLoader.php">CodeExamplesLoader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">91</span>
+    <span class="phpdocumentor-element-found-in__line">92</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Returns an array of \RichWeb\Algorithms\CodeExample objects for a post.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__final">final</span>        <span class="phpdocumentor-signature__name">getCodeExamples</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
     
     
 
@@ -435,7 +436,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/CodeExamples/CodeExamplesLoader.php"><a href="files/includes-codeexamples-codeexamplesloader.html"><abbr title="Includes/CodeExamples/CodeExamplesLoader.php">CodeExamplesLoader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">47</span>
+    <span class="phpdocumentor-element-found-in__line">48</span>
 
     </aside>
 
@@ -484,7 +485,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/CodeExamples/CodeExamplesLoader.php"><a href="files/includes-codeexamples-codeexamplesloader.html"><abbr title="Includes/CodeExamples/CodeExamplesLoader.php">CodeExamplesLoader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">34</span>
+    <span class="phpdocumentor-element-found-in__line">35</span>
 
     </aside>
 
@@ -564,7 +565,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/CodeExamples/CodeExamplesLoader.php"><a href="files/includes-codeexamples-codeexamplesloader.html"><abbr title="Includes/CodeExamples/CodeExamplesLoader.php">CodeExamplesLoader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">60</span>
+    <span class="phpdocumentor-element-found-in__line">61</span>
 
     </aside>
 
