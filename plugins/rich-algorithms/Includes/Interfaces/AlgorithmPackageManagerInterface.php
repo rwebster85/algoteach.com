@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace RichWeb\Algorithms\Interfaces;
 
-use RichWeb\Algorithms\AlgorithmPackage;
+use RichWeb\Algorithms\Packages\AlgorithmPackage;
 
 interface AlgorithmPackageManagerInterface
 {

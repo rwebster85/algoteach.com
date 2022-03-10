@@ -11,7 +11,7 @@
 
 declare(strict_types=1);
 
-namespace RichWeb\Algorithms;
+namespace RichWeb\Algorithms\Packages;
 
 use RichWeb\Algorithms\Interfaces\AlgorithmPackageInterface;
 use RichWeb\Algorithms\Traits\Formatting\FilePaths;

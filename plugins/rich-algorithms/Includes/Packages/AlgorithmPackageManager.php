@@ -11,11 +11,11 @@
 
 declare(strict_types=1);
 
-namespace RichWeb\Algorithms;
+namespace RichWeb\Algorithms\Packages;
 
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
-use RichWeb\Algorithms\AlgorithmPackage;
+use RichWeb\Algorithms\Packages\AlgorithmPackage;
 use RichWeb\Algorithms\Interfaces\AlgorithmPackageLoaderInterface;
 use RichWeb\Algorithms\Interfaces\AlgorithmPackageManagerInterface;
 use RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface;

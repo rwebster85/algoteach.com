@@ -11,7 +11,7 @@
 
 declare(strict_types=1);
 
-use RichWeb\Algorithms\CodeExample;
+use RichWeb\Algorithms\CodeExamples\CodeExample;
 
 /** @var CodeExample $this **/ ?>
 

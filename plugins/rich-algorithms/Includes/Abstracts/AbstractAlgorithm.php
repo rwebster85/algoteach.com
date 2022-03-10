@@ -13,11 +13,9 @@ declare(strict_types=1);
 
 namespace RichWeb\Algorithms\Abstracts;
 
-use RichWeb\Algorithms\CodeExample;
 use RichWeb\Algorithms\Interfaces\AlgorithmInterface;
 use RichWeb\Algorithms\Interfaces\AlgorithmPackageInterface;
 use RichWeb\Algorithms\Interfaces\HasRunnerInterface;
-use RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface;
 use RichWeb\Algorithms\Traits\Formatting;
 use RichWeb\Algorithms\Setup\AlgorithmScripts;
 
@@ -30,64 +28,21 @@ abstract class AbstractAlgorithm implements AlgorithmInterface, HasRunnerInterfa
 
     final public function __construct(
         private AlgorithmPackageInterface $package,
-        private int $post_id,
-        private SyntaxHighlighterInterface $syntax
+        private int $post_id
     ) {}
 
     public function run(): void
     {
-        $this->buildCodeExamples();
         $this->actions();
         $this->loadScripts();
         $this->load();
     }
 
-    private function actions(): void
-    {
-        add_filter('the_content', [$this, 'appendExamplesToContent']);
-    }
+    private function actions(): void {}
 
     final public function loadScripts(): void
     {
         (new AlgorithmScripts($this->package))->run();
-    }
-
-    final public function appendExamplesToContent(string $content): string
-    {
-        if (empty($this->code_examples)) {
-            return $content;
-        }
-
-        ob_start();
-
-        echo '<div class="rich-algo-frontend-examples-wrap">';
-
-        /** @var CodeExample $example */
-        foreach ($this->code_examples as $example) {
-            echo $example;
-        }
-
-        echo '</div>';
-
-        $after = ob_get_clean();
-        return $content . $after;
-    }
-
-    private function buildCodeExamples(): void
-    {
-        $examples = (array) get_post_meta($this->post_id, 'richweb_algorithm_code_examples', true);
-
-        foreach ($examples as $example) {
-            if (!is_array($example) || empty($example)) {
-                continue;
-            }
-            $this->code_examples[] = new CodeExample($example, $this->syntax);
-        }
-    }
-
-    final public function getCodeExamples(): array
-    {
-        return $this->code_examples;
     }
 
     /**

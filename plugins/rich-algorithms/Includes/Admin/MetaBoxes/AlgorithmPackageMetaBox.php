@@ -14,8 +14,8 @@ declare(strict_types=1);
 namespace RichWeb\Algorithms\Admin\MetaBoxes;
 
 use RichWeb\Algorithms\Admin\Abstracts\AbstractMetaBox;
-use RichWeb\Algorithms\AlgorithmPackageManager;
-use RichWeb\Algorithms\AlgorithmPackage;
+use RichWeb\Algorithms\Packages\AlgorithmPackageManager;
+use RichWeb\Algorithms\Packages\AlgorithmPackage;
 use RichWeb\Algorithms\Traits\Formatting\Strings;
 
 /**

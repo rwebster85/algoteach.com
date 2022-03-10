@@ -21,22 +21,4 @@ interface AlgorithmInterface
      * @return void
      */
     public function loadScripts(): void;
-
-    /**
-     * Hooked into from the WP hook 'the_content'. Appends all the code examples for an Algorithm to post content.
-     * 
-     * @see https://developer.wordpress.org/reference/hooks/the_content/ WP action
-     * 
-     * @param string $content
-     * 
-     * @return string
-     */
-    public function appendExamplesToContent(string $content): string;
-
-    /**
-     * Returns an array of \RichWeb\Algorithms\CodeExample objects for a post.
-     * 
-     * @return array
-     */
-    public function getCodeExamples(): array;
 }

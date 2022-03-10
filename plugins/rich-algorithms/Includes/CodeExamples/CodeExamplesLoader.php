@@ -1,0 +1,89 @@
+<?php
+
+/*
+ * This file is part of Rich Algorithms.
+ *
+ * Copyright (c) Richard Webster
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+declare(strict_types=1);
+
+namespace RichWeb\Algorithms\CodeExamples;
+
+use RichWeb\Algorithms\CodeExamples\CodeExample;
+use RichWeb\Algorithms\Interfaces\HasRunnerInterface;
+use RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface;
+
+final class CodeExamplesLoader implements HasRunnerInterface
+{
+    private array $code_examples = [];
+
+    public function __construct(
+        private SyntaxHighlighterInterface $syntax
+    ) {}
+
+    public function run(): void
+    {
+        add_action('template_redirect', [$this, 'loadCodeExamplesForPost']);
+        add_filter('the_content', [$this, 'appendExamplesToContent']);
+    }
+
+    /**
+     * Loads the package for the current global post, hooked from 'template_redirect' WP Action
+     * 
+     * @see https://developer.wordpress.org/reference/hooks/template_redirect/ WP Action
+     * 
+     * @return void
+     */
+    public function loadCodeExamplesForPost(): void
+    {
+        if (is_singular('richweb_algorithm')) {
+
+            $post_id = absint(get_the_ID() ?? 0);
+
+            $code_examples = (array) get_post_meta($post_id, 'richweb_algorithm_code_examples', true);
+            if (!empty($code_examples)) {
+                $this->buildCodeExamples($code_examples);
+            }
+        }
+    }
+
+    private function buildCodeExamples(array $code_examples): void
+    {
+        foreach ($code_examples as $example) {
+            if (!is_array($example) || empty($example)) {
+                continue;
+            }
+            $this->code_examples[] = new CodeExample($example, $this->syntax);
+        }
+    }
+
+    final public function appendExamplesToContent(string $content): string
+    {
+        if (empty($this->code_examples)) {
+            return $content;
+        }
+
+        ob_start();
+
+        echo '<div class="rich-algo-frontend-examples-wrap">';
+
+        /** @var CodeExample $example */
+        foreach ($this->code_examples as $example) {
+            echo $example;
+        }
+
+        echo '</div>';
+
+        $after = ob_get_clean();
+        return $content . $after;
+    }
+
+    final public function getCodeExamples(): array
+    {
+        return $this->code_examples;
+    }
+}

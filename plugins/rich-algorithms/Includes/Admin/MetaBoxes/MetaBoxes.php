@@ -14,7 +14,7 @@ declare(strict_types=1);
 namespace RichWeb\Algorithms\Admin\MetaBoxes;
 
 use RichWeb\Algorithms\Abstracts\AbstractSyntaxHighlighter;
-use RichWeb\Algorithms\AlgorithmPackageManager;
+use RichWeb\Algorithms\Packages\AlgorithmPackageManager;
 use RichWeb\Algorithms\Interfaces\HasRunnerInterface;
 
 final class MetaBoxes implements HasRunnerInterface

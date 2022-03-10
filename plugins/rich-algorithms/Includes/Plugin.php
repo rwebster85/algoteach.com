@@ -14,6 +14,7 @@ declare(strict_types=1);
 namespace RichWeb\Algorithms;
 
 use RichWeb\Algorithms\Abstracts\AbstractSingletonPlugin;
+use RichWeb\Algorithms\Packages\AlgorithmPackageManager;
 use RichWeb\Algorithms\Interfaces\AlgorithmPackageManagerInterface;
 use RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface;
 use RichWeb\Algorithms\PrismSyntaxHighlighter;
@@ -23,6 +24,7 @@ use RichWeb\Algorithms\Admin\{
     AlgorithmPostType,
     MetaBoxes\MetaBoxes
 };
+use RichWeb\Algorithms\CodeExamples\CodeExamplesLoader;
 
 use const RichWeb\Algorithms\{
     PLUGIN_FILE,
@@ -95,6 +97,8 @@ final class Plugin extends AbstractSingletonPlugin
     {
         $this->syntax = new PrismSyntaxHighlighter();
         $this->algorithm_package_manager = new AlgorithmPackageManager($this->main_directory, $this->syntax);
+
+        (new CodeExamplesLoader($this->syntax))->run();
 
         (new AlgorithmPostType())->run();
         (new MetaBoxes($this->main_directory, $this->algorithm_package_manager, $this->syntax))->run();

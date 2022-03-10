@@ -11,13 +11,12 @@
 
 declare(strict_types=1);
 
-namespace RichWeb\Algorithms;
+namespace RichWeb\Algorithms\Packages;
 
 use RichWeb\Algorithms\Abstracts\AbstractAlgorithm;
-use RichWeb\Algorithms\AlgorithmPackage;
+use RichWeb\Algorithms\Packages\AlgorithmPackage;
 use RichWeb\Algorithms\Interfaces\AlgorithmPackageLoaderInterface;
 use RichWeb\Algorithms\Interfaces\HasRunnerInterface;
-use RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface;
 
 final class AlgorithmPackageLoader implements AlgorithmPackageLoaderInterface, HasRunnerInterface
 {
@@ -25,8 +24,7 @@ final class AlgorithmPackageLoader implements AlgorithmPackageLoaderInterface, H
      * @var array<string, AlgorithmPackage>
      */
     public function __construct(
-        private array $packages,
-        private SyntaxHighlighterInterface $syntax
+        private array $packages
     ) {}
 
     public function run(): void
@@ -71,7 +69,7 @@ final class AlgorithmPackageLoader implements AlgorithmPackageLoaderInterface, H
             if (file_exists($path)) {
                 require_once $path;
                 $class = $package->getQualifiedClassName();
-                $algorithm = new $class($package, $post_id, $this->syntax);
+                $algorithm = new $class($package, $post_id);
                 /** @var AbstractAlgorithm $algorithm */
                 $algorithm->run();
             }
