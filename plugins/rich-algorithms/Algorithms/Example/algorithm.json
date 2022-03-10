@@ -2,7 +2,7 @@
     "name": "Example Algorithm",
     "version": "1.0.0",
     "class": "Example",
-    "namespace": "RichWeb\\Algorithms\\Packages",
+    "namespace": "RichWeb\\Algorithms\\Algorithm",
     "scripts": [
         "example.js"
     ],

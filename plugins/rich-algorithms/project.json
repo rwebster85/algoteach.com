@@ -6,7 +6,7 @@
     "sources": {
         "autoload": {
             "RichWeb\\Algorithms": "Includes",
-            "RichWeb\\Algorithms\\Packages": "Algorithms"
+            "RichWeb\\Algorithms\\Algorithm": "Algorithms"
         },
         "files": []
     },

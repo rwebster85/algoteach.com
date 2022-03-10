@@ -11,7 +11,7 @@
 
 declare(strict_types=1);
 
-namespace RichWeb\Algorithms\Packages;
+namespace RichWeb\Algorithms\Algorithm;
 
 use RichWeb\Algorithms\Abstracts\AbstractAlgorithm;
 
