@@ -42,4 +42,32 @@ trait Strings
     {
         return esc_html($var);
     }
+
+    /**
+     * Escapes any HTML entities within a string for safe output as an HTML attribute.
+     * 
+     * @param string $var
+     * 
+     * @uses \esc_attr() WP Function
+     * 
+     * @return string
+     */
+    protected function escAttr(string $var = ''): string
+    {
+        return esc_attr($var);
+    }
+
+    /**
+     * Escapes any HTML entities within a string for safe output to a textarea element.
+     * 
+     * @param string $var
+     * 
+     * @uses \esc_textarea() WP Function
+     * 
+     * @return string
+     */
+    protected function escTextarea(string $var = ''): string
+    {
+        return esc_textarea($var);
+    }
 }

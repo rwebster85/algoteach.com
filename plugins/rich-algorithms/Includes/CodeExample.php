@@ -15,6 +15,7 @@ namespace RichWeb\Algorithms;
 
 use RichWeb\Algorithms\Interfaces\CodeExampleInterface;
 use RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface;
+use RichWeb\Algorithms\Loaders\ContentLoader;
 use RichWeb\Algorithms\Traits\Formatting;
 use Stringable;
 
@@ -69,7 +70,8 @@ class CodeExample implements CodeExampleInterface, Stringable
     {
         ob_start();
 
-        include dirname(__FILE__) . $this->formatSlashes('\Content\CodeExampleContent.php');
+        $path = dirname(__FILE__) . $this->formatSlashes('\Content\CodeExampleContent.php');
+        include $path;
 
         $content = ob_get_clean();
 
