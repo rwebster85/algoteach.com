@@ -17,8 +17,6 @@ use RichWeb\Algorithms\Abstracts\AbstractScripts;
 use RichWeb\Algorithms\Interfaces\AlgorithmPackageInterface;
 use RichWeb\Algorithms\Traits\Formatting;
 
-use const RichWeb\Algorithms\PLUGIN_FILE;
-
 /**
  * Loads the JS and CSS files needed by the algorithm.
  */
@@ -29,9 +27,7 @@ class AlgorithmScripts extends AbstractScripts
 
     public function __construct(
         private AlgorithmPackageInterface $package
-    ) {
-        
-    }
+    ) {}
 
     public function enqueueAdminScripts(string $hook): void {}
 
