@@ -43,7 +43,8 @@ class CodeExample implements CodeExampleInterface, Stringable
         return $this->lang;
     }
 
-    public function getLanguageFormatted(): string {
+    public function getLanguageFormatted(): string
+    {
         $langs = $this->syntax->languages();
 
         return ($langs[$this->lang] ?? '');
