@@ -130,25 +130,11 @@
 
 <dl class="phpdocumentor-table-of-contents">
                         <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichWeb-Algorithms-Interfaces-AlgorithmInterface.html#method_actions">actions()</a>
+    <a href="classes/RichWeb-Algorithms-Interfaces-AlgorithmInterface.html#method_loadScripts">loadScripts()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
-<dd>Hooks into the necessary WP actions.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichWeb-Algorithms-Interfaces-AlgorithmInterface.html#method_appendExamplesToContent">appendExamplesToContent()</a>
-    <span>
-                                &nbsp;: string    </span>
-</dt>
-<dd>Hooked into from the WP hook &#039;the_content&#039;. Appends all the code examples for an Algorithm to the bottom of the post.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichWeb-Algorithms-Interfaces-AlgorithmInterface.html#method_getCodeExamples">getCodeExamples()</a>
-    <span>
-                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
-</dt>
-<dd>Returns an array of \RichWeb\Algorithms\CodeExample objects for a post.</dd>
+<dd>Loads the scripts required for the algorithm.</dd>
 
         </dl>
 
@@ -167,9 +153,9 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_actions">
-        actions()
-        <a href="classes/RichWeb-Algorithms-Interfaces-AlgorithmInterface.html#method_actions" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_loadScripts">
+        loadScripts()
+        <a href="classes/RichWeb-Algorithms-Interfaces-AlgorithmInterface.html#method_loadScripts" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Interfaces/AlgorithmInterface.php"><a href="files/includes-interfaces-algorithminterface.html"><abbr title="Includes/Interfaces/AlgorithmInterface.php">AlgorithmInterface.php</abbr></a></abbr>
@@ -178,11 +164,11 @@
 
     </aside>
 
-        <p class="phpdocumentor-summary">Hooks into the necessary WP actions.</p>
+        <p class="phpdocumentor-summary">Loads the scripts required for the algorithm.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">actions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                <span class="phpdocumentor-signature__name">loadScripts</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     
     
@@ -190,98 +176,6 @@
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">void</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_appendExamplesToContent">
-        appendExamplesToContent()
-        <a href="classes/RichWeb-Algorithms-Interfaces-AlgorithmInterface.html#method_appendExamplesToContent" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Interfaces/AlgorithmInterface.php"><a href="files/includes-interfaces-algorithminterface.html"><abbr title="Includes/Interfaces/AlgorithmInterface.php">AlgorithmInterface.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">34</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Hooked into from the WP hook &#039;the_content&#039;. Appends all the code examples for an Algorithm to the bottom of the post.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">appendExamplesToContent</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$content</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
-
-    
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$content</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                
-            </dd>
-            </dl>
-
-    
-    <h5 class="phpdocumentor-tag-list__heading" id="tags">
-        Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
-    </h5>
-    <dl class="phpdocumentor-tag-list">
-                                    <dt class="phpdocumentor-tag-list__entry">
-                    <span class="phpdocumentor-tag__name">see</span>
-                </dt>
-                <dd class="phpdocumentor-tag-list__definition">
-                                                                                    <span class="phpdocumentor-tag-link"><a href="https://developer.wordpress.org/reference/hooks/the_content/"><abbr title="https://developer.wordpress.org/reference/hooks/the_content/">https://developer.wordpress.org/reference/hooks/the_content/</abbr></a></span>
-                                        
-                                                 <section class="phpdocumentor-description"><p>WP action</p>
-</section>
-
-                                    </dd>
-                        </dl>
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">string</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_getCodeExamples">
-        getCodeExamples()
-        <a href="classes/RichWeb-Algorithms-Interfaces-AlgorithmInterface.html#method_getCodeExamples" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Interfaces/AlgorithmInterface.php"><a href="files/includes-interfaces-algorithminterface.html"><abbr title="Includes/Interfaces/AlgorithmInterface.php">AlgorithmInterface.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">41</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Returns an array of \RichWeb\Algorithms\CodeExample objects for a post.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getCodeExamples</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
-
-    
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
             &mdash;
         
     

@@ -97,7 +97,7 @@
 
     <article class="phpdocumentor-element -interface">
         <h2 class="phpdocumentor-content__title">
-    AlgorithmPackageManagerInterface
+    CodeExamplesLoaderInterface
                 <div class="phpdocumentor-element__package">
             in
             <ul class="phpdocumentor-breadcrumbs">
@@ -107,9 +107,9 @@
     </h2>
 
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Interfaces/AlgorithmPackageManagerInterface.php"><a href="files/includes-interfaces-algorithmpackagemanagerinterface.html"><abbr title="Includes/Interfaces/AlgorithmPackageManagerInterface.php">AlgorithmPackageManagerInterface.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Interfaces/CodeExamplesLoaderInterface.php"><a href="files/includes-interfaces-codeexamplesloaderinterface.html"><abbr title="Includes/Interfaces/CodeExamplesLoaderInterface.php">CodeExamplesLoaderInterface.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">18</span>
+    <span class="phpdocumentor-element-found-in__line">16</span>
 
     </aside>
 
@@ -130,11 +130,18 @@
 
 <dl class="phpdocumentor-table-of-contents">
                         <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichWeb-Algorithms-Interfaces-AlgorithmPackageManagerInterface.html#method_getPackages">getPackages()</a>
+    <a href="classes/RichWeb-Algorithms-Interfaces-CodeExamplesLoaderInterface.html#method_appendExamplesToContent">appendExamplesToContent()</a>
     <span>
-                                &nbsp;: array&lt;string, <a href="classes/RichWeb-Algorithms-Packages-AlgorithmPackage.html"><abbr title="\RichWeb\Algorithms\Packages\AlgorithmPackage">AlgorithmPackage</abbr></a>&gt;    </span>
+                                &nbsp;: string    </span>
 </dt>
-<dd>Returns all the algorithm packages found.</dd>
+<dd>Hooked into from the WP hook &#039;the_content&#039;. Appends all the code examples for an Algorithm to post content.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/RichWeb-Algorithms-Interfaces-CodeExamplesLoaderInterface.html#method_getCodeExamples">getCodeExamples()</a>
+    <span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
+</dt>
+<dd>Returns an array of \RichWeb\Algorithms\CodeExample objects for a post.</dd>
 
         </dl>
 
@@ -145,7 +152,7 @@
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
-            <a href="classes/RichWeb-Algorithms-Interfaces-AlgorithmPackageManagerInterface.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/RichWeb-Algorithms-Interfaces-CodeExamplesLoaderInterface.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
                     <article
         class="phpdocumentor-element
@@ -153,29 +160,88 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_getPackages">
-        getPackages()
-        <a href="classes/RichWeb-Algorithms-Interfaces-AlgorithmPackageManagerInterface.html#method_getPackages" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_appendExamplesToContent">
+        appendExamplesToContent()
+        <a href="classes/RichWeb-Algorithms-Interfaces-CodeExamplesLoaderInterface.html#method_appendExamplesToContent" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Interfaces/AlgorithmPackageManagerInterface.php"><a href="files/includes-interfaces-algorithmpackagemanagerinterface.html"><abbr title="Includes/Interfaces/AlgorithmPackageManagerInterface.php">AlgorithmPackageManagerInterface.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Interfaces/CodeExamplesLoaderInterface.php"><a href="files/includes-interfaces-codeexamplesloaderinterface.html"><abbr title="Includes/Interfaces/CodeExamplesLoaderInterface.php">CodeExamplesLoaderInterface.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">25</span>
+    <span class="phpdocumentor-element-found-in__line">27</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Returns all the algorithm packages found.</p>
+        <p class="phpdocumentor-summary">Hooked into from the WP hook &#039;the_content&#039;. Appends all the code examples for an Algorithm to post content.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getPackages</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string, <a href="classes/RichWeb-Algorithms-Packages-AlgorithmPackage.html"><abbr title="\RichWeb\Algorithms\Packages\AlgorithmPackage">AlgorithmPackage</abbr></a>&gt;</span></code>
+                <span class="phpdocumentor-signature__name">appendExamplesToContent</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$content</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$content</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">see</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                    <span class="phpdocumentor-tag-link"><a href="https://developer.wordpress.org/reference/hooks/the_content/"><abbr title="https://developer.wordpress.org/reference/hooks/the_content/">https://developer.wordpress.org/reference/hooks/the_content/</abbr></a></span>
+                                        
+                                                 <section class="phpdocumentor-description"><p>WP action</p>
+</section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getCodeExamples">
+        getCodeExamples()
+        <a href="classes/RichWeb-Algorithms-Interfaces-CodeExamplesLoaderInterface.html#method_getCodeExamples" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Interfaces/CodeExamplesLoaderInterface.php"><a href="files/includes-interfaces-codeexamplesloaderinterface.html"><abbr title="Includes/Interfaces/CodeExamplesLoaderInterface.php">CodeExamplesLoaderInterface.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">34</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Returns an array of \RichWeb\Algorithms\CodeExample objects for a post.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getCodeExamples</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
     
     
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string, <a href="classes/RichWeb-Algorithms-Packages-AlgorithmPackage.html"><abbr title="\RichWeb\Algorithms\Packages\AlgorithmPackage">AlgorithmPackage</abbr></a>&gt;</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
             &mdash;
         
     
@@ -258,7 +324,7 @@
 </section>
             </div>
         </div>
-        <a href="classes/RichWeb-Algorithms-Interfaces-AlgorithmPackageManagerInterface.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/RichWeb-Algorithms-Interfaces-CodeExamplesLoaderInterface.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 

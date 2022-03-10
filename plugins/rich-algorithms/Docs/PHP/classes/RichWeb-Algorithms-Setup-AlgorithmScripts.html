@@ -92,16 +92,15 @@
                     <ul class="phpdocumentor-breadcrumbs">
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/richweb.html">RichWeb</a></li>
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/richweb-algorithms.html">Algorithms</a></li>
-            <li class="phpdocumentor-breadcrumb"><a href="namespaces/richweb-algorithms-admin.html">Admin</a></li>
-            <li class="phpdocumentor-breadcrumb"><a href="namespaces/richweb-algorithms-admin-metaboxes.html">MetaBoxes</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/richweb-algorithms-setup.html">Setup</a></li>
     </ul>
 
     <article class="phpdocumentor-element -class">
         <h2 class="phpdocumentor-content__title">
-    AlgorithmCodeExamplesMetaBox
+    AlgorithmScripts
 
         <span class="phpdocumentor-element__extends">
-        extends <a href="classes/RichWeb-Algorithms-Admin-Abstracts-AbstractMetaBox.html"><abbr title="\RichWeb\Algorithms\Admin\Abstracts\AbstractMetaBox">AbstractMetaBox</abbr></a>
+        extends <a href="classes/RichWeb-Algorithms-Abstracts-AbstractScripts.html"><abbr title="\RichWeb\Algorithms\Abstracts\AbstractScripts">AbstractScripts</abbr></a>
     </span>
     
             <div class="phpdocumentor-element__package">
@@ -118,13 +117,13 @@
     </h2>
 
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Setup/AlgorithmScripts.php"><a href="files/includes-setup-algorithmscripts.html"><abbr title="Includes/Setup/AlgorithmScripts.php">AlgorithmScripts.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">23</span>
 
     </aside>
 
-            <p class="phpdocumentor-summary">This Meta Box outputs the algorithm package selection.</p>
+            <p class="phpdocumentor-summary">Loads the JS and CSS files needed by the algorithm.</p>
 
 
 
@@ -141,95 +140,39 @@
 
 <dl class="phpdocumentor-table-of-contents">
                     <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#property_main_directory">$main_directory</a>
+    <a href="classes/RichWeb-Algorithms-Setup-AlgorithmScripts.html#property_package">$package</a>
     <span>
-                        &nbsp;: string            </span>
-</dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#property_post_id">$post_id</a>
-    <span>
-                        &nbsp;: int            </span>
-</dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#property_syntax">$syntax</a>
-    <span>
-                        &nbsp;: <a href="classes/RichWeb-Algorithms-Abstracts-AbstractSyntaxHighlighter.html"><abbr title="\RichWeb\Algorithms\Abstracts\AbstractSyntaxHighlighter">AbstractSyntaxHighlighter</abbr></a>            </span>
+                        &nbsp;: <a href="classes/RichWeb-Algorithms-Interfaces-AlgorithmPackageInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\AlgorithmPackageInterface">AlgorithmPackageInterface</abbr></a>            </span>
 </dt>
 <dd></dd>
 
                 <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#method___construct">__construct()</a>
+    <a href="classes/RichWeb-Algorithms-Setup-AlgorithmScripts.html#method___construct">__construct()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
 <dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#method_add">add()</a>
+    <a href="classes/RichWeb-Algorithms-Setup-AlgorithmScripts.html#method_enqueueAdminScripts">enqueueAdminScripts()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
-<dd>Adds the meta box.</dd>
+<dd>Enqueues the scripts and styles for admin pages. Hooked from &#039;admin_enqueue_scripts&#039; action.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#method_ajaxAddNewCodeExample">ajaxAddNewCodeExample()</a>
+    <a href="classes/RichWeb-Algorithms-Setup-AlgorithmScripts.html#method_enqueueFrontendScripts">enqueueFrontendScripts()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
-<dd>AJAX call when adding a new code example to the metabox.</dd>
+<dd>Enqueues the scripts and styles for the frontend. Hooked from &#039;wp_enqueue_scripts&#039; action.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichWeb-Algorithms-Admin-Abstracts-AbstractMetaBox.html#method_build">build()</a>
+    <a href="classes/RichWeb-Algorithms-Abstracts-AbstractScripts.html#method_run">run()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
 <dd>Runs the class init functions not handled during construction.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#method_getCodeExampleInfoEditor">getCodeExampleInfoEditor()</a>
-    <span>
-                                &nbsp;: string    </span>
-</dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#method_getCodeExamples">getCodeExamples()</a>
-    <span>
-                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
-</dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#method_getPostId">getPostId()</a>
-    <span>
-                                &nbsp;: int    </span>
-</dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#method_html">html()</a>
-    <span>
-                                &nbsp;: void    </span>
-</dt>
-<dd>Outputs the HTML inside the meta box.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#method_save">save()</a>
-    <span>
-                                &nbsp;: void    </span>
-</dt>
-<dd>Saves the value for the meta box.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#method_supportedLanguages">supportedLanguages()</a>
-    <span>
-                                &nbsp;: array&lt;string, string&gt;    </span>
-</dt>
-<dd>Returns a key/value array of supported code example languages. Key is the PrismJS name, value is the name formatted for display.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
     <a href="classes/RichWeb-Algorithms-Traits-Formatting-Strings.html#method_escAttr">escAttr()</a>
@@ -274,18 +217,11 @@
 <dd>Sanitise a string for safe usage and database storage.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
-    <a href="classes/RichWeb-Algorithms-Admin-Abstracts-AbstractMetaBox.html#method_actions">actions()</a>
+    <a href="classes/RichWeb-Algorithms-Abstracts-AbstractScripts.html#method_actions">actions()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
-<dd>Hooks into the WP actions for adding and saving meta boxes.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -private">
-    <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#method_getCodeExampleElement">getCodeExampleElement()</a>
-    <span>
-                                &nbsp;: string    </span>
-</dt>
-<dd>Returns a code example element for the metabox.</dd>
+<dd>The action hooks to set up on initialisation.</dd>
 
         </dl>
 
@@ -297,7 +233,7 @@
     <section class="phpdocumentor-properties">
         <h3 class="phpdocumentor-elements__header" id="properties">
             Properties
-            <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/RichWeb-Algorithms-Setup-AlgorithmScripts.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
                     <article
         class="
@@ -306,92 +242,24 @@
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_main_directory">
-        $main_directory
-        <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#property_main_directory" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_package">
+        $package
+        <a href="classes/RichWeb-Algorithms-Setup-AlgorithmScripts.html#property_package" class="headerlink"><i class="fas fa-link"></i></a>
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Setup/AlgorithmScripts.php"><a href="files/includes-setup-algorithmscripts.html"><abbr title="Includes/Setup/AlgorithmScripts.php">AlgorithmScripts.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">31</span>
+    <span class="phpdocumentor-element-found-in__line">29</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">string</span>
-    <span class="phpdocumentor-signature__name">$main_directory</span>
-    </code>
-
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
-    
-
-</article>
-                    <article
-        class="
-            phpdocumentor-element
-            -property
-            -private
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="property_post_id">
-        $post_id
-        <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#property_post_id" class="headerlink"><i class="fas fa-link"></i></a>
-        <span class="phpdocumentor-element__modifiers">
-                                </span>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">28</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">int</span>
-    <span class="phpdocumentor-signature__name">$post_id</span>
-    </code>
-
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
-    
-
-</article>
-                    <article
-        class="
-            phpdocumentor-element
-            -property
-            -private
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="property_syntax">
-        $syntax
-        <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#property_syntax" class="headerlink"><i class="fas fa-link"></i></a>
-        <span class="phpdocumentor-element__modifiers">
-                                </span>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">32</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type"><a href="classes/RichWeb-Algorithms-Abstracts-AbstractSyntaxHighlighter.html"><abbr title="\RichWeb\Algorithms\Abstracts\AbstractSyntaxHighlighter">AbstractSyntaxHighlighter</abbr></a></span>
-    <span class="phpdocumentor-signature__name">$syntax</span>
+        <span class="phpdocumentor-signature__type"><a href="classes/RichWeb-Algorithms-Interfaces-AlgorithmPackageInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\AlgorithmPackageInterface">AlgorithmPackageInterface</abbr></a></span>
+    <span class="phpdocumentor-signature__name">$package</span>
     </code>
 
         <section class="phpdocumentor-description"></section>
@@ -406,7 +274,7 @@
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
-            <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/RichWeb-Algorithms-Setup-AlgorithmScripts.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
                     <article
         class="phpdocumentor-element
@@ -416,35 +284,27 @@
 >
     <h4 class="phpdocumentor-element__name" id="method___construct">
         __construct()
-        <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/RichWeb-Algorithms-Setup-AlgorithmScripts.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Setup/AlgorithmScripts.php"><a href="files/includes-setup-algorithmscripts.html"><abbr title="Includes/Setup/AlgorithmScripts.php">AlgorithmScripts.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">30</span>
+    <span class="phpdocumentor-element-found-in__line">28</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$main_directory</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/RichWeb-Algorithms-Abstracts-AbstractSyntaxHighlighter.html"><abbr title="\RichWeb\Algorithms\Abstracts\AbstractSyntaxHighlighter">AbstractSyntaxHighlighter</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$syntax</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/RichWeb-Algorithms-Interfaces-AlgorithmPackageInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\AlgorithmPackageInterface">AlgorithmPackageInterface</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$package</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
         <section class="phpdocumentor-description"></section>
 
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$main_directory</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$syntax</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/RichWeb-Algorithms-Abstracts-AbstractSyntaxHighlighter.html"><abbr title="\RichWeb\Algorithms\Abstracts\AbstractSyntaxHighlighter">AbstractSyntaxHighlighter</abbr></a></span>
+                <span class="phpdocumentor-signature__argument__name">$package</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/RichWeb-Algorithms-Interfaces-AlgorithmPackageInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\AlgorithmPackageInterface">AlgorithmPackageInterface</abbr></a></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"></section>
@@ -466,22 +326,66 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_add">
-        add()
-        <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#method_add" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_enqueueAdminScripts">
+        enqueueAdminScripts()
+        <a href="classes/RichWeb-Algorithms-Setup-AlgorithmScripts.html#method_enqueueAdminScripts" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Setup/AlgorithmScripts.php"><a href="files/includes-setup-algorithmscripts.html"><abbr title="Includes/Setup/AlgorithmScripts.php">AlgorithmScripts.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">37</span>
+    <span class="phpdocumentor-element-found-in__line">32</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Adds the meta box.</p>
+        <p class="phpdocumentor-summary">Enqueues the scripts and styles for admin pages. Hooked from &#039;admin_enqueue_scripts&#039; action.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">add</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                <span class="phpdocumentor-signature__name">enqueueAdminScripts</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$hook</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$hook</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_enqueueFrontendScripts">
+        enqueueFrontendScripts()
+        <a href="classes/RichWeb-Algorithms-Setup-AlgorithmScripts.html#method_enqueueFrontendScripts" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Setup/AlgorithmScripts.php"><a href="files/includes-setup-algorithmscripts.html"><abbr title="Includes/Setup/AlgorithmScripts.php">AlgorithmScripts.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">34</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Enqueues the scripts and styles for the frontend. Hooked from &#039;wp_enqueue_scripts&#039; action.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">enqueueFrontendScripts</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     
     
@@ -499,61 +403,14 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_ajaxAddNewCodeExample">
-        ajaxAddNewCodeExample()
-        <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#method_ajaxAddNewCodeExample" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_run">
+        run()
+        <a href="classes/RichWeb-Algorithms-Abstracts-AbstractScripts.html#method_run" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Abstracts/AbstractScripts.php"><a href="files/includes-abstracts-abstractscripts.html"><abbr title="Includes/Abstracts/AbstractScripts.php">AbstractScripts.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">118</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">AJAX call when adding a new code example to the metabox.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">ajaxAddNewCodeExample</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
-
-    
-    
-    
-    <h5 class="phpdocumentor-tag-list__heading" id="tags">
-        Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
-    </h5>
-    <dl class="phpdocumentor-tag-list">
-                                    <dt class="phpdocumentor-tag-list__entry">
-                    <span class="phpdocumentor-tag__name">uses</span>
-                </dt>
-                <dd class="phpdocumentor-tag-list__definition">
-                                                                                    <span class="phpdocumentor-tag-link"><a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#method_getCodeExampleElement"><abbr title="\RichWeb\Algorithms\Admin\MetaBoxes\AlgorithmCodeExamplesMetaBox::getCodeExampleElement()">AlgorithmCodeExamplesMetaBox::getCodeExampleElement()</abbr></a></span>
-                                        
-                                             
-                                    </dd>
-                        </dl>
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">void</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                -final        "
->
-    <h4 class="phpdocumentor-element__name" id="method_build">
-        build()
-        <a href="classes/RichWeb-Algorithms-Admin-Abstracts-AbstractMetaBox.html#method_build" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/Abstracts/AbstractMetaBox.php"><a href="files/includes-admin-abstracts-abstractmetabox.html"><abbr title="Includes/Admin/Abstracts/AbstractMetaBox.php">AbstractMetaBox.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">49</span>
+    <span class="phpdocumentor-element-found-in__line">24</span>
 
     </aside>
 
@@ -561,7 +418,7 @@
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-        <span class="phpdocumentor-signature__final">final</span>        <span class="phpdocumentor-signature__name">build</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                <span class="phpdocumentor-signature__name">run</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     
     
@@ -569,243 +426,6 @@
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">void</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_getCodeExampleInfoEditor">
-        getCodeExampleInfoEditor()
-        <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#method_getCodeExampleInfoEditor" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">78</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getCodeExampleInfoEditor</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$content</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$key</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$content</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$key</span>
-                : <span class="phpdocumentor-signature__argument__return-type">int</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">string</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_getCodeExamples">
-        getCodeExamples()
-        <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#method_getCodeExamples" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">101</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getCodeExamples</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_getPostId">
-        getPostId()
-        <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#method_getPostId" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">106</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getPostId</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">int</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_html">
-        html()
-        <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#method_html" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">49</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Outputs the HTML inside the meta box.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">html</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\WP_Post">WP_Post</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$post</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
-
-    
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$post</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\WP_Post">WP_Post</abbr></span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">void</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_save">
-        save()
-        <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#method_save" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">132</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Saves the value for the meta box.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">save</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$post_id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
-
-    
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$post_id</span>
-                : <span class="phpdocumentor-signature__argument__return-type">int</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">void</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_supportedLanguages">
-        supportedLanguages()
-        <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#method_supportedLanguages" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">162</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Returns a key/value array of supported code example languages. Key is the PrismJS name, value is the name formatted for display.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">supportedLanguages</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string, string&gt;</span></code>
-
-    
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string, string&gt;</span>
             &mdash;
         
     
@@ -1172,16 +792,16 @@
 >
     <h4 class="phpdocumentor-element__name" id="method_actions">
         actions()
-        <a href="classes/RichWeb-Algorithms-Admin-Abstracts-AbstractMetaBox.html#method_actions" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/RichWeb-Algorithms-Abstracts-AbstractScripts.html#method_actions" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/Abstracts/AbstractMetaBox.php"><a href="files/includes-admin-abstracts-abstractmetabox.html"><abbr title="Includes/Admin/Abstracts/AbstractMetaBox.php">AbstractMetaBox.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Abstracts/AbstractScripts.php"><a href="files/includes-abstracts-abstractscripts.html"><abbr title="Includes/Abstracts/AbstractScripts.php">AbstractScripts.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">62</span>
+    <span class="phpdocumentor-element-found-in__line">32</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Hooks into the WP actions for adding and saving meta boxes.</p>
+        <p class="phpdocumentor-summary">The action hooks to set up on initialisation.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
@@ -1190,100 +810,9 @@
     
     
     
-    <h5 class="phpdocumentor-tag-list__heading" id="tags">
-        Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
-    </h5>
-    <dl class="phpdocumentor-tag-list">
-                                    <dt class="phpdocumentor-tag-list__entry">
-                    <span class="phpdocumentor-tag__name">see</span>
-                </dt>
-                <dd class="phpdocumentor-tag-list__definition">
-                                                                                    <span class="phpdocumentor-tag-link"><a href="https://developer.wordpress.org/reference/hooks/add_meta_boxes/"><abbr title="https://developer.wordpress.org/reference/hooks/add_meta_boxes/">https://developer.wordpress.org/reference/hooks/add_meta_boxes/</abbr></a></span>
-                                        
-                                                 <section class="phpdocumentor-description"><p>WP action</p>
-</section>
-
-                                    </dd>
-                            <dt class="phpdocumentor-tag-list__entry">
-                    <span class="phpdocumentor-tag__name">see</span>
-                </dt>
-                <dd class="phpdocumentor-tag-list__definition">
-                                                                                    <span class="phpdocumentor-tag-link"><a href="https://developer.wordpress.org/reference/hooks/save_post/"><abbr title="https://developer.wordpress.org/reference/hooks/save_post/">https://developer.wordpress.org/reference/hooks/save_post/</abbr></a></span>
-                                        
-                                                 <section class="phpdocumentor-description"><p>WP action</p>
-</section>
-
-                                    </dd>
-                        </dl>
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">void</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -private
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_getCodeExampleElement">
-        getCodeExampleElement()
-        <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#method_getCodeExampleElement" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">67</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Returns a code example element for the metabox.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
-                <span class="phpdocumentor-signature__name">getCodeExampleElement</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$key</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$lang</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$code</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$info</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
-
-    
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$key</span>
-                : <span class="phpdocumentor-signature__argument__return-type">int</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$lang</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$code</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$info</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">string</span>
             &mdash;
         
     
@@ -1366,7 +895,7 @@
 </section>
             </div>
         </div>
-        <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/RichWeb-Algorithms-Setup-AlgorithmScripts.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 

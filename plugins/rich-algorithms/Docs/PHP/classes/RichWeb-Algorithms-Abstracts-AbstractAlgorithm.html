@@ -109,14 +109,17 @@
     
             <span class="phpdocumentor-element__implements">
             implements
-                            <a href="classes/RichWeb-Algorithms-Interfaces-AlgorithmInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\AlgorithmInterface">AlgorithmInterface</abbr></a>                    </span>
+                            <a href="classes/RichWeb-Algorithms-Interfaces-AlgorithmInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\AlgorithmInterface">AlgorithmInterface</abbr></a>,                             <a href="classes/RichWeb-Algorithms-Interfaces-HasRunnerInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\HasRunnerInterface">HasRunnerInterface</abbr></a>                    </span>
     
+            <span class="phpdocumentor-element__extends">
+            Uses
+                            <a href="classes/RichWeb-Algorithms-Traits-Formatting-FilePaths.html"><abbr title="\RichWeb\Algorithms\Traits\Formatting\FilePaths">FilePaths</abbr></a>,                             <a href="classes/RichWeb-Algorithms-Traits-Formatting-Strings.html"><abbr title="\RichWeb\Algorithms\Traits\Formatting\Strings">Strings</abbr></a>                    </span>
     </h2>
 
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Abstracts/AbstractAlgorithm.php"><a href="files/includes-abstracts-abstractalgorithm.html"><abbr title="Includes/Abstracts/AbstractAlgorithm.php">AbstractAlgorithm.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">21</span>
+    <span class="phpdocumentor-element-found-in__line">22</span>
 
     </aside>
 
@@ -135,6 +138,8 @@
 
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -interface"><a href="classes/RichWeb-Algorithms-Interfaces-AlgorithmInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\AlgorithmInterface">AlgorithmInterface</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -interface"><a href="classes/RichWeb-Algorithms-Interfaces-HasRunnerInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\HasRunnerInterface">HasRunnerInterface</abbr></a></dt>
         <dd></dd>
     
     
@@ -169,13 +174,6 @@
 </dt>
 <dd></dd>
 
-            <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/RichWeb-Algorithms-Abstracts-AbstractAlgorithm.html#property_syntax">$syntax</a>
-    <span>
-                        &nbsp;: <a href="classes/RichWeb-Algorithms-Interfaces-SyntaxHighlighterInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface">SyntaxHighlighterInterface</abbr></a>            </span>
-</dt>
-<dd></dd>
-
                 <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/RichWeb-Algorithms-Abstracts-AbstractAlgorithm.html#method___construct">__construct()</a>
     <span>
@@ -184,35 +182,70 @@
 <dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichWeb-Algorithms-Abstracts-AbstractAlgorithm.html#method_actions">actions()</a>
+    <a href="classes/RichWeb-Algorithms-Abstracts-AbstractAlgorithm.html#method_loadScripts">loadScripts()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
-<dd>Hooks into the necessary WP actions.</dd>
+<dd>Loads the scripts required for the algorithm.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichWeb-Algorithms-Abstracts-AbstractAlgorithm.html#method_appendExamplesToContent">appendExamplesToContent()</a>
+    <a href="classes/RichWeb-Algorithms-Abstracts-AbstractAlgorithm.html#method_run">run()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+<dd>Runs the class init functions not handled during construction.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
+    <a href="classes/RichWeb-Algorithms-Traits-Formatting-Strings.html#method_escAttr">escAttr()</a>
     <span>
                                 &nbsp;: string    </span>
 </dt>
-<dd>Hooked into from the WP hook &#039;the_content&#039;. Appends all the code examples for an Algorithm to the bottom of the post.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichWeb-Algorithms-Abstracts-AbstractAlgorithm.html#method_getCodeExamples">getCodeExamples()</a>
-    <span>
-                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
-</dt>
-<dd>Returns an array of \RichWeb\Algorithms\CodeExample objects for a post.</dd>
+<dd>Escapes any HTML entities within a string for safe output as an HTML attribute.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
-    <a href="classes/RichWeb-Algorithms-Abstracts-AbstractAlgorithm.html#method_run">run()</a>
+    <a href="classes/RichWeb-Algorithms-Traits-Formatting-Strings.html#method_escHtml">escHtml()</a>
+    <span>
+                                &nbsp;: string    </span>
+</dt>
+<dd>Escapes any HTML entities within a string for safe output.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
+    <a href="classes/RichWeb-Algorithms-Traits-Formatting-Strings.html#method_escTextarea">escTextarea()</a>
+    <span>
+                                &nbsp;: string    </span>
+</dt>
+<dd>Escapes any HTML entities within a string for safe output to a textarea element.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
+    <a href="classes/RichWeb-Algorithms-Traits-Formatting-FilePaths.html#method_formatSlashes">formatSlashes()</a>
+    <span>
+                                &nbsp;: string    </span>
+</dt>
+<dd>Normalises forward and/or backward slashes to the system directory separator.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
+    <a href="classes/RichWeb-Algorithms-Traits-Formatting-Strings.html#method_ksesPost">ksesPost()</a>
+    <span>
+                                &nbsp;: string    </span>
+</dt>
+<dd>Sanitise content for allowed HTML elements, usually from post content.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
+    <a href="classes/RichWeb-Algorithms-Abstracts-AbstractAlgorithm.html#method_load">load()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
 <dd>Can be implemented in the concrete class for additional functionality. Always called during construction.</dd>
 
+            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
+    <a href="classes/RichWeb-Algorithms-Traits-Formatting-Strings.html#method_sanitise">sanitise()</a>
+    <span>
+                                &nbsp;: string    </span>
+</dt>
+<dd>Sanitise a string for safe usage and database storage.</dd>
+
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
-    <a href="classes/RichWeb-Algorithms-Abstracts-AbstractAlgorithm.html#method_buildCodeExamples">buildCodeExamples()</a>
+    <a href="classes/RichWeb-Algorithms-Abstracts-AbstractAlgorithm.html#method_actions">actions()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
@@ -246,7 +279,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Abstracts/AbstractAlgorithm.php"><a href="files/includes-abstracts-abstractalgorithm.html"><abbr title="Includes/Abstracts/AbstractAlgorithm.php">AbstractAlgorithm.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">23</span>
+    <span class="phpdocumentor-element-found-in__line">27</span>
 
     </aside>
 
@@ -280,7 +313,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Abstracts/AbstractAlgorithm.php"><a href="files/includes-abstracts-abstractalgorithm.html"><abbr title="Includes/Abstracts/AbstractAlgorithm.php">AbstractAlgorithm.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">26</span>
+    <span class="phpdocumentor-element-found-in__line">30</span>
 
     </aside>
 
@@ -314,7 +347,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Abstracts/AbstractAlgorithm.php"><a href="files/includes-abstracts-abstractalgorithm.html"><abbr title="Includes/Abstracts/AbstractAlgorithm.php">AbstractAlgorithm.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">27</span>
+    <span class="phpdocumentor-element-found-in__line">31</span>
 
     </aside>
 
@@ -323,40 +356,6 @@
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type">int</span>
     <span class="phpdocumentor-signature__name">$post_id</span>
-    </code>
-
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
-    
-
-</article>
-                    <article
-        class="
-            phpdocumentor-element
-            -property
-            -private
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="property_syntax">
-        $syntax
-        <a href="classes/RichWeb-Algorithms-Abstracts-AbstractAlgorithm.html#property_syntax" class="headerlink"><i class="fas fa-link"></i></a>
-        <span class="phpdocumentor-element__modifiers">
-                                </span>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Abstracts/AbstractAlgorithm.php"><a href="files/includes-abstracts-abstractalgorithm.html"><abbr title="Includes/Abstracts/AbstractAlgorithm.php">AbstractAlgorithm.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">28</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type"><a href="classes/RichWeb-Algorithms-Interfaces-SyntaxHighlighterInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface">SyntaxHighlighterInterface</abbr></a></span>
-    <span class="phpdocumentor-signature__name">$syntax</span>
     </code>
 
         <section class="phpdocumentor-description"></section>
@@ -386,14 +385,14 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Abstracts/AbstractAlgorithm.php"><a href="files/includes-abstracts-abstractalgorithm.html"><abbr title="Includes/Abstracts/AbstractAlgorithm.php">AbstractAlgorithm.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">25</span>
+    <span class="phpdocumentor-element-found-in__line">29</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-        <span class="phpdocumentor-signature__final">final</span>        <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/RichWeb-Algorithms-Interfaces-AlgorithmPackageInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\AlgorithmPackageInterface">AlgorithmPackageInterface</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$package</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$post_id</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/RichWeb-Algorithms-Interfaces-SyntaxHighlighterInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface">SyntaxHighlighterInterface</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$syntax</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+        <span class="phpdocumentor-signature__final">final</span>        <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/RichWeb-Algorithms-Interfaces-AlgorithmPackageInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\AlgorithmPackageInterface">AlgorithmPackageInterface</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$package</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$post_id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -415,14 +414,6 @@
                     <section class="phpdocumentor-description"></section>
 
             </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$syntax</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/RichWeb-Algorithms-Interfaces-SyntaxHighlighterInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface">SyntaxHighlighterInterface</abbr></a></span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
-            </dd>
             </dl>
 
     
@@ -437,24 +428,24 @@
         class="phpdocumentor-element
             -method
             -public
-                                                        "
+                                                -final        "
 >
-    <h4 class="phpdocumentor-element__name" id="method_actions">
-        actions()
-        <a href="classes/RichWeb-Algorithms-Abstracts-AbstractAlgorithm.html#method_actions" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_loadScripts">
+        loadScripts()
+        <a href="classes/RichWeb-Algorithms-Abstracts-AbstractAlgorithm.html#method_loadScripts" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Abstracts/AbstractAlgorithm.php"><a href="files/includes-abstracts-abstractalgorithm.html"><abbr title="Includes/Abstracts/AbstractAlgorithm.php">AbstractAlgorithm.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">35</span>
+    <span class="phpdocumentor-element-found-in__line">43</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Hooks into the necessary WP actions.</p>
+        <p class="phpdocumentor-summary">Loads the scripts required for the algorithm.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">actions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+        <span class="phpdocumentor-signature__final">final</span>        <span class="phpdocumentor-signature__name">loadScripts</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     
     
@@ -470,82 +461,6 @@
         class="phpdocumentor-element
             -method
             -public
-                                                -final        "
->
-    <h4 class="phpdocumentor-element__name" id="method_appendExamplesToContent">
-        appendExamplesToContent()
-        <a href="classes/RichWeb-Algorithms-Abstracts-AbstractAlgorithm.html#method_appendExamplesToContent" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Abstracts/AbstractAlgorithm.php"><a href="files/includes-abstracts-abstractalgorithm.html"><abbr title="Includes/Abstracts/AbstractAlgorithm.php">AbstractAlgorithm.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">40</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Hooked into from the WP hook &#039;the_content&#039;. Appends all the code examples for an Algorithm to the bottom of the post.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-        <span class="phpdocumentor-signature__final">final</span>        <span class="phpdocumentor-signature__name">appendExamplesToContent</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$content</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
-
-    
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$content</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">string</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                -final        "
->
-    <h4 class="phpdocumentor-element__name" id="method_getCodeExamples">
-        getCodeExamples()
-        <a href="classes/RichWeb-Algorithms-Abstracts-AbstractAlgorithm.html#method_getCodeExamples" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Abstracts/AbstractAlgorithm.php"><a href="files/includes-abstracts-abstractalgorithm.html"><abbr title="Includes/Abstracts/AbstractAlgorithm.php">AbstractAlgorithm.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">73</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Returns an array of \RichWeb\Algorithms\CodeExample objects for a post.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-        <span class="phpdocumentor-signature__final">final</span>        <span class="phpdocumentor-signature__name">getCodeExamples</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
-
-    
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -protected
                                                         "
 >
     <h4 class="phpdocumentor-element__name" id="method_run">
@@ -555,14 +470,14 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Abstracts/AbstractAlgorithm.php"><a href="files/includes-abstracts-abstractalgorithm.html"><abbr title="Includes/Abstracts/AbstractAlgorithm.php">AbstractAlgorithm.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">83</span>
+    <span class="phpdocumentor-element-found-in__line">34</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Can be implemented in the concrete class for additional functionality. Always called during construction.</p>
+        <p class="phpdocumentor-summary">Runs the class init functions not handled during construction.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">protected</span>
+    <span class="phpdocumentor-signature__visibility">public</span>
                 <span class="phpdocumentor-signature__name">run</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     
@@ -578,24 +493,411 @@
                     <article
         class="phpdocumentor-element
             -method
-            -private
+            -protected
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_buildCodeExamples">
-        buildCodeExamples()
-        <a href="classes/RichWeb-Algorithms-Abstracts-AbstractAlgorithm.html#method_buildCodeExamples" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_escAttr">
+        escAttr()
+        <a href="classes/RichWeb-Algorithms-Traits-Formatting-Strings.html#method_escAttr" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Traits/Formatting/Strings.php"><a href="files/includes-traits-formatting-strings.html"><abbr title="Includes/Traits/Formatting/Strings.php">Strings.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">55</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Escapes any HTML entities within a string for safe output as an HTML attribute.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+                <span class="phpdocumentor-signature__name">escAttr</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$var</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$var</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">uses</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                    <span class="phpdocumentor-tag-link"><abbr title="\esc_attr()">esc_attr()</abbr></span>
+                                        
+                                                 <section class="phpdocumentor-description"><p>WP Function</p>
+</section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_escHtml">
+        escHtml()
+        <a href="classes/RichWeb-Algorithms-Traits-Formatting-Strings.html#method_escHtml" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Traits/Formatting/Strings.php"><a href="files/includes-traits-formatting-strings.html"><abbr title="Includes/Traits/Formatting/Strings.php">Strings.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">41</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Escapes any HTML entities within a string for safe output.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+                <span class="phpdocumentor-signature__name">escHtml</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$var</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$var</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">uses</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                    <span class="phpdocumentor-tag-link"><abbr title="\esc_html()">esc_html()</abbr></span>
+                                        
+                                                 <section class="phpdocumentor-description"><p>WP Function</p>
+</section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_escTextarea">
+        escTextarea()
+        <a href="classes/RichWeb-Algorithms-Traits-Formatting-Strings.html#method_escTextarea" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Traits/Formatting/Strings.php"><a href="files/includes-traits-formatting-strings.html"><abbr title="Includes/Traits/Formatting/Strings.php">Strings.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">69</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Escapes any HTML entities within a string for safe output to a textarea element.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+                <span class="phpdocumentor-signature__name">escTextarea</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$var</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$var</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">uses</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                    <span class="phpdocumentor-tag-link"><abbr title="\esc_textarea()">esc_textarea()</abbr></span>
+                                        
+                                                 <section class="phpdocumentor-description"><p>WP Function</p>
+</section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_formatSlashes">
+        formatSlashes()
+        <a href="classes/RichWeb-Algorithms-Traits-Formatting-FilePaths.html#method_formatSlashes" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Traits/Formatting/FilePaths.php"><a href="files/includes-traits-formatting-filepaths.html"><abbr title="Includes/Traits/Formatting/FilePaths.php">FilePaths.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">27</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Normalises forward and/or backward slashes to the system directory separator.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+                <span class="phpdocumentor-signature__name">formatSlashes</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$path</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$path</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">uses</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                    <span class="phpdocumentor-tag-link"><abbr title="\str_replace()">str_replace()</abbr></span>
+                                        
+                                             
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The normalised path</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_ksesPost">
+        ksesPost()
+        <a href="classes/RichWeb-Algorithms-Traits-Formatting-Strings.html#method_ksesPost" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Traits/Formatting/Strings.php"><a href="files/includes-traits-formatting-strings.html"><abbr title="Includes/Traits/Formatting/Strings.php">Strings.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">83</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Sanitise content for allowed HTML elements, usually from post content.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+                <span class="phpdocumentor-signature__name">ksesPost</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$var</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$var</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">uses</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                    <span class="phpdocumentor-tag-link"><abbr title="\wp_kses_post()">wp_kses_post()</abbr></span>
+                                        
+                                                 <section class="phpdocumentor-description"><p>WP Function</p>
+</section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_load">
+        load()
+        <a href="classes/RichWeb-Algorithms-Abstracts-AbstractAlgorithm.html#method_load" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Abstracts/AbstractAlgorithm.php"><a href="files/includes-abstracts-abstractalgorithm.html"><abbr title="Includes/Abstracts/AbstractAlgorithm.php">AbstractAlgorithm.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">61</span>
+    <span class="phpdocumentor-element-found-in__line">53</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Can be implemented in the concrete class for additional functionality. Always called during construction.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+                <span class="phpdocumentor-signature__name">load</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_sanitise">
+        sanitise()
+        <a href="classes/RichWeb-Algorithms-Traits-Formatting-Strings.html#method_sanitise" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Traits/Formatting/Strings.php"><a href="files/includes-traits-formatting-strings.html"><abbr title="Includes/Traits/Formatting/Strings.php">Strings.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">27</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Sanitise a string for safe usage and database storage.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+                <span class="phpdocumentor-signature__name">sanitise</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$var</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$var</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">uses</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                    <span class="phpdocumentor-tag-link"><abbr title="\sanitize_text_field()">sanitize_text_field()</abbr></span>
+                                        
+                                                 <section class="phpdocumentor-description"><p>WP Function</p>
+</section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_actions">
+        actions()
+        <a href="classes/RichWeb-Algorithms-Abstracts-AbstractAlgorithm.html#method_actions" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Abstracts/AbstractAlgorithm.php"><a href="files/includes-abstracts-abstractalgorithm.html"><abbr title="Includes/Abstracts/AbstractAlgorithm.php">AbstractAlgorithm.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">41</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-                <span class="phpdocumentor-signature__name">buildCodeExamples</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                <span class="phpdocumentor-signature__name">actions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
         <section class="phpdocumentor-description"></section>
 
