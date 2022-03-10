@@ -37,13 +37,13 @@ define(__NAMESPACE__ . '\PLUGIN_NAME_FULL', $project->getName());
 define(__NAMESPACE__ . '\TEXT_DOMAIN', 'rich-algo');
 
 // Resolves to: path\to\plugin\folder
-define(__NAMESPACE__ . '\RICH_ALGO_PATH', plugin_dir_path(PLUGIN_FILE));
+define(__NAMESPACE__ . '\PATH', plugin_dir_path(PLUGIN_FILE));
 
 // Resolves to: plugin_folder_name
-define(__NAMESPACE__ . '\RICH_ALGO_PLUGIN_PATH', plugin_basename(dirname(PLUGIN_FILE)));
+define(__NAMESPACE__ . '\PLUGIN_PATH', plugin_basename(dirname(PLUGIN_FILE)));
 
 // Resolves to: plugin_folder_name\plugin_filename.php
-define(__NAMESPACE__ . '\RICH_ALGO_PLUGIN_BASENAME', plugin_basename(PLUGIN_FILE));
+define(__NAMESPACE__ . '\PLUGIN_BASENAME', plugin_basename(PLUGIN_FILE));
 
 require_once $includes . 'Interfaces' . $sep . 'AutoloaderInterface.php';
 require_once $includes . 'Loaders' . $sep . 'Autoloader.php';

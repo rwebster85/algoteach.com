@@ -28,6 +28,7 @@ use RichWeb\Algorithms\CodeExamples\CodeExamplesLoader;
 
 use const RichWeb\Algorithms\{
     PLUGIN_FILE,
+    PLUGIN_PATH,
     TEXT_DOMAIN
 };
 
@@ -85,7 +86,7 @@ final class Plugin extends AbstractSingletonPlugin
      */
     public function pluginsLoadedSetup(): void
     {
-        (new Setup($this->text_domain, RICH_ALGO_PLUGIN_PATH))->run();
+        (new Setup($this->text_domain, PLUGIN_PATH))->run();
     }
 
     /**
