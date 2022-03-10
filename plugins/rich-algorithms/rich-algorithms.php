@@ -50,6 +50,6 @@ if (version_compare('8.0.0', PHP_VERSION, '>')) {
     return;
 }
 
-define('RICH_ALGO_FILE', __FILE__);
+define(__NAMESPACE__ . '\PLUGIN_FILE', __FILE__);
 
 require_once 'bootstrap.php';

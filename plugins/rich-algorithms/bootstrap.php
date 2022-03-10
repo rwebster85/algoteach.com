@@ -13,6 +13,8 @@ declare(strict_types=1);
 
 namespace RichWeb\Algorithms;
 
+use const RichWeb\Algorithms\PLUGIN_FILE;
+
 defined('WPINC') || exit;
 
 use RichWeb\Algorithms\{
@@ -30,12 +32,18 @@ require_once $includes . 'Project.php';
 $project = new Project(__DIR__ . $sep . 'project.json', __DIR__);
 $project->buildProject();
 
-define('RICH_ALGO_VER', $project->getVersion());
-define('RICH_ALGO_TEXT_DOMAIN', 'rich-algo');
-define('RICH_ALGO_PLUGIN_NAME_FULL', $project->getName());
-define('RICH_ALGO_PATH', plugin_dir_path(RICH_ALGO_FILE));
-define('RICH_ALGO_PLUGIN_PATH', plugin_basename(dirname(RICH_ALGO_FILE)));
-define('RICH_ALGO_PLUGIN_BASENAME', plugin_basename(RICH_ALGO_FILE));
+define(__NAMESPACE__ . '\VERSION', $project->getVersion());
+define(__NAMESPACE__ . '\PLUGIN_NAME_FULL', $project->getName());
+define(__NAMESPACE__ . '\TEXT_DOMAIN', 'rich-algo');
+
+// Resolves to: path\to\plugin\folder
+define(__NAMESPACE__ . '\RICH_ALGO_PATH', plugin_dir_path(PLUGIN_FILE));
+
+// Resolves to: plugin_folder_name
+define(__NAMESPACE__ . '\RICH_ALGO_PLUGIN_PATH', plugin_basename(dirname(PLUGIN_FILE)));
+
+// Resolves to: plugin_folder_name\plugin_filename.php
+define(__NAMESPACE__ . '\RICH_ALGO_PLUGIN_BASENAME', plugin_basename(PLUGIN_FILE));
 
 require_once $includes . 'Interfaces' . $sep . 'AutoloaderInterface.php';
 require_once $includes . 'Loaders' . $sep . 'Autoloader.php';

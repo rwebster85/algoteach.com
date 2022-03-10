@@ -24,13 +24,13 @@ use RichWeb\Algorithms\Admin\{
     MetaBoxes\MetaBoxes
 };
 
+use const RichWeb\Algorithms\{
+    PLUGIN_FILE,
+    TEXT_DOMAIN
+};
+
 final class Plugin extends AbstractSingletonPlugin
 {
-    /**
-     * Plugin file.
-     */
-    private string $file = RICH_ALGO_FILE;
-
     private AlgorithmPackageManagerInterface $algorithm_package_manager;
 
     private SyntaxHighlighterInterface $syntax;
@@ -42,7 +42,7 @@ final class Plugin extends AbstractSingletonPlugin
         $this->version        = $project->getVersion();
         $this->requirements   = $project->getRequirements();
         $this->main_directory = $project->getMainDirectory();
-        $this->text_domain    = RICH_ALGO_TEXT_DOMAIN;
+        $this->text_domain    = TEXT_DOMAIN;
     }
 
     protected function build(): void
@@ -56,8 +56,8 @@ final class Plugin extends AbstractSingletonPlugin
      */
     private function initHooks(): void
     {
-        register_activation_hook($this->file, array($this, 'activated'));
-        register_deactivation_hook($this->file, array($this, 'aeactivated'));
+        register_activation_hook(PLUGIN_FILE, array($this, 'activated'));
+        register_deactivation_hook(PLUGIN_FILE, array($this, 'aeactivated'));
 
         add_action('plugins_loaded', [$this, 'pluginsLoadedSetup'], -1);
         add_action('init', [$this, 'initSetup'], 0);

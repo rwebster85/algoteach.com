@@ -16,14 +16,14 @@ namespace RichWeb\Algorithms\Interfaces;
 interface AlgorithmInterface
 {
     /**
-     * Hooks into the necessary WP actions.
+     * Loads the scripts required for the algorithm.
      * 
      * @return void
      */
-    public function actions(): void;
+    public function loadScripts(): void;
 
     /**
-     * Hooked into from the WP hook 'the_content'. Appends all the code examples for an Algorithm to the bottom of the post.
+     * Hooked into from the WP hook 'the_content'. Appends all the code examples for an Algorithm to post content.
      * 
      * @see https://developer.wordpress.org/reference/hooks/the_content/ WP action
      * 

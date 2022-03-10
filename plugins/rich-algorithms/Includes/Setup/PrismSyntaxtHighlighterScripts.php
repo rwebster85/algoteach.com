@@ -15,6 +15,8 @@ namespace RichWeb\Algorithms\Setup;
 
 use RichWeb\Algorithms\Abstracts\AbstractScripts;
 
+use const RichWeb\Algorithms\PLUGIN_FILE;
+
 class PrismSyntaxtHighlighterScripts extends AbstractScripts
 {
     public function __construct() {}
@@ -23,7 +25,7 @@ class PrismSyntaxtHighlighterScripts extends AbstractScripts
 
     public function enqueueFrontendScripts(): void
     {
-        $assets = plugins_url('/Assets/', RICH_ALGO_FILE);
+        $assets = plugins_url('/Assets/', PLUGIN_FILE);
 
         $timestamp = time();
 

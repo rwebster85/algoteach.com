@@ -16,6 +16,27 @@ namespace RichWeb\Algorithms\Interfaces;
 interface AlgorithmPackageInterface
 {
     /**
+     * Returns the path to the algorithm config file.
+     * 
+     * @return string
+     */
+    public function getConfigPath(): string;
+
+    /**
+     * Returns an array of JavaScript files from the config file required by the algorithm.
+     * 
+     * @return array
+     */
+    public function getScripts(): array;
+
+    /**
+     * Returns an array of CSS files from the config file required by the algorithm.
+     * 
+     * @return array
+     */
+    public function getStyles(): array;
+
+    /**
      * Returns the unqualified class name of the package.
      * 
      * @return string

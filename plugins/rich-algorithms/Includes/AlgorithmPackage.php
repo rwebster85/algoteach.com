@@ -35,6 +35,10 @@ final class AlgorithmPackage implements AlgorithmPackageInterface
 
     private string $version;
 
+    private array $scripts;
+
+    private array $styles;
+
     public function __construct(
         private string $config_path
     ) {
@@ -44,12 +48,19 @@ final class AlgorithmPackage implements AlgorithmPackageInterface
             $this->setNameSpace();
             $this->setName();
             $this->setVersion();
+            $this->setScripts();
+            $this->setStyles();
         }
     }
 
     private function parseConfig(): array
     {
         return json_decode(file_get_contents($this->config_path), true);
+    }
+
+    public function getConfigPath(): string
+    {
+        return $this->config_path;
     }
 
     private function setClass(): void
@@ -90,6 +101,26 @@ final class AlgorithmPackage implements AlgorithmPackageInterface
     public function getVersion(): string
     {
         return $this->version;
+    }
+
+    private function setScripts(): void
+    {
+        $this->scripts = (array) ($this->config['scrpts'] ?? []);
+    }
+
+    public function getScripts(): array
+    {
+        return $this->scripts;
+    }
+
+    private function setStyles(): void
+    {
+        $this->styles = (array) ($this->config['styles'] ?? []);
+    }
+
+    public function getStyles(): array
+    {
+        return $this->styles;
     }
 
     public function getPath(): string

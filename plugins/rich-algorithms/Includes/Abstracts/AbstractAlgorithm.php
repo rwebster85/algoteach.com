@@ -16,25 +16,39 @@ namespace RichWeb\Algorithms\Abstracts;
 use RichWeb\Algorithms\CodeExample;
 use RichWeb\Algorithms\Interfaces\AlgorithmInterface;
 use RichWeb\Algorithms\Interfaces\AlgorithmPackageInterface;
+use RichWeb\Algorithms\Interfaces\HasRunnerInterface;
 use RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface;
+use RichWeb\Algorithms\Traits\Formatting;
+use RichWeb\Algorithms\Setup\AlgorithmScripts;
 
-abstract class AbstractAlgorithm implements AlgorithmInterface
+abstract class AbstractAlgorithm implements AlgorithmInterface, HasRunnerInterface
 {
+    use Formatting\FilePaths;
+    use Formatting\Strings;
+
     private array $code_examples;
 
     final public function __construct(
         private AlgorithmPackageInterface $package,
         private int $post_id,
         private SyntaxHighlighterInterface $syntax
-    ) {
+    ) {}
+
+    public function run(): void
+    {
         $this->buildCodeExamples();
         $this->actions();
-        $this->run();
+        $this->loadScripts();
     }
 
-    public function actions(): void
+    private function actions(): void
     {
         add_filter('the_content', [$this, 'appendExamplesToContent']);
+    }
+
+    final public function loadScripts(): void
+    {
+        (new AlgorithmScripts($this->package))->run();
     }
 
     final public function appendExamplesToContent(string $content): string
@@ -80,5 +94,5 @@ abstract class AbstractAlgorithm implements AlgorithmInterface
      * 
      * @return void
      */
-    protected function run(): void {}
+    protected function load(): void {}
 }

@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace RichWeb\Algorithms;
 
+use RichWeb\Algorithms\Abstracts\AbstractAlgorithm;
 use RichWeb\Algorithms\AlgorithmPackage;
 use RichWeb\Algorithms\Interfaces\AlgorithmPackageLoaderInterface;
 use RichWeb\Algorithms\Interfaces\HasRunnerInterface;
@@ -70,7 +71,9 @@ final class AlgorithmPackageLoader implements AlgorithmPackageLoaderInterface, H
             if (file_exists($path)) {
                 require_once $path;
                 $class = $package->getQualifiedClassName();
-                (new $class($package, $post_id, $this->syntax));
+                $algorithm = new $class($package, $post_id, $this->syntax);
+                /** @var AbstractAlgorithm $algorithm */
+                $algorithm->run();
             }
         }
     }

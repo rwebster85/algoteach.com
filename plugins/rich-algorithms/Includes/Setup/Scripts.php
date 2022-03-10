@@ -15,6 +15,8 @@ namespace RichWeb\Algorithms\Setup;
 
 use RichWeb\Algorithms\Abstracts\AbstractScripts;
 
+use const RichWeb\Algorithms\PLUGIN_FILE;
+
 /**
  * Loads the JS and CSS files needed by the plugin.
  */
@@ -28,7 +30,7 @@ class Scripts extends AbstractScripts
         // Prevents browser being able to cache the file
         $timestamp = time();
 
-        $admin_assets = plugins_url('/Assets/Admin/', RICH_ALGO_FILE);
+        $admin_assets = plugins_url('/Assets/Admin/', PLUGIN_FILE);
 
         // Admin CSS files, register first then enqueue
         wp_register_style('rich-algo-admin', $admin_assets . 'CSS/rich-algo-admin.css', [], $timestamp);
@@ -49,7 +51,7 @@ class Scripts extends AbstractScripts
 
     public function enqueueFrontendScripts(): void
     {
-        $assets = plugins_url('/Assets/', RICH_ALGO_FILE);
+        $assets = plugins_url('/Assets/', PLUGIN_FILE);
 
         $timestamp = time();
 
