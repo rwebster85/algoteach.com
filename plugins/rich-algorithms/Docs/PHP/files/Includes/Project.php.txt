@@ -13,9 +13,11 @@ declare(strict_types=1);
 
 namespace RichWeb\Algorithms;
 
+use RichWeb\Algorithms\Interfaces\ProjectInterface;
+
 use const DIRECTORY_SEPARATOR;
 
-final class Project
+final class Project implements ProjectInterface
 {
     private string $config_path;
 

@@ -13,9 +13,10 @@ declare(strict_types=1);
 
 namespace RichWeb\Algorithms\Admin\Abstracts;
 
+use RichWeb\Algorithms\Admin\Interfaces\PostTypeInterface;
 use RichWeb\Algorithms\Interfaces\HasRunnerInterface;
 
-abstract class AbstractPostType implements HasRunnerInterface
+abstract class AbstractPostType implements PostTypeInterface, HasRunnerInterface
 {
     /**
      * Runs the class init functions not handled during construction.

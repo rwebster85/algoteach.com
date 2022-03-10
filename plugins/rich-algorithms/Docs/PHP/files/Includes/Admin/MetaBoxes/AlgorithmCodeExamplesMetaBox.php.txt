@@ -14,19 +14,22 @@ declare(strict_types=1);
 namespace RichWeb\Algorithms\Admin\MetaBoxes;
 
 use RichWeb\Algorithms\Admin\Abstracts\AbstractMetaBox;
-use RichWeb\Algorithms\AlgorithmPackageManager;
-use RichWeb\Algorithms\AlgorithmPackage;
-use RichWeb\Algorithms\Traits\Formatting\Strings;
+use RichWeb\Algorithms\Abstracts\AbstractSyntaxHighlighter;
+use RichWeb\Algorithms\Traits\Formatting;
 
 /**
  * This Meta Box outputs the algorithm package selection.
  */
 final class AlgorithmCodeExamplesMetaBox extends AbstractMetaBox
 {
-    use Strings;
+    use Formatting\FilePaths;
+    use Formatting\Strings;
+
+    private int $post_id;
 
     public function __construct(
-        private string $main_directory
+        private string $main_directory,
+        private AbstractSyntaxHighlighter $syntax
     ) {
         add_action('wp_ajax_richweb_algorithm_code_example_add', [$this, 'ajaxAddNewCodeExample']);
     }
@@ -45,15 +48,9 @@ final class AlgorithmCodeExamplesMetaBox extends AbstractMetaBox
 
     public function html(\WP_Post $post): void
     {
+        $this->post_id = $post->ID;
+
         wp_nonce_field('_richweb_algorithm_code_examples_nonce', 'richweb_algorithm_code_examples_nonce');
-
-        $post_id = $post->ID;
-
-        $packages = [];//$this->algorithm_package_manager->getPackages();
-
-        $languages = $this->supportedLanguages();
-
-        $code_examples = get_post_meta($post_id, 'richweb_algorithm_code_examples', true);
 
         include_once dirname(__FILE__) . '\..\Content\CodeExamplesMetaDetails.php';
     }
@@ -67,17 +64,48 @@ final class AlgorithmCodeExamplesMetaBox extends AbstractMetaBox
      * 
      * @return string
      */
-    private function getCodeExampleElement(int $key, string $lang = '', string $code = ''): string
+    private function getCodeExampleElement(int $key, string $lang = '', string $code = '', string $info = ''): string
     {
-        $languages = $this->supportedLanguages();
-
         ob_start();
 
-        include dirname(__FILE__) . '\..\Content\CodeExamplesMetaField.php';
+        include dirname(__FILE__) . $this->formatSlashes('\..\Content\CodeExamplesMetaField.php');
 
         $content = ob_get_clean();
 
         return $content;
+    }
+
+    public function getCodeExampleInfoEditor(string $content, int $key): string
+    {
+        ob_start();
+        echo '<div class="rich-algo-meta-field-info-wrap">';
+        $editor_id = 'richweb_algorithm_code_examples-editor-'.$key.'';
+        $editor_name = 'richweb_algorithm_code_examples['.$key.'][info]';
+        $settings = array(
+            'media_buttons' => false,
+            'quicktags' => true,
+            'teeny' => true,
+            'editor_height' => 80,
+            'textarea_name' => $editor_name
+        );
+    
+        wp_editor($content, $editor_id, $settings);
+    
+        echo '</div>';
+    
+        $editor = ob_get_clean();
+        
+        return $editor;
+    }
+
+    public function getCodeExamples(): array
+    {
+        return (array) get_post_meta($this->getPostId(), 'richweb_algorithm_code_examples', true);
+    }
+
+    public function getPostId(): int
+    {
+        return $this->post_id;
     }
 
     /**
@@ -103,25 +131,13 @@ final class AlgorithmCodeExamplesMetaBox extends AbstractMetaBox
 
     public function save(int $post_id): void
     {
-        //update_post_meta($post_id, 'richweb_algorithm_code_examples', null);
-
-        //return;
-        // Don't save meta box during autosave.
         if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
 
-        // For security, verify the nonce.
         if (!isset($_POST['richweb_algorithm_code_examples_nonce']) || !wp_verify_nonce($_POST['richweb_algorithm_code_examples_nonce'], '_richweb_algorithm_code_examples_nonce')) return;
 
-        // If the user shouldn't be updating this metabox, bail.
         if (!current_user_can('update_core', $post_id)) return;
 
-        $code_examples = $_POST['richweb_algorithm_code_examples'];
-
-        echo 'Before';
-        echo '<pre>';
-        print_r($code_examples);
-        echo '</pre>';
-        //exit;
+        $code_examples = (array) ($_POST['richweb_algorithm_code_examples'] ?? []);
 
         foreach ($code_examples as $key => $example) {
             if (!array_filter($example)) {
@@ -131,13 +147,6 @@ final class AlgorithmCodeExamplesMetaBox extends AbstractMetaBox
 
         $code_examples = array_values($code_examples);
 
-        echo 'after';
-        echo '<pre>';
-        print_r($code_examples);
-        echo '</pre>';
-        //exit;
-
-        // Save the fields.
         if (!empty($code_examples)) {
             update_post_meta($post_id, 'richweb_algorithm_code_examples', $code_examples);
         } else {
@@ -150,26 +159,8 @@ final class AlgorithmCodeExamplesMetaBox extends AbstractMetaBox
      * 
      * @return array<string, string>
      */
-    private function supportedLanguages(): array
+    public function supportedLanguages(): array
     {
-        return [
-            'atom'       => 'Atom',
-            'c'          => 'C',
-            'clike'      => 'C-like',
-            'cpp'        => 'C++',
-            'csharp'     => 'C#',
-            'css'        => 'CSS',
-            'html'       => 'HTML',
-            'javascript' => 'JavaScript',
-            'markup'     => 'Markup',
-            'mathml'     => 'MathML',
-            'php'        => 'PHP',
-            'python'     => 'Python',
-            'rss'        => 'RSS',
-            'ssml'       => 'SSML',
-            'svg'        => 'SVG',
-            'swift'      => 'Swift',
-            'xml'        => 'XML',
-        ];
+        return $this->syntax->languages();
     }
 }

@@ -17,6 +17,8 @@ declare(strict_types=1);
 
 namespace RichWeb\Algorithms\Loaders;
 
+use RichWeb\Algorithms\Interfaces\AutoloaderInterface;
+
 /**
  * An example of a general-purpose implementation that includes the optional
  * functionality of allowing multiple base directories for a single namespace
@@ -67,7 +69,7 @@ namespace RichWeb\Algorithms\Loaders;
  * new \Foo\Bar\Qux\QuuxTest;
  * ```
  */
-class Autoloader
+class Autoloader implements AutoloaderInterface
 {
     /**
      * An associative array where the key is a namespace prefix and the value
@@ -103,9 +105,10 @@ class Autoloader
      * @param bool $prepend If true, prepend the base directory to the stack
      * instead of appending it; this causes it to be searched first rather
      * than last.
+     * 
      * @return void
      */
-    public function addNamespace($prefix, $base_dir, $prepend = false)
+    public function addNamespace($prefix, $base_dir, $prepend = false): void
     {
         // normalize namespace prefix
         $prefix = trim($prefix, '\\') . '\\';
@@ -130,10 +133,10 @@ class Autoloader
      * Loads the class file for a given class name.
      *
      * @param string $class The fully-qualified class name.
-     * @return mixed The mapped file name on success, or boolean false on
-     * failure.
+     * 
+     * @return string|bool The mapped file name on success, or boolean false on failure.
      */
-    public function loadClass($class)
+    public function loadClass($class): string|bool
     {
         // the current namespace prefix
         $prefix = $class;
@@ -168,10 +171,10 @@ class Autoloader
      *
      * @param string $prefix The namespace prefix.
      * @param string $relative_class The relative class name.
-     * @return mixed Boolean false if no mapped file can be loaded, or the
-     * name of the mapped file that was loaded.
+     * 
+     * @return string|bool Boolean false if no mapped file can be loaded, or the name of the mapped file that was loaded.
      */
-    protected function loadMappedFile($prefix, $relative_class)
+    protected function loadMappedFile($prefix, $relative_class): string|bool
     {
         // are there any base directories for this namespace prefix?
         if (isset($this->prefixes[$prefix]) === false) {
@@ -203,6 +206,7 @@ class Autoloader
      * If a file exists, require it from the file system.
      *
      * @param string $file The file to require.
+     * 
      * @return bool True if the file exists, false if not.
      */
     protected function requireFile($file)

@@ -15,10 +15,12 @@ namespace RichWeb\Algorithms\Setup;
 
 use RichWeb\Algorithms\Abstracts\AbstractScripts;
 
+use const RichWeb\Algorithms\PLUGIN_FILE;
+
 /**
  * Loads the JS and CSS files needed by the plugin.
  */
-final class Scripts extends AbstractScripts
+class Scripts extends AbstractScripts
 {
     public function __construct() {}
 
@@ -28,7 +30,7 @@ final class Scripts extends AbstractScripts
         // Prevents browser being able to cache the file
         $timestamp = time();
 
-        $admin_assets = plugins_url('/Assets/Admin/', RICH_ALGO_FILE);
+        $admin_assets = plugins_url('/Assets/Admin/', PLUGIN_FILE);
 
         // Admin CSS files, register first then enqueue
         wp_register_style('rich-algo-admin', $admin_assets . 'CSS/rich-algo-admin.css', [], $timestamp);
@@ -49,21 +51,12 @@ final class Scripts extends AbstractScripts
 
     public function enqueueFrontendScripts(): void
     {
-        $assets = plugins_url('/Assets/', RICH_ALGO_FILE);
+        $assets = plugins_url('/Assets/', PLUGIN_FILE);
 
         $timestamp = time();
 
-        wp_register_script(
-            'rich-algo-prism-script',
-            $assets . 'JS/prism.js',
-            ['jquery'],
-            $timestamp,
-            true
-        );
-        wp_enqueue_script('rich-algo-prism-script');
-        
-        wp_register_style('rich-algo-prism-style', $assets . 'CSS/prism.css', [], $timestamp);
-        wp_enqueue_style('rich-algo-prism-style');
+        wp_register_script('rich-algo-script', $assets . 'JS/rich-algo.js', ['jquery'], $timestamp, true);
+        wp_enqueue_script('rich-algo-script');
 
         wp_register_style('rich-algo-style', $assets . 'CSS/style.css', [], $timestamp);
         wp_enqueue_style('rich-algo-style');

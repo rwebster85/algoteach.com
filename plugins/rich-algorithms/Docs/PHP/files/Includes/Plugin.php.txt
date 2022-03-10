@@ -14,22 +14,29 @@ declare(strict_types=1);
 namespace RichWeb\Algorithms;
 
 use RichWeb\Algorithms\Abstracts\AbstractSingletonPlugin;
-
+use RichWeb\Algorithms\Packages\AlgorithmPackageManager;
+use RichWeb\Algorithms\Interfaces\AlgorithmPackageManagerInterface;
+use RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface;
+use RichWeb\Algorithms\PrismSyntaxHighlighter;
 use RichWeb\Algorithms\Setup\Setup;
 
 use RichWeb\Algorithms\Admin\{
     AlgorithmPostType,
     MetaBoxes\MetaBoxes
 };
+use RichWeb\Algorithms\CodeExamples\CodeExamplesLoader;
+
+use const RichWeb\Algorithms\{
+    PLUGIN_FILE,
+    PLUGIN_PATH,
+    TEXT_DOMAIN
+};
 
 final class Plugin extends AbstractSingletonPlugin
 {
-    /**
-     * Plugin file.
-     */
-    private string $file = RICH_ALGO_FILE;
+    private AlgorithmPackageManagerInterface $algorithm_package_manager;
 
-    private AlgorithmPackageManager $algorithm_package_manager;
+    private SyntaxHighlighterInterface $syntax;
 
     protected function __construct(Project $project)
     {
@@ -38,7 +45,7 @@ final class Plugin extends AbstractSingletonPlugin
         $this->version        = $project->getVersion();
         $this->requirements   = $project->getRequirements();
         $this->main_directory = $project->getMainDirectory();
-        $this->text_domain    = RICH_ALGO_TEXT_DOMAIN;
+        $this->text_domain    = TEXT_DOMAIN;
     }
 
     protected function build(): void
@@ -52,8 +59,8 @@ final class Plugin extends AbstractSingletonPlugin
      */
     private function initHooks(): void
     {
-        register_activation_hook($this->file, array($this, 'activated'));
-        register_deactivation_hook($this->file, array($this, 'aeactivated'));
+        register_activation_hook(PLUGIN_FILE, array($this, 'activated'));
+        register_deactivation_hook(PLUGIN_FILE, array($this, 'aeactivated'));
 
         add_action('plugins_loaded', [$this, 'pluginsLoadedSetup'], -1);
         add_action('init', [$this, 'initSetup'], 0);
@@ -79,7 +86,7 @@ final class Plugin extends AbstractSingletonPlugin
      */
     public function pluginsLoadedSetup(): void
     {
-        (new Setup($this->text_domain, RICH_ALGO_PLUGIN_PATH))->run();
+        (new Setup($this->text_domain, PLUGIN_PATH))->run();
     }
 
     /**
@@ -89,10 +96,13 @@ final class Plugin extends AbstractSingletonPlugin
      */
     public function initSetup(): void
     {
-        $this->algorithm_package_manager = new AlgorithmPackageManager($this->main_directory);
+        $this->syntax = new PrismSyntaxHighlighter();
+        $this->algorithm_package_manager                         =                     new AlgorithmPackageManager($this->main_directory, $this->syntax);
+
+        (new CodeExamplesLoader($this->syntax))->run();
 
         (new AlgorithmPostType())->run();
-        (new MetaBoxes($this->main_directory, $this->algorithm_package_manager))->run();
+        (new MetaBoxes($this->main_directory, $this->algorithm_package_manager, $this->syntax))->run();
     }
 
     private function loadModules(): void
@@ -100,7 +110,12 @@ final class Plugin extends AbstractSingletonPlugin
         do_action('rich_algo_loaded_modules');
     }
 
-    public function packageManager(): AlgorithmPackageManager
+    public function syntaxHighlighter(): SyntaxHighlighterInterface
+    {
+        return $this->syntax;
+    }
+
+    public function packageManager(): AlgorithmPackageManagerInterface
     {
         return $this->algorithm_package_manager;
     }

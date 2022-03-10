@@ -14,9 +14,9 @@ declare(strict_types=1);
 namespace RichWeb\Algorithms\Abstracts;
 
 use RichWeb\Algorithms\Project;
-use RichWeb\Algorithms\Interfaces\SingletonInterface;
+use RichWeb\Algorithms\Interfaces\SingletonPluginInterface;
 
-abstract class AbstractSingletonPlugin extends AbstractPlugin implements SingletonInterface
+abstract class AbstractSingletonPlugin extends AbstractPlugin implements SingletonPluginInterface
 {
     /**
      * The single instance of the class.

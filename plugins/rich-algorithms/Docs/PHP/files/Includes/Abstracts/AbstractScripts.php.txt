@@ -13,9 +13,10 @@ declare(strict_types=1);
 
 namespace RichWeb\Algorithms\Abstracts;
 
+use RichWeb\Algorithms\Interfaces\HasRunnerInterface;
 use RichWeb\Algorithms\Interfaces\ScriptsInterface;
 
-abstract class AbstractScripts implements ScriptsInterface
+abstract class AbstractScripts implements ScriptsInterface, HasRunnerInterface
 {
     abstract public function enqueueAdminScripts(string $hook): void;
     abstract public function enqueueFrontendScripts(): void;

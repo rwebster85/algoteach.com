@@ -14,8 +14,8 @@ declare(strict_types=1);
 namespace RichWeb\Algorithms\Admin\MetaBoxes;
 
 use RichWeb\Algorithms\Admin\Abstracts\AbstractMetaBox;
-use RichWeb\Algorithms\AlgorithmPackageManager;
-use RichWeb\Algorithms\AlgorithmPackage;
+use RichWeb\Algorithms\Packages\AlgorithmPackageManager;
+use RichWeb\Algorithms\Packages\AlgorithmPackage;
 use RichWeb\Algorithms\Traits\Formatting\Strings;
 
 /**
@@ -72,20 +72,16 @@ final class AlgorithmPackageMetaBox extends AbstractMetaBox
 
     public function save(int $post_id): void
     {
-        // Don't save meta box during autosave.
         if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
 
-        // For security, verify the nonce.
         if (!isset($_POST['richweb_algorithm_package_nonce']) || !wp_verify_nonce($_POST['richweb_algorithm_package_nonce'], '_richweb_algorithm_package_nonce')) return;
 
-        // If the user shouldn't be updating this metabox, bail.
         if (!current_user_can('update_core', $post_id)) return;
 
         $package = isset($_POST['richweb_algorithm_package'])
         ? $this->sanitise($_POST['richweb_algorithm_package'])
         : '';
 
-        // Save the fields.
         if (!empty($package)) {
             update_post_meta($post_id, 'richweb_algorithm_package', $package);
         } else {

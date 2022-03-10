@@ -1,13 +1,4 @@
 <?php
-/**
- * Class Category | core/Category.class.php
- *
- * @package     MyApp XYZ
- * @subpackage  Categories
- * @author      Sandro Miguel Marques <sandromiguel@something.com>
- * @version     v.1.1 (06/12/2016)
- * @copyright   Copyright (c) 2016, Sandro
- */
 
 /*
  * This file is part of Rich Algorithms.
@@ -18,7 +9,13 @@
  * file that was distributed with this source code.
  */
 
-declare(strict_types=1); ?>
+declare(strict_types=1);
+
+use RichWeb\Algorithms\Admin\MetaBoxes\AlgorithmCodeExamplesMetaBox;
+
+$code_examples = $this->getCodeExamples();
+
+/** @var AlgorithmCodeExamplesMetaBox $this **/ ?>
 
 <div class="rich-algo-meta-outer">
     <div id="rich-algo-example-sortable">
@@ -27,7 +24,8 @@ declare(strict_types=1); ?>
                 $key = absint($key);
                 $lang = $this->escHtml(($example['lang'] ?? ''));
                 $code = ($example['code'] ?? '');
-                echo $this->getCodeExampleElement($key, $lang, $code);
+                $info = ($example['info'] ?? '');
+                echo $this->getCodeExampleElement($key, $lang, $code, $info);
             }
         } ?>
     </div>
