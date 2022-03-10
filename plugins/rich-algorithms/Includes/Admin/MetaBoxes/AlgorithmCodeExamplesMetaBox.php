@@ -75,11 +75,11 @@ final class AlgorithmCodeExamplesMetaBox extends AbstractMetaBox
         return $content;
     }
 
-    public function getCodeExampleInfoEditor($content, $key): string
+    public function getCodeExampleInfoEditor(string $content, int $key): string
     {
         ob_start();
         echo '<div class="rich-algo-meta-field-info-wrap">';
-        $editor_id = 'richweb_algorithm_code_examples-'.$key.'';
+        $editor_id = 'richweb_algorithm_code_examples-editor-'.$key.'';
         $editor_name = 'richweb_algorithm_code_examples['.$key.'][info]';
         $settings = array(
             'media_buttons' => false,

@@ -23,7 +23,7 @@ $languages = $this->supportedLanguages();
         <label class="rich-algo-meta-field-label mar-10" for="richweb_algorithm_code_examples[<?php echo $key; ?>][code]">
             Code Example #<span class="rich-algo-example-number"><?php echo ($key + 1); ?></span>
         </label>
-        <textarea rows="10" id="richweb_algorithm_code_examples[<?php echo $key; ?>][code]" name="richweb_algorithm_code_examples[<?php echo $key; ?>][code]"><?php echo $code; ?></textarea>
+        <textarea rows="10" class="rich-algo-example-code-editor" id="richweb_algorithm_code_examples[<?php echo $key; ?>][code]" name="richweb_algorithm_code_examples[<?php echo $key; ?>][code]"><?php echo $code; ?></textarea>
     </div>
 
     <div class="rich-algo-meta-field-wrap rich-algo-meta-field-inline">
