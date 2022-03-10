@@ -37,31 +37,39 @@ class AlgorithmScripts extends AbstractScripts
 
         $algorithm_path = plugin_dir_path($this->package->getConfigPath());
 
-        $scripts_path = $this->formatSlashes($algorithm_path . 'Assets/JS/');
-        $scripts_url  = plugins_url('JS/', $scripts_path);
+        $scripts = $this->package->getScripts();
 
-        $styles_path = $this->formatSlashes($algorithm_path . 'Assets/CSS/');
-        $styles_url  = plugins_url('CSS/', $styles_path);
+        if (!empty($scripts)) {
+            $scripts_path = $this->formatSlashes($algorithm_path . 'Assets/JS/');
+            $scripts_url  = plugins_url('JS/', $scripts_path);
 
-        foreach ($this->package->getScripts() as $script) {
-            $script_path = $this->formatSlashes($scripts_path . $script);
-            if (file_exists($script_path)) {
-                $script_url = $scripts_url . $script;
-                $class = $this->package->getClass();
-                $file = pathinfo($script, PATHINFO_FILENAME);
-                $script_name = $this->sanitise(strtolower($class . '-' . $file .'-' . 'script'));
-                wp_enqueue_script($script_name, $script_url, ['jquery'], $timestamp, true);
+            foreach ($scripts as $script) {
+                $script_path = $this->formatSlashes($scripts_path . $script);
+                if (file_exists($script_path)) {
+                    $script_url = $scripts_url . $script;
+                    $class = $this->package->getClass();
+                    $file = pathinfo($script, PATHINFO_FILENAME);
+                    $script_name = $this->escAttr(strtolower($class . '-' . $file .'-' . 'script'));
+                    wp_enqueue_script($script_name, $script_url, ['jquery'], $timestamp, true);
+                }
             }
         }
 
-        foreach ($this->package->getStyles() as $style) {
-            $style_path = $this->formatSlashes($styles_path . $style);
-            if (file_exists($style_path)) {
-                $style_url = $styles_url . $style;
-                $class = $this->package->getClass();
-                $file = pathinfo($style, PATHINFO_FILENAME);
-                $style_name = $this->sanitise(strtolower($class . '-' . $file .'-' . 'style'));
-                wp_enqueue_style($style_name, $style_url, [], $timestamp);
+        $styles = $this->package->getStyles();
+
+        if (!empty($styles)) {
+            $styles_path = $this->formatSlashes($algorithm_path . 'Assets/CSS/');
+            $styles_url  = plugins_url('CSS/', $styles_path);
+
+            foreach ($styles as $style) {
+                $style_path = $this->formatSlashes($styles_path . $style);
+                if (file_exists($style_path)) {
+                    $style_url = $styles_url . $style;
+                    $class = $this->package->getClass();
+                    $file = pathinfo($style, PATHINFO_FILENAME);
+                    $style_name = $this->escAttr(strtolower($class . '-' . $file .'-' . 'style'));
+                    wp_enqueue_style($style_name, $style_url, [], $timestamp);
+                }
             }
         }
     }
