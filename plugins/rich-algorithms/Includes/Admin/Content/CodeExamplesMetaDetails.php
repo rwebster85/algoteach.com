@@ -23,7 +23,7 @@ $code_examples = $this->getCodeExamples();
             foreach ($code_examples as $key => $example) {
                 $key = absint($key);
                 $lang = $this->escHtml(($example['lang'] ?? ''));
-                $code = ($example['content'] ?? '');
+                $code = ($example['code'] ?? '');
                 $info = ($example['info'] ?? '');
                 echo $this->getCodeExampleElement($key, $lang, $code, $info);
             }

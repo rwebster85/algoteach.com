@@ -33,7 +33,7 @@ class CodeExample implements CodeExampleInterface, Stringable
         private array $example,
         private SyntaxHighlighterInterface $syntax
     ) {
-        $this->code = ($example['content'] ?? '');
+        $this->code = ($example['code'] ?? '');
         $this->lang = ($example['lang'] ?? '');
         $this->info = ($example['info'] ?? '');
     }

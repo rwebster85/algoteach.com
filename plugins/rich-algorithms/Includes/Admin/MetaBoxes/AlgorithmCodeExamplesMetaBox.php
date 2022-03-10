@@ -137,7 +137,7 @@ final class AlgorithmCodeExamplesMetaBox extends AbstractMetaBox
 
         if (!current_user_can('update_core', $post_id)) return;
 
-        $code_examples = $_POST['richweb_algorithm_code_examples'];
+        $code_examples = (array) ($_POST['richweb_algorithm_code_examples'] ?? []);
 
         foreach ($code_examples as $key => $example) {
             if (!array_filter($example)) {

@@ -63,6 +63,9 @@ abstract class AbstractAlgorithm implements AlgorithmInterface
         $examples = (array) get_post_meta($this->post_id, 'richweb_algorithm_code_examples', true);
 
         foreach ($examples as $example) {
+            if (!is_array($example) || empty($example)) {
+                continue;
+            }
             $this->code_examples[] = new CodeExample($example, $this->syntax);
         }
     }
