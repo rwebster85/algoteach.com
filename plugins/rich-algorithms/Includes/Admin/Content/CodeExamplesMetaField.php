@@ -23,7 +23,7 @@ $languages = $this->supportedLanguages();
         <label class="rich-algo-meta-field-label mar-10" for="richweb_algorithm_code_examples[<?php echo $key; ?>][code]">
             Code Example #<span class="rich-algo-example-number"><?php echo ($key + 1); ?></span>
         </label>
-        <textarea rows="10" class="rich-algo-example-code-editor" id="richweb_algorithm_code_examples[<?php echo $key; ?>][code]" name="richweb_algorithm_code_examples[<?php echo $key; ?>][code]"><?php echo $code; ?></textarea>
+        <textarea spellcheck="false" rows="10" class="rich-algo-example-code-editor" id="richweb_algorithm_code_examples[<?php echo $key; ?>][code]" name="richweb_algorithm_code_examples[<?php echo $key; ?>][code]"><?php echo $code; ?></textarea>
     </div>
 
     <div class="rich-algo-meta-field-wrap rich-algo-meta-field-inline">
@@ -31,7 +31,7 @@ $languages = $this->supportedLanguages();
         <select class="rich-algo-admin-select width-200 richweb_algorithm_code_examples_lang" name="richweb_algorithm_code_examples[<?php echo $key; ?>][lang]" id="richweb_algorithm_code_examples[<?php echo $key; ?>][lang]">
             <option value="">— None —</option>
             <?php foreach ($languages as $language => $nicename) {
-                $name = $this->escHtml($nicename);
+                $name = $this->escHtml(strtoupper($nicename));
                 $selected = selected($language, $lang, false);
                 echo '<option value="' . $this->escHtml($language) . '"' . $selected . '>' . $name . '</option>';
             } ?>

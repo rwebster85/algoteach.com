@@ -21,7 +21,7 @@ use RichWeb\Algorithms\CodeExample;
         <?php echo $this->ksesPost($this->getInfoAutoP()); ?>
     </div>
     <div class="rich-algo-frontend-code-wrap">
-        <span class="rich-algo-frontend-code-language"><?php echo $this->escHtml($this->getLanguageFormatted()); ?></span>
+        <span class="rich-algo-frontend-code-language"><?php echo $this->escHtml(strtoupper($this->getLanguageFormatted())); ?></span>
         <pre class="line-numbers"><code class="language-<?php echo $this->escAttr($this->getLanguage()); ?>"><?php echo $this->escHtml($this->getCode()); ?></code></pre>
         <textarea class="rich-algo-frontend-code-example-textarea"><?php echo $this->escTextarea($this->getCode()); ?></textarea>
         <p class="rich-algo-frontend-code-toolbar"><button class="button button-primary rich-algo-copy"><i class="fas"></i> Copy</button></p>
