@@ -85,7 +85,7 @@ final class AlgorithmCodeExamplesMetaBox extends AbstractMetaBox
             'media_buttons' => false,
             'quicktags' => true,
             'teeny' => true,
-            'editor_height' => 200,
+            'editor_height' => 80,
             'textarea_name' => $editor_name
         );
     
