@@ -16,9 +16,15 @@ namespace RichWeb\Algorithms\CodeExamples;
 use RichWeb\Algorithms\CodeExamples\CodeExample;
 use RichWeb\Algorithms\Interfaces\HasRunnerInterface;
 use RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface;
+use RichWeb\Algorithms\Traits\Posts\AlgorithmChecker;
 
+/**
+ * Responsbile for loading code examples on the frontend if the post has any.
+ */
 final class CodeExamplesLoader implements HasRunnerInterface
 {
+    use AlgorithmChecker;
+    
     private array $code_examples = [];
 
     public function __construct(
@@ -40,7 +46,7 @@ final class CodeExamplesLoader implements HasRunnerInterface
      */
     public function loadCodeExamplesForPost(): void
     {
-        if (is_singular('richweb_algorithm')) {
+        if ($this->isSingleAlgorithm()) {
 
             $post_id = absint(get_the_ID() ?? 0);
 

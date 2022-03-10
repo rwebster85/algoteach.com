@@ -17,9 +17,12 @@ use RichWeb\Algorithms\Abstracts\AbstractAlgorithm;
 use RichWeb\Algorithms\Packages\AlgorithmPackage;
 use RichWeb\Algorithms\Interfaces\AlgorithmPackageLoaderInterface;
 use RichWeb\Algorithms\Interfaces\HasRunnerInterface;
+use RichWeb\Algorithms\Traits\Posts\AlgorithmChecker;
 
 final class AlgorithmPackageLoader implements AlgorithmPackageLoaderInterface, HasRunnerInterface
 {
+    use AlgorithmChecker;
+
     /**
      * @var array<string, AlgorithmPackage>
      */
@@ -41,7 +44,7 @@ final class AlgorithmPackageLoader implements AlgorithmPackageLoaderInterface, H
      */
     public function loadPackageForPost(): void
     {
-        if (is_singular('richweb_algorithm')) {
+        if ($this->isSingleAlgorithm()) {
             $post_id = absint(get_the_ID() ?? 0);
             $package = $this->postHasPackage($post_id);
             if (!empty($package)) {
