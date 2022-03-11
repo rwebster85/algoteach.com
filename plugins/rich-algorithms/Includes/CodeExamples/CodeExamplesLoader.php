@@ -34,6 +34,19 @@ final class CodeExamplesLoader implements CodeExamplesLoaderInterface, HasRunner
 
     public function run(): void
     {
+        $this->actions();
+    }
+
+    /**
+     * The action hooks to set up on initialisation.
+     * 
+     * @uses \add_action() WP Function
+     * @see https://developer.wordpress.org/reference/hooks/init/ WP action
+     * 
+     * @return void
+     */
+    private function actions(): void
+    {
         add_action('template_redirect', [$this, 'loadCodeExamplesForPost']);
         add_filter('the_content', [$this, 'appendExamplesToContent']);
     }

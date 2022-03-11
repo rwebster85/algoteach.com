@@ -36,7 +36,8 @@ final class AlgorithmPackageManager implements AlgorithmPackageManagerInterface
      */
     private array $packages;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->package_folder = $this->formatSlashes(PATH . '/Algorithms/');
 
         $this->parsePackages();
