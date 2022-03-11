@@ -97,12 +97,12 @@ final class Plugin extends AbstractSingletonPlugin
     public function initSetup(): void
     {
         $this->syntax = new PrismSyntaxHighlighter();
-        $this->algorithm_package_manager = new AlgorithmPackageManager($this->main_directory, $this->syntax);
+        $this->algorithm_package_manager = new AlgorithmPackageManager();
 
         (new CodeExamplesLoader($this->syntax))->run();
 
         (new AlgorithmPostType())->run();
-        (new MetaBoxes($this->main_directory, $this->algorithm_package_manager, $this->syntax))->run();
+        (new MetaBoxes($this->algorithm_package_manager, $this->syntax))->run();
     }
 
     private function loadModules(): void

@@ -18,10 +18,10 @@ use RecursiveIteratorIterator;
 use RichWeb\Algorithms\Packages\AlgorithmPackage;
 use RichWeb\Algorithms\Interfaces\AlgorithmPackageLoaderInterface;
 use RichWeb\Algorithms\Interfaces\AlgorithmPackageManagerInterface;
-use RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface;
 use RichWeb\Algorithms\Traits\Formatting\FilePaths;
 
 use const DIRECTORY_SEPARATOR;
+use const RichWeb\Algorithms\PATH;
 
 final class AlgorithmPackageManager implements AlgorithmPackageManagerInterface
 {
@@ -36,15 +36,12 @@ final class AlgorithmPackageManager implements AlgorithmPackageManagerInterface
      */
     private array $packages;
 
-    public function __construct(
-        private string $main_directory,
-        private SyntaxHighlighterInterface $syntax
-    ) {
-        $this->package_folder = $this->formatSlashes($main_directory . '/Algorithms/');
+    public function __construct() {
+        $this->package_folder = $this->formatSlashes(PATH . '/Algorithms/');
 
         $this->parsePackages();
 
-        $this->loader = new AlgorithmPackageLoader($this->packages, $this->syntax);
+        $this->loader = new AlgorithmPackageLoader($this->packages);
         $this->loader->run();
     }
 

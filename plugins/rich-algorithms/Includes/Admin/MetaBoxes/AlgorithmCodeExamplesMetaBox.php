@@ -28,7 +28,6 @@ final class AlgorithmCodeExamplesMetaBox extends AbstractMetaBox
     private int $post_id;
 
     public function __construct(
-        private string $main_directory,
         private AbstractSyntaxHighlighter $syntax
     ) {
         add_action('wp_ajax_richweb_algorithm_code_example_add', [$this, 'ajaxAddNewCodeExample']);

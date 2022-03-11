@@ -26,7 +26,6 @@ final class AlgorithmPackageMetaBox extends AbstractMetaBox
     use Strings;
 
     public function __construct(
-        private string $main_directory,
         private AlgorithmPackageManager $algorithm_package_manager
     ) {}
 
