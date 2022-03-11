@@ -15,10 +15,5 @@ namespace RichWeb\Algorithms\Interfaces;
 
 interface AlgorithmInterface
 {
-    /**
-     * Loads the scripts required for the algorithm.
-     * 
-     * @return void
-     */
-    public function loadScripts(): void;
+    
 }
