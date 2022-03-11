@@ -23,12 +23,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Abstracts\\AbstractAlgorithm\u003A\u003AloadScripts\u0028\u0029",
             "name": "loadScripts",
-            "summary": "Loads\u0020the\u0020scripts\u0020required\u0020for\u0020the\u0020algorithm.",
+            "summary": "",
             "url": "classes/RichWeb-Algorithms-Abstracts-AbstractAlgorithm.html#method_loadScripts"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Abstracts\\AbstractAlgorithm\u003A\u003Aload\u0028\u0029",
             "name": "load",
-            "summary": "Can\u0020be\u0020implemented\u0020in\u0020the\u0020concrete\u0020class\u0020for\u0020additional\u0020functionality.\u0020Always\u0020called\u0020during\u0020construction.",
+            "summary": "Can\u0020be\u0020implemented\u0020in\u0020the\u0020concrete\u0020class\u0020for\u0020additional\u0020functionality.\u0020Always\u0020called\u0020from\u0020the\u0020run\u0028\u0029\u0020method.",
             "url": "classes/RichWeb-Algorithms-Abstracts-AbstractAlgorithm.html#method_load"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Abstracts\\AbstractAlgorithm\u003A\u003A\u0024code_examples",
@@ -416,6 +416,11 @@ Search.appendIndex(
             "summary": "Returns\u0020the\u0020language\u0020for\u0020the\u0020code\u0020example\u0020suitable\u0020for\u0020outputting.",
             "url": "classes/RichWeb-Algorithms-CodeExamples-CodeExample.html#method_getLanguageFormatted"
         },                {
+            "fqsen": "\\RichWeb\\Algorithms\\CodeExamples\\CodeExample\u003A\u003AgetLanguageVersion\u0028\u0029",
+            "name": "getLanguageVersion",
+            "summary": "Returns\u0020the\u0020version\u0020number\u0020of\u0020the\u0020programming\u0020language\u0020used\u0020for\u0020the\u0020code\u0020example.",
+            "url": "classes/RichWeb-Algorithms-CodeExamples-CodeExample.html#method_getLanguageVersion"
+        },                {
             "fqsen": "\\RichWeb\\Algorithms\\CodeExamples\\CodeExample\u003A\u003AgetInfo\u0028\u0029",
             "name": "getInfo",
             "summary": "Returns\u0020the\u0020additional\u0020info\u0020attached\u0020to\u0020this\u0020code\u0020snippet.",
@@ -445,6 +450,11 @@ Search.appendIndex(
             "name": "lang",
             "summary": "",
             "url": "classes/RichWeb-Algorithms-CodeExamples-CodeExample.html#property_lang"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\CodeExamples\\CodeExample\u003A\u003A\u0024vers",
+            "name": "vers",
+            "summary": "",
+            "url": "classes/RichWeb-Algorithms-CodeExamples-CodeExample.html#property_vers"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\CodeExamples\\CodeExample\u003A\u003A\u0024info",
             "name": "info",
@@ -515,11 +525,6 @@ Search.appendIndex(
             "name": "AlgorithmInterface",
             "summary": "",
             "url": "classes/RichWeb-Algorithms-Interfaces-AlgorithmInterface.html"
-        },                {
-            "fqsen": "\\RichWeb\\Algorithms\\Interfaces\\AlgorithmInterface\u003A\u003AloadScripts\u0028\u0029",
-            "name": "loadScripts",
-            "summary": "Loads\u0020the\u0020scripts\u0020required\u0020for\u0020the\u0020algorithm.",
-            "url": "classes/RichWeb-Algorithms-Interfaces-AlgorithmInterface.html#method_loadScripts"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Interfaces\\AlgorithmPackageInterface",
             "name": "AlgorithmPackageInterface",
@@ -635,6 +640,11 @@ Search.appendIndex(
             "name": "getLanguageFormatted",
             "summary": "Returns\u0020the\u0020language\u0020for\u0020the\u0020code\u0020example\u0020suitable\u0020for\u0020outputting.",
             "url": "classes/RichWeb-Algorithms-Interfaces-CodeExampleInterface.html#method_getLanguageFormatted"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Interfaces\\CodeExampleInterface\u003A\u003AgetLanguageVersion\u0028\u0029",
+            "name": "getLanguageVersion",
+            "summary": "Returns\u0020the\u0020version\u0020number\u0020of\u0020the\u0020programming\u0020language\u0020used\u0020for\u0020the\u0020code\u0020example.",
+            "url": "classes/RichWeb-Algorithms-Interfaces-CodeExampleInterface.html#method_getLanguageVersion"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Interfaces\\CodeExampleInterface\u003A\u003AgetInfo\u0028\u0029",
             "name": "getInfo",

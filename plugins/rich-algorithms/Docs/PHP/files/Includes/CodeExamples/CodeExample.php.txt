@@ -27,6 +27,8 @@ class CodeExample implements CodeExampleInterface, Stringable
 
     private string $lang;
 
+    private string $vers;
+
     private string $info;
 
     public function __construct(
@@ -35,6 +37,7 @@ class CodeExample implements CodeExampleInterface, Stringable
     ) {
         $this->code = ($example['code'] ?? '');
         $this->lang = ($example['lang'] ?? '');
+        $this->vers = ($example['vers'] ?? '');
         $this->info = ($example['info'] ?? '');
     }
 
@@ -46,6 +49,11 @@ class CodeExample implements CodeExampleInterface, Stringable
     public function getLanguageFormatted(): string
     {
         return ($this->code_languages[$this->lang] ?? '');
+    }
+
+    public function getLanguageVersion(): string
+    {
+        return ($this->vers);
     }
 
     public function getInfo(): string
