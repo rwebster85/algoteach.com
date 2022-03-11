@@ -91,6 +91,8 @@ final class CodeExamplesLoader implements CodeExamplesLoaderInterface, HasRunner
 
         echo '<div class="rich-algo-frontend-examples-wrap">';
 
+        echo '<h2><i class="fas fa-code"></i> Code Examples</h2>';
+
         /** @var CodeExample $example */
         foreach ($this->code_examples as $example) {
             echo $example;
