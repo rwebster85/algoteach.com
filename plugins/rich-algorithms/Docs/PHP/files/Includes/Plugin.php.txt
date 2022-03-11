@@ -14,17 +14,18 @@ declare(strict_types=1);
 namespace RichWeb\Algorithms;
 
 use RichWeb\Algorithms\Abstracts\AbstractSingletonPlugin;
-use RichWeb\Algorithms\Packages\AlgorithmPackageManager;
+use RichWeb\Algorithms\CodeExamples\CodeExamplesLoader;
 use RichWeb\Algorithms\Interfaces\AlgorithmPackageManagerInterface;
 use RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface;
+use RichWeb\Algorithms\Packages\AlgorithmPackageLoader;
+use RichWeb\Algorithms\Packages\AlgorithmPackageManager;
 use RichWeb\Algorithms\PrismSyntaxHighlighter;
 use RichWeb\Algorithms\Setup\Setup;
-
+use RichWeb\Algorithms\Traits\Formatting\FilePaths;
 use RichWeb\Algorithms\Admin\{
     AlgorithmPostType,
     MetaBoxes\MetaBoxes
 };
-use RichWeb\Algorithms\CodeExamples\CodeExamplesLoader;
 
 use const RichWeb\Algorithms\{
     PLUGIN_FILE,
@@ -34,6 +35,8 @@ use const RichWeb\Algorithms\{
 
 final class Plugin extends AbstractSingletonPlugin
 {
+    use FilePaths;
+
     private AlgorithmPackageManagerInterface $algorithm_package_manager;
 
     private SyntaxHighlighterInterface $syntax;
@@ -97,12 +100,19 @@ final class Plugin extends AbstractSingletonPlugin
     public function initSetup(): void
     {
         $this->syntax = new PrismSyntaxHighlighter();
-        $this->algorithm_package_manager = new AlgorithmPackageManager();
+
+        $package_folder = $this->formatSlashes(PATH . '/Algorithms/');
+        $this->algorithm_package_manager = new AlgorithmPackageManager($package_folder);
+
+        $packages = $this->algorithm_package_manager->getPackages();
+
+        $package_loader = new AlgorithmPackageLoader($packages);
+        $package_loader->run();
 
         (new CodeExamplesLoader($this->syntax))->run();
 
         (new AlgorithmPostType())->run();
-        (new MetaBoxes($this->algorithm_package_manager, $this->syntax))->run();
+        (new MetaBoxes($packages, $this->syntax))->run();
     }
 
     private function loadModules(): void

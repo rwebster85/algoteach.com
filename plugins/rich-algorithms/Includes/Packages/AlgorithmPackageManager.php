@@ -31,9 +31,7 @@ final class AlgorithmPackageManager implements AlgorithmPackageManagerInterface
     private array $packages;
 
     /**
-     * The folder where algorithm packages are stored.
-     * 
-     * @param string
+     * @param string The folder where algorithm packages are stored.
      */
     public function __construct(
         private string $package_folder

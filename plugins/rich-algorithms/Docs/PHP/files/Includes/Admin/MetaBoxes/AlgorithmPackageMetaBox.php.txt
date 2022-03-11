@@ -14,8 +14,7 @@ declare(strict_types=1);
 namespace RichWeb\Algorithms\Admin\MetaBoxes;
 
 use RichWeb\Algorithms\Admin\Abstracts\AbstractMetaBox;
-use RichWeb\Algorithms\Packages\AlgorithmPackageManager;
-use RichWeb\Algorithms\Packages\AlgorithmPackage;
+use RichWeb\Algorithms\Interfaces\AlgorithmPackageInterface;
 use RichWeb\Algorithms\Traits\Formatting\Strings;
 
 /**
@@ -25,9 +24,24 @@ final class AlgorithmPackageMetaBox extends AbstractMetaBox
 {
     use Strings;
 
-    public function __construct(
-        private AlgorithmPackageManager $algorithm_package_manager
-    ) {}
+    /**
+     * The available algorithm packages.
+     * 
+     * @var AlgorithmPackageInterface[]
+     */
+    private array $packages;
+
+    /**
+     * Accepts an variadic array of AlgorithmPackageInterface objects.
+     * 
+     * @param AlgorithmPackageInterface[] $packages
+     * 
+     * @return void
+     */
+    public function __construct(AlgorithmPackageInterface ...$packages)
+    {
+        $this->packages = $packages;
+    }
 
     public function add(): void
     {
@@ -47,7 +61,7 @@ final class AlgorithmPackageMetaBox extends AbstractMetaBox
 
         $post_id = $post->ID;
 
-        $packages = $this->algorithm_package_manager->getPackages();
+        $packages = $this->packages;
 
         $current_package = get_post_meta($post_id, 'richweb_algorithm_package', true); ?>
 
@@ -57,7 +71,7 @@ final class AlgorithmPackageMetaBox extends AbstractMetaBox
             <select class="rich-algo-admin-select richweb_algorithm_package" name="richweb_algorithm_package" id="richweb_algorithm_package">
                 <option value="">— None —</option>
                 <?php
-                /** @var AlgorithmPackage $package */
+                /** @var AlgorithmPackageInterface $package */
                 foreach ($packages as $name => $package) {
                     $name = $this->escHtml($name);
                     $selected = selected($name, $current_package, false);

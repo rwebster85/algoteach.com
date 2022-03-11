@@ -13,23 +13,40 @@ declare(strict_types=1);
 
 namespace RichWeb\Algorithms\Admin\MetaBoxes;
 
-use RichWeb\Algorithms\Abstracts\AbstractSyntaxHighlighter;
-use RichWeb\Algorithms\Packages\AlgorithmPackageManager;
+use RichWeb\Algorithms\Interfaces\AlgorithmPackageInterface;
 use RichWeb\Algorithms\Interfaces\HasRunnerInterface;
+use RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface;
 
 final class MetaBoxes implements HasRunnerInterface
 {
+    /**
+     * The available algorithm packages.
+     * 
+     * @var AlgorithmPackageInterface[]
+     */
+    private array $packages;
+    
+    /**
+     * The syntax highlighter being used by the system.
+     * 
+     * @var SyntaxHighlighterInterface
+     */
+    private SyntaxHighlighterInterface $syntax;
+
     public function __construct(
-        private AlgorithmPackageManager $algorithm_package_manager,
-        private AbstractSyntaxHighlighter $syntax
-    ) {}
+        array $packages,
+        SyntaxHighlighterInterface $syntax
+    ) {
+        $this->packages = $packages;
+        $this->syntax = $syntax;
+    }
 
     /**
      * Runs the class init functions not handled during construction.
      */
     public function run(): void
     {
-        (new AlgorithmPackageMetaBox($this->algorithm_package_manager))->build();
+        (new AlgorithmPackageMetaBox(...$this->packages))->build();
         (new AlgorithmCodeExamplesMetaBox($this->syntax))->build();
     }
 }
