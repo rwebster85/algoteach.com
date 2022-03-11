@@ -24,11 +24,6 @@
 <polygon fill="none" stroke="black" points="24,-24 24,-1210 1102,-1210 1102,-24 24,-24"/>
 <text text-anchor="middle" x="563" y="-1197.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Algorithms</text>
 </g>
-<g id="clust4" class="cluster">
-<title>cluster_\RichWeb\Algorithms\Abstracts</title>
-<polygon fill="none" stroke="black" points="367.5,-272 367.5,-506 792.5,-506 792.5,-272 367.5,-272"/>
-<text text-anchor="middle" x="580" y="-493.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Abstracts</text>
-</g>
 <g id="clust5" class="cluster">
 <title>cluster_\RichWeb\Algorithms\Admin</title>
 <polygon fill="none" stroke="black" points="75,-922 75,-1182 811,-1182 811,-922 75,-922"/>
@@ -39,55 +34,60 @@
 <polygon fill="none" stroke="black" points="83,-1006 83,-1132 230,-1132 230,-1006 83,-1006"/>
 <text text-anchor="middle" x="156.5" y="-1119.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Interfaces</text>
 </g>
+<g id="clust8" class="cluster">
+<title>cluster_\RichWeb\Algorithms\Admin\MetaBoxes</title>
+<polygon fill="none" stroke="black" points="581,-930 581,-1110 803,-1110 803,-930 581,-930"/>
+<text text-anchor="middle" x="692" y="-1097.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">MetaBoxes</text>
+</g>
 <g id="clust6" class="cluster">
 <title>cluster_\RichWeb\Algorithms\Admin\Abstracts</title>
 <polygon fill="none" stroke="black" points="360.5,-1006 360.5,-1132 501.5,-1132 501.5,-1006 360.5,-1006"/>
 <text text-anchor="middle" x="431" y="-1119.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Abstracts</text>
 </g>
-<g id="clust8" class="cluster">
-<title>cluster_\RichWeb\Algorithms\Admin\MetaBoxes</title>
-<polygon fill="none" stroke="black" points="581,-930 581,-1110 803,-1110 803,-930 581,-930"/>
-<text text-anchor="middle" x="692" y="-1097.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">MetaBoxes</text>
+<g id="clust4" class="cluster">
+<title>cluster_\RichWeb\Algorithms\Abstracts</title>
+<polygon fill="none" stroke="black" points="367.5,-272 367.5,-506 792.5,-506 792.5,-272 367.5,-272"/>
+<text text-anchor="middle" x="580" y="-493.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Abstracts</text>
 </g>
 <g id="clust11" class="cluster">
 <title>cluster_\RichWeb\Algorithms\Loaders</title>
 <polygon fill="none" stroke="black" points="371,-514 371,-694 491,-694 491,-514 371,-514"/>
 <text text-anchor="middle" x="431" y="-681.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Loaders</text>
 </g>
-<g id="clust13" class="cluster">
-<title>cluster_\RichWeb\Algorithms\Setup</title>
-<polygon fill="none" stroke="black" points="859,-535 859,-823 1094,-823 1094,-535 859,-535"/>
-<text text-anchor="middle" x="976.5" y="-810.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Setup</text>
-</g>
 <g id="clust10" class="cluster">
 <title>cluster_\RichWeb\Algorithms\Interfaces</title>
 <polygon fill="none" stroke="black" points="32,-83 32,-911 281,-911 281,-83 32,-83"/>
 <text text-anchor="middle" x="156.5" y="-898.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Interfaces</text>
 </g>
-<g id="clust14" class="cluster">
-<title>cluster_\RichWeb\Algorithms\Traits</title>
-<polygon fill="none" stroke="black" points="898,-285 898,-527 1055,-527 1055,-285 898,-285"/>
-<text text-anchor="middle" x="976.5" y="-514.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Traits</text>
+<g id="clust13" class="cluster">
+<title>cluster_\RichWeb\Algorithms\Setup</title>
+<polygon fill="none" stroke="black" points="859,-535 859,-823 1094,-823 1094,-535 859,-535"/>
+<text text-anchor="middle" x="976.5" y="-810.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Setup</text>
 </g>
-<g id="clust16" class="cluster">
-<title>cluster_\RichWeb\Algorithms\Traits\Posts</title>
-<polygon fill="none" stroke="black" points="906,-427 906,-499 1047,-499 1047,-427 906,-427"/>
-<text text-anchor="middle" x="976.5" y="-486.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Posts</text>
-</g>
-<g id="clust15" class="cluster">
-<title>cluster_\RichWeb\Algorithms\Traits\Formatting</title>
-<polygon fill="none" stroke="black" points="930,-293 930,-419 1023,-419 1023,-293 930,-293"/>
-<text text-anchor="middle" x="976.5" y="-406.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Formatting</text>
+<g id="clust9" class="cluster">
+<title>cluster_\RichWeb\Algorithms\CodeExamples</title>
+<polygon fill="none" stroke="black" points="354,-788 354,-914 508,-914 508,-788 354,-788"/>
+<text text-anchor="middle" x="431" y="-901.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">CodeExamples</text>
 </g>
 <g id="clust12" class="cluster">
 <title>cluster_\RichWeb\Algorithms\Packages</title>
 <polygon fill="none" stroke="black" points="337,-84 337,-264 525,-264 525,-84 337,-84"/>
 <text text-anchor="middle" x="431" y="-251.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Packages</text>
 </g>
-<g id="clust9" class="cluster">
-<title>cluster_\RichWeb\Algorithms\CodeExamples</title>
-<polygon fill="none" stroke="black" points="354,-788 354,-914 508,-914 508,-788 354,-788"/>
-<text text-anchor="middle" x="431" y="-901.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">CodeExamples</text>
+<g id="clust14" class="cluster">
+<title>cluster_\RichWeb\Algorithms\Traits</title>
+<polygon fill="none" stroke="black" points="898,-285 898,-527 1055,-527 1055,-285 898,-285"/>
+<text text-anchor="middle" x="976.5" y="-514.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Traits</text>
+</g>
+<g id="clust15" class="cluster">
+<title>cluster_\RichWeb\Algorithms\Traits\Formatting</title>
+<polygon fill="none" stroke="black" points="930,-373 930,-499 1023,-499 1023,-373 930,-373"/>
+<text text-anchor="middle" x="976.5" y="-486.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Formatting</text>
+</g>
+<g id="clust16" class="cluster">
+<title>cluster_\RichWeb\Algorithms\Traits\Posts</title>
+<polygon fill="none" stroke="black" points="906,-293 906,-365 1047,-365 1047,-293 906,-293"/>
+<text text-anchor="middle" x="976.5" y="-352.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Posts</text>
 </g>
 <!-- \\RichWeb\\Algorithms\\Abstracts\\AbstractAlgorithm -->
 <g id="node1" class="node">
@@ -539,20 +539,20 @@
 <!-- \\RichWeb\\Algorithms\\Traits\\Formatting\\FilePaths -->
 <g id="node42" class="node">
 <title>\\RichWeb\\Algorithms\\Traits\\Formatting\\FilePaths</title>
-<polygon fill="none" stroke="black" points="1015,-391 938,-391 938,-355 1015,-355 1015,-391"/>
-<text text-anchor="middle" x="976.5" y="-370.2" font-family="Courier,monospace" font-size="11.00">FilePaths</text>
+<polygon fill="none" stroke="black" points="1015,-471 938,-471 938,-435 1015,-435 1015,-471"/>
+<text text-anchor="middle" x="976.5" y="-450.2" font-family="Courier,monospace" font-size="11.00">FilePaths</text>
 </g>
 <!-- \\RichWeb\\Algorithms\\Traits\\Formatting\\Strings -->
 <g id="node43" class="node">
 <title>\\RichWeb\\Algorithms\\Traits\\Formatting\\Strings</title>
-<polygon fill="none" stroke="black" points="1008.5,-337 944.5,-337 944.5,-301 1008.5,-301 1008.5,-337"/>
-<text text-anchor="middle" x="976.5" y="-316.2" font-family="Courier,monospace" font-size="11.00">Strings</text>
+<polygon fill="none" stroke="black" points="1008.5,-417 944.5,-417 944.5,-381 1008.5,-381 1008.5,-417"/>
+<text text-anchor="middle" x="976.5" y="-396.2" font-family="Courier,monospace" font-size="11.00">Strings</text>
 </g>
 <!-- \\RichWeb\\Algorithms\\Traits\\Posts\\AlgorithmChecker -->
 <g id="node44" class="node">
 <title>\\RichWeb\\Algorithms\\Traits\\Posts\\AlgorithmChecker</title>
-<polygon fill="none" stroke="black" points="1039,-471 914,-471 914,-435 1039,-435 1039,-471"/>
-<text text-anchor="middle" x="976.5" y="-450.2" font-family="Courier,monospace" font-size="11.00">AlgorithmChecker</text>
+<polygon fill="none" stroke="black" points="1039,-337 914,-337 914,-301 1039,-301 1039,-337"/>
+<text text-anchor="middle" x="976.5" y="-316.2" font-family="Courier,monospace" font-size="11.00">AlgorithmChecker</text>
 </g>
 <!-- \\RichWeb\\Algorithms\\Plugin -->
 <g id="node45" class="node">

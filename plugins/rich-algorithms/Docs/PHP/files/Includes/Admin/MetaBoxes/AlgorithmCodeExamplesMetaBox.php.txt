@@ -14,7 +14,6 @@ declare(strict_types=1);
 namespace RichWeb\Algorithms\Admin\MetaBoxes;
 
 use RichWeb\Algorithms\Admin\Abstracts\AbstractMetaBox;
-use RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface;
 use RichWeb\Algorithms\Traits\Formatting;
 
 /**
@@ -27,8 +26,13 @@ final class AlgorithmCodeExamplesMetaBox extends AbstractMetaBox
 
     private int $post_id;
 
+    /**
+     * Create a new instance of AlgorithmCodeExamplesMetaBox.
+     * 
+     * @param array<string, string> $code_languages The coding languages available with the syntax highlighter.
+     */
     public function __construct(
-        private SyntaxHighlighterInterface $syntax
+        private array $code_languages
     ) {
         add_action('wp_ajax_richweb_algorithm_code_example_add', [$this, 'ajaxAddNewCodeExample']);
     }
@@ -160,6 +164,6 @@ final class AlgorithmCodeExamplesMetaBox extends AbstractMetaBox
      */
     public function supportedLanguages(): array
     {
-        return $this->syntax->languages();
+        return $this->code_languages;
     }
 }

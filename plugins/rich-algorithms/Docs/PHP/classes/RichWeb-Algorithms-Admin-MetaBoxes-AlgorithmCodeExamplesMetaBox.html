@@ -120,9 +120,9 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">23</span>
+    <span class="phpdocumentor-element-found-in__line">22</span>
 
-            <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#source-view.23"  class="phpdocumentor-element-found-in__source" data-line="23" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#source-view.22"  class="phpdocumentor-element-found-in__source" data-line="22" data-modal="source-view"></a>
     </aside>
 
             <p class="phpdocumentor-summary">This Meta Box outputs the algorithm package selection.</p>
@@ -142,16 +142,16 @@
 
 <dl class="phpdocumentor-table-of-contents">
                     <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#property_post_id">$post_id</a>
+    <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#property_code_languages">$code_languages</a>
     <span>
-                        &nbsp;: int            </span>
+                        &nbsp;: array&lt;string|int, mixed&gt;            </span>
 </dt>
 <dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#property_syntax">$syntax</a>
+    <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#property_post_id">$post_id</a>
     <span>
-                        &nbsp;: <a href="classes/RichWeb-Algorithms-Interfaces-SyntaxHighlighterInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface">SyntaxHighlighterInterface</abbr></a>            </span>
+                        &nbsp;: int            </span>
 </dt>
 <dd></dd>
 
@@ -160,7 +160,7 @@
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd></dd>
+<dd>Create a new instance of AlgorithmCodeExamplesMetaBox.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#method_add">add()</a>
@@ -224,6 +224,13 @@
                                 &nbsp;: array&lt;string, string&gt;    </span>
 </dt>
 <dd>Returns a key/value array of supported code example languages. Key is the PrismJS name, value is the name formatted for display.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
+    <a href="classes/RichWeb-Algorithms-Traits-Formatting-Strings.html#method_autoP">autoP()</a>
+    <span>
+                                &nbsp;: string    </span>
+</dt>
+<dd>Returns the string formatted with &lt;p&gt; tags, parsed from newlines.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
     <a href="classes/RichWeb-Algorithms-Traits-Formatting-Strings.html#method_escAttr">escAttr()</a>
@@ -300,25 +307,25 @@
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_post_id">
-        $post_id
-        <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#property_post_id" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_code_languages">
+        $code_languages
+        <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#property_code_languages" class="headerlink"><i class="fas fa-link"></i></a>
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">28</span>
+    <span class="phpdocumentor-element-found-in__line">35</span>
 
-            <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#source-view.28"  class="phpdocumentor-element-found-in__source" data-line="28" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#source-view.35"  class="phpdocumentor-element-found-in__source" data-line="35" data-modal="source-view"></a>
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">int</span>
-    <span class="phpdocumentor-signature__name">$post_id</span>
+        <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
+    <span class="phpdocumentor-signature__name">$code_languages</span>
     </code>
 
         <section class="phpdocumentor-description"></section>
@@ -335,25 +342,25 @@
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_syntax">
-        $syntax
-        <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#property_syntax" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_post_id">
+        $post_id
+        <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#property_post_id" class="headerlink"><i class="fas fa-link"></i></a>
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">31</span>
+    <span class="phpdocumentor-element-found-in__line">27</span>
 
-            <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#source-view.31"  class="phpdocumentor-element-found-in__source" data-line="31" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#source-view.27"  class="phpdocumentor-element-found-in__source" data-line="27" data-modal="source-view"></a>
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type"><a href="classes/RichWeb-Algorithms-Interfaces-SyntaxHighlighterInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface">SyntaxHighlighterInterface</abbr></a></span>
-    <span class="phpdocumentor-signature__name">$syntax</span>
+        <span class="phpdocumentor-signature__type">int</span>
+    <span class="phpdocumentor-signature__name">$post_id</span>
     </code>
 
         <section class="phpdocumentor-description"></section>
@@ -383,26 +390,27 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">30</span>
+    <span class="phpdocumentor-element-found-in__line">34</span>
 
-            <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#source-view.30"  class="phpdocumentor-element-found-in__source" data-line="30" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#source-view.34"  class="phpdocumentor-element-found-in__source" data-line="34" data-modal="source-view"></a>
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Create a new instance of AlgorithmCodeExamplesMetaBox.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/RichWeb-Algorithms-Interfaces-SyntaxHighlighterInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface">SyntaxHighlighterInterface</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$syntax</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string, string&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$code_languages</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$syntax</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/RichWeb-Algorithms-Interfaces-SyntaxHighlighterInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface">SyntaxHighlighterInterface</abbr></a></span>
+                <span class="phpdocumentor-signature__argument__name">$code_languages</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string, string&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>The coding languages available with the syntax highlighter.</p>
+</section>
 
             </dd>
             </dl>
@@ -428,9 +436,9 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">36</span>
+    <span class="phpdocumentor-element-found-in__line">40</span>
 
-            <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#source-view.36"  class="phpdocumentor-element-found-in__source" data-line="36" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#source-view.40"  class="phpdocumentor-element-found-in__source" data-line="40" data-modal="source-view"></a>
     </aside>
 
         <p class="phpdocumentor-summary">Adds the meta box.</p>
@@ -462,9 +470,9 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">117</span>
+    <span class="phpdocumentor-element-found-in__line">121</span>
 
-            <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#source-view.117"  class="phpdocumentor-element-found-in__source" data-line="117" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#source-view.121"  class="phpdocumentor-element-found-in__source" data-line="121" data-modal="source-view"></a>
     </aside>
 
         <p class="phpdocumentor-summary">AJAX call when adding a new code example to the metabox.</p>
@@ -544,9 +552,9 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">77</span>
+    <span class="phpdocumentor-element-found-in__line">81</span>
 
-            <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#source-view.77"  class="phpdocumentor-element-found-in__source" data-line="77" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#source-view.81"  class="phpdocumentor-element-found-in__source" data-line="81" data-modal="source-view"></a>
     </aside>
 
     
@@ -597,9 +605,9 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">100</span>
+    <span class="phpdocumentor-element-found-in__line">104</span>
 
-            <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#source-view.100"  class="phpdocumentor-element-found-in__source" data-line="100" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#source-view.104"  class="phpdocumentor-element-found-in__source" data-line="104" data-modal="source-view"></a>
     </aside>
 
     
@@ -631,9 +639,9 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">105</span>
+    <span class="phpdocumentor-element-found-in__line">109</span>
 
-            <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#source-view.105"  class="phpdocumentor-element-found-in__source" data-line="105" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#source-view.109"  class="phpdocumentor-element-found-in__source" data-line="109" data-modal="source-view"></a>
     </aside>
 
     
@@ -665,9 +673,9 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">48</span>
+    <span class="phpdocumentor-element-found-in__line">52</span>
 
-            <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#source-view.48"  class="phpdocumentor-element-found-in__source" data-line="48" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#source-view.52"  class="phpdocumentor-element-found-in__source" data-line="52" data-modal="source-view"></a>
     </aside>
 
         <p class="phpdocumentor-summary">Outputs the HTML inside the meta box.</p>
@@ -709,9 +717,9 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">131</span>
+    <span class="phpdocumentor-element-found-in__line">135</span>
 
-            <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#source-view.131"  class="phpdocumentor-element-found-in__source" data-line="131" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#source-view.135"  class="phpdocumentor-element-found-in__source" data-line="135" data-modal="source-view"></a>
     </aside>
 
         <p class="phpdocumentor-summary">Saves the value for the meta box.</p>
@@ -753,9 +761,9 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">161</span>
+    <span class="phpdocumentor-element-found-in__line">165</span>
 
-            <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#source-view.161"  class="phpdocumentor-element-found-in__source" data-line="161" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#source-view.165"  class="phpdocumentor-element-found-in__source" data-line="165" data-modal="source-view"></a>
     </aside>
 
         <p class="phpdocumentor-summary">Returns a key/value array of supported code example languages. Key is the PrismJS name, value is the name formatted for display.</p>
@@ -770,6 +778,51 @@
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">array&lt;string, string&gt;</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_autoP">
+        autoP()
+        <a href="classes/RichWeb-Algorithms-Traits-Formatting-Strings.html#method_autoP" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Traits/Formatting/Strings.php"><a href="files/includes-traits-formatting-strings.html"><abbr title="Includes/Traits/Formatting/Strings.php">Strings.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">93</span>
+
+            <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#source-view.93"  class="phpdocumentor-element-found-in__source" data-line="93" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">Returns the string formatted with &lt;p&gt; tags, parsed from newlines.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+                <span class="phpdocumentor-signature__name">autoP</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$var</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$var</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string</span>
             &mdash;
         
     
@@ -967,9 +1020,9 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Traits/Formatting/FilePaths.php"><a href="files/includes-traits-formatting-filepaths.html"><abbr title="Includes/Traits/Formatting/FilePaths.php">FilePaths.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">27</span>
+    <span class="phpdocumentor-element-found-in__line">29</span>
 
-            <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#source-view.27"  class="phpdocumentor-element-found-in__source" data-line="27" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#source-view.29"  class="phpdocumentor-element-found-in__source" data-line="29" data-modal="source-view"></a>
     </aside>
 
         <p class="phpdocumentor-summary">Normalises forward and/or backward slashes to the system directory separator.</p>
@@ -1207,9 +1260,9 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php"><a href="files/includes-admin-metaboxes-algorithmcodeexamplesmetabox.html"><abbr title="Includes/Admin/MetaBoxes/AlgorithmCodeExamplesMetaBox.php">AlgorithmCodeExamplesMetaBox.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">66</span>
+    <span class="phpdocumentor-element-found-in__line">70</span>
 
-            <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#source-view.66"  class="phpdocumentor-element-found-in__source" data-line="66" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#source-view.70"  class="phpdocumentor-element-found-in__source" data-line="70" data-modal="source-view"></a>
     </aside>
 
         <p class="phpdocumentor-summary">Returns a code example element for the metabox.</p>

@@ -283,7 +283,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Admin\\MetaBoxes\\AlgorithmCodeExamplesMetaBox\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "",
+            "summary": "Create\u0020a\u0020new\u0020instance\u0020of\u0020AlgorithmCodeExamplesMetaBox.",
             "url": "classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#method___construct"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Admin\\MetaBoxes\\AlgorithmCodeExamplesMetaBox\u003A\u003Aadd\u0028\u0029",
@@ -336,10 +336,10 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#property_post_id"
         },                {
-            "fqsen": "\\RichWeb\\Algorithms\\Admin\\MetaBoxes\\AlgorithmCodeExamplesMetaBox\u003A\u003A\u0024syntax",
-            "name": "syntax",
+            "fqsen": "\\RichWeb\\Algorithms\\Admin\\MetaBoxes\\AlgorithmCodeExamplesMetaBox\u003A\u003A\u0024code_languages",
+            "name": "code_languages",
             "summary": "",
-            "url": "classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#property_syntax"
+            "url": "classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#property_code_languages"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Admin\\MetaBoxes\\AlgorithmPackageMetaBox",
             "name": "AlgorithmPackageMetaBox",
@@ -378,7 +378,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Admin\\MetaBoxes\\MetaBoxes\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "",
+            "summary": "Create\u0020a\u0020new\u0020instance\u0020of\u0020MetaBoxes\u0020which\u0020builds\u0020all\u0020required\u0020meta\u0020boxes.",
             "url": "classes/RichWeb-Algorithms-Admin-MetaBoxes-MetaBoxes.html#method___construct"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Admin\\MetaBoxes\\MetaBoxes\u003A\u003Arun\u0028\u0029",
@@ -388,13 +388,13 @@ Search.appendIndex(
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Admin\\MetaBoxes\\MetaBoxes\u003A\u003A\u0024packages",
             "name": "packages",
-            "summary": "The\u0020available\u0020algorithm\u0020packages.",
+            "summary": "",
             "url": "classes/RichWeb-Algorithms-Admin-MetaBoxes-MetaBoxes.html#property_packages"
         },                {
-            "fqsen": "\\RichWeb\\Algorithms\\Admin\\MetaBoxes\\MetaBoxes\u003A\u003A\u0024syntax",
-            "name": "syntax",
-            "summary": "The\u0020syntax\u0020highlighter\u0020being\u0020used\u0020by\u0020the\u0020system.",
-            "url": "classes/RichWeb-Algorithms-Admin-MetaBoxes-MetaBoxes.html#property_syntax"
+            "fqsen": "\\RichWeb\\Algorithms\\Admin\\MetaBoxes\\MetaBoxes\u003A\u003A\u0024code_languages",
+            "name": "code_languages",
+            "summary": "",
+            "url": "classes/RichWeb-Algorithms-Admin-MetaBoxes-MetaBoxes.html#property_code_languages"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\CodeExamples\\CodeExample",
             "name": "CodeExample",
@@ -456,10 +456,10 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/RichWeb-Algorithms-CodeExamples-CodeExample.html#property_example"
         },                {
-            "fqsen": "\\RichWeb\\Algorithms\\CodeExamples\\CodeExample\u003A\u003A\u0024syntax",
-            "name": "syntax",
+            "fqsen": "\\RichWeb\\Algorithms\\CodeExamples\\CodeExample\u003A\u003A\u0024code_languages",
+            "name": "code_languages",
             "summary": "",
-            "url": "classes/RichWeb-Algorithms-CodeExamples-CodeExample.html#property_syntax"
+            "url": "classes/RichWeb-Algorithms-CodeExamples-CodeExample.html#property_code_languages"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\CodeExamples\\CodeExamplesLoader",
             "name": "CodeExamplesLoader",
@@ -506,10 +506,10 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#property_code_examples"
         },                {
-            "fqsen": "\\RichWeb\\Algorithms\\CodeExamples\\CodeExamplesLoader\u003A\u003A\u0024syntax",
-            "name": "syntax",
+            "fqsen": "\\RichWeb\\Algorithms\\CodeExamples\\CodeExamplesLoader\u003A\u003A\u0024code_languages",
+            "name": "code_languages",
             "summary": "",
-            "url": "classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#property_syntax"
+            "url": "classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#property_code_languages"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Interfaces\\AlgorithmInterface",
             "name": "AlgorithmInterface",
@@ -1286,11 +1286,6 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/RichWeb-Algorithms-Project.html#property_requirements"
         },                {
-            "fqsen": "\\RichWeb\\Algorithms\\Project\u003A\u003A\u0024sep",
-            "name": "sep",
-            "summary": "",
-            "url": "classes/RichWeb-Algorithms-Project.html#property_sep"
-        },                {
             "fqsen": "\\RichWeb\\Algorithms\\Setup\\AlgorithmScripts",
             "name": "AlgorithmScripts",
             "summary": "Loads\u0020the\u0020JS\u0020and\u0020CSS\u0020files\u0020needed\u0020by\u0020the\u0020algorithm.",
@@ -1470,6 +1465,11 @@ Search.appendIndex(
             "name": "ksesPost",
             "summary": "Sanitise\u0020content\u0020for\u0020allowed\u0020HTML\u0020elements,\u0020usually\u0020from\u0020post\u0020content.",
             "url": "classes/RichWeb-Algorithms-Traits-Formatting-Strings.html#method_ksesPost"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Traits\\Formatting\\Strings\u003A\u003AautoP\u0028\u0029",
+            "name": "autoP",
+            "summary": "Returns\u0020the\u0020string\u0020formatted\u0020with\u0020\u003Cp\u003E\u0020tags,\u0020parsed\u0020from\u0020newlines.",
+            "url": "classes/RichWeb-Algorithms-Traits-Formatting-Strings.html#method_autoP"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Traits\\Posts\\AlgorithmChecker",
             "name": "AlgorithmChecker",

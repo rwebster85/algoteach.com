@@ -29,7 +29,7 @@ final class CodeExamplesLoader implements CodeExamplesLoaderInterface, HasRunner
     private array $code_examples = [];
 
     public function __construct(
-        private SyntaxHighlighterInterface $syntax
+        private array $code_languages
     ) {}
 
     public function run(): void
@@ -77,7 +77,7 @@ final class CodeExamplesLoader implements CodeExamplesLoaderInterface, HasRunner
             if (!is_array($example) || empty($example)) {
                 continue;
             }
-            $this->code_examples[] = new CodeExample($example, $this->syntax);
+            $this->code_examples[] = new CodeExample($example, $this->code_languages);
         }
     }
 
