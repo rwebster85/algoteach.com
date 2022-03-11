@@ -41,13 +41,6 @@ define(__NAMESPACE__ . '\PATH', plugin_dir_path(PLUGIN_FILE));
 
 // Resolves to: plugin_folder_name
 define(__NAMESPACE__ . '\PLUGIN_PATH', plugin_basename(dirname(PLUGIN_FILE)));
- 
-/**
- * Resolves to: plugin_folder_name\plugin_filename.php
- * 
- * Can be used by plugins to detect if this plugin is active by using `is_plugin_active(RichWeb\Algorithms\PLUGIN_BASENAME)`
- */
-define(__NAMESPACE__ . '\PLUGIN_BASENAME', plugin_basename(PLUGIN_FILE));
 
 require_once $includes . 'Interfaces' . $sep . 'AutoloaderInterface.php';
 require_once $includes . 'Loaders' . $sep . 'Autoloader.php';
