@@ -1023,7 +1023,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Packages\\AlgorithmPackageLoader\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "",
+            "summary": "Creates\u0020a\u0020new\u0020AlgorithmPackageLoader.",
             "url": "classes/RichWeb-Algorithms-Packages-AlgorithmPackageLoader.html#method___construct"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Packages\\AlgorithmPackageLoader\u003A\u003Arun\u0028\u0029",

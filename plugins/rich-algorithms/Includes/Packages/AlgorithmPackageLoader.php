@@ -24,7 +24,9 @@ final class AlgorithmPackageLoader implements AlgorithmPackageLoaderInterface, H
     use AlgorithmChecker;
 
     /**
-     * @var array<string, AlgorithmPackage>
+     * Creates a new AlgorithmPackageLoader.
+     * 
+     * @param array<string, AlgorithmPackage> $packages A key/value pair of AlgorithmPackage objects. Key is the fully qualified package class name, value is the package object.
      */
     public function __construct(
         private array $packages

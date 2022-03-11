@@ -88,6 +88,10 @@ trait Strings
     /**
      * Returns the string formatted with <p> tags, parsed from newlines.
      * 
+     * @param string $var
+     * 
+     * @uses \wpautop WP Function
+     * 
      * @return string
      */
     protected function autoP(string $var = ''): string
