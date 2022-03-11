@@ -26,6 +26,8 @@ $languages = $this->supportedLanguages();
         <textarea spellcheck="false" rows="10" class="rich-algo-example-code-editor" id="richweb_algorithm_code_examples[<?php echo $key; ?>][code]" name="richweb_algorithm_code_examples[<?php echo $key; ?>][code]"><?php echo $code; ?></textarea>
     </div>
 
+    <hr>
+
     <div class="rich-algo-meta-field-wrap rich-algo-meta-field-inline">
         <label class="rich-algo-meta-field-label" for="richweb_algorithm_code_examples[<?php echo $key; ?>][lang]">Language</label>
         <select class="rich-algo-admin-select width-200 richweb_algorithm_code_examples_lang" name="richweb_algorithm_code_examples[<?php echo $key; ?>][lang]" id="richweb_algorithm_code_examples[<?php echo $key; ?>][lang]">
@@ -36,6 +38,11 @@ $languages = $this->supportedLanguages();
                 echo '<option value="' . $this->escHtml($language) . '"' . $selected . '>' . $name . '</option>';
             } ?>
         </select>
+    </div>
+
+    <div class="rich-algo-meta-field-wrap rich-algo-meta-field-inline">
+        <label class="rich-algo-meta-field-label" for="richweb_algorithm_code_examples[<?php echo $key; ?>][vers]">Version</label>
+        <input type="text" class="width-200 richweb_algorithm_code_examples_vers" name="richweb_algorithm_code_examples[<?php echo $key; ?>][vers]" id="richweb_algorithm_code_examples[<?php echo $key; ?>][vers]" value="<?php echo $vers; ?>"><span class="description">Language version is output in the code example title on the frontend.</span>
     </div>
 
     <hr>

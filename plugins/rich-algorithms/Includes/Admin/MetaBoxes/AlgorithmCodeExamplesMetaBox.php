@@ -67,7 +67,7 @@ final class AlgorithmCodeExamplesMetaBox extends AbstractMetaBox
      * 
      * @return string
      */
-    private function getCodeExampleElement(int $key, string $lang = '', string $code = '', string $info = ''): string
+    private function getCodeExampleElement(int $key, string $lang = '', string $vers = '', string $code = '', string $info = ''): string
     {
         ob_start();
 
@@ -142,13 +142,33 @@ final class AlgorithmCodeExamplesMetaBox extends AbstractMetaBox
 
         $code_examples = (array) ($_POST['richweb_algorithm_code_examples'] ?? []);
 
+        var_dump($code_examples);
+
+        // Remove empty code examples before saving.
         foreach ($code_examples as $key => $example) {
             if (!array_filter($example)) {
                 unset($code_examples[$key]);
             }
         }
 
+        // Reorder code examples
         $code_examples = array_values($code_examples);
+
+        // Clean and sanitise the input fields (except code as it is supposed to be raw)
+        foreach ($code_examples as $key => $example) {
+            if (!empty($example['code'])) {
+                $code_examples[$key]['code'] = $this->ksesPost($example['code']);
+            }
+            if (!empty($example['lang'])) {
+                $code_examples[$key]['lang'] = $this->sanitise($example['lang']);
+            }
+            if (!empty($example['vers'])) {
+                $code_examples[$key]['vers'] = $this->sanitise($example['vers']);
+            }
+            if (!empty($example['info'])) {
+                $code_examples[$key]['info'] = $this->ksesPost($example['info']);
+            }
+        }
 
         if (!empty($code_examples)) {
             update_post_meta($post_id, 'richweb_algorithm_code_examples', $code_examples);

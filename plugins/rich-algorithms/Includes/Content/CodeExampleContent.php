@@ -17,7 +17,16 @@ use RichWeb\Algorithms\CodeExamples\CodeExample;
 
 <div class="rich-algo-frontend-code-example">
     <div class="rich-algo-frontend-code-example-info">
-        <h3><?php echo $this->escHtml($this->getLanguageFormatted()); ?> Implementation</h3>
+        <?php
+            $example_title    = '';
+            $example_title   .= $this->getLanguageFormatted();
+            $language_version = ($this->getLanguageVersion() ?? '');
+            if (!empty($language_version)) {
+                $example_title .= ' ' . $language_version;
+            }
+            $example_title .= ' Implementation';
+        ?>
+        <h3><?php echo $this->escHtml($example_title); ?></h3>
         <?php echo $this->ksesPost($this->getInfoAutoP()); ?>
     </div>
     <div class="rich-algo-frontend-code-wrap">
@@ -27,3 +36,5 @@ use RichWeb\Algorithms\CodeExamples\CodeExample;
         <p class="rich-algo-frontend-code-toolbar"><button class="button button-primary rich-algo-copy"><i class="fas"></i> Copy</button></p>
     </div>
 </div>
+
+<?php

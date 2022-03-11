@@ -30,6 +30,13 @@ interface CodeExampleInterface
     public function getLanguageFormatted(): string;
 
     /**
+     * Returns the version number of the programming language used for the code example.
+     * 
+     * @return string
+     */
+    public function getLanguageVersion(): string;
+
+    /**
      * Returns the additional info attached to this code snippet.
      * 
      * @return string

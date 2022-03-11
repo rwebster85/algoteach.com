@@ -31,7 +31,7 @@ abstract class AbstractAlgorithm implements AlgorithmInterface, HasRunnerInterfa
         private int $post_id
     ) {}
 
-    public function run(): void
+    final public function run(): void
     {
         $this->actions();
         $this->loadScripts();
@@ -46,7 +46,7 @@ abstract class AbstractAlgorithm implements AlgorithmInterface, HasRunnerInterfa
     }
 
     /**
-     * Can be implemented in the concrete class for additional functionality. Always called during construction.
+     * Can be implemented in the concrete class for additional functionality. Always called from the run() method.
      * 
      * @return void
      */

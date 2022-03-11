@@ -8,8 +8,23 @@ code[class*=language-]  {
 
 .rich-algo-frontend-examples-wrap {
     position: relative;
-    margin-top: 50px;
+    padding-top: 50px;
 }
+
+.rich-algo-frontend-examples-wrap h2 {
+    margin: 0;
+    padding: 1em 0;
+    border-top: 1px solid #ccc;
+}
+
+.rich-algo-frontend-examples-wrap h2 i {
+    font-size: 20px;
+    display: inline-block;
+    top: -3px;
+    position: relative;
+    padding-right: 4px;
+}
+
 .rich-algo-frontend-code-example {
     position: relative;
     padding-top: 20px;

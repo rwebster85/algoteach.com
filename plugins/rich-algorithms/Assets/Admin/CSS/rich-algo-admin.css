@@ -1,6 +1,10 @@
 .rich-algo-meta-field-wrap {
-    margin-bottom: 20px;
+    margin: 20px 0;
     position: relative;
+}
+
+.rich-algo-meta-field-wrap:first-of-type {
+    margin-top: 0;
 }
 
 .rich-algo-admin-select {
@@ -20,6 +24,7 @@
 
 .rich-algo-meta-field-inline .rich-algo-meta-field-label {
     margin-right: 20px;
+    min-width: 100px;
 }
 
 .rich-algo-meta-field-wrap .width-200 {
@@ -30,6 +35,18 @@
     display: table;
     content: "";
     clear: both;
+}
+
+.rich-algo-meta-field-inline > span.description {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.rich-algo-meta-field-inline select,
+.rich-algo-meta-field-inline input,
+.rich-algo-meta-field-inline label,
+.rich-algo-meta-field-inline > span.description {
+    margin-bottom: 5px;
 }
 
 .rich-algo-meta-field-wrap textarea {
