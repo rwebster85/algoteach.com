@@ -48,7 +48,7 @@ final class CodeExamplesLoader implements CodeExamplesLoaderInterface, HasRunner
     private function actions(): void
     {
         add_action('template_redirect', [$this, 'loadCodeExamplesForPost']);
-        add_filter('the_content', [$this, 'appendExamplesToContent']);
+        add_filter('the_content', [$this, 'appendExamplesToContent'], 10, 1);
     }
 
     /**
@@ -61,9 +61,7 @@ final class CodeExamplesLoader implements CodeExamplesLoaderInterface, HasRunner
     public function loadCodeExamplesForPost(): void
     {
         if ($this->isSingleAlgorithm()) {
-
             $post_id = absint(get_the_ID() ?? 0);
-
             $code_examples = (array) get_post_meta($post_id, 'richweb_algorithm_code_examples', true);
             if (!empty($code_examples)) {
                 $this->buildCodeExamples($code_examples);
@@ -81,7 +79,7 @@ final class CodeExamplesLoader implements CodeExamplesLoaderInterface, HasRunner
         }
     }
 
-    final public function appendExamplesToContent(string $content): string
+    final public function appendExamplesToContent(?string $content = ''): ?string
     {
         if (empty($this->code_examples)) {
             return $content;
