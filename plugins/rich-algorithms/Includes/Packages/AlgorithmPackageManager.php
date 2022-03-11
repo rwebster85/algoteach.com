@@ -15,35 +15,30 @@ namespace RichWeb\Algorithms\Packages;
 
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
-use RichWeb\Algorithms\Packages\AlgorithmPackage;
-use RichWeb\Algorithms\Interfaces\AlgorithmPackageLoaderInterface;
 use RichWeb\Algorithms\Interfaces\AlgorithmPackageManagerInterface;
-use RichWeb\Algorithms\Traits\Formatting\FilePaths;
+use RichWeb\Algorithms\Packages\AlgorithmPackage;
 
 use const DIRECTORY_SEPARATOR;
-use const RichWeb\Algorithms\PATH;
 
+/**
+ * Finds any algorithm packages present and creates an array of those packages, represented as AlgorithmPackage objects.
+ */
 final class AlgorithmPackageManager implements AlgorithmPackageManagerInterface
 {
-    use FilePaths;
-
-    private string $package_folder;
-
-    private AlgorithmPackageLoaderInterface $loader;
-
     /**
      * @var array<string, AlgorithmPackage>
      */
     private array $packages;
 
-    public function __construct()
-    {
-        $this->package_folder = $this->formatSlashes(PATH . '/Algorithms/');
-
+    /**
+     * The folder where algorithm packages are stored.
+     * 
+     * @param string
+     */
+    public function __construct(
+        private string $package_folder
+    ) {
         $this->parsePackages();
-
-        $this->loader = new AlgorithmPackageLoader($this->packages);
-        $this->loader->run();
     }
 
     public function getPackages(): array
@@ -51,16 +46,27 @@ final class AlgorithmPackageManager implements AlgorithmPackageManagerInterface
         return $this->packages;
     }
 
+    /**
+     * Iterates through the package folder to discover available packages, creates a new AlgorithmPackage object for each one and stores them in $packages.
+     * 
+     * @uses AlgorithmPackage
+     * @uses AlgorithmPackageManager::$packages
+     * @uses \RecursiveDirectoryIterator
+     * @uses \RecursiveIteratorIterator
+     * @uses \SplFileInfo
+     * 
+     * @return void
+     */
     private function parsePackages(): void
     {
         $packages = [];
 
-        $folder = new RecursiveDirectoryIterator(
-            $this->package_folder,
-            RecursiveDirectoryIterator::SKIP_DOTS
+        $files = new RecursiveIteratorIterator(
+            new RecursiveDirectoryIterator(
+                $this->package_folder,
+                RecursiveDirectoryIterator::SKIP_DOTS
+            )
         );
-        
-        $files = new RecursiveIteratorIterator($folder);
 
         /** @var \SplFileInfo $file */
         foreach($files as $file) {

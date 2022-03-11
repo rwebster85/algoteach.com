@@ -14,7 +14,7 @@ declare(strict_types=1);
 namespace RichWeb\Algorithms\Admin\MetaBoxes;
 
 use RichWeb\Algorithms\Admin\Abstracts\AbstractMetaBox;
-use RichWeb\Algorithms\Abstracts\AbstractSyntaxHighlighter;
+use RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface;
 use RichWeb\Algorithms\Traits\Formatting;
 
 /**
@@ -28,7 +28,7 @@ final class AlgorithmCodeExamplesMetaBox extends AbstractMetaBox
     private int $post_id;
 
     public function __construct(
-        private AbstractSyntaxHighlighter $syntax
+        private SyntaxHighlighterInterface $syntax
     ) {
         add_action('wp_ajax_richweb_algorithm_code_example_add', [$this, 'ajaxAddNewCodeExample']);
     }

@@ -18,7 +18,9 @@ use RichWeb\Algorithms\Packages\AlgorithmPackage;
 interface AlgorithmPackageManagerInterface
 {
     /**
-     * Returns all the algorithm packages found.
+     * Returns all the algorithm packages found as a key/value pair.
+     * 
+     * Key is the fully qualified package class name, value is the package object.
      * 
      * @return array<string, AlgorithmPackage>
      */
