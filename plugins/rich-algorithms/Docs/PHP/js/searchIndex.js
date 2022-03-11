@@ -336,11 +336,6 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#property_post_id"
         },                {
-            "fqsen": "\\RichWeb\\Algorithms\\Admin\\MetaBoxes\\AlgorithmCodeExamplesMetaBox\u003A\u003A\u0024main_directory",
-            "name": "main_directory",
-            "summary": "",
-            "url": "classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmCodeExamplesMetaBox.html#property_main_directory"
-        },                {
             "fqsen": "\\RichWeb\\Algorithms\\Admin\\MetaBoxes\\AlgorithmCodeExamplesMetaBox\u003A\u003A\u0024syntax",
             "name": "syntax",
             "summary": "",
@@ -371,11 +366,6 @@ Search.appendIndex(
             "summary": "Saves\u0020the\u0020value\u0020for\u0020the\u0020meta\u0020box.",
             "url": "classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmPackageMetaBox.html#method_save"
         },                {
-            "fqsen": "\\RichWeb\\Algorithms\\Admin\\MetaBoxes\\AlgorithmPackageMetaBox\u003A\u003A\u0024main_directory",
-            "name": "main_directory",
-            "summary": "",
-            "url": "classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmPackageMetaBox.html#property_main_directory"
-        },                {
             "fqsen": "\\RichWeb\\Algorithms\\Admin\\MetaBoxes\\AlgorithmPackageMetaBox\u003A\u003A\u0024algorithm_package_manager",
             "name": "algorithm_package_manager",
             "summary": "",
@@ -395,11 +385,6 @@ Search.appendIndex(
             "name": "run",
             "summary": "Runs\u0020the\u0020class\u0020init\u0020functions\u0020not\u0020handled\u0020during\u0020construction.",
             "url": "classes/RichWeb-Algorithms-Admin-MetaBoxes-MetaBoxes.html#method_run"
-        },                {
-            "fqsen": "\\RichWeb\\Algorithms\\Admin\\MetaBoxes\\MetaBoxes\u003A\u003A\u0024main_directory",
-            "name": "main_directory",
-            "summary": "",
-            "url": "classes/RichWeb-Algorithms-Admin-MetaBoxes-MetaBoxes.html#property_main_directory"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Admin\\MetaBoxes\\MetaBoxes\u003A\u003A\u0024algorithm_package_manager",
             "name": "algorithm_package_manager",
@@ -1100,16 +1085,6 @@ Search.appendIndex(
             "name": "packages",
             "summary": "",
             "url": "classes/RichWeb-Algorithms-Packages-AlgorithmPackageManager.html#property_packages"
-        },                {
-            "fqsen": "\\RichWeb\\Algorithms\\Packages\\AlgorithmPackageManager\u003A\u003A\u0024main_directory",
-            "name": "main_directory",
-            "summary": "",
-            "url": "classes/RichWeb-Algorithms-Packages-AlgorithmPackageManager.html#property_main_directory"
-        },                {
-            "fqsen": "\\RichWeb\\Algorithms\\Packages\\AlgorithmPackageManager\u003A\u003A\u0024syntax",
-            "name": "syntax",
-            "summary": "",
-            "url": "classes/RichWeb-Algorithms-Packages-AlgorithmPackageManager.html#property_syntax"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Plugin",
             "name": "Plugin",

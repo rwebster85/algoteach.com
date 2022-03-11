@@ -20,7 +20,6 @@ use RichWeb\Algorithms\Interfaces\HasRunnerInterface;
 final class MetaBoxes implements HasRunnerInterface
 {
     public function __construct(
-        private string $main_directory,
         private AlgorithmPackageManager $algorithm_package_manager,
         private AbstractSyntaxHighlighter $syntax
     ) {}
@@ -30,7 +29,7 @@ final class MetaBoxes implements HasRunnerInterface
      */
     public function run(): void
     {
-        (new AlgorithmPackageMetaBox($this->main_directory, $this->algorithm_package_manager))->build();
-        (new AlgorithmCodeExamplesMetaBox($this->main_directory, $this->syntax))->build();
+        (new AlgorithmPackageMetaBox($this->algorithm_package_manager))->build();
+        (new AlgorithmCodeExamplesMetaBox($this->syntax))->build();
     }
 }
