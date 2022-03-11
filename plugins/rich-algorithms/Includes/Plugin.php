@@ -14,6 +14,8 @@ declare(strict_types=1);
 namespace RichWeb\Algorithms;
 
 use RichWeb\Algorithms\Abstracts\AbstractSingletonPlugin;
+use RichWeb\Algorithms\Admin\AlgorithmPostType;
+use RichWeb\Algorithms\Admin\MetaBoxes\MetaBoxes;
 use RichWeb\Algorithms\CodeExamples\CodeExamplesLoader;
 use RichWeb\Algorithms\Interfaces\AlgorithmPackageManagerInterface;
 use RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface;
@@ -22,10 +24,6 @@ use RichWeb\Algorithms\Packages\AlgorithmPackageManager;
 use RichWeb\Algorithms\PrismSyntaxHighlighter;
 use RichWeb\Algorithms\Setup\Setup;
 use RichWeb\Algorithms\Traits\Formatting\FilePaths;
-use RichWeb\Algorithms\Admin\{
-    AlgorithmPostType,
-    MetaBoxes\MetaBoxes
-};
 
 use const RichWeb\Algorithms\{
     PLUGIN_FILE,
