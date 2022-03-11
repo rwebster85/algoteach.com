@@ -25,16 +25,16 @@ final class AlgorithmPackageMetaBox extends AbstractMetaBox
     use Strings;
 
     /**
-     * The available algorithm packages.
+     * A key/value pair of AlgorithmPackage objects. Key is the fully qualified package class name, value is the package object.
      * 
-     * @var AlgorithmPackageInterface[]
+     * @var array<string, AlgorithmPackageInterface>
      */
     private array $packages;
 
     /**
      * Accepts an variadic array of AlgorithmPackageInterface objects.
      * 
-     * @param AlgorithmPackageInterface[] $packages
+     * @param array<string, AlgorithmPackageInterface> $packages
      * 
      * @return void
      */

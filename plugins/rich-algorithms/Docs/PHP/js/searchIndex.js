@@ -368,7 +368,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Admin\\MetaBoxes\\AlgorithmPackageMetaBox\u003A\u003A\u0024packages",
             "name": "packages",
-            "summary": "The\u0020available\u0020algorithm\u0020packages.",
+            "summary": "A\u0020key\/value\u0020pair\u0020of\u0020AlgorithmPackage\u0020objects.\u0020Key\u0020is\u0020the\u0020fully\u0020qualified\u0020package\u0020class\u0020name,\u0020value\u0020is\u0020the\u0020package\u0020object.",
             "url": "classes/RichWeb-Algorithms-Admin-MetaBoxes-AlgorithmPackageMetaBox.html#property_packages"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Admin\\MetaBoxes\\MetaBoxes",
@@ -1068,7 +1068,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Packages\\AlgorithmPackageManager\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "",
+            "summary": "Creates\u0020a\u0020new\u0020package\u0020manager.",
             "url": "classes/RichWeb-Algorithms-Packages-AlgorithmPackageManager.html#method___construct"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Packages\\AlgorithmPackageManager\u003A\u003AgetPackages\u0028\u0029",
@@ -1083,7 +1083,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Packages\\AlgorithmPackageManager\u003A\u003A\u0024packages",
             "name": "packages",
-            "summary": "",
+            "summary": "A\u0020key\/value\u0020pair\u0020of\u0020AlgorithmPackage\u0020objects.\u0020Key\u0020is\u0020the\u0020fully\u0020qualified\u0020package\u0020class\u0020name,\u0020value\u0020is\u0020the\u0020package\u0020object.",
             "url": "classes/RichWeb-Algorithms-Packages-AlgorithmPackageManager.html#property_packages"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Packages\\AlgorithmPackageManager\u003A\u003A\u0024package_folder",

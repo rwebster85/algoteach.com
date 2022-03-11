@@ -26,12 +26,16 @@ use const DIRECTORY_SEPARATOR;
 final class AlgorithmPackageManager implements AlgorithmPackageManagerInterface
 {
     /**
+     * A key/value pair of AlgorithmPackage objects. Key is the fully qualified package class name, value is the package object.
+     * 
      * @var array<string, AlgorithmPackage>
      */
     private array $packages;
 
     /**
-     * @param string The folder where algorithm packages are stored.
+     * Creates a new package manager.
+     * 
+     * @param string $package_folder The folder where algorithm packages are stored.
      */
     public function __construct(
         private string $package_folder
