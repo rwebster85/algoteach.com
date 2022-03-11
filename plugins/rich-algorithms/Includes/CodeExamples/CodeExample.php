@@ -55,7 +55,7 @@ class CodeExample implements CodeExampleInterface, Stringable
 
     public function getInfoAutoP(): string
     {
-        return wpautop($this->info);
+        return $this->autoP($this->info);
     }
 
     public function getCode(): string

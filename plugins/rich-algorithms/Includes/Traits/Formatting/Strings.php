@@ -84,4 +84,14 @@ trait Strings
     {
         return wp_kses_post($var);
     }
+
+    /**
+     * Returns the string formatted with <p> tags, parsed from newlines.
+     * 
+     * @return string
+     */
+    protected function autoP(string $var = ''): string
+    {
+        return wpautop($var);
+    }
 }
