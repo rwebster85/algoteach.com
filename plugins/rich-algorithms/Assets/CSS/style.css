@@ -30,14 +30,6 @@ code[class*=language-]  {
     padding-top: 20px;
 }
 
-.rich-algo-frontend-code-example-info {
-    padding-bottom: 25px;
-}
-
-.rich-algo-frontend-code-example-info p:last-child {
-    margin-bottom: 0;
-}
-
 .rich-algo-frontend-code-wrap {
     position: relative;
 }
