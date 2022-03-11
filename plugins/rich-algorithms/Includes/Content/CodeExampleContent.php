@@ -18,11 +18,13 @@ use RichWeb\Algorithms\CodeExamples\CodeExample;
 <div class="rich-algo-frontend-code-example">
     <div class="rich-algo-frontend-code-example-info">
         <?php
-            $example_title    = '';
-            $example_title   .= $this->getLanguageFormatted();
-            $language_version = ($this->getLanguageVersion() ?? '');
+            $formatted_language = $this->getLanguageFormatted();
+            $pre_language       = $formatted_language;
+            $example_title      = $formatted_language;
+            $language_version   = ($this->getLanguageVersion() ?? '');
             if (!empty($language_version)) {
                 $example_title .= ' ' . $language_version;
+                $pre_language  .= ' ' . $language_version;
             }
             $example_title .= ' Implementation';
         ?>
@@ -30,7 +32,7 @@ use RichWeb\Algorithms\CodeExamples\CodeExample;
         <?php echo $this->ksesPost($this->getInfoAutoP()); ?>
     </div>
     <div class="rich-algo-frontend-code-wrap">
-        <span class="rich-algo-frontend-code-language"><?php echo $this->escHtml(strtoupper($this->getLanguageFormatted())); ?></span>
+        <span class="rich-algo-frontend-code-language"><?php echo $this->escHtml(strtoupper($pre_language)); ?></span>
         <pre class="line-numbers"><code class="language-<?php echo $this->escAttr($this->getLanguage()); ?>"><?php echo $this->escHtml($this->getCode()); ?></code></pre>
         <textarea class="rich-algo-frontend-code-example-textarea"><?php echo $this->escTextarea($this->getCode()); ?></textarea>
         <p class="rich-algo-frontend-code-toolbar"><button class="button button-primary rich-algo-copy"><i class="fas"></i> Copy</button></p>
