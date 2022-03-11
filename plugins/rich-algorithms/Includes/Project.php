@@ -15,7 +15,7 @@ namespace RichWeb\Algorithms;
 
 use RichWeb\Algorithms\Interfaces\ProjectInterface;
 
-use const DIRECTORY_SEPARATOR;
+use const DIRECTORY_SEPARATOR as SEP;
 
 final class Project implements ProjectInterface
 {
@@ -34,8 +34,6 @@ final class Project implements ProjectInterface
     private string $version = '';
 
     private array $requirements = [];
-
-    private string $sep = DIRECTORY_SEPARATOR;
 
     public function __construct(string $config_path, string $main_directory)
     {
@@ -102,7 +100,7 @@ final class Project implements ProjectInterface
         }
 
         foreach ($autoload as $namespace => $path) {
-            $this->autoload_sources[$namespace] = $this->main_directory . $this->sep . $path;
+            $this->autoload_sources[$namespace] = $this->main_directory . SEP . $path;
         }
     }
 
@@ -118,7 +116,7 @@ final class Project implements ProjectInterface
         }
 
         foreach ($files as $file) {
-            $this->file_sources[] = $this->formatSlashes($this->main_directory . $this->sep . $file);
+            $this->file_sources[] = $this->formatSlashes($this->main_directory . SEP . $file);
         }
     }
 
@@ -141,6 +139,6 @@ final class Project implements ProjectInterface
      */
     private function formatSlashes(string $path): string
     {
-        return(str_replace(["\\", "/"], $this->sep, $path));
+        return(str_replace(["\\", "/"], SEP, $path));
     }
 }

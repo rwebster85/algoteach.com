@@ -19,6 +19,8 @@ namespace RichWeb\Algorithms\Loaders;
 
 use RichWeb\Algorithms\Interfaces\AutoloaderInterface;
 
+use const DIRECTORY_SEPARATOR as SEP;
+
 /**
  * An example of a general-purpose implementation that includes the optional
  * functionality of allowing multiple base directories for a single namespace
@@ -114,7 +116,7 @@ class Autoloader implements AutoloaderInterface
         $prefix = trim($prefix, '\\') . '\\';
 
         // normalize the base directory with a trailing separator
-        $base_dir = rtrim($base_dir, DIRECTORY_SEPARATOR) . '/';
+        $base_dir = rtrim($base_dir, SEP) . SEP;
 
         // initialize the namespace prefix array
         if (isset($this->prefixes[$prefix]) === false) {

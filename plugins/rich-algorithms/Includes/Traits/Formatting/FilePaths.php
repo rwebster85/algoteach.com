@@ -13,6 +13,8 @@ declare(strict_types=1);
 
 namespace RichWeb\Algorithms\Traits\Formatting;
 
+use const DIRECTORY_SEPARATOR as SEP;
+
 trait FilePaths
 {
     /**
@@ -26,6 +28,6 @@ trait FilePaths
      */
     protected function formatSlashes(string $path): string
     {
-        return (str_replace(["\\", "/"], DIRECTORY_SEPARATOR, $path));
+        return (str_replace(["\\", "/"], SEP, $path));
     }
 }

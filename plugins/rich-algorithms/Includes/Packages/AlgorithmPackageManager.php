@@ -18,7 +18,7 @@ use RecursiveIteratorIterator;
 use RichWeb\Algorithms\Interfaces\AlgorithmPackageManagerInterface;
 use RichWeb\Algorithms\Packages\AlgorithmPackage;
 
-use const DIRECTORY_SEPARATOR;
+use const DIRECTORY_SEPARATOR as SEP;
 
 /**
  * Finds any algorithm packages present and creates an array of those packages, represented as AlgorithmPackage objects.
@@ -74,7 +74,7 @@ final class AlgorithmPackageManager implements AlgorithmPackageManagerInterface
         foreach($files as $file) {
             if ($file->getFilename() == 'algorithm.json') {
                 $algorithm = new AlgorithmPackage(
-                    $file->getPath() . DIRECTORY_SEPARATOR . $file->getFileName()
+                    $file->getPath() . SEP . $file->getFileName()
                 );
                 $name = $algorithm->getQualifiedClassName();
                 $packages[$name] = $algorithm;
