@@ -27,7 +27,10 @@ abstract class AbstractPostType implements PostTypeInterface, HasRunnerInterface
     }
 
     /**
-     * Called by `run()` and is used to set up all the actions for the post type.
+     * The action hooks to set up on initialisation.
+     * 
+     * @uses \add_action() WP Function
+     * @see https://developer.wordpress.org/reference/hooks/init/ WP action
      * 
      * @return void
      */

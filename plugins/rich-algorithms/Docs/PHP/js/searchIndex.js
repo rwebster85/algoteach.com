@@ -198,7 +198,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Admin\\Abstracts\\AbstractPostType\u003A\u003Aactions\u0028\u0029",
             "name": "actions",
-            "summary": "Called\u0020by\u0020\u0060run\u0028\u0029\u0060\u0020and\u0020is\u0020used\u0020to\u0020set\u0020up\u0020all\u0020the\u0020actions\u0020for\u0020the\u0020post\u0020type.",
+            "summary": "The\u0020action\u0020hooks\u0020to\u0020set\u0020up\u0020on\u0020initialisation.",
             "url": "classes/RichWeb-Algorithms-Admin-Abstracts-AbstractPostType.html#method_actions"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Admin\\Abstracts\\AbstractPostType\u003A\u003Aregister\u0028\u0029",
@@ -218,7 +218,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Admin\\AlgorithmPostType\u003A\u003Aactions\u0028\u0029",
             "name": "actions",
-            "summary": "Called\u0020by\u0020\u0060run\u0028\u0029\u0060\u0020and\u0020is\u0020used\u0020to\u0020set\u0020up\u0020all\u0020the\u0020actions\u0020for\u0020the\u0020post\u0020type.",
+            "summary": "The\u0020action\u0020hooks\u0020to\u0020set\u0020up\u0020on\u0020initialisation.",
             "url": "classes/RichWeb-Algorithms-Admin-AlgorithmPostType.html#method_actions"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Admin\\AlgorithmPostType\u003A\u003AarchivePageTitle\u0028\u0029",
@@ -475,6 +475,11 @@ Search.appendIndex(
             "name": "run",
             "summary": "Runs\u0020the\u0020class\u0020init\u0020functions\u0020not\u0020handled\u0020during\u0020construction.",
             "url": "classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#method_run"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\CodeExamples\\CodeExamplesLoader\u003A\u003Aactions\u0028\u0029",
+            "name": "actions",
+            "summary": "The\u0020action\u0020hooks\u0020to\u0020set\u0020up\u0020on\u0020initialisation.",
+            "url": "classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#method_actions"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\CodeExamples\\CodeExamplesLoader\u003A\u003AloadCodeExamplesForPost\u0028\u0029",
             "name": "loadCodeExamplesForPost",
@@ -1025,6 +1030,11 @@ Search.appendIndex(
             "name": "run",
             "summary": "Runs\u0020the\u0020class\u0020init\u0020functions\u0020not\u0020handled\u0020during\u0020construction.",
             "url": "classes/RichWeb-Algorithms-Packages-AlgorithmPackageLoader.html#method_run"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Packages\\AlgorithmPackageLoader\u003A\u003Aactions\u0028\u0029",
+            "name": "actions",
+            "summary": "The\u0020action\u0020hooks\u0020to\u0020set\u0020up\u0020on\u0020initialisation.",
+            "url": "classes/RichWeb-Algorithms-Packages-AlgorithmPackageLoader.html#method_actions"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Packages\\AlgorithmPackageLoader\u003A\u003AloadPackageForPost\u0028\u0029",
             "name": "loadPackageForPost",

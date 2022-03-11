@@ -38,7 +38,7 @@ abstract class AbstractAlgorithm implements AlgorithmInterface, HasRunnerInterfa
         $this->load();
     }
 
-    private function actions(): void {}
+    protected function actions(): void {}
 
     final public function loadScripts(): void
     {
