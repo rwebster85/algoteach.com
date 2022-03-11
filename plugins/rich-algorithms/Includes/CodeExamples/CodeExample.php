@@ -14,7 +14,6 @@ declare(strict_types=1);
 namespace RichWeb\Algorithms\CodeExamples;
 
 use RichWeb\Algorithms\Interfaces\CodeExampleInterface;
-use RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface;
 use RichWeb\Algorithms\Loaders\ContentLoader;
 use RichWeb\Algorithms\Traits\Formatting;
 use Stringable;
@@ -32,7 +31,7 @@ class CodeExample implements CodeExampleInterface, Stringable
 
     public function __construct(
         private array $example,
-        private SyntaxHighlighterInterface $syntax
+        private array $code_languages
     ) {
         $this->code = ($example['code'] ?? '');
         $this->lang = ($example['lang'] ?? '');
@@ -46,9 +45,7 @@ class CodeExample implements CodeExampleInterface, Stringable
 
     public function getLanguageFormatted(): string
     {
-        $langs = $this->syntax->languages();
-
-        return ($langs[$this->lang] ?? '');
+        return ($this->code_languages[$this->lang] ?? '');
     }
 
     public function getInfo(): string

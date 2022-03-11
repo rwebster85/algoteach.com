@@ -107,10 +107,12 @@ final class Plugin extends AbstractSingletonPlugin
         $package_loader = new AlgorithmPackageLoader($packages);
         $package_loader->run();
 
-        (new CodeExamplesLoader($this->syntax))->run();
-
         (new AlgorithmPostType())->run();
-        (new MetaBoxes($packages, $this->syntax))->run();
+
+        $coding_languages = $this->syntax->languages();
+        
+        (new CodeExamplesLoader($coding_languages))->run();
+        (new MetaBoxes($packages, $coding_languages))->run();
     }
 
     private function loadModules(): void
