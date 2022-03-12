@@ -97,6 +97,8 @@ final class Plugin extends AbstractSingletonPlugin
      */
     public function initSetup(): void
     {
+        $event_subscriber = new EventSubscriber();
+
         $this->syntax = new PrismSyntaxHighlighter();
 
         $package_folder = $this->formatSlashes(PATH . '/Algorithms/');
@@ -111,7 +113,7 @@ final class Plugin extends AbstractSingletonPlugin
 
         $coding_languages = $this->syntax->languages();
         
-        (new CodeExamplesLoader($coding_languages, new EventSubscriber()))->subscribeToEvents();
+        (new CodeExamplesLoader($coding_languages))->subscribeToEvents($event_subscriber);
         (new MetaBoxes($packages, $coding_languages))->run();
     }
 

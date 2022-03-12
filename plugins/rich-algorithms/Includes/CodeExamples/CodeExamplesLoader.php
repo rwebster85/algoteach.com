@@ -29,14 +29,32 @@ final class CodeExamplesLoader implements CodeExamplesLoaderInterface, Subscribe
     private array $code_examples = [];
 
     public function __construct(
-        private array $code_languages,
-        private EventSubscriberInterface $subscriber
+        private array $code_languages
     ) {}
 
-    public function subscribeToEvents(): void
+    final public function subscribeToEvents(EventSubscriberInterface $subscriber): void
     {
-        $this->subscriber->subscribe('template_redirect', $this, 'loadCodeExamplesForPost');
-        $this->subscriber->subscribe('the_content', $this, 'appendExamplesToContent');
+        $subscriber->subscribe('template_redirect', $this, 'canLoadCodeExamplesForPost');
+        $subscriber->subscribe('the_content', $this, 'canAppendExamplesToContent');
+    }
+
+    /**
+     * Verifies the post is applicable for code examples.
+     * 
+     * Hooked from 'template_redirect' WP Action
+     * 
+     * @see https://developer.wordpress.org/reference/hooks/template_redirect/ WP Action
+     * 
+     * @return void
+     */
+    final public function canLoadCodeExamplesForPost(): void
+    {
+        if ($this->isSingleAlgorithm()) {
+            $post_id = absint(get_the_ID() ?? 0);
+            if ($post_id > 0) {
+                $this->loadCodeExamplesForPost($post_id);
+            }
+        }
     }
 
     /**
@@ -46,18 +64,15 @@ final class CodeExamplesLoader implements CodeExamplesLoaderInterface, Subscribe
      * 
      * @return void
      */
-    public function loadCodeExamplesForPost(): void
+    final public function loadCodeExamplesForPost(int $post_id): void
     {
-        if ($this->isSingleAlgorithm()) {
-            $post_id = absint(get_the_ID() ?? 0);
-            $code_examples = (array) get_post_meta($post_id, 'richweb_algorithm_code_examples', true);
-            if (!empty($code_examples)) {
-                $this->buildCodeExamples($code_examples);
-            }
+        $code_examples = (array) get_post_meta($post_id, 'richweb_algorithm_code_examples', true);
+        if (!empty($code_examples)) {
+            $this->buildCodeExamples($code_examples);
         }
     }
 
-    private function buildCodeExamples(array $code_examples): void
+    final public function buildCodeExamples(array $code_examples): void
     {
         foreach ($code_examples as $example) {
             if (!is_array($example) || empty($example)) {
@@ -67,12 +82,17 @@ final class CodeExamplesLoader implements CodeExamplesLoaderInterface, Subscribe
         }
     }
 
-    final public function appendExamplesToContent(?string $content = ''): ?string
+    final public function canAppendExamplesToContent(?string $content = ''): ?string
     {
-        if (empty($this->code_examples)) {
+        if (!$this->isSingleAlgorithm() || empty($this->code_examples)) {
             return $content;
         }
 
+        return $this->appendExamplesToContent($content);
+    }
+
+    final public function appendExamplesToContent(?string $content = ''): string
+    {
         ob_start();
 
         echo '<div class="rich-algo-frontend-examples-wrap">';
