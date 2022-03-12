@@ -18,7 +18,7 @@ use RichWeb\Algorithms\Interfaces\EventSubscriberInterface;
 interface SubscribesToEventsInterface
 {
     /**
-     * Method containing the events an object will subscribe to.
+     * Method containing the events this object will subscribe to.
      * 
      * @return void
      */

@@ -39,9 +39,14 @@ final class CodeExamplesLoader implements CodeExamplesLoaderInterface, Subscribe
     }
 
     /**
-     * Verifies the post is applicable for code examples.
+     * Verifies the post is applicable for appending code examples to content.
      * 
      * Hooked from 'template_redirect' WP Action
+     * 
+     * @uses AlgorithmChecker::isSingleAlgorithm()
+     * @uses CodeExamplesLoader::canLoadCodeExamplesForPost()
+     * @uses \absint() WP Function
+     * @uses \get_the_ID() WP Function
      * 
      * @see https://developer.wordpress.org/reference/hooks/template_redirect/ WP Action
      * 
@@ -58,9 +63,12 @@ final class CodeExamplesLoader implements CodeExamplesLoaderInterface, Subscribe
     }
 
     /**
-     * Loads the package for the current global post, hooked from 'template_redirect' WP Action
+     * Obtains the code examples from the post meta and builds the class code examples. Called from canLoadCodeExamplesForPost()
      * 
-     * @see https://developer.wordpress.org/reference/hooks/template_redirect/ WP Action
+     * @param $post_id The post Id to get the code examples for
+     * 
+     * @uses CodeExamplesLoader::buildCodeExamples()
+     * @uses \get_post_meta() WP Function
      * 
      * @return void
      */
