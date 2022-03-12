@@ -19,6 +19,6 @@ class Observer implements ObserverInterface
 {
     final function register(string $event, object $caller, string $callback, int $priority = 10, int $args = 1): void
     {
-        add_action($event, [$caller, $callback], $priority, $args);
+        add_filter($event, [$caller, $callback], $priority, $args);
     }
 }
