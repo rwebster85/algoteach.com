@@ -111,7 +111,7 @@ final class Plugin extends AbstractSingletonPlugin
 
         $coding_languages = $this->syntax->languages();
         
-        (new CodeExamplesLoader($coding_languages, new Observer()))->run();
+        (new CodeExamplesLoader($coding_languages, new EventSubscriber()))->subscribeToEvents();
         (new MetaBoxes($packages, $coding_languages))->run();
     }
 

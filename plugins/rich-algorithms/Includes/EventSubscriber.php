@@ -13,11 +13,11 @@ declare(strict_types=1);
 
 namespace RichWeb\Algorithms;
 
-use RichWeb\Algorithms\Interfaces\ObserverInterface;
+use RichWeb\Algorithms\Interfaces\EventSubscriberInterface;
 
-class Observer implements ObserverInterface
+class EventSubscriber implements EventSubscriberInterface
 {
-    final function register(string $event, object $caller, string $callback, int $priority = 10, int $args = 1): void
+    final function subscribe(string $event, object $caller, string $callback, int $priority = 10, int $args = 1): void
     {
         add_filter($event, [$caller, $callback], $priority, $args);
     }

@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace RichWeb\Algorithms\Interfaces;
 
-interface ObserverInterface
+interface EventSubscriberInterface
 {
     /**
      * Registers an object for event callback.
@@ -26,5 +26,5 @@ interface ObserverInterface
      * 
      * @return void
      */
-    public function register(string $event, object $observer, string $callback, int $priority = 10, int $args = 1): void;
+    public function subscribe(string $event, object $observer, string $callback, int $priority = 10, int $args = 1): void;
 }

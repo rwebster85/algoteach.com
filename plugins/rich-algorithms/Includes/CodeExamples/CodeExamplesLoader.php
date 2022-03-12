@@ -15,14 +15,14 @@ namespace RichWeb\Algorithms\CodeExamples;
 
 use RichWeb\Algorithms\CodeExamples\CodeExample;
 use RichWeb\Algorithms\Interfaces\CodeExamplesLoaderInterface;
-use RichWeb\Algorithms\Interfaces\HasRunnerInterface;
-use RichWeb\Algorithms\Interfaces\ObserverInterface;
+use RichWeb\Algorithms\Interfaces\SubscribesToEventsInterface;
+use RichWeb\Algorithms\Interfaces\EventSubscriberInterface;
 use RichWeb\Algorithms\Traits\Posts\AlgorithmChecker;
 
 /**
  * Responsbile for loading code examples on the frontend if the post has any.
  */
-final class CodeExamplesLoader implements CodeExamplesLoaderInterface, HasRunnerInterface
+final class CodeExamplesLoader implements CodeExamplesLoaderInterface, SubscribesToEventsInterface
 {
     use AlgorithmChecker;
     
@@ -30,13 +30,13 @@ final class CodeExamplesLoader implements CodeExamplesLoaderInterface, HasRunner
 
     public function __construct(
         private array $code_languages,
-        private ObserverInterface $observer
+        private EventSubscriberInterface $subscriber
     ) {}
 
-    public function run(): void
+    public function subscribeToEvents(): void
     {
-        $this->observer->register('template_redirect', $this, 'loadCodeExamplesForPost');
-        $this->observer->register('the_content', $this, 'appendExamplesToContent');
+        $this->subscriber->subscribe('template_redirect', $this, 'loadCodeExamplesForPost');
+        $this->subscriber->subscribe('the_content', $this, 'appendExamplesToContent');
     }
 
     /**
