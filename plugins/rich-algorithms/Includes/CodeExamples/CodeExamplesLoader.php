@@ -16,7 +16,7 @@ namespace RichWeb\Algorithms\CodeExamples;
 use RichWeb\Algorithms\CodeExamples\CodeExample;
 use RichWeb\Algorithms\Interfaces\CodeExamplesLoaderInterface;
 use RichWeb\Algorithms\Interfaces\HasRunnerInterface;
-use RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface;
+use RichWeb\Algorithms\Interfaces\ObserverInterface;
 use RichWeb\Algorithms\Traits\Posts\AlgorithmChecker;
 
 /**
@@ -29,26 +29,14 @@ final class CodeExamplesLoader implements CodeExamplesLoaderInterface, HasRunner
     private array $code_examples = [];
 
     public function __construct(
-        private array $code_languages
+        private array $code_languages,
+        private ObserverInterface $observer
     ) {}
 
     public function run(): void
     {
-        $this->actions();
-    }
-
-    /**
-     * The action hooks to set up on initialisation.
-     * 
-     * @uses \add_action() WP Function
-     * @see https://developer.wordpress.org/reference/hooks/init/ WP action
-     * 
-     * @return void
-     */
-    private function actions(): void
-    {
-        add_action('template_redirect', [$this, 'loadCodeExamplesForPost']);
-        add_filter('the_content', [$this, 'appendExamplesToContent'], 10, 1);
+        $this->observer->register('template_redirect', $this, 'loadCodeExamplesForPost');
+        $this->observer->register('the_content', $this, 'appendExamplesToContent');
     }
 
     /**
