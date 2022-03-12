@@ -22,5 +22,5 @@ interface SubscribesToEventsInterface
      * 
      * @return void
      */
-    public function subscribeToEvents(): void;
+    public function subscribeToEvents(EventSubscriberInterface $subscriber): void;
 }
