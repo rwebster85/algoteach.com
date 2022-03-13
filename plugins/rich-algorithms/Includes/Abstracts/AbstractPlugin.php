@@ -13,10 +13,13 @@ declare(strict_types=1);
 
 namespace RichWeb\Algorithms\Abstracts;
 
+use RichWeb\Algorithms\Interfaces\EventCreatorInterface;
+use RichWeb\Algorithms\Interfaces\EventSubscriberInterface;
 use RichWeb\Algorithms\Interfaces\PluginInterface;
+use RichWeb\Algorithms\Interfaces\SubscribesToEventsInterface;
 use RichWeb\Algorithms\Project;
 
-abstract class AbstractPlugin implements PluginInterface
+abstract class AbstractPlugin implements PluginInterface, SubscribesToEventsInterface
 {
     protected Project $project;
 
@@ -25,6 +28,10 @@ abstract class AbstractPlugin implements PluginInterface
     protected string $version = '';
 
     protected string $main_directory;
+
+    protected EventSubscriberInterface $event_subscriber;
+
+    protected EventCreatorInterface $event_creator;
 
     /**
      * The array of requirements for this plugin.

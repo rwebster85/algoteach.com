@@ -27,7 +27,6 @@ use RichWeb\Algorithms\Packages\AlgorithmPackageManager;
 use RichWeb\Algorithms\PrismSyntaxHighlighter;
 use RichWeb\Algorithms\Setup\Setup;
 use RichWeb\Algorithms\Traits\Formatting\FilePaths;
-use RichWeb\Algorithms\Interfaces\SubscribesToEventsInterface;
 
 use const RichWeb\Algorithms\{
     PLUGIN_FILE,
@@ -35,7 +34,7 @@ use const RichWeb\Algorithms\{
     TEXT_DOMAIN
 };
 
-final class Plugin extends AbstractSingletonPlugin implements SubscribesToEventsInterface
+final class Plugin extends AbstractSingletonPlugin
 {
     use FilePaths;
 
@@ -45,12 +44,14 @@ final class Plugin extends AbstractSingletonPlugin implements SubscribesToEvents
 
     protected function __construct(Project $project)
     {
-        $this->project        = $project;
-        $this->name           = $project->getName();
-        $this->version        = $project->getVersion();
-        $this->requirements   = $project->getRequirements();
-        $this->main_directory = $project->getMainDirectory();
-        $this->text_domain    = TEXT_DOMAIN;
+        $this->project          = $project;
+        $this->name             = $project->getName();
+        $this->version          = $project->getVersion();
+        $this->requirements     = $project->getRequirements();
+        $this->main_directory   = $project->getMainDirectory();
+        $this->text_domain      = TEXT_DOMAIN;
+        $this->event_creator    = new EventCreator();
+        $this->event_subscriber = new EventSubscriber();
     }
 
     protected function build(): void
@@ -64,12 +65,8 @@ final class Plugin extends AbstractSingletonPlugin implements SubscribesToEvents
      */
     private function initHooks(): void
     {
-        $event_subscriber = new EventSubscriber();
-        $event_creator = new EventCreator();
-
-        $this->subscribeToEvents($event_subscriber);
-
-        $event_creator->create(__CLASS__ . '\InitHooksComplete');
+        $this->subscribeToEvents($this->event_subscriber);
+        $this->event_creator->create(__CLASS__ . '\InitHooksComplete');
     }
 
     final public function subscribeToEvents(EventSubscriberInterface $subscriber): void
@@ -112,8 +109,6 @@ final class Plugin extends AbstractSingletonPlugin implements SubscribesToEvents
      */
     public function initSetup(): void
     {
-        $event_subscriber = new EventSubscriber();
-
         $this->syntax = new PrismSyntaxHighlighter();
 
         $package_folder = $this->formatSlashes(PATH . '/Algorithms/');
@@ -128,7 +123,7 @@ final class Plugin extends AbstractSingletonPlugin implements SubscribesToEvents
 
         $coding_languages = $this->syntax->languages();
         
-        (new CodeExamplesLoader($coding_languages))->subscribeToEvents($event_subscriber);
+        (new CodeExamplesLoader($coding_languages))->subscribeToEvents($this->event_subscriber);
         (new MetaBoxes($packages, $coding_languages))->run();
     }
 
