@@ -80,14 +80,12 @@ final class Plugin extends AbstractSingletonPlugin
 
     public function activated(): void
     {
-        $event_creator = new EventCreator();
-        $event_creator->create(__CLASS__ . '\Activated');
+        $this->event_creator->create(__CLASS__ . '\Activated');
     }
 
     public function deactivated(): void
     {
-        $event_creator = new EventCreator();
-        $event_creator->create(__CLASS__ . '\Deactivated');
+        $this->event_creator->create(__CLASS__ . '\Deactivated');
     }
 
     /**
@@ -123,13 +121,13 @@ final class Plugin extends AbstractSingletonPlugin
 
         $coding_languages = $this->syntax->languages();
         
-        (new CodeExamplesLoader($coding_languages))->subscribeToEvents($this->event_subscriber);
+        (new CodeExamplesLoader($coding_languages))->subscribeToEvents(new EventSubscriber());
         (new MetaBoxes($packages, $coding_languages))->run();
     }
 
     private function loadModules(): void
     {
-        do_action('rich_algo_loaded_modules');
+        $this->event_creator->create(__CLASS__ . '\ModulesLoaded');
     }
 
     public function syntaxHighlighter(): SyntaxHighlighterInterface
