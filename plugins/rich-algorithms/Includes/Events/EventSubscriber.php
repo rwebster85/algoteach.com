@@ -15,6 +15,8 @@ namespace RichWeb\Algorithms\Events;
 
 use RichWeb\Algorithms\Interfaces\EventSubscriberInterface;
 
+use function add_filter;
+
 class EventSubscriber implements EventSubscriberInterface
 {
     final function subscribe(string $event, object $caller, string $callback, int $priority = 10, int $args = 1): void
