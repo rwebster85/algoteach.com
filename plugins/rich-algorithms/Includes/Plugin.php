@@ -17,6 +17,7 @@ use RichWeb\Algorithms\Abstracts\AbstractSingletonPlugin;
 use RichWeb\Algorithms\Admin\AlgorithmPostType;
 use RichWeb\Algorithms\Admin\MetaBoxes\MetaBoxes;
 use RichWeb\Algorithms\CodeExamples\CodeExamplesLoader;
+use RichWeb\Algorithms\Events\EventSubscriber;
 use RichWeb\Algorithms\Interfaces\AlgorithmPackageManagerInterface;
 use RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface;
 use RichWeb\Algorithms\Packages\AlgorithmPackageLoader;
