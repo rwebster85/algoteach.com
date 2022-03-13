@@ -20,7 +20,7 @@ interface EventSubscriberInterface
      * 
      * @param string $event    The event name to subscribe to.
      * @param object $observer The observer object that will receive the event.
-     * @param string $callback The callback method on the $caller object to be called by the event.
+     * @param string $callback The callback method on the $observer object to be called by the event.
      * @param int    $priority The priority to register for.
      * @param int    $args     The number of arguments to accept in the callback method.
      * 
