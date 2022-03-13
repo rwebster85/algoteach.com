@@ -17,14 +17,17 @@ use RichWeb\Algorithms\Abstracts\AbstractSingletonPlugin;
 use RichWeb\Algorithms\Admin\AlgorithmPostType;
 use RichWeb\Algorithms\Admin\MetaBoxes\MetaBoxes;
 use RichWeb\Algorithms\CodeExamples\CodeExamplesLoader;
+use RichWeb\Algorithms\Events\EventCreator;
 use RichWeb\Algorithms\Events\EventSubscriber;
 use RichWeb\Algorithms\Interfaces\AlgorithmPackageManagerInterface;
+use RichWeb\Algorithms\Interfaces\EventSubscriberInterface;
 use RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface;
 use RichWeb\Algorithms\Packages\AlgorithmPackageLoader;
 use RichWeb\Algorithms\Packages\AlgorithmPackageManager;
 use RichWeb\Algorithms\PrismSyntaxHighlighter;
 use RichWeb\Algorithms\Setup\Setup;
 use RichWeb\Algorithms\Traits\Formatting\FilePaths;
+use RichWeb\Algorithms\Interfaces\SubscribesToEventsInterface;
 
 use const RichWeb\Algorithms\{
     PLUGIN_FILE,
@@ -32,7 +35,7 @@ use const RichWeb\Algorithms\{
     TEXT_DOMAIN
 };
 
-final class Plugin extends AbstractSingletonPlugin
+final class Plugin extends AbstractSingletonPlugin implements SubscribesToEventsInterface
 {
     use FilePaths;
 
@@ -61,22 +64,33 @@ final class Plugin extends AbstractSingletonPlugin
      */
     private function initHooks(): void
     {
-        register_activation_hook(PLUGIN_FILE, array($this, 'activated'));
-        register_deactivation_hook(PLUGIN_FILE, array($this, 'aeactivated'));
+        $event_subscriber = new EventSubscriber();
+        $event_creator = new EventCreator();
 
-        add_action('plugins_loaded', [$this, 'pluginsLoadedSetup'], -1);
-        add_action('init', [$this, 'initSetup'], 0);
+        $this->subscribeToEvents($event_subscriber);
+
+        $event_creator->create(__CLASS__ . '\InitHooksComplete');
+    }
+
+    final public function subscribeToEvents(EventSubscriberInterface $subscriber): void
+    {
+        $subscriber->subscribe('plugins_loaded', $this, 'pluginsLoadedSetup', -1);
+        $subscriber->subscribe('init', $this, 'initSetup', 0);
+
+        $subscriber->subscribe('activate_' . PLUGIN_FILE, $this, 'activated');
+        $subscriber->subscribe('deactivate_' . PLUGIN_FILE, $this, 'deactivated');
     }
 
     public function activated(): void
     {
-        \flush_rewrite_rules();
-        do_action('rich_algo_activate');
+        $event_creator = new EventCreator();
+        $event_creator->create(__CLASS__ . '\Activated');
     }
 
     public function deactivated(): void
     {
-        do_action('rich_algo_deactivate');
+        $event_creator = new EventCreator();
+        $event_creator->create(__CLASS__ . '\Deactivated');
     }
 
     /**

@@ -16,7 +16,7 @@ namespace RichWeb\Algorithms\Interfaces;
 interface EventSubscriberInterface
 {
     /**
-     * Registers an object for event callback.
+     * Registers an object for event callback with the WordPress Plugin API.
      * 
      * @param string $event    The event name to subscribe to.
      * @param object $observer The observer object that will receive the event.
