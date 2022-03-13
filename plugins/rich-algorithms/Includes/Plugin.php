@@ -17,8 +17,8 @@ use RichWeb\Algorithms\Abstracts\AbstractSingletonPlugin;
 use RichWeb\Algorithms\Admin\AlgorithmPostType;
 use RichWeb\Algorithms\Admin\MetaBoxes\MetaBoxes;
 use RichWeb\Algorithms\CodeExamples\CodeExamplesLoader;
-use RichWeb\Algorithms\Events\EventCreator;
-use RichWeb\Algorithms\Events\EventSubscriber;
+use RichWeb\Algorithms\Events\WPEventCreator;
+use RichWeb\Algorithms\Events\WPEventSubscriber;
 use RichWeb\Algorithms\Interfaces\AlgorithmPackageManagerInterface;
 use RichWeb\Algorithms\Interfaces\EventSubscriberInterface;
 use RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface;
@@ -50,8 +50,8 @@ final class Plugin extends AbstractSingletonPlugin
         $this->requirements     = $project->getRequirements();
         $this->main_directory   = $project->getMainDirectory();
         $this->text_domain      = TEXT_DOMAIN;
-        $this->event_creator    = new EventCreator();
-        $this->event_subscriber = new EventSubscriber();
+        $this->event_creator    = new WPEventCreator();
+        $this->event_subscriber = new WPEventSubscriber();
     }
 
     protected function build(): void
@@ -121,7 +121,7 @@ final class Plugin extends AbstractSingletonPlugin
 
         $coding_languages = $this->syntax->languages();
         
-        (new CodeExamplesLoader($coding_languages))->subscribeToEvents(new EventSubscriber());
+        (new CodeExamplesLoader($coding_languages))->subscribeToEvents(new WPEventSubscriber());
         (new MetaBoxes($packages, $coding_languages))->run();
     }
 

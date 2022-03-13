@@ -17,8 +17,11 @@ use RichWeb\Algorithms\Interfaces\EventCreatorInterface;
 
 use function do_action;
 
-class EventCreator implements EventCreatorInterface
+class WPEventCreator implements EventCreatorInterface
 {
+    /**
+     * Creates a new event that other objects can subscribe to using the WordPress Plugin API.
+     */
     final function create(string $event, mixed ...$args): void
     {
         do_action($event, $args);

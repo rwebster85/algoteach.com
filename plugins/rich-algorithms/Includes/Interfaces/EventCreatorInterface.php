@@ -16,10 +16,10 @@ namespace RichWeb\Algorithms\Interfaces;
 interface EventCreatorInterface
 {
     /**
-     * Creates a new event that other objects can subscribe to with the WordPress Plugin API.
+     * Creates a new event that other objects can subscribe to.
      * 
-     * @param string $event
-     * @param array ...$args
+     * @param string $event   The name of the event to subscribe to.
+     * @param array  ...$args Variadic array of possible arguments to include with the event.
      * 
      * @return void
      */
