@@ -35,8 +35,8 @@ final class CodeExamplesLoader implements CodeExamplesLoaderInterface, Subscribe
 
     final public function subscribeToEvents(EventSubscriberInterface $subscriber): void
     {
-        $subscriber->subscribe('template_redirect', $this, 'canLoadCodeExamplesForPost');
-        $subscriber->subscribe('the_content', $this, 'canAppendExamplesToContent');
+        $subscriber->subscribe('template_redirect', [$this, 'canLoadCodeExamplesForPost']);
+        $subscriber->subscribe('the_content', [$this, 'canAppendExamplesToContent']);
     }
 
     /**

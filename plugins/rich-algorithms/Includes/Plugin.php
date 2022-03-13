@@ -71,11 +71,11 @@ final class Plugin extends AbstractSingletonPlugin
 
     final public function subscribeToEvents(EventSubscriberInterface $subscriber): void
     {
-        $subscriber->subscribe('plugins_loaded', $this, 'pluginsLoadedSetup', -1);
-        $subscriber->subscribe('init', $this, 'initSetup', 0);
+        $subscriber->subscribe('plugins_loaded', [$this, 'pluginsLoadedSetup'], -1);
+        $subscriber->subscribe('init', [$this, 'initSetup'], 0);
 
-        $subscriber->subscribe('activate_' . PLUGIN_FILE, $this, 'activated');
-        $subscriber->subscribe('deactivate_' . PLUGIN_FILE, $this, 'deactivated');
+        $subscriber->subscribe('activate_' . PLUGIN_FILE, [$this, 'activated']);
+        $subscriber->subscribe('deactivate_' . PLUGIN_FILE, [$this, 'deactivated']);
     }
 
     public function activated(): void

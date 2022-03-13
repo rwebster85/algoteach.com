@@ -18,13 +18,12 @@ interface EventSubscriberInterface
     /**
      * Registers an object for event callback.
      * 
-     * @param string $event    The event name to subscribe to.
-     * @param object $observer The observer object that will receive the event.
-     * @param string $callback The callback method on the $observer object to be called by the event.
-     * @param int    $priority The priority to register for.
-     * @param int    $args     The number of arguments to accept in the callback method.
+     * @param string        $event    The event name to subscribe to.
+     * @param array|string  $callback The callback method to be called by the event.
+     * @param int           $priority The priority to register for.
+     * @param int           $args     The number of arguments to accept in the callback method.
      * 
      * @return void
      */
-    public function subscribe(string $event, object $observer, string $callback, int $priority = 10, int $args = 1): void;
+    public function subscribe(string $event, array|string $callback, int $priority = 10, int $args = 1): void;
 }
