@@ -14,15 +14,16 @@ declare(strict_types=1);
 namespace RichWeb\Algorithms\CodeExamples;
 
 use RichWeb\Algorithms\CodeExamples\CodeExample;
+use RichWeb\Algorithms\Events\EventSubscriber;
 use RichWeb\Algorithms\Interfaces\CodeExamplesLoaderInterface;
-use RichWeb\Algorithms\Interfaces\HasRunnerInterface;
-use RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface;
+use RichWeb\Algorithms\Interfaces\SubscribesToEventsInterface;
+use RichWeb\Algorithms\Interfaces\EventSubscriberInterface;
 use RichWeb\Algorithms\Traits\Posts\AlgorithmChecker;
 
 /**
  * Responsbile for loading code examples on the frontend if the post has any.
  */
-final class CodeExamplesLoader implements CodeExamplesLoaderInterface, HasRunnerInterface
+final class CodeExamplesLoader implements CodeExamplesLoaderInterface, SubscribesToEventsInterface
 {
     use AlgorithmChecker;
     
@@ -32,44 +33,55 @@ final class CodeExamplesLoader implements CodeExamplesLoaderInterface, HasRunner
         private array $code_languages
     ) {}
 
-    public function run(): void
+    final public function subscribeToEvents(EventSubscriberInterface $subscriber): void
     {
-        $this->actions();
+        $subscriber->subscribe('template_redirect', [$this, 'canLoadCodeExamplesForPost']);
+        $subscriber->subscribe('the_content', [$this, 'canAppendExamplesToContent']);
     }
 
     /**
-     * The action hooks to set up on initialisation.
+     * Verifies the post is applicable for appending code examples to content.
      * 
-     * @uses \add_action() WP Function
-     * @see https://developer.wordpress.org/reference/hooks/init/ WP action
+     * Hooked from 'template_redirect' WP Action
      * 
-     * @return void
-     */
-    private function actions(): void
-    {
-        add_action('template_redirect', [$this, 'loadCodeExamplesForPost']);
-        add_filter('the_content', [$this, 'appendExamplesToContent'], 10, 1);
-    }
-
-    /**
-     * Loads the package for the current global post, hooked from 'template_redirect' WP Action
+     * @uses AlgorithmChecker::isSingleAlgorithm()
+     * @uses CodeExamplesLoader::canLoadCodeExamplesForPost()
+     * @uses \absint() WP Function
+     * @uses \get_the_ID() WP Function
      * 
      * @see https://developer.wordpress.org/reference/hooks/template_redirect/ WP Action
      * 
      * @return void
      */
-    public function loadCodeExamplesForPost(): void
+    final public function canLoadCodeExamplesForPost(): void
     {
         if ($this->isSingleAlgorithm()) {
             $post_id = absint(get_the_ID() ?? 0);
-            $code_examples = (array) get_post_meta($post_id, 'richweb_algorithm_code_examples', true);
-            if (!empty($code_examples)) {
-                $this->buildCodeExamples($code_examples);
+            if ($post_id > 0) {
+                $this->loadCodeExamplesForPost($post_id);
             }
         }
     }
 
-    private function buildCodeExamples(array $code_examples): void
+    /**
+     * Obtains the code examples from the post meta and builds the class code examples. Called from canLoadCodeExamplesForPost()
+     * 
+     * @param $post_id The post Id to get the code examples for
+     * 
+     * @uses CodeExamplesLoader::buildCodeExamples()
+     * @uses \get_post_meta() WP Function
+     * 
+     * @return void
+     */
+    final public function loadCodeExamplesForPost(int $post_id): void
+    {
+        $code_examples = (array) get_post_meta($post_id, 'richweb_algorithm_code_examples', true);
+        if (!empty($code_examples)) {
+            $this->buildCodeExamples($code_examples);
+        }
+    }
+
+    final public function buildCodeExamples(array $code_examples): void
     {
         foreach ($code_examples as $example) {
             if (!is_array($example) || empty($example)) {
@@ -79,12 +91,17 @@ final class CodeExamplesLoader implements CodeExamplesLoaderInterface, HasRunner
         }
     }
 
-    final public function appendExamplesToContent(?string $content = ''): ?string
+    final public function canAppendExamplesToContent(?string $content = ''): ?string
     {
-        if (empty($this->code_examples)) {
+        if (!$this->isSingleAlgorithm() || empty($this->code_examples)) {
             return $content;
         }
 
+        return $this->appendExamplesToContent($content);
+    }
+
+    final public function appendExamplesToContent(?string $content = ''): string
+    {
         ob_start();
 
         echo '<div class="rich-algo-frontend-examples-wrap">';

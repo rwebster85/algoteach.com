@@ -118,9 +118,9 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Plugin.php"><a href="files/includes-plugin.html"><abbr title="Includes/Plugin.php">Plugin.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">34</span>
+    <span class="phpdocumentor-element-found-in__line">37</span>
 
-            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.34"  class="phpdocumentor-element-found-in__source" data-line="34" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.37"  class="phpdocumentor-element-found-in__source" data-line="37" data-modal="source-view"></a>
     </aside>
 
         
@@ -140,6 +140,20 @@
 
 <dl class="phpdocumentor-table-of-contents">
                     <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a href="classes/RichWeb-Algorithms-Abstracts-AbstractPlugin.html#property_event_creator">$event_creator</a>
+    <span>
+                        &nbsp;: <a href="classes/RichWeb-Algorithms-Interfaces-EventCreatorInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\EventCreatorInterface">EventCreatorInterface</abbr></a>            </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a href="classes/RichWeb-Algorithms-Abstracts-AbstractPlugin.html#property_event_subscriber">$event_subscriber</a>
+    <span>
+                        &nbsp;: <a href="classes/RichWeb-Algorithms-Interfaces-EventSubscriberInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\EventSubscriberInterface">EventSubscriberInterface</abbr></a>            </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
     <a href="classes/RichWeb-Algorithms-Abstracts-AbstractPlugin.html#property_main_directory">$main_directory</a>
     <span>
                         &nbsp;: string            </span>
@@ -259,6 +273,13 @@
 <dd>Called when the &#039;plugins_loaded&#039; WP action is fired.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/RichWeb-Algorithms-Plugin.html#method_subscribeToEvents">subscribeToEvents()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/RichWeb-Algorithms-Plugin.html#method_syntaxHighlighter">syntaxHighlighter()</a>
     <span>
                                 &nbsp;: <a href="classes/RichWeb-Algorithms-Interfaces-SyntaxHighlighterInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface">SyntaxHighlighterInterface</abbr></a>    </span>
@@ -319,6 +340,76 @@
             -protected
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="property_event_creator">
+        $event_creator
+        <a href="classes/RichWeb-Algorithms-Abstracts-AbstractPlugin.html#property_event_creator" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Abstracts/AbstractPlugin.php"><a href="files/includes-abstracts-abstractplugin.html"><abbr title="Includes/Abstracts/AbstractPlugin.php">AbstractPlugin.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">34</span>
+
+            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.34"  class="phpdocumentor-element-found-in__source" data-line="34" data-modal="source-view"></a>
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+        <span class="phpdocumentor-signature__type"><a href="classes/RichWeb-Algorithms-Interfaces-EventCreatorInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\EventCreatorInterface">EventCreatorInterface</abbr></a></span>
+    <span class="phpdocumentor-signature__name">$event_creator</span>
+    </code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_event_subscriber">
+        $event_subscriber
+        <a href="classes/RichWeb-Algorithms-Abstracts-AbstractPlugin.html#property_event_subscriber" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Abstracts/AbstractPlugin.php"><a href="files/includes-abstracts-abstractplugin.html"><abbr title="Includes/Abstracts/AbstractPlugin.php">AbstractPlugin.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">32</span>
+
+            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.32"  class="phpdocumentor-element-found-in__source" data-line="32" data-modal="source-view"></a>
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+        <span class="phpdocumentor-signature__type"><a href="classes/RichWeb-Algorithms-Interfaces-EventSubscriberInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\EventSubscriberInterface">EventSubscriberInterface</abbr></a></span>
+    <span class="phpdocumentor-signature__name">$event_subscriber</span>
+    </code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="property_main_directory">
         $main_directory
         <a href="classes/RichWeb-Algorithms-Abstracts-AbstractPlugin.html#property_main_directory" class="headerlink"><i class="fas fa-link"></i></a>
@@ -328,9 +419,9 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Abstracts/AbstractPlugin.php"><a href="files/includes-abstracts-abstractplugin.html"><abbr title="Includes/Abstracts/AbstractPlugin.php">AbstractPlugin.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">27</span>
+    <span class="phpdocumentor-element-found-in__line">30</span>
 
-            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.27"  class="phpdocumentor-element-found-in__source" data-line="27" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.30"  class="phpdocumentor-element-found-in__source" data-line="30" data-modal="source-view"></a>
     </aside>
 
     
@@ -363,9 +454,9 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Abstracts/AbstractPlugin.php"><a href="files/includes-abstracts-abstractplugin.html"><abbr title="Includes/Abstracts/AbstractPlugin.php">AbstractPlugin.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">23</span>
+    <span class="phpdocumentor-element-found-in__line">26</span>
 
-            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.23"  class="phpdocumentor-element-found-in__source" data-line="23" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.26"  class="phpdocumentor-element-found-in__source" data-line="26" data-modal="source-view"></a>
     </aside>
 
     
@@ -398,9 +489,9 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Abstracts/AbstractPlugin.php"><a href="files/includes-abstracts-abstractplugin.html"><abbr title="Includes/Abstracts/AbstractPlugin.php">AbstractPlugin.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">21</span>
+    <span class="phpdocumentor-element-found-in__line">24</span>
 
-            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.21"  class="phpdocumentor-element-found-in__source" data-line="21" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.24"  class="phpdocumentor-element-found-in__source" data-line="24" data-modal="source-view"></a>
     </aside>
 
     
@@ -433,9 +524,9 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Abstracts/AbstractPlugin.php"><a href="files/includes-abstracts-abstractplugin.html"><abbr title="Includes/Abstracts/AbstractPlugin.php">AbstractPlugin.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">32</span>
+    <span class="phpdocumentor-element-found-in__line">39</span>
 
-            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.32"  class="phpdocumentor-element-found-in__source" data-line="32" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.39"  class="phpdocumentor-element-found-in__source" data-line="39" data-modal="source-view"></a>
     </aside>
 
         <p class="phpdocumentor-summary">The array of requirements for this plugin.</p>
@@ -468,9 +559,9 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Abstracts/AbstractPlugin.php"><a href="files/includes-abstracts-abstractplugin.html"><abbr title="Includes/Abstracts/AbstractPlugin.php">AbstractPlugin.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">25</span>
+    <span class="phpdocumentor-element-found-in__line">28</span>
 
-            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.25"  class="phpdocumentor-element-found-in__source" data-line="25" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.28"  class="phpdocumentor-element-found-in__source" data-line="28" data-modal="source-view"></a>
     </aside>
 
     
@@ -503,9 +594,9 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Plugin.php"><a href="files/includes-plugin.html"><abbr title="Includes/Plugin.php">Plugin.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">38</span>
+    <span class="phpdocumentor-element-found-in__line">41</span>
 
-            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.38"  class="phpdocumentor-element-found-in__source" data-line="38" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.41"  class="phpdocumentor-element-found-in__source" data-line="41" data-modal="source-view"></a>
     </aside>
 
     
@@ -573,9 +664,9 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Plugin.php"><a href="files/includes-plugin.html"><abbr title="Includes/Plugin.php">Plugin.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">40</span>
+    <span class="phpdocumentor-element-found-in__line">43</span>
 
-            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.40"  class="phpdocumentor-element-found-in__source" data-line="40" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.43"  class="phpdocumentor-element-found-in__source" data-line="43" data-modal="source-view"></a>
     </aside>
 
     
@@ -612,9 +703,9 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Plugin.php"><a href="files/includes-plugin.html"><abbr title="Includes/Plugin.php">Plugin.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">70</span>
+    <span class="phpdocumentor-element-found-in__line">81</span>
 
-            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.70"  class="phpdocumentor-element-found-in__source" data-line="70" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.81"  class="phpdocumentor-element-found-in__source" data-line="81" data-modal="source-view"></a>
     </aside>
 
     
@@ -646,9 +737,9 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Plugin.php"><a href="files/includes-plugin.html"><abbr title="Includes/Plugin.php">Plugin.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">76</span>
+    <span class="phpdocumentor-element-found-in__line">86</span>
 
-            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.76"  class="phpdocumentor-element-found-in__source" data-line="76" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.86"  class="phpdocumentor-element-found-in__source" data-line="86" data-modal="source-view"></a>
     </aside>
 
     
@@ -680,9 +771,9 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Abstracts/AbstractPlugin.php"><a href="files/includes-abstracts-abstractplugin.html"><abbr title="Includes/Abstracts/AbstractPlugin.php">AbstractPlugin.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">51</span>
+    <span class="phpdocumentor-element-found-in__line">58</span>
 
-            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.51"  class="phpdocumentor-element-found-in__source" data-line="51" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.58"  class="phpdocumentor-element-found-in__source" data-line="58" data-modal="source-view"></a>
     </aside>
 
     
@@ -714,9 +805,9 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Abstracts/AbstractPlugin.php"><a href="files/includes-abstracts-abstractplugin.html"><abbr title="Includes/Abstracts/AbstractPlugin.php">AbstractPlugin.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">46</span>
+    <span class="phpdocumentor-element-found-in__line">53</span>
 
-            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.46"  class="phpdocumentor-element-found-in__source" data-line="46" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.53"  class="phpdocumentor-element-found-in__source" data-line="53" data-modal="source-view"></a>
     </aside>
 
     
@@ -748,9 +839,9 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Abstracts/AbstractPlugin.php"><a href="files/includes-abstracts-abstractplugin.html"><abbr title="Includes/Abstracts/AbstractPlugin.php">AbstractPlugin.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">41</span>
+    <span class="phpdocumentor-element-found-in__line">48</span>
 
-            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.41"  class="phpdocumentor-element-found-in__source" data-line="41" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.48"  class="phpdocumentor-element-found-in__source" data-line="48" data-modal="source-view"></a>
     </aside>
 
     
@@ -782,9 +873,9 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Plugin.php"><a href="files/includes-plugin.html"><abbr title="Includes/Plugin.php">Plugin.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">98</span>
+    <span class="phpdocumentor-element-found-in__line">108</span>
 
-            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.98"  class="phpdocumentor-element-found-in__source" data-line="98" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.108"  class="phpdocumentor-element-found-in__source" data-line="108" data-modal="source-view"></a>
     </aside>
 
         <p class="phpdocumentor-summary">Called when the &#039;init&#039; WP action is fired.</p>
@@ -863,9 +954,9 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Plugin.php"><a href="files/includes-plugin.html"><abbr title="Includes/Plugin.php">Plugin.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">128</span>
+    <span class="phpdocumentor-element-found-in__line">138</span>
 
-            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.128"  class="phpdocumentor-element-found-in__source" data-line="128" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.138"  class="phpdocumentor-element-found-in__source" data-line="138" data-modal="source-view"></a>
     </aside>
 
     
@@ -897,9 +988,9 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Plugin.php"><a href="files/includes-plugin.html"><abbr title="Includes/Plugin.php">Plugin.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">88</span>
+    <span class="phpdocumentor-element-found-in__line">98</span>
 
-            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.88"  class="phpdocumentor-element-found-in__source" data-line="88" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.98"  class="phpdocumentor-element-found-in__source" data-line="98" data-modal="source-view"></a>
     </aside>
 
         <p class="phpdocumentor-summary">Called when the &#039;plugins_loaded&#039; WP action is fired.</p>
@@ -936,6 +1027,51 @@
         class="phpdocumentor-element
             -method
             -public
+                                                -final        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_subscribeToEvents">
+        subscribeToEvents()
+        <a href="classes/RichWeb-Algorithms-Plugin.html#method_subscribeToEvents" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Plugin.php"><a href="files/includes-plugin.html"><abbr title="Includes/Plugin.php">Plugin.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">72</span>
+
+            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.72"  class="phpdocumentor-element-found-in__source" data-line="72" data-modal="source-view"></a>
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__final">final</span>        <span class="phpdocumentor-signature__name">subscribeToEvents</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/RichWeb-Algorithms-Interfaces-EventSubscriberInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\EventSubscriberInterface">EventSubscriberInterface</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$subscriber</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$subscriber</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/RichWeb-Algorithms-Interfaces-EventSubscriberInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\EventSubscriberInterface">EventSubscriberInterface</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
                                                         "
 >
     <h4 class="phpdocumentor-element__name" id="method_syntaxHighlighter">
@@ -945,9 +1081,9 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Plugin.php"><a href="files/includes-plugin.html"><abbr title="Includes/Plugin.php">Plugin.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">123</span>
+    <span class="phpdocumentor-element-found-in__line">133</span>
 
-            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.123"  class="phpdocumentor-element-found-in__source" data-line="123" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.133"  class="phpdocumentor-element-found-in__source" data-line="133" data-modal="source-view"></a>
     </aside>
 
     
@@ -979,9 +1115,9 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Plugin.php"><a href="files/includes-plugin.html"><abbr title="Includes/Plugin.php">Plugin.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">42</span>
+    <span class="phpdocumentor-element-found-in__line">45</span>
 
-            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.42"  class="phpdocumentor-element-found-in__source" data-line="42" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.45"  class="phpdocumentor-element-found-in__source" data-line="45" data-modal="source-view"></a>
     </aside>
 
     
@@ -1024,9 +1160,9 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Plugin.php"><a href="files/includes-plugin.html"><abbr title="Includes/Plugin.php">Plugin.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">52</span>
+    <span class="phpdocumentor-element-found-in__line">57</span>
 
-            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.52"  class="phpdocumentor-element-found-in__source" data-line="52" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.57"  class="phpdocumentor-element-found-in__source" data-line="57" data-modal="source-view"></a>
     </aside>
 
     
@@ -1118,9 +1254,9 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Plugin.php"><a href="files/includes-plugin.html"><abbr title="Includes/Plugin.php">Plugin.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">61</span>
+    <span class="phpdocumentor-element-found-in__line">66</span>
 
-            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.61"  class="phpdocumentor-element-found-in__source" data-line="61" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.66"  class="phpdocumentor-element-found-in__source" data-line="66" data-modal="source-view"></a>
     </aside>
 
         <p class="phpdocumentor-summary">Hook into actions and filters.</p>
@@ -1152,9 +1288,9 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Plugin.php"><a href="files/includes-plugin.html"><abbr title="Includes/Plugin.php">Plugin.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">118</span>
+    <span class="phpdocumentor-element-found-in__line">128</span>
 
-            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.118"  class="phpdocumentor-element-found-in__source" data-line="118" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Plugin.html#source-view.128"  class="phpdocumentor-element-found-in__source" data-line="128" data-modal="source-view"></a>
     </aside>
 
     

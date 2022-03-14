@@ -17,7 +17,10 @@ use RichWeb\Algorithms\Abstracts\AbstractSingletonPlugin;
 use RichWeb\Algorithms\Admin\AlgorithmPostType;
 use RichWeb\Algorithms\Admin\MetaBoxes\MetaBoxes;
 use RichWeb\Algorithms\CodeExamples\CodeExamplesLoader;
+use RichWeb\Algorithms\Events\WPEventCreator;
+use RichWeb\Algorithms\Events\WPEventSubscriber;
 use RichWeb\Algorithms\Interfaces\AlgorithmPackageManagerInterface;
+use RichWeb\Algorithms\Interfaces\EventSubscriberInterface;
 use RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface;
 use RichWeb\Algorithms\Packages\AlgorithmPackageLoader;
 use RichWeb\Algorithms\Packages\AlgorithmPackageManager;
@@ -41,12 +44,14 @@ final class Plugin extends AbstractSingletonPlugin
 
     protected function __construct(Project $project)
     {
-        $this->project        = $project;
-        $this->name           = $project->getName();
-        $this->version        = $project->getVersion();
-        $this->requirements   = $project->getRequirements();
-        $this->main_directory = $project->getMainDirectory();
-        $this->text_domain    = TEXT_DOMAIN;
+        $this->project          = $project;
+        $this->name             = $project->getName();
+        $this->version          = $project->getVersion();
+        $this->requirements     = $project->getRequirements();
+        $this->main_directory   = $project->getMainDirectory();
+        $this->text_domain      = TEXT_DOMAIN;
+        $this->event_creator    = new WPEventCreator();
+        $this->event_subscriber = new WPEventSubscriber();
     }
 
     protected function build(): void
@@ -60,22 +65,27 @@ final class Plugin extends AbstractSingletonPlugin
      */
     private function initHooks(): void
     {
-        register_activation_hook(PLUGIN_FILE, array($this, 'activated'));
-        register_deactivation_hook(PLUGIN_FILE, array($this, 'aeactivated'));
+        $this->subscribeToEvents($this->event_subscriber);
+        $this->event_creator->create(__CLASS__ . '\InitHooksComplete');
+    }
 
-        add_action('plugins_loaded', [$this, 'pluginsLoadedSetup'], -1);
-        add_action('init', [$this, 'initSetup'], 0);
+    final public function subscribeToEvents(EventSubscriberInterface $subscriber): void
+    {
+        $subscriber->subscribe('plugins_loaded', [$this, 'pluginsLoadedSetup'], -1);
+        $subscriber->subscribe('init', [$this, 'initSetup'], 0);
+
+        $subscriber->subscribe('activate_' . PLUGIN_FILE, [$this, 'activated']);
+        $subscriber->subscribe('deactivate_' . PLUGIN_FILE, [$this, 'deactivated']);
     }
 
     public function activated(): void
     {
-        \flush_rewrite_rules();
-        do_action('rich_algo_activate');
+        $this->event_creator->create(__CLASS__ . '\Activated');
     }
 
     public function deactivated(): void
     {
-        do_action('rich_algo_deactivate');
+        $this->event_creator->create(__CLASS__ . '\Deactivated');
     }
 
     /**
@@ -111,13 +121,13 @@ final class Plugin extends AbstractSingletonPlugin
 
         $coding_languages = $this->syntax->languages();
         
-        (new CodeExamplesLoader($coding_languages))->run();
+        (new CodeExamplesLoader($coding_languages))->subscribeToEvents(new WPEventSubscriber());
         (new MetaBoxes($packages, $coding_languages))->run();
     }
 
     private function loadModules(): void
     {
-        do_action('rich_algo_loaded_modules');
+        $this->event_creator->create(__CLASS__ . '\ModulesLoaded');
     }
 
     public function syntaxHighlighter(): SyntaxHighlighterInterface

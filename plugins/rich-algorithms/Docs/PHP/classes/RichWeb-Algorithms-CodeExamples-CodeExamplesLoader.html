@@ -109,7 +109,7 @@
     
             <span class="phpdocumentor-element__implements">
             implements
-                            <a href="classes/RichWeb-Algorithms-Interfaces-CodeExamplesLoaderInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\CodeExamplesLoaderInterface">CodeExamplesLoaderInterface</abbr></a>,                             <a href="classes/RichWeb-Algorithms-Interfaces-HasRunnerInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\HasRunnerInterface">HasRunnerInterface</abbr></a>                    </span>
+                            <a href="classes/RichWeb-Algorithms-Interfaces-CodeExamplesLoaderInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\CodeExamplesLoaderInterface">CodeExamplesLoaderInterface</abbr></a>,                             <a href="classes/RichWeb-Algorithms-Interfaces-SubscribesToEventsInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\SubscribesToEventsInterface">SubscribesToEventsInterface</abbr></a>                    </span>
     
             <span class="phpdocumentor-element__extends">
             Uses
@@ -119,9 +119,9 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/CodeExamples/CodeExamplesLoader.php"><a href="files/includes-codeexamples-codeexamplesloader.html"><abbr title="Includes/CodeExamples/CodeExamplesLoader.php">CodeExamplesLoader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">25</span>
+    <span class="phpdocumentor-element-found-in__line">26</span>
 
-            <a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#source-view.25"  class="phpdocumentor-element-found-in__source" data-line="25" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#source-view.26"  class="phpdocumentor-element-found-in__source" data-line="26" data-modal="source-view"></a>
     </aside>
 
             <p class="phpdocumentor-summary">Responsbile for loading code examples on the frontend if the post has any.</p>
@@ -140,7 +140,7 @@
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -interface"><a href="classes/RichWeb-Algorithms-Interfaces-CodeExamplesLoaderInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\CodeExamplesLoaderInterface">CodeExamplesLoaderInterface</abbr></a></dt>
         <dd></dd>
-            <dt class="phpdocumentor-table-of-contents__entry -interface"><a href="classes/RichWeb-Algorithms-Interfaces-HasRunnerInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\HasRunnerInterface">HasRunnerInterface</abbr></a></dt>
+            <dt class="phpdocumentor-table-of-contents__entry -interface"><a href="classes/RichWeb-Algorithms-Interfaces-SubscribesToEventsInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\SubscribesToEventsInterface">SubscribesToEventsInterface</abbr></a></dt>
         <dd></dd>
     
     
@@ -183,6 +183,27 @@
 <dd>Hooked into from the WP hook &#039;the_content&#039;. Appends all the code examples for an Algorithm to post content.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#method_buildCodeExamples">buildCodeExamples()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#method_canAppendExamplesToContent">canAppendExamplesToContent()</a>
+    <span>
+                                &nbsp;: string|null    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#method_canLoadCodeExamplesForPost">canLoadCodeExamplesForPost()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+<dd>Verifies the post is applicable for appending code examples to content.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#method_getCodeExamples">getCodeExamples()</a>
     <span>
                                 &nbsp;: array&lt;string|int, mixed&gt;    </span>
@@ -194,14 +215,14 @@
     <span>
                                 &nbsp;: void    </span>
 </dt>
-<dd>Loads the package for the current global post, hooked from &#039;template_redirect&#039; WP Action</dd>
+<dd>Obtains the code examples from the post meta and builds the class code examples. Called from canLoadCodeExamplesForPost()</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#method_run">run()</a>
+    <a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#method_subscribeToEvents">subscribeToEvents()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
-<dd>Runs the class init functions not handled during construction.</dd>
+<dd>Method containing the events this object will subscribe to.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
     <a href="classes/RichWeb-Algorithms-Traits-Posts-AlgorithmChecker.html#method_isSingleAlgorithm">isSingleAlgorithm()</a>
@@ -209,20 +230,6 @@
                                 &nbsp;: bool    </span>
 </dt>
 <dd>Returns true if the current post is a singular algorithm.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -private">
-    <a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#method_actions">actions()</a>
-    <span>
-                                &nbsp;: void    </span>
-</dt>
-<dd>The action hooks to set up on initialisation.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -private">
-    <a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#method_buildCodeExamples">buildCodeExamples()</a>
-    <span>
-                                &nbsp;: void    </span>
-</dt>
-<dd></dd>
 
         </dl>
 
@@ -252,9 +259,9 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/CodeExamples/CodeExamplesLoader.php"><a href="files/includes-codeexamples-codeexamplesloader.html"><abbr title="Includes/CodeExamples/CodeExamplesLoader.php">CodeExamplesLoader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">29</span>
+    <span class="phpdocumentor-element-found-in__line">30</span>
 
-            <a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#source-view.29"  class="phpdocumentor-element-found-in__source" data-line="29" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#source-view.30"  class="phpdocumentor-element-found-in__source" data-line="30" data-modal="source-view"></a>
     </aside>
 
     
@@ -287,9 +294,9 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/CodeExamples/CodeExamplesLoader.php"><a href="files/includes-codeexamples-codeexamplesloader.html"><abbr title="Includes/CodeExamples/CodeExamplesLoader.php">CodeExamplesLoader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">32</span>
+    <span class="phpdocumentor-element-found-in__line">33</span>
 
-            <a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#source-view.32"  class="phpdocumentor-element-found-in__source" data-line="32" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#source-view.33"  class="phpdocumentor-element-found-in__source" data-line="33" data-modal="source-view"></a>
     </aside>
 
     
@@ -326,9 +333,9 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/CodeExamples/CodeExamplesLoader.php"><a href="files/includes-codeexamples-codeexamplesloader.html"><abbr title="Includes/CodeExamples/CodeExamplesLoader.php">CodeExamplesLoader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">31</span>
+    <span class="phpdocumentor-element-found-in__line">32</span>
 
-            <a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#source-view.31"  class="phpdocumentor-element-found-in__source" data-line="31" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#source-view.32"  class="phpdocumentor-element-found-in__source" data-line="32" data-modal="source-view"></a>
     </aside>
 
     
@@ -371,9 +378,9 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/CodeExamples/CodeExamplesLoader.php"><a href="files/includes-codeexamples-codeexamplesloader.html"><abbr title="Includes/CodeExamples/CodeExamplesLoader.php">CodeExamplesLoader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">82</span>
+    <span class="phpdocumentor-element-found-in__line">103</span>
 
-            <a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#source-view.82"  class="phpdocumentor-element-found-in__source" data-line="82" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#source-view.103"  class="phpdocumentor-element-found-in__source" data-line="103" data-modal="source-view"></a>
     </aside>
 
         <p class="phpdocumentor-summary">Hooked into from the WP hook &#039;the_content&#039;. Appends all the code examples for an Algorithm to post content.</p>
@@ -408,6 +415,184 @@
             -public
                                                 -final        "
 >
+    <h4 class="phpdocumentor-element__name" id="method_buildCodeExamples">
+        buildCodeExamples()
+        <a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#method_buildCodeExamples" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/CodeExamples/CodeExamplesLoader.php"><a href="files/includes-codeexamples-codeexamplesloader.html"><abbr title="Includes/CodeExamples/CodeExamplesLoader.php">CodeExamplesLoader.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">84</span>
+
+            <a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#source-view.84"  class="phpdocumentor-element-found-in__source" data-line="84" data-modal="source-view"></a>
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__final">final</span>        <span class="phpdocumentor-signature__name">buildCodeExamples</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$code_examples</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$code_examples</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                -final        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_canAppendExamplesToContent">
+        canAppendExamplesToContent()
+        <a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#method_canAppendExamplesToContent" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/CodeExamples/CodeExamplesLoader.php"><a href="files/includes-codeexamples-codeexamplesloader.html"><abbr title="Includes/CodeExamples/CodeExamplesLoader.php">CodeExamplesLoader.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">94</span>
+
+            <a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#source-view.94"  class="phpdocumentor-element-found-in__source" data-line="94" data-modal="source-view"></a>
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__final">final</span>        <span class="phpdocumentor-signature__name">canAppendExamplesToContent</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$content</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$content</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string|null</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string|null</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                -final        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_canLoadCodeExamplesForPost">
+        canLoadCodeExamplesForPost()
+        <a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#method_canLoadCodeExamplesForPost" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/CodeExamples/CodeExamplesLoader.php"><a href="files/includes-codeexamples-codeexamplesloader.html"><abbr title="Includes/CodeExamples/CodeExamplesLoader.php">CodeExamplesLoader.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">56</span>
+
+            <a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#source-view.56"  class="phpdocumentor-element-found-in__source" data-line="56" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">Verifies the post is applicable for appending code examples to content.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__final">final</span>        <span class="phpdocumentor-signature__name">canLoadCodeExamplesForPost</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+        <section class="phpdocumentor-description"><p>Hooked from 'template_redirect' WP Action</p>
+</section>
+
+    
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">uses</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                    <span class="phpdocumentor-tag-link"><a href="classes/RichWeb-Algorithms-Traits-Posts-AlgorithmChecker.html#method_isSingleAlgorithm"><abbr title="\RichWeb\Algorithms\Traits\Posts\AlgorithmChecker::isSingleAlgorithm()">AlgorithmChecker::isSingleAlgorithm()</abbr></a></span>
+                                        
+                                             
+                                    </dd>
+                            <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">uses</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                    <span class="phpdocumentor-tag-link"><a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#method_canLoadCodeExamplesForPost"><abbr title="\RichWeb\Algorithms\CodeExamples\CodeExamplesLoader::canLoadCodeExamplesForPost()">CodeExamplesLoader::canLoadCodeExamplesForPost()</abbr></a></span>
+                                        
+                                             
+                                    </dd>
+                            <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">uses</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                    <span class="phpdocumentor-tag-link"><abbr title="\absint()">absint()</abbr></span>
+                                        
+                                                 <section class="phpdocumentor-description"><p>WP Function</p>
+</section>
+
+                                    </dd>
+                            <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">uses</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                    <span class="phpdocumentor-tag-link"><abbr title="\get_the_ID()">get_the_ID()</abbr></span>
+                                        
+                                                 <section class="phpdocumentor-description"><p>WP Function</p>
+</section>
+
+                                    </dd>
+                                                <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">see</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                    <span class="phpdocumentor-tag-link"><a href="https://developer.wordpress.org/reference/hooks/template_redirect/"><abbr title="https://developer.wordpress.org/reference/hooks/template_redirect/">https://developer.wordpress.org/reference/hooks/template_redirect/</abbr></a></span>
+                                        
+                                                 <section class="phpdocumentor-description"><p>WP Action</p>
+</section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                -final        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getCodeExamples">
         getCodeExamples()
         <a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#method_getCodeExamples" class="headerlink"><i class="fas fa-link"></i></a>
@@ -415,9 +600,9 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/CodeExamples/CodeExamplesLoader.php"><a href="files/includes-codeexamples-codeexamplesloader.html"><abbr title="Includes/CodeExamples/CodeExamplesLoader.php">CodeExamplesLoader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">105</span>
+    <span class="phpdocumentor-element-found-in__line">122</span>
 
-            <a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#source-view.105"  class="phpdocumentor-element-found-in__source" data-line="105" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#source-view.122"  class="phpdocumentor-element-found-in__source" data-line="122" data-modal="source-view"></a>
     </aside>
 
         <p class="phpdocumentor-summary">Returns an array of \RichWeb\Algorithms\CodeExample objects for a post.</p>
@@ -440,7 +625,7 @@
         class="phpdocumentor-element
             -method
             -public
-                                                        "
+                                                -final        "
 >
     <h4 class="phpdocumentor-element__name" id="method_loadCodeExamplesForPost">
         loadCodeExamplesForPost()
@@ -449,19 +634,31 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/CodeExamples/CodeExamplesLoader.php"><a href="files/includes-codeexamples-codeexamplesloader.html"><abbr title="Includes/CodeExamples/CodeExamplesLoader.php">CodeExamplesLoader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">61</span>
+    <span class="phpdocumentor-element-found-in__line">76</span>
 
-            <a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#source-view.61"  class="phpdocumentor-element-found-in__source" data-line="61" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#source-view.76"  class="phpdocumentor-element-found-in__source" data-line="76" data-modal="source-view"></a>
     </aside>
 
-        <p class="phpdocumentor-summary">Loads the package for the current global post, hooked from &#039;template_redirect&#039; WP Action</p>
+        <p class="phpdocumentor-summary">Obtains the code examples from the post meta and builds the class code examples. Called from canLoadCodeExamplesForPost()</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">loadCodeExamplesForPost</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+        <span class="phpdocumentor-signature__final">final</span>        <span class="phpdocumentor-signature__name">loadCodeExamplesForPost</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href=""><abbr title=""></abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$post_id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     
-    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$post_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href=""><abbr title=""></abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The post Id to get the code examples for</p>
+</section>
+
+            </dd>
+            </dl>
+
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
@@ -469,12 +666,20 @@
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
-                    <span class="phpdocumentor-tag__name">see</span>
+                    <span class="phpdocumentor-tag__name">uses</span>
                 </dt>
                 <dd class="phpdocumentor-tag-list__definition">
-                                                                                    <span class="phpdocumentor-tag-link"><a href="https://developer.wordpress.org/reference/hooks/template_redirect/"><abbr title="https://developer.wordpress.org/reference/hooks/template_redirect/">https://developer.wordpress.org/reference/hooks/template_redirect/</abbr></a></span>
+                                                                                    <span class="phpdocumentor-tag-link"><a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#method_buildCodeExamples"><abbr title="\RichWeb\Algorithms\CodeExamples\CodeExamplesLoader::buildCodeExamples()">CodeExamplesLoader::buildCodeExamples()</abbr></a></span>
                                         
-                                                 <section class="phpdocumentor-description"><p>WP Action</p>
+                                             
+                                    </dd>
+                            <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">uses</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                    <span class="phpdocumentor-tag-link"><abbr title="\get_post_meta()">get_post_meta()</abbr></span>
+                                        
+                                                 <section class="phpdocumentor-description"><p>WP Function</p>
 </section>
 
                                     </dd>
@@ -490,28 +695,40 @@
         class="phpdocumentor-element
             -method
             -public
-                                                        "
+                                                -final        "
 >
-    <h4 class="phpdocumentor-element__name" id="method_run">
-        run()
-        <a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#method_run" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_subscribeToEvents">
+        subscribeToEvents()
+        <a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#method_subscribeToEvents" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/CodeExamples/CodeExamplesLoader.php"><a href="files/includes-codeexamples-codeexamplesloader.html"><abbr title="Includes/CodeExamples/CodeExamplesLoader.php">CodeExamplesLoader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">35</span>
+    <span class="phpdocumentor-element-found-in__line">36</span>
 
-            <a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#source-view.35"  class="phpdocumentor-element-found-in__source" data-line="35" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#source-view.36"  class="phpdocumentor-element-found-in__source" data-line="36" data-modal="source-view"></a>
     </aside>
 
-        <p class="phpdocumentor-summary">Runs the class init functions not handled during construction.</p>
+        <p class="phpdocumentor-summary">Method containing the events this object will subscribe to.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">run</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+        <span class="phpdocumentor-signature__final">final</span>        <span class="phpdocumentor-signature__name">subscribeToEvents</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/RichWeb-Algorithms-Interfaces-EventSubscriberInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\EventSubscriberInterface">EventSubscriberInterface</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$subscriber</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     
-    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$subscriber</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/RichWeb-Algorithms-Interfaces-EventSubscriberInterface.html"><abbr title="\RichWeb\Algorithms\Interfaces\EventSubscriberInterface">EventSubscriberInterface</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The subscriber object that carries out the subscription logic.</p>
+</section>
+
+            </dd>
+            </dl>
+
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
@@ -564,111 +781,6 @@
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">bool</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -private
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_actions">
-        actions()
-        <a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#method_actions" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/CodeExamples/CodeExamplesLoader.php"><a href="files/includes-codeexamples-codeexamplesloader.html"><abbr title="Includes/CodeExamples/CodeExamplesLoader.php">CodeExamplesLoader.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">48</span>
-
-            <a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#source-view.48"  class="phpdocumentor-element-found-in__source" data-line="48" data-modal="source-view"></a>
-    </aside>
-
-        <p class="phpdocumentor-summary">The action hooks to set up on initialisation.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
-                <span class="phpdocumentor-signature__name">actions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
-
-    
-    
-    
-    <h5 class="phpdocumentor-tag-list__heading" id="tags">
-        Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
-    </h5>
-    <dl class="phpdocumentor-tag-list">
-                                    <dt class="phpdocumentor-tag-list__entry">
-                    <span class="phpdocumentor-tag__name">uses</span>
-                </dt>
-                <dd class="phpdocumentor-tag-list__definition">
-                                                                                    <span class="phpdocumentor-tag-link"><abbr title="\add_action()">add_action()</abbr></span>
-                                        
-                                                 <section class="phpdocumentor-description"><p>WP Function</p>
-</section>
-
-                                    </dd>
-                                                <dt class="phpdocumentor-tag-list__entry">
-                    <span class="phpdocumentor-tag__name">see</span>
-                </dt>
-                <dd class="phpdocumentor-tag-list__definition">
-                                                                                    <span class="phpdocumentor-tag-link"><a href="https://developer.wordpress.org/reference/hooks/init/"><abbr title="https://developer.wordpress.org/reference/hooks/init/">https://developer.wordpress.org/reference/hooks/init/</abbr></a></span>
-                                        
-                                                 <section class="phpdocumentor-description"><p>WP action</p>
-</section>
-
-                                    </dd>
-                        </dl>
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">void</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -private
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_buildCodeExamples">
-        buildCodeExamples()
-        <a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#method_buildCodeExamples" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/CodeExamples/CodeExamplesLoader.php"><a href="files/includes-codeexamples-codeexamplesloader.html"><abbr title="Includes/CodeExamples/CodeExamplesLoader.php">CodeExamplesLoader.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">72</span>
-
-            <a href="classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#source-view.72"  class="phpdocumentor-element-found-in__source" data-line="72" data-modal="source-view"></a>
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
-                <span class="phpdocumentor-signature__name">buildCodeExamples</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$code_examples</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$code_examples</span>
-                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">void</span>
             &mdash;
         
     

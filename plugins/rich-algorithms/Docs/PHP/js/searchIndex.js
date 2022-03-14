@@ -91,6 +91,16 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/RichWeb-Algorithms-Abstracts-AbstractPlugin.html#property_main_directory"
         },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Abstracts\\AbstractPlugin\u003A\u003A\u0024event_subscriber",
+            "name": "event_subscriber",
+            "summary": "",
+            "url": "classes/RichWeb-Algorithms-Abstracts-AbstractPlugin.html#property_event_subscriber"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Abstracts\\AbstractPlugin\u003A\u003A\u0024event_creator",
+            "name": "event_creator",
+            "summary": "",
+            "url": "classes/RichWeb-Algorithms-Abstracts-AbstractPlugin.html#property_event_creator"
+        },                {
             "fqsen": "\\RichWeb\\Algorithms\\Abstracts\\AbstractPlugin\u003A\u003A\u0024requirements",
             "name": "requirements",
             "summary": "The\u0020array\u0020of\u0020requirements\u0020for\u0020this\u0020plugin.",
@@ -481,25 +491,30 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#method___construct"
         },                {
-            "fqsen": "\\RichWeb\\Algorithms\\CodeExamples\\CodeExamplesLoader\u003A\u003Arun\u0028\u0029",
-            "name": "run",
-            "summary": "Runs\u0020the\u0020class\u0020init\u0020functions\u0020not\u0020handled\u0020during\u0020construction.",
-            "url": "classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#method_run"
+            "fqsen": "\\RichWeb\\Algorithms\\CodeExamples\\CodeExamplesLoader\u003A\u003AsubscribeToEvents\u0028\u0029",
+            "name": "subscribeToEvents",
+            "summary": "Method\u0020containing\u0020the\u0020events\u0020this\u0020object\u0020will\u0020subscribe\u0020to.",
+            "url": "classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#method_subscribeToEvents"
         },                {
-            "fqsen": "\\RichWeb\\Algorithms\\CodeExamples\\CodeExamplesLoader\u003A\u003Aactions\u0028\u0029",
-            "name": "actions",
-            "summary": "The\u0020action\u0020hooks\u0020to\u0020set\u0020up\u0020on\u0020initialisation.",
-            "url": "classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#method_actions"
+            "fqsen": "\\RichWeb\\Algorithms\\CodeExamples\\CodeExamplesLoader\u003A\u003AcanLoadCodeExamplesForPost\u0028\u0029",
+            "name": "canLoadCodeExamplesForPost",
+            "summary": "Verifies\u0020the\u0020post\u0020is\u0020applicable\u0020for\u0020appending\u0020code\u0020examples\u0020to\u0020content.",
+            "url": "classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#method_canLoadCodeExamplesForPost"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\CodeExamples\\CodeExamplesLoader\u003A\u003AloadCodeExamplesForPost\u0028\u0029",
             "name": "loadCodeExamplesForPost",
-            "summary": "Loads\u0020the\u0020package\u0020for\u0020the\u0020current\u0020global\u0020post,\u0020hooked\u0020from\u0020\u0027template_redirect\u0027\u0020WP\u0020Action",
+            "summary": "Obtains\u0020the\u0020code\u0020examples\u0020from\u0020the\u0020post\u0020meta\u0020and\u0020builds\u0020the\u0020class\u0020code\u0020examples.\u0020Called\u0020from\u0020canLoadCodeExamplesForPost\u0028\u0029",
             "url": "classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#method_loadCodeExamplesForPost"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\CodeExamples\\CodeExamplesLoader\u003A\u003AbuildCodeExamples\u0028\u0029",
             "name": "buildCodeExamples",
             "summary": "",
             "url": "classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#method_buildCodeExamples"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\CodeExamples\\CodeExamplesLoader\u003A\u003AcanAppendExamplesToContent\u0028\u0029",
+            "name": "canAppendExamplesToContent",
+            "summary": "",
+            "url": "classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#method_canAppendExamplesToContent"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\CodeExamples\\CodeExamplesLoader\u003A\u003AappendExamplesToContent\u0028\u0029",
             "name": "appendExamplesToContent",
@@ -520,6 +535,31 @@ Search.appendIndex(
             "name": "code_languages",
             "summary": "",
             "url": "classes/RichWeb-Algorithms-CodeExamples-CodeExamplesLoader.html#property_code_languages"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Events\\WPEventCreator",
+            "name": "WPEventCreator",
+            "summary": "",
+            "url": "classes/RichWeb-Algorithms-Events-WPEventCreator.html"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Events\\WPEventCreator\u003A\u003Acreate\u0028\u0029",
+            "name": "create",
+            "summary": "Creates\u0020a\u0020new\u0020event\u0020that\u0020other\u0020objects\u0020can\u0020subscribe\u0020to\u0020using\u0020the\u0020WordPress\u0020Plugin\u0020API.\u0020Essentially\u0020a\u0020wrapper\u0020for\u0020the\u0020\u0060do_action\u0028\u0029\u0060\u0020WP\u0020function.",
+            "url": "classes/RichWeb-Algorithms-Events-WPEventCreator.html#method_create"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Events\\WPEventCreator\u003A\u003Afilter\u0028\u0029",
+            "name": "filter",
+            "summary": "Creates\u0020a\u0020new\u0020filter\u0020for\u0020a\u0020value\u0020so\u0020that\u0020other\u0020objects\u0020can\u0020intercept\u0020and\u0020change\u0020using\u0020the\u0020WordPress\u0020Plugin\u0020API.\u0020Essentially\u0020a\u0020wrapper\u0020for\u0020the\u0020\u0060apply_filters\u0028\u0029\u0060\u0020WP\u0020function.",
+            "url": "classes/RichWeb-Algorithms-Events-WPEventCreator.html#method_filter"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Events\\WPEventSubscriber",
+            "name": "WPEventSubscriber",
+            "summary": "",
+            "url": "classes/RichWeb-Algorithms-Events-WPEventSubscriber.html"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Events\\WPEventSubscriber\u003A\u003Asubscribe\u0028\u0029",
+            "name": "subscribe",
+            "summary": "Registers\u0020an\u0020object\u0020for\u0020event\u0020callback\u0020with\u0020the\u0020WordPress\u0020Plugin\u0020API.\u0020Essentially\u0020a\u0020wrapper\u0020for\u0020the\u0020\u0060add_filter\u0028\u0029\u0060\u0020WP\u0020function.",
+            "url": "classes/RichWeb-Algorithms-Events-WPEventSubscriber.html#method_subscribe"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Interfaces\\AlgorithmInterface",
             "name": "AlgorithmInterface",
@@ -681,6 +721,31 @@ Search.appendIndex(
             "summary": "Returns\u0020an\u0020array\u0020of\u0020\\RichWeb\\Algorithms\\CodeExample\u0020objects\u0020for\u0020a\u0020post.",
             "url": "classes/RichWeb-Algorithms-Interfaces-CodeExamplesLoaderInterface.html#method_getCodeExamples"
         },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Interfaces\\EventCreatorInterface",
+            "name": "EventCreatorInterface",
+            "summary": "",
+            "url": "classes/RichWeb-Algorithms-Interfaces-EventCreatorInterface.html"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Interfaces\\EventCreatorInterface\u003A\u003Acreate\u0028\u0029",
+            "name": "create",
+            "summary": "Creates\u0020a\u0020new\u0020event\u0020that\u0020other\u0020objects\u0020can\u0020subscribe\u0020to.",
+            "url": "classes/RichWeb-Algorithms-Interfaces-EventCreatorInterface.html#method_create"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Interfaces\\EventCreatorInterface\u003A\u003Afilter\u0028\u0029",
+            "name": "filter",
+            "summary": "Creates\u0020a\u0020new\u0020filter\u0020that\u0020other\u0020objects\u0020can\u0020subscribe\u0020to\u0020and\u0020intercept.",
+            "url": "classes/RichWeb-Algorithms-Interfaces-EventCreatorInterface.html#method_filter"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Interfaces\\EventSubscriberInterface",
+            "name": "EventSubscriberInterface",
+            "summary": "",
+            "url": "classes/RichWeb-Algorithms-Interfaces-EventSubscriberInterface.html"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Interfaces\\EventSubscriberInterface\u003A\u003Asubscribe\u0028\u0029",
+            "name": "subscribe",
+            "summary": "Registers\u0020an\u0020object\u0020for\u0020event\u0020callback.",
+            "url": "classes/RichWeb-Algorithms-Interfaces-EventSubscriberInterface.html#method_subscribe"
+        },                {
             "fqsen": "\\RichWeb\\Algorithms\\Interfaces\\FileLoaderInterface",
             "name": "FileLoaderInterface",
             "summary": "",
@@ -795,6 +860,16 @@ Search.appendIndex(
             "name": "instance",
             "summary": "Main\u0020Class\u0020Instance.",
             "url": "classes/RichWeb-Algorithms-Interfaces-SingletonPluginInterface.html#method_instance"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Interfaces\\SubscribesToEventsInterface",
+            "name": "SubscribesToEventsInterface",
+            "summary": "",
+            "url": "classes/RichWeb-Algorithms-Interfaces-SubscribesToEventsInterface.html"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Interfaces\\SubscribesToEventsInterface\u003A\u003AsubscribeToEvents\u0028\u0029",
+            "name": "subscribeToEvents",
+            "summary": "Method\u0020containing\u0020the\u0020events\u0020this\u0020object\u0020will\u0020subscribe\u0020to.",
+            "url": "classes/RichWeb-Algorithms-Interfaces-SubscribesToEventsInterface.html#method_subscribeToEvents"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Interfaces\\SyntaxHighlighterInterface",
             "name": "SyntaxHighlighterInterface",
@@ -1121,6 +1196,11 @@ Search.appendIndex(
             "summary": "Hook\u0020into\u0020actions\u0020and\u0020filters.",
             "url": "classes/RichWeb-Algorithms-Plugin.html#method_initHooks"
         },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Plugin\u003A\u003AsubscribeToEvents\u0028\u0029",
+            "name": "subscribeToEvents",
+            "summary": "",
+            "url": "classes/RichWeb-Algorithms-Plugin.html#method_subscribeToEvents"
+        },                {
             "fqsen": "\\RichWeb\\Algorithms\\Plugin\u003A\u003Aactivated\u0028\u0029",
             "name": "activated",
             "summary": "",
@@ -1381,6 +1461,26 @@ Search.appendIndex(
             "summary": "Enqueues\u0020the\u0020scripts\u0020and\u0020styles\u0020for\u0020the\u0020frontend.\u0020Hooked\u0020from\u0020\u0027wp_enqueue_scripts\u0027\u0020action.",
             "url": "classes/RichWeb-Algorithms-Setup-PrismSyntaxtHighlighterScripts.html#method_enqueueFrontendScripts"
         },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Setup\\Scripts\\FrontendScriptLoader",
+            "name": "FrontendScriptLoader",
+            "summary": "",
+            "url": "classes/RichWeb-Algorithms-Setup-Scripts-FrontendScriptLoader.html"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Setup\\Scripts\\FrontendScriptLoader\u003A\u003Arun\u0028\u0029",
+            "name": "run",
+            "summary": "",
+            "url": "classes/RichWeb-Algorithms-Setup-Scripts-FrontendScriptLoader.html#method_run"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Setup\\Scripts\\FrontendScriptLoader\u003A\u003Aregister\u0028\u0029",
+            "name": "register",
+            "summary": "",
+            "url": "classes/RichWeb-Algorithms-Setup-Scripts-FrontendScriptLoader.html#method_register"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Setup\\Scripts\\FrontendScriptLoader\u003A\u003Aload\u0028\u0029",
+            "name": "load",
+            "summary": "",
+            "url": "classes/RichWeb-Algorithms-Setup-Scripts-FrontendScriptLoader.html#method_load"
+        },                {
             "fqsen": "\\RichWeb\\Algorithms\\Setup\\Scripts",
             "name": "Scripts",
             "summary": "Loads\u0020the\u0020JS\u0020and\u0020CSS\u0020files\u0020needed\u0020by\u0020the\u0020plugin.",
@@ -1526,6 +1626,11 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/richweb-algorithms-codeexamples.html"
         },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Events",
+            "name": "Events",
+            "summary": "",
+            "url": "namespaces/richweb-algorithms-events.html"
+        },                {
             "fqsen": "\\RichWeb\\Algorithms\\Interfaces",
             "name": "Interfaces",
             "summary": "",
@@ -1555,6 +1660,11 @@ Search.appendIndex(
             "name": "Setup",
             "summary": "",
             "url": "namespaces/richweb-algorithms-setup.html"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Setup\\Scripts",
+            "name": "Scripts",
+            "summary": "",
+            "url": "namespaces/richweb-algorithms-setup-scripts.html"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Traits\\Formatting",
             "name": "Formatting",
