@@ -14,6 +14,7 @@ declare(strict_types=1);
 namespace RichWeb\Algorithms\Setup;
 
 use RichWeb\Algorithms\Interfaces\{
+    EventSubscriberInterface,
     LanguagesInterface,
     HasRunnerInterface
 };
@@ -33,7 +34,8 @@ class Languages implements LanguagesInterface, HasRunnerInterface
 
     public function __construct(
         private string $text_domain,
-        private string $plugin_path
+        private string $plugin_path,
+        private EventSubscriberInterface $subscriber
     ) {}
 
     /**
@@ -51,14 +53,16 @@ class Languages implements LanguagesInterface, HasRunnerInterface
     /**
      * The action hooks to set up on initialisation.
      * 
-     * @uses \add_action() WP Function
+     * @uses Languages::$subscriber
+     * 
+     * @see EventSubscriberInterface::subscribe()
      * @see https://developer.wordpress.org/reference/hooks/init/ WP action
      * 
      * @return void
      */
     private function actions(): void
     {
-        add_action('init', [$this, 'loadTextDomain']);
+        $this->subscriber->subscribe('init', [$this, 'loadTextDomain']);
     }
 
     /**

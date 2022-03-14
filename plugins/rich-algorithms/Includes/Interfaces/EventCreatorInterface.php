@@ -19,7 +19,7 @@ interface EventCreatorInterface
      * Creates a new event that other objects can subscribe to.
      * 
      * @param string $event   The name of the event to subscribe to.
-     * @param array  ...$args Variadic array of possible arguments to include with the event.
+     * @param mixed  ...$args Variadic array of possible arguments to include with the event.
      * 
      * @return void
      */
@@ -30,7 +30,7 @@ interface EventCreatorInterface
      * 
      * @param string $filter  The name of the filter to create.
      * @param mixed  $value   The value being filtered.
-     * @param array  ...$args Variadic array of possible arguments to include with the filter.
+     * @param mixed  ...$args Variadic array of possible arguments to include with the filter.
      * 
      * @return mixed
      */

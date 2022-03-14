@@ -1441,6 +1441,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/RichWeb-Algorithms-Setup-Languages.html#property_plugin_path"
         },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Setup\\Languages\u003A\u003A\u0024subscriber",
+            "name": "subscriber",
+            "summary": "",
+            "url": "classes/RichWeb-Algorithms-Setup-Languages.html#property_subscriber"
+        },                {
             "fqsen": "\\RichWeb\\Algorithms\\Setup\\PrismSyntaxtHighlighterScripts",
             "name": "PrismSyntaxtHighlighterScripts",
             "summary": "",
@@ -1535,6 +1540,11 @@ Search.appendIndex(
             "name": "plugin_path",
             "summary": "",
             "url": "classes/RichWeb-Algorithms-Setup-Setup.html#property_plugin_path"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Setup\\Setup\u003A\u003A\u0024subscriber",
+            "name": "subscriber",
+            "summary": "",
+            "url": "classes/RichWeb-Algorithms-Setup-Setup.html#property_subscriber"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Traits\\Formatting\\FilePaths",
             "name": "FilePaths",
