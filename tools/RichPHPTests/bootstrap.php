@@ -11,14 +11,15 @@
 
 namespace RichPHPTests;
 
-$sep = DIRECTORY_SEPARATOR;
-$path = __DIR__ . $sep;
-$includes = $path . 'Includes' . $sep;
+use const DIRECTORY_SEPARATOR as SEP;
+
+$path = __DIR__ . SEP;
+$includes = $path . 'Includes' . SEP;
 
 require_once $includes . 'Project.php';
 $project = new Project($path . 'project.json', __DIR__);
 
-require_once $includes . 'Autoload' . $sep . 'Autoloader.php';
+require_once $includes . 'Autoload' . SEP . 'Autoloader.php';
 (new Autoload\Autoloader($project->getAutoloaderSources()))->register();
 
 (new FileLoader(...$project->getFileSources()))->loadFiles();

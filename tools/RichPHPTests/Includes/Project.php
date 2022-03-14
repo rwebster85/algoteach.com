@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace RichPHPTests;
 
-use const DIRECTORY_SEPARATOR;
+use const DIRECTORY_SEPARATOR as SEP;
 
 /**
  * An object that stores information about the current project such as name, version number, and autoload/manual directories.
@@ -85,8 +85,6 @@ final class Project
     private string $version;
 
     private array $requirements;
-
-    private string $sep = DIRECTORY_SEPARATOR;
 
     /**
      * Builds a new Project containing the paths for files and the autoloader. Also assigns project specific details such as name and version number.
@@ -160,7 +158,7 @@ final class Project
         }
 
         foreach ($autoload as $namespace => $path) {
-            $this->autoload_sources[$namespace] = $this->main_directory . $this->sep . $path;
+            $this->autoload_sources[$namespace] = $this->main_directory . SEP . $path;
         }
     }
 
@@ -176,7 +174,7 @@ final class Project
         }
 
         foreach ($files as $file) {
-            $this->file_sources[] = $this->formatSlashes($this->main_directory . $this->sep . $file);
+            $this->file_sources[] = $this->formatSlashes($this->main_directory . SEP . $file);
         }
     }
 
@@ -199,6 +197,6 @@ final class Project
      */
     private function formatSlashes(string $path): string
     {
-        return(str_replace(["\\", "/"], $this->sep, $path));
+        return(str_replace(["\\", "/"], SEP, $path));
     }
 }
