@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace RichWeb\Algorithms\Setup;
 
+use RichWeb\Algorithms\Interfaces\EventSubscriberInterface;
 use RichWeb\Algorithms\Interfaces\HasRunnerInterface;
 
 /**
@@ -22,7 +23,8 @@ class Setup implements HasRunnerInterface
 {
     public function __construct(
         private string $text_domain,
-        private string $plugin_path
+        private string $plugin_path,
+        private EventSubscriberInterface $subscriber
     ) {}
 
     /**
@@ -48,7 +50,7 @@ class Setup implements HasRunnerInterface
      */
     private function textDomainLoader(): void
     {
-        (new Languages($this->text_domain, $this->plugin_path))->run();
+        (new Languages($this->text_domain, $this->plugin_path, $this->subscriber))->run();
     }
 
     /**

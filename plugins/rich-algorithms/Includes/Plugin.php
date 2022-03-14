@@ -99,7 +99,7 @@ final class Plugin extends AbstractSingletonPlugin
      */
     public function pluginsLoadedSetup(): void
     {
-        (new Setup($this->text_domain, PLUGIN_PATH))->run();
+        (new Setup($this->text_domain, PLUGIN_PATH, new WPEventSubscriber()))->run();
 
         $this->event_creator->create(__CLASS__ . '\PluginsLoadedSetupComplete');
     }
