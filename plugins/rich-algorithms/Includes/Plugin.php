@@ -59,7 +59,7 @@ final class Plugin extends AbstractSingletonPlugin
         $this->initHooks();
         $this->loadModules();
 
-        $this->event_creator->create(__CLASS__ . '\BuildComplete');
+        $this->event_creator->create(__CLASS__ . '\BuildComplete', $this);
     }
 
     /**
