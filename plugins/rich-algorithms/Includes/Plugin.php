@@ -58,6 +58,8 @@ final class Plugin extends AbstractSingletonPlugin
     {
         $this->initHooks();
         $this->loadModules();
+
+        $this->event_creator->create(__CLASS__ . '\BuildComplete');
     }
 
     /**
@@ -98,6 +100,8 @@ final class Plugin extends AbstractSingletonPlugin
     public function pluginsLoadedSetup(): void
     {
         (new Setup($this->text_domain, PLUGIN_PATH))->run();
+
+        $this->event_creator->create(__CLASS__ . '\PluginsLoadedSetupComplete');
     }
 
     /**
@@ -123,6 +127,8 @@ final class Plugin extends AbstractSingletonPlugin
         
         (new CodeExamplesLoader($coding_languages))->subscribeToEvents(new WPEventSubscriber());
         (new MetaBoxes($packages, $coding_languages))->run();
+
+        $this->event_creator->create(__CLASS__ . '\InitSetupComplete');
     }
 
     private function loadModules(): void
