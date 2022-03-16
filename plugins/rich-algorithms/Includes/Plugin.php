@@ -26,7 +26,7 @@ use RichWeb\Algorithms\Packages\AlgorithmPackageLoader;
 use RichWeb\Algorithms\Packages\AlgorithmPackageManager;
 use RichWeb\Algorithms\PrismSyntaxHighlighter;
 use RichWeb\Algorithms\Setup\Setup;
-use RichWeb\Algorithms\Traits\Formatting\FilePaths;
+use RichWeb\Algorithms\Traits\Formatting\FilePathsTrait;
 
 use const RichWeb\Algorithms\{
     PLUGIN_FILE,
@@ -36,7 +36,7 @@ use const RichWeb\Algorithms\{
 
 final class Plugin extends AbstractSingletonPlugin
 {
-    use FilePaths;
+    use FilePathsTrait;
 
     private AlgorithmPackageManagerInterface $algorithm_package_manager;
 
