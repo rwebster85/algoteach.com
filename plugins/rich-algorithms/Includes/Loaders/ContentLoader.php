@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace RichWeb\Algorithms\Loaders;
 
+use RichWeb\Algorithms\Interfaces\ContentLoaderInterface;
 use RichWeb\Algorithms\Interfaces\FileLoaderInterface;
 use RichWeb\Algorithms\Traits\Formatting;
 use function file_exists;
@@ -45,7 +46,7 @@ use function file_exists;
  * 
  * Public methods on the ContentLoader class be can accessed from within content pages by using the `$loader` variable or `$this`.
  */
-final class ContentLoader
+final class ContentLoader implements ContentLoaderInterface
 {
     use Formatting\FilePathsTrait;
     use Formatting\Strings;
