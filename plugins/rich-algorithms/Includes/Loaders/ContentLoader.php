@@ -14,6 +14,7 @@ declare(strict_types=1);
 namespace RichWeb\Algorithms\Loaders;
 
 use RichWeb\Algorithms\Interfaces\FileLoaderInterface;
+use RichWeb\Algorithms\Traits\Formatting;
 use function file_exists;
 
 /**
@@ -24,41 +25,61 @@ use function file_exists;
  * Example usage:
  * 
  * ```php
- * $files = [
- *     'File1.php',
- *     'Files2.php'
- * ];
+ * $path = 'path/to/some/file.php';
  * 
- * $file_loader = new FileLoader(...$files);
- * $file_loader->loadFiles();
+ * $loader = new ContentLoader($path, $this);
+ * $loader->loadFile();
  * ```
+ * 
+ * Within the content file being loaded, to reference the object passed as `$this`, use `$content`.
+ * 
+ * ```php
+ * <?php
+ * // Content file
+ * // @var ContentLoader $loader
+ * ?>
+ * <div>
+ *     <p><?php echo $loader->escHtml($content->someMethod()); ?></p>
+ * </div>
+ * ```
+ * 
+ * Public methods on the ContentLoader class be can accessed from within content pages by using the `$loader` variable or `$this`.
  */
 final class ContentLoader
 {
+    use Formatting\FilePathsTrait;
+    use Formatting\Strings;
+
     /**
-     * The path to a content file to load.
+     * Creates a new content loader.
      * 
-     * @param string Filepath
-     * @param bool Whether to use require or include
+     * @param string $path    The filepath of a content file to load.
+     * @param object $content The object the content file relates to.
+     * @param bool   $require Whether to use require or include
      */
     public function __construct(
         private string $path,
+        private ?object $content = null,
         private bool $require = false
     ) {}
 
     /**
-     * Iterates through $files and passes each to requireFile().
+     * Loads the file in the ContentLoader::$path variable.
      * 
-     * @uses FileLoader::$files
-     * @uses FileLoader::requireFile()
+     * Also declares two local variables for use within a content file. `$loader` is this content loader, and `$content` is the object passed in the constructor.
+     * 
+     * @uses ContentLoader::$path
      * 
      * @return void
      */
     public function loadFile(): void
     {
+        $loader  = $this;
+        $content = $this->content;
+
         if (file_exists($this->path)) {
             if ($this->require) {
-                require_once $this->path;
+                require $this->path;
             } else {
                 include $this->path;
             }
