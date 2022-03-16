@@ -21,7 +21,7 @@ use RichWeb\Algorithms\Setup\AlgorithmScripts;
 
 abstract class AbstractAlgorithm implements AlgorithmInterface, HasRunnerInterface
 {
-    use Formatting\FilePaths;
+    use Formatting\FilePathsTrait;
     use Formatting\Strings;
 
     private array $code_examples;

@@ -22,7 +22,7 @@ use RichWeb\Algorithms\Traits\Formatting;
  */
 class AlgorithmScripts extends AbstractScripts
 {
-    use Formatting\FilePaths;
+    use Formatting\FilePathsTrait;
     use Formatting\Strings;
 
     public function __construct(
