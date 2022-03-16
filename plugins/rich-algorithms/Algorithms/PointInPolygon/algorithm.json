@@ -1,0 +1,12 @@
+{
+    "name": "Point in Polygon",
+    "version": "1.0.0",
+    "class": "PointInPolygon",
+    "namespace": "RichWeb\\Algorithms\\Algorithm",
+    "scripts": [
+        "polygon.js"
+    ],
+    "styles": [
+        "polygon.css"
+    ]
+}
