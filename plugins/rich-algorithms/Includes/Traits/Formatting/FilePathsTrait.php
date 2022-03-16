@@ -15,7 +15,7 @@ namespace RichWeb\Algorithms\Traits\Formatting;
 
 use const DIRECTORY_SEPARATOR as SEP;
 
-trait FilePaths
+trait FilePathsTrait
 {
     /**
      * Normalises forward and/or backward slashes to the system directory separator.
