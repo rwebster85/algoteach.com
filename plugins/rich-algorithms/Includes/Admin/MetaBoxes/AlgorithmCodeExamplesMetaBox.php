@@ -14,6 +14,7 @@ declare(strict_types=1);
 namespace RichWeb\Algorithms\Admin\MetaBoxes;
 
 use RichWeb\Algorithms\Admin\Abstracts\AbstractMetaBox;
+use RichWeb\Algorithms\Loaders\ContentLoader;
 use RichWeb\Algorithms\Traits\Formatting;
 
 /**
@@ -21,7 +22,7 @@ use RichWeb\Algorithms\Traits\Formatting;
  */
 final class AlgorithmCodeExamplesMetaBox extends AbstractMetaBox
 {
-    use Formatting\FilePaths;
+    use Formatting\FilePathsTrait;
     use Formatting\Strings;
 
     private int $post_id;
@@ -55,7 +56,9 @@ final class AlgorithmCodeExamplesMetaBox extends AbstractMetaBox
 
         wp_nonce_field('_richweb_algorithm_code_examples_nonce', 'richweb_algorithm_code_examples_nonce');
 
-        include_once dirname(__FILE__) . '\..\Content\CodeExamplesMetaDetails.php';
+        $path = $this->formatSlashes(dirname(__FILE__) . '\..\Content\CodeExamplesMetaDetails.php');
+        $loader = new ContentLoader($path, $this);
+        $loader->loadFile();
     }
 
     /**
@@ -67,7 +70,7 @@ final class AlgorithmCodeExamplesMetaBox extends AbstractMetaBox
      * 
      * @return string
      */
-    private function getCodeExampleElement(int $key, string $lang = '', string $vers = '', string $code = '', string $info = ''): string
+    public function getCodeExampleElement(int $key, string $lang = '', string $vers = '', string $code = '', string $info = ''): string
     {
         ob_start();
 

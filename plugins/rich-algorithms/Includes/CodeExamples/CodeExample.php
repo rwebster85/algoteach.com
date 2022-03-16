@@ -20,8 +20,7 @@ use Stringable;
 
 class CodeExample implements CodeExampleInterface, Stringable
 {
-    use Formatting\FilePaths;
-    use Formatting\Strings;
+    use Formatting\FilePathsTrait;
 
     private string $code;
 
@@ -61,25 +60,25 @@ class CodeExample implements CodeExampleInterface, Stringable
         return $this->info;
     }
 
-    public function getInfoAutoP(): string
-    {
-        return $this->autoP($this->info);
-    }
-
     public function getCode(): string
     {
         return $this->code;
     }
     
+    /**
+     * Returns the string representation of this code example.
+     * 
+     * @return string
+     */
     public function __toString(): string
     {
         ob_start();
 
         $path = dirname(__FILE__) . $this->formatSlashes('\..\Content\CodeExampleContent.php');
-        include $path;
 
-        $content = ob_get_clean();
+        $loader = new ContentLoader($path, $this);
+        $loader->loadFile();
 
-        return $content;
+        return ob_get_clean();
     }
 }
