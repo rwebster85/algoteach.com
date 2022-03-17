@@ -16,4 +16,4 @@ PSR-4 Compliant PHP Autoloader class adapted from PHP FIG group.
 * PHP FIG. (2016, July 7). PSR-4 Example Implementations. Retrieved December 8, 2021, from PHP-FIG: https://www.php-fig.org/psr/psr-4/examples/
 
 Syntax highlighter by PrismJS.
-* PrismJS. (2022, February 17). PrismJS (1.27.0) [Webpage Syntax Highlighter]. PrismJS. https://prismjs.com/
+* PrismJS. (2022, February 17). PrismJS (1.27.0) [Code Syntax Highlighter]. PrismJS. https://prismjs.com/
