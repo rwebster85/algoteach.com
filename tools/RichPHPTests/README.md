@@ -158,7 +158,7 @@ File and class structure of framework based primarily on PHPUnit, but also JUnit
 
 #### Specific Code Adaptations
 TestUtil::isTestMethod()
-* Bergmann, S. (2020). PHPUnit – The PHP Testing Framework. PHPUnit. Retrieved 5 January 2022, from https://phpunit.de/
+* Bergmann, S. (2020). phpunit/Test.php. Retrieved January 5, 2022, from GitHub: https://github.com/sebastianbergmann/phpunit/blob/1c4fc0e68c42132b4bf38b0185058919f2dc3f31/src/Util/Test.php#L21
 
 SourceChecker::isCli()
 * Moon, S. (2020, July 30). How to Check if php is running from cli (command line). BinaryTides. Retrieved 4 January 2022, from https://www.binarytides.com/php-check-running-cli/
