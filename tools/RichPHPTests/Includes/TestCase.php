@@ -160,7 +160,7 @@ abstract class TestCase
     {
         $method = new ReflectionMethod($this, 'setUpClass');
         if (
-            TestUtil::testClassHasMethod(new ReflectionMethod($this, 'setUpClass'))
+            TestUtil::testClassHasMethod($method)
             && $method->getReturnType()->getName() === 'void'
         ) {
             $this->setUpClass();
@@ -178,7 +178,7 @@ abstract class TestCase
     {
         $method = new ReflectionMethod($this, 'tearDownClass');
         if (
-            TestUtil::testClassHasMethod(new ReflectionMethod($this, 'setUpClass'))
+            TestUtil::testClassHasMethod($method)
             && $method->getReturnType()->getName() === 'void'
         ) {
             $this->tearDownClass();
