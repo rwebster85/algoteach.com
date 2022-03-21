@@ -1,12 +1,12 @@
 {
-    "name": "Example Algorithm",
+    "name": "Dijkstra's algorithm",
     "version": "1.0.0",
-    "class": "Example",
+    "class": "Dijkstra",
     "namespace": "RichWeb\\Algorithms\\Algorithm",
     "scripts": [
-        "example.js"
+        "dijkstra.js"
     ],
     "styles": [
-        "example.css"
+        "dijkstra.css"
     ]
 }
