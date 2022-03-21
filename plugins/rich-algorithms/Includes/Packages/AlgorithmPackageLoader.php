@@ -68,7 +68,7 @@ final class AlgorithmPackageLoader implements AlgorithmPackageLoaderInterface, H
         }
     }
 
-    private function postHasPackage($post_id): bool|string
+    private function postHasPackage(int $post_id): bool|string
     {
         return get_post_meta($post_id, 'richweb_algorithm_package', true);
     }
