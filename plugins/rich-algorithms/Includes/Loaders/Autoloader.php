@@ -110,7 +110,7 @@ class Autoloader implements AutoloaderInterface
      * 
      * @return void
      */
-    public function addNamespace($prefix, $base_dir, $prepend = false): void
+    public function addNamespace(string $prefix, string $base_dir, bool $prepend = false): void
     {
         // normalize namespace prefix
         $prefix = trim($prefix, '\\') . '\\';
@@ -138,7 +138,7 @@ class Autoloader implements AutoloaderInterface
      * 
      * @return string|bool The mapped file name on success, or boolean false on failure.
      */
-    public function loadClass($class): string|bool
+    public function loadClass(string $class): string|bool
     {
         // the current namespace prefix
         $prefix = $class;
@@ -176,7 +176,7 @@ class Autoloader implements AutoloaderInterface
      * 
      * @return string|bool Boolean false if no mapped file can be loaded, or the name of the mapped file that was loaded.
      */
-    protected function loadMappedFile($prefix, $relative_class): string|bool
+    protected function loadMappedFile(string $prefix, string $relative_class):  
     {
         // are there any base directories for this namespace prefix?
         if (isset($this->prefixes[$prefix]) === false) {
@@ -211,7 +211,7 @@ class Autoloader implements AutoloaderInterface
      * 
      * @return bool True if the file exists, false if not.
      */
-    protected function requireFile($file)
+    protected function requireFile(string $file): bool
     {
         if (file_exists($file)) {
             require_once $file;
