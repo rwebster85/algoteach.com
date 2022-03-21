@@ -14,9 +14,10 @@ declare(strict_types=1);
 namespace RichWeb\Algorithms\Packages;
 
 use RichWeb\Algorithms\Abstracts\AbstractAlgorithm;
-use RichWeb\Algorithms\Packages\AlgorithmPackage;
 use RichWeb\Algorithms\Interfaces\AlgorithmPackageLoaderInterface;
+use RichWeb\Algorithms\Interfaces\EventSubscriberInterface;
 use RichWeb\Algorithms\Interfaces\HasRunnerInterface;
+use RichWeb\Algorithms\Packages\AlgorithmPackage;
 use RichWeb\Algorithms\Traits\Posts\AlgorithmChecker;
 
 final class AlgorithmPackageLoader implements AlgorithmPackageLoaderInterface, HasRunnerInterface
@@ -26,10 +27,12 @@ final class AlgorithmPackageLoader implements AlgorithmPackageLoaderInterface, H
     /**
      * Creates a new AlgorithmPackageLoader.
      * 
-     * @param array<string, AlgorithmPackage> $packages A key/value pair of AlgorithmPackage objects. Key is the fully qualified package class name, value is the package object.
+     * @param array<string, AlgorithmPackage> $packages   A key/value pair of AlgorithmPackage objects. Key is the fully qualified package class name, value is the package object.
+     * @param EventSubscriberInterface        $subscriber The event subscriber
      */
     public function __construct(
-        private array $packages
+        private array $packages,
+        private EventSubscriberInterface $subscriber
     ) {}
 
     public function run(): void
@@ -87,7 +90,7 @@ final class AlgorithmPackageLoader implements AlgorithmPackageLoaderInterface, H
             if (file_exists($path)) {
                 require_once $path;
                 $class = $package->getQualifiedClassName();
-                $algorithm = new $class($package, $post_id);
+                $algorithm = new $class($package, $post_id, $this->subscriber);
                 /** @var AbstractAlgorithm $algorithm */
                 $algorithm->run();
             }

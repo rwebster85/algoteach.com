@@ -119,7 +119,7 @@ final class Plugin extends AbstractSingletonPlugin
 
         $packages = $this->algorithm_package_manager->getPackages();
 
-        $package_loader = new AlgorithmPackageLoader($packages);
+        $package_loader = new AlgorithmPackageLoader($packages, new WPEventSubscriber());
         $package_loader->run();
 
         (new AlgorithmPostType())->run();

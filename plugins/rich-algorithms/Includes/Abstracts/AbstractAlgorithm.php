@@ -15,6 +15,7 @@ namespace RichWeb\Algorithms\Abstracts;
 
 use RichWeb\Algorithms\Interfaces\AlgorithmInterface;
 use RichWeb\Algorithms\Interfaces\AlgorithmPackageInterface;
+use RichWeb\Algorithms\Interfaces\EventSubscriberInterface;
 use RichWeb\Algorithms\Interfaces\HasRunnerInterface;
 use RichWeb\Algorithms\Traits\Formatting;
 use RichWeb\Algorithms\Setup\AlgorithmScripts;
@@ -28,7 +29,8 @@ abstract class AbstractAlgorithm implements AlgorithmInterface, HasRunnerInterfa
 
     final public function __construct(
         private AlgorithmPackageInterface $package,
-        private int $post_id
+        private int $post_id,
+        private EventSubscriberInterface $subscriber
     ) {}
 
     final public function run(): void
@@ -38,7 +40,12 @@ abstract class AbstractAlgorithm implements AlgorithmInterface, HasRunnerInterfa
         $this->load();
     }
 
-    protected function actions(): void {}
+    protected function actions(): void
+    {
+        $this->subscriber->subscribe('the_content', [$this, 'demo']);
+    }
+
+    abstract public function demo(?string $content = ''): string;
 
     private function loadScripts(): void
     {

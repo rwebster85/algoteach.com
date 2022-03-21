@@ -29,6 +29,10 @@ class AlgorithmScripts extends AbstractScripts
         private AlgorithmPackageInterface $package
     ) {}
 
+    public function registerAdminScripts(): void {}
+
+    public function registerFrontendScripts(): void {}
+
     public function enqueueAdminScripts(string $hook): void {}
 
     public function enqueueFrontendScripts(): void
