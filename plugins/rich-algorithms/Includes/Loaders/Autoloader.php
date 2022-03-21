@@ -176,7 +176,7 @@ class Autoloader implements AutoloaderInterface
      * 
      * @return string|bool Boolean false if no mapped file can be loaded, or the name of the mapped file that was loaded.
      */
-    protected function loadMappedFile(string $prefix, string $relative_class):  
+    protected function loadMappedFile(string $prefix, string $relative_class): string|bool
     {
         // are there any base directories for this namespace prefix?
         if (isset($this->prefixes[$prefix]) === false) {
