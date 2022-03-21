@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace RichWeb\Algorithms\Interfaces;
 
-use RichWeb\Algorithms\Project;
+use RichWeb\Algorithms\Interfaces\ProjectInterface;
 
 interface SingletonPluginInterface
 {
@@ -22,5 +22,5 @@ interface SingletonPluginInterface
      *
      * Ensures only one instance of this class is loaded or can be loaded.
      */
-    public static function instance(?Project $project);
+    public static function instance(?ProjectInterface $project);
 }
