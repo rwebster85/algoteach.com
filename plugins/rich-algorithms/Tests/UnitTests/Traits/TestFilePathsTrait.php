@@ -10,10 +10,11 @@ class TestFilePathsTrait extends TestCase
 {
     use FilePathsTrait;
 
-    public function testFormatSlashesWindows(): void
+    public function testFormatSlashes(): void
     {
+        $sep = DIRECTORY_SEPARATOR;
         $path = 'path/to/file.php';
         $formatted = $this->formatSlashes($path);
-        test($formatted)->stringNotContains('/');
+        test($formatted)->stringContains($sep);
     }
 }
