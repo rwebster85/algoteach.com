@@ -23,4 +23,9 @@ final class PointInPolygon extends AbstractAlgorithm
     {
         //
     }
+
+    public function demo(?string $content = ''): string
+    {
+        return $content;
+    }
 }
