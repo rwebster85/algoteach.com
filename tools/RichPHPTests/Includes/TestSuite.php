@@ -145,15 +145,16 @@ final class TestSuite
 
             include_once $test_class->getFullPath();
 
+            if (!class_exists($qualified_name)) {
+                continue;
+            }
+
             if ($this->isTestClassExcluded($qualified_name)) {
                 Application::getTestResults()->addSkippedFile();
                 continue;
             }
 
-            if (
-                class_exists($qualified_name)
-                && TestUtil::isTestClass($qualified_name)
-            ) {
+            if (TestUtil::isTestClass($qualified_name)) {
                 $test_class = new $qualified_name($this->config);
             }
         }
