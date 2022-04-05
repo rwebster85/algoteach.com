@@ -31,7 +31,7 @@ class TestResult
         public string $error_message,
         private bool $pass
     ) {
-        $trace = debug_backtrace()[4];
+        $trace = debug_backtrace()[3];
 
         $this->test_name = ($trace['function'] ?? '');
         $this->test_class = ($trace['class'] ?? '');
