@@ -13,10 +13,12 @@ declare(strict_types=1);
 
 use RichWeb\Algorithms\Admin\MetaBoxes\AlgorithmCodeExamplesMetaBox;
 use RichWeb\Algorithms\ContentLoader;
+use RichWeb\Algorithms\CodeExamples\CodeExampleModel;
 
 /**
  * @var AlgorithmCodeExamplesMetaBox $model
  * @var ContentLoader                $loader
+ * @var array<string|int, CodeExampleModel> $code_examples
  */
 
 $code_examples = $model->getCodeExamples();
