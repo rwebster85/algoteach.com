@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace RichWeb\Algorithms\CodeExamples;
 
-use RichWeb\Algorithms\CodeExamples\CodeExample;
+use RichWeb\Algorithms\CodeExamples\CodeExampleModel;
 use RichWeb\Algorithms\Events\EventSubscriber;
 use RichWeb\Algorithms\Interfaces\CodeExamplesLoaderInterface;
 use RichWeb\Algorithms\Interfaces\SubscribesToEventsInterface;
@@ -87,7 +87,7 @@ final class CodeExamplesLoader implements CodeExamplesLoaderInterface, Subscribe
             if (!is_array($example) || empty($example)) {
                 continue;
             }
-            $this->code_examples[] = new CodeExample($example, $this->code_languages);
+            $this->code_examples[] = new CodeExampleModel($example, $this->code_languages);
         }
     }
 
@@ -108,7 +108,7 @@ final class CodeExamplesLoader implements CodeExamplesLoaderInterface, Subscribe
 
         echo '<h2><i class="fas fa-code"></i> Code Examples</h2>';
 
-        /** @var CodeExample $example */
+        /** @var CodeExampleModel $example */
         foreach ($this->code_examples as $example) {
             echo $example;
         }

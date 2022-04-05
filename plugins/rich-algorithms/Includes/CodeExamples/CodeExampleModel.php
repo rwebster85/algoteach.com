@@ -18,7 +18,7 @@ use RichWeb\Algorithms\Loaders\ContentLoader;
 use RichWeb\Algorithms\Traits\Formatting;
 use Stringable;
 
-class CodeExample implements CodeExampleInterface, Stringable
+class CodeExampleModel implements CodeExampleInterface, Stringable
 {
     use Formatting\FilePathsTrait;
 

@@ -11,11 +11,11 @@
 
 declare(strict_types=1);
 
-use RichWeb\Algorithms\CodeExamples\CodeExample;
+use RichWeb\Algorithms\CodeExamples\CodeExampleModel;
 use RichWeb\Algorithms\ContentLoader;
 
 /**
- * @var CodeExample $content
+ * @var CodeExampleModel $content
  * @var ContentLoader $loader
  */
 
