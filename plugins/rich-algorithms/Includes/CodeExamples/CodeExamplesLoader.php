@@ -101,14 +101,8 @@ final class CodeExamplesLoader implements CodeExamplesLoaderInterface, Subscribe
 
     final public function appendExamplesToContent(?string $content = ''): string
     {
-        $code_examples_model = new CodeExamplesModel($this->getCodeExamples());
-
-        ob_start();
-
-        echo $code_examples_model;
-
-        $after = ob_get_clean();
-        return $content . $after;
+        $model = new CodeExamplesModel($this->getCodeExamples());
+        return $content . $model;
     }
 
     final public function getCodeExamples(): array
