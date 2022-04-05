@@ -13,11 +13,11 @@ declare(strict_types=1);
 
 namespace RichWeb\Algorithms\CodeExamples;
 
+use RichWeb\Algorithms\Interfaces\ModelInterface;
 use RichWeb\Algorithms\Loaders\ContentLoader;
 use RichWeb\Algorithms\Traits\Formatting;
-use Stringable;
 
-class CodeExamplesModel implements Stringable
+class CodeExamplesModel implements ModelInterface
 {
     use Formatting\FilePathsTrait;
 
@@ -40,7 +40,7 @@ class CodeExamplesModel implements Stringable
      * 
      * @return string
      */
-    public function __toString(): string
+    public function getContent(): string
     {
         ob_start();
 

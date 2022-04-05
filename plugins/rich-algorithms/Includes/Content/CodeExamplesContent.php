@@ -27,7 +27,7 @@ use RichWeb\Algorithms\ContentLoader;
     <?php
         /** @var CodeExampleModel $example */
         foreach ($model->getCodeExamples() as $example) {
-            echo $example;
+            echo $example->getContent();
         }
     ?>
 </div>
