@@ -121,6 +121,11 @@ final class Test extends AbstractTest
         $this->assert(is_object($this->value), false, 'Value is an object.');
     }
 
+    public function isObjectOfType(string $type): void
+    {
+        $this->assert($this->value instanceof $type, true, 'Object is not an instance of ' . (string) $type . '');
+    }
+
     public function isString(): void
     {
         $this->assert(is_string($this->value), true, 'Value is not a string.');
