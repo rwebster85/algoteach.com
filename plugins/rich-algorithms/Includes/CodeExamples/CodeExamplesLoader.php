@@ -101,18 +101,11 @@ final class CodeExamplesLoader implements CodeExamplesLoaderInterface, Subscribe
 
     final public function appendExamplesToContent(?string $content = ''): string
     {
+        $code_examples_model = new CodeExamplesModel($this->getCodeExamples());
+
         ob_start();
 
-        echo '<div class="rich-algo-frontend-examples-wrap">';
-
-        echo '<h2><i class="fas fa-code"></i> Code Examples</h2>';
-
-        /** @var CodeExampleModel $example */
-        foreach ($this->code_examples as $example) {
-            echo $example;
-        }
-
-        echo '</div>';
+        echo $code_examples_model;
 
         $after = ob_get_clean();
         return $content . $after;
