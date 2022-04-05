@@ -14,7 +14,6 @@ declare(strict_types=1);
 namespace RichWeb\Algorithms\CodeExamples;
 
 use RichWeb\Algorithms\CodeExamples\CodeExampleModel;
-use RichWeb\Algorithms\Events\EventSubscriber;
 use RichWeb\Algorithms\Interfaces\CodeExamplesLoaderInterface;
 use RichWeb\Algorithms\Interfaces\SubscribesToEventsInterface;
 use RichWeb\Algorithms\Interfaces\EventSubscriberInterface;
