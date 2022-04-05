@@ -41,7 +41,7 @@ if (version_compare($min_php, PHP_VERSION, '>')) {
 }
 //end of adapted code
 
-$tests_folder = $path . 'Tests';//$argv[1] ?? null;
+$tests_folder = ($argv[1] ?? $path . 'Tests');
 
 if (is_null($tests_folder)) {
     fwrite(
