@@ -18,7 +18,7 @@ use RichWeb\Algorithms\Traits\Formatting;
 use function file_exists;
 
 /**
- * Content loader includes/requires Content PHP files (views).
+ * Content loader includes/requires Content PHP files (views). Uses formatting traits so page content can access cleaning methods.
  * 
  * Accepts a string path to a content file and a model object.
  * 
