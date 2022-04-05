@@ -20,7 +20,7 @@ use function file_exists;
 /**
  * Content loader includes/requires Content PHP files (views).
  * 
- * Accepts a string path to a content file.
+ * Accepts a string path to a content file and a model object.
  * 
  * Example usage:
  * 
@@ -31,12 +31,13 @@ use function file_exists;
  * $loader->loadFile();
  * ```
  * 
- * Within the content file being loaded, to reference the object passed as `$this`, use `$content`.
+ * Within the content file being loaded, to reference the object passed as `$this`, use `$model`.
  * 
  * ```php
  * <?php
  * // Content file
  * // @var ContentLoader $loader
+ * // @var ModelClass    $model
  * ?>
  * <div>
  *     <p><?php echo $loader->escHtml($content->someMethod()); ?></p>
@@ -54,19 +55,19 @@ final class ContentLoader implements ContentLoaderInterface
      * Creates a new content loader.
      * 
      * @param string $path    The filepath of a content file to load.
-     * @param object $content The object the content file relates to.
+     * @param object $model   The object the content file relates to.
      * @param bool   $require Whether to use require or include
      */
     public function __construct(
-        private string $path,
-        private ?object $content = null,
-        private bool $require = false
+        private string  $path,
+        private ?object $model   = null,
+        private bool    $require = false
     ) {}
 
     /**
      * Loads the file in the ContentLoader::$path variable.
      * 
-     * Also declares two local variables for use within a content file. `$loader` is this content loader, and `$content` is the object passed in the constructor.
+     * Also declares two local variables for use within a content file. `$loader` is this content loader, and `$model` is the object passed in the constructor.
      * 
      * @uses ContentLoader::$path
      * 
@@ -75,7 +76,7 @@ final class ContentLoader implements ContentLoaderInterface
     public function loadFile(): void
     {
         $loader  = $this;
-        $content = $this->content;
+        $model = $this->model;
 
         if (file_exists($this->path)) {
             if ($this->require) {

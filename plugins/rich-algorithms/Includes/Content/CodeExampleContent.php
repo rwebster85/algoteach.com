@@ -15,7 +15,7 @@ use RichWeb\Algorithms\CodeExamples\CodeExampleModel;
 use RichWeb\Algorithms\ContentLoader;
 
 /**
- * @var CodeExampleModel $content
+ * @var CodeExampleModel $model
  * @var ContentLoader $loader
  */
 
@@ -24,10 +24,10 @@ use RichWeb\Algorithms\ContentLoader;
 <div class="rich-algo-frontend-code-example">
     <div class="rich-algo-frontend-code-example-info">
         <?php
-            $formatted_language = $content->getLanguageFormatted();
+            $formatted_language = $model->getLanguageFormatted();
             $pre_language       = $formatted_language;
             $example_title      = $formatted_language;
-            $language_version   = ($content->getLanguageVersion() ?? '');
+            $language_version   = ($model->getLanguageVersion() ?? '');
             if (!empty($language_version)) {
                 $example_title .= ' ' . $language_version;
                 $pre_language  .= ' ' . $language_version;
@@ -35,12 +35,12 @@ use RichWeb\Algorithms\ContentLoader;
             $example_title .= ' Implementation';
         ?>
         <h3><?php echo $loader->escHtml($example_title); ?></h3>
-        <?php echo $loader->ksesPost($loader->autoP($content->getInfo())); ?>
+        <?php echo $loader->ksesPost($loader->autoP($model->getInfo())); ?>
     </div>
     <div class="rich-algo-frontend-code-wrap">
         <span class="rich-algo-frontend-code-language"><?php echo $loader->escHtml(strtoupper($pre_language)); ?></span>
-        <pre class="line-numbers"><code class="language-<?php echo $loader->escAttr($content->getLanguage()); ?>"><?php echo $loader->escHtml($content->getCode()); ?></code></pre>
-        <textarea class="rich-algo-frontend-code-example-textarea"><?php echo $loader->escTextarea($content->getCode()); ?></textarea>
+        <pre class="line-numbers"><code class="language-<?php echo $loader->escAttr($model->getLanguage()); ?>"><?php echo $loader->escHtml($model->getCode()); ?></code></pre>
+        <textarea class="rich-algo-frontend-code-example-textarea"><?php echo $loader->escTextarea($model->getCode()); ?></textarea>
         <p class="rich-algo-frontend-code-toolbar"><button class="button button-primary rich-algo-copy"><i class="fas"></i> Copy</button></p>
     </div>
 </div>
