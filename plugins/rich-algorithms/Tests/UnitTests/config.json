@@ -1,0 +1,8 @@
+{
+    "name": "Rich Algorithms Unit Tests",
+    "namespace": "RichAlgoUnitTests",
+    "excluded_classes": [
+    ],
+    "excluded_tests": [
+    ]
+}
