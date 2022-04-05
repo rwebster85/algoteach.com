@@ -2,11 +2,8 @@
 
 namespace RichAlgoUnitTests;
 
-use RichPHPTests\Attributes;
 use RichPHPTests\TestCase;
-use RichWeb\Algorithms\CodeExamples\CodeExampleModel;
 use RichWeb\Algorithms\CodeExamples\CodeExamplesLoader;
-use RichWeb\Algorithms\Interfaces\CodeExamplesLoaderInterface;
 
 class TestCodeExamplesLoader extends TestCase
 {
