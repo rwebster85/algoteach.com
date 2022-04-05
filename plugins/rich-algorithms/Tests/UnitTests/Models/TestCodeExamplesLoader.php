@@ -20,7 +20,7 @@ class TestCodeExamplesLoader extends TestCase
         ];
     }
 
-    public function testBuildCodeExamplesOnce(): void
+    public function testBuildCodeExamplesOne(): void
     {
         $examples = [
             [
