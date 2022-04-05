@@ -1,6 +1,6 @@
 <?php
 
-namespace RichAlgoUnitTests;
+namespace RichAlgoUnitTests\Models;
 
 use RichPHPTests\Attributes;
 use RichPHPTests\TestCase;

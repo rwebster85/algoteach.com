@@ -1,6 +1,6 @@
 <?php
 
-namespace RichAlgoUnitTests;
+namespace RichAlgoUnitTests\Traits;
 
 use RichPHPTests\TestCase;
 

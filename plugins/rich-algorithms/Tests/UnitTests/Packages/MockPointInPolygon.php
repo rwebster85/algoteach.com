@@ -11,7 +11,7 @@
 
 declare(strict_types=1);
 
-namespace RichAlgoUnitTests;
+namespace RichAlgoUnitTests\Packages;
 
 use RichWeb\Algorithms\Abstracts\AbstractAlgorithm;
 

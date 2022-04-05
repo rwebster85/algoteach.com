@@ -1,6 +1,6 @@
 <?php
 
-namespace RichAlgoUnitTests;
+namespace RichAlgoUnitTests\Packages;
 
 use RichPHPTests\TestCase;
 use RichWeb\Algorithms\Packages\AlgorithmPackage;

@@ -1,6 +1,6 @@
 <?php
 
-namespace RichAlgoUnitTests;
+namespace RichAlgoUnitTests\Models;
 
 use RichPHPTests\Attributes;
 use RichPHPTests\TestCase;
@@ -58,7 +58,7 @@ class TestCodeExampleModelInterface extends TestCase
     #[Attributes\Skip] // This is a WP integration test
     public function testGetContent(): void
     {
-        $content = $this->model->getContent();
-        test($content)->stringContains('rich-algo-frontend-code-example');
+        //$content = $this->model->getContent();
+        //test($content)->stringContains('rich-algo-frontend-code-example');
     }
 }

@@ -102,7 +102,8 @@ final class TestSuite
                     $file->getFileName(),
                     str_replace('.php', '', $file->getFileName()),
                     $this->config->getNamespace(),
-                    $file->getPath() . DIRECTORY_SEPARATOR
+                    $file->getPath() . DIRECTORY_SEPARATOR,
+                    $this->config->getTestsFolder()
                 );
                 $test_classes[] = $test;
             }

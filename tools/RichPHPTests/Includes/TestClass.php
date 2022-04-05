@@ -19,7 +19,8 @@ final class TestClass
         private string $file,
         private string $class,
         private string $namespace,
-        private string $path
+        private string $path,
+        private string $tests_path
     ) {}
 
     public function getFileName(): string
@@ -49,10 +50,18 @@ final class TestClass
 
     public function qualifiedClassName(): string
     {
+        $tests_folder = $this->getTestsPath();
+        $qualified = '';
+        $qualified = str_replace($tests_folder, $this->getNamespace(), $this->getPath());
         return (
             !empty($this->getNamespace())
-            ? $this->getNamespace() . '\\' . $this->getClassName()
+            ? $qualified . $this->getClassName()
             : $this->getClassName()
         );
+    }
+
+    public function getTestsPath(): string
+    {
+        return $this->tests_path;
     }
 }
