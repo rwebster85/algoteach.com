@@ -75,8 +75,8 @@ final class ContentLoader implements ContentLoaderInterface
      */
     public function loadFile(): void
     {
-        $loader  = $this;
-        $model = $this->model;
+        $loader = $this;
+        $model  = $this->model;
 
         if (file_exists($this->path)) {
             if ($this->require) {
