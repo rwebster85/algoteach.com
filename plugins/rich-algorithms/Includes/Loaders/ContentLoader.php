@@ -14,7 +14,6 @@ declare(strict_types=1);
 namespace RichWeb\Algorithms\Loaders;
 
 use RichWeb\Algorithms\Interfaces\ContentLoaderInterface;
-use RichWeb\Algorithms\Interfaces\FileLoaderInterface;
 use RichWeb\Algorithms\Traits\Formatting;
 use function file_exists;
 
