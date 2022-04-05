@@ -15,11 +15,11 @@ use RichWeb\Algorithms\Admin\MetaBoxes\AlgorithmCodeExamplesMetaBox;
 use RichWeb\Algorithms\ContentLoader;
 
 /**
- * @var AlgorithmCodeExamplesMetaBox $content
+ * @var AlgorithmCodeExamplesMetaBox $model
  * @var ContentLoader                $loader
  */
 
-$code_examples = $content->getCodeExamples();
+$code_examples = $model->getCodeExamples();
 
 ?>
 
@@ -32,7 +32,7 @@ $code_examples = $content->getCodeExamples();
                 $vers = $loader->escHtml(($example['vers'] ?? ''));
                 $code = ($example['code'] ?? '');
                 $info = ($example['info'] ?? '');
-                echo $content->getCodeExampleElement($key, $lang, $vers, $code, $info);
+                echo $model->getCodeExampleElement($key, $lang, $vers, $code, $info);
             }
         } ?>
     </div>
