@@ -16,7 +16,7 @@ use RichWeb\Algorithms\ContentLoader;
 
 /**
  * @var CodeExampleModel $model
- * @var ContentLoader $loader
+ * @var ContentLoader    $loader
  */
 
 ?>
