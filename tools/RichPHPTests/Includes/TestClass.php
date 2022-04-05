@@ -51,7 +51,6 @@ final class TestClass
     public function qualifiedClassName(): string
     {
         $tests_folder = $this->getTestsPath();
-        $qualified = '';
         $qualified = str_replace($tests_folder, $this->getNamespace(), $this->getPath());
         return (
             !empty($this->getNamespace())
