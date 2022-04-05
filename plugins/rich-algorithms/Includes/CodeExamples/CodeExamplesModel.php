@@ -13,11 +13,12 @@ declare(strict_types=1);
 
 namespace RichWeb\Algorithms\CodeExamples;
 
+use RichWeb\Algorithms\Interfaces\CodeExamplesModelInterface;
 use RichWeb\Algorithms\Interfaces\ModelInterface;
 use RichWeb\Algorithms\Loaders\ContentLoader;
 use RichWeb\Algorithms\Traits\Formatting;
 
-class CodeExamplesModel implements ModelInterface
+class CodeExamplesModel implements CodeExamplesModelInterface, ModelInterface
 {
     use Formatting\FilePathsTrait;
 
