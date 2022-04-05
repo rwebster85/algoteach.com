@@ -22,7 +22,7 @@ use RichWeb\Algorithms\{
 use const DIRECTORY_SEPARATOR as SEP;
 
 $plugin_path      = dirname(dirname(dirname(__FILE__)));
-$includes         = $plugin_path . '\Includes' . SEP;
+$includes         = $plugin_path . SEP . 'Includes' . SEP;
 $plugin_namespace = 'RichWeb\Algorithms';
 
 require_once $includes . 'Interfaces' . SEP . 'ProjectInterface.php';
@@ -36,7 +36,7 @@ require_once $includes . 'Loaders' . SEP . 'Autoloader.php';
 
 (new FileLoader(...$project->getFileSources()))->loadFiles();
 
-define($plugin_namespace . '\PLUGIN_FILE', $plugin_path . '\rich-algorithms.php');
+define($plugin_namespace . '\PLUGIN_FILE', $plugin_path . SEP . 'rich-algorithms.php');
 define($plugin_namespace . '\VERSION', $project->getVersion());
 define($plugin_namespace . '\PLUGIN_NAME_FULL', $project->getName());
 define($plugin_namespace . '\TEXT_DOMAIN', 'rich-algo');
