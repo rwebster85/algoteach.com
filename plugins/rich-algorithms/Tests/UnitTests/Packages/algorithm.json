@@ -1,0 +1,14 @@
+{
+    "name": "Mock Point In Polygon",
+    "version": "1.9.6",
+    "class": "MockPointInPolygon",
+    "namespace": "RichWeb\\Algorithms\\Algorithm",
+    "scripts": [
+        "polygon.js",
+        "polygon2.js"
+    ],
+    "styles": [
+        "polygon.css",
+        "polygon2.css"
+    ]
+}
