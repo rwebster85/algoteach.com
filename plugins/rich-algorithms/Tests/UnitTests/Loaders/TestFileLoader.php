@@ -17,6 +17,11 @@ class TestFileLoader extends TestCase
         test($exists)->isTrue();
     }
 
+    /**
+     * The FileLoader class should not raise any errors for files that don't exist.
+     * 
+     * @return void
+     */
     public function testFileLoaderFileNotExists(): void
     {
         $files = [__DIR__ . SEP . 'DoesNotExist.php'];
