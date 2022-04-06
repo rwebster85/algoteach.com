@@ -111,6 +111,7 @@ final class TestSuite
             if (
                 $file->getFilename() != 'bootstrap.php'
                 && $file->getExtension() == 'php'
+                && !str_starts_with($file->getFilename(), 'Mock')
             ) {
                 $test = new TestClass(
                     $file->getFileName(),
