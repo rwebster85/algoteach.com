@@ -20,11 +20,18 @@ use ReflectionClass;
 final class TestSuite
 {
     /**
-     * Array of TestClass objects.
+     * Array of TestClass objects. These are potential classes for testing.
      * 
      * @var TestClass[]
      */
     private array $test_classes = [];
+
+    /**
+     * Array of TestClass objects that were not valid tests to run.
+     * 
+     * @var TestClass[]
+     */
+    private array $test_classes_invalid = [];
 
     /**
      * An array of strings containing the fully qualified class names of each test class to skip, given in the config file.
@@ -92,8 +99,8 @@ final class TestSuite
         
         $files = new RecursiveIteratorIterator($folder);
 
-        /** @var \SplFileInfo $file */
         foreach($files as $file) {
+            assert($file instanceof \SplFileInfo);
             if (
                 $file->getFilename() != 'bootstrap.php'
                 && $file->getExtension() == 'php'
@@ -125,6 +132,34 @@ final class TestSuite
     }
 
     /**
+     * Get an array of arrays with stored TestClass objects whose classes were not able to be instantiated.
+     * 
+     * Inner arrays are key-value pairs, 'class' is the TestClass object and 'reason' is the reason.
+     * 
+     * @return array[]
+     */
+    public function getInvalidTestClasses(): array
+    {
+        return $this->test_classes_invalid;
+    }
+
+    /**
+     * Adds a new invalid test class.
+     * 
+     * @param TestClass $class
+     * @param string $reason
+     * 
+     * @return void
+     */
+    private function addInvalidTest(TestClass $class, string $reason = ''): void
+    {
+        $this->test_classes_invalid[] = [
+            'class'  => $class,
+            'reason' => $reason
+        ];
+    }
+
+    /**
      * Iterates over TestSuite::$test_classes, verifies the files exist, includes them, then calls run() on each of the classes.
      * 
      * @uses \file_exists()
@@ -135,17 +170,28 @@ final class TestSuite
      */
     public function run(): void
     {
-        /** @var TestClass $test_class */
+        $autoload = (!empty($this->config->getNamespace()));
+
         foreach ($this->test_classes as $test_class) {
-            if (!file_exists($test_class->getFullPath())) {
+            $path = $test_class->getFullPath();
+            if (!file_exists($path)) {
+                $this->addInvalidTest($test_class, "File '$path' does not exist");
                 continue;
+            }
+
+            if (!$autoload) {
+                include_once $path;
             }
 
             $qualified_name = $test_class->qualifiedClassName();
 
-            include_once $test_class->getFullPath();
-
             if (!class_exists($qualified_name)) {
+                $this->addInvalidTest($test_class, "Class '$qualified_name' does not exist");
+                continue;
+            }
+
+            if (!TestUtil::isTestClass($qualified_name)) {
+                //$this->addInvalidTest($test_class, "Class '$qualified_name' is not a valid test class");
                 continue;
             }
 
@@ -154,9 +200,7 @@ final class TestSuite
                 continue;
             }
 
-            if (TestUtil::isTestClass($qualified_name)) {
-                $test_class = new $qualified_name($this->config);
-            }
+            $test_class = new $qualified_name($this->config);
         }
     }
 

@@ -39,6 +39,10 @@ final class TestResults implements TestResultsInterface
 
     private int $skipped_tests = 0;
 
+    public function __construct(
+        private TestSuite $suite
+    ) {}
+
     public function addResult(TestResult $result): void
     {
         $this->results[$result->test_class][] = $result;
@@ -109,7 +113,21 @@ final class TestResults implements TestResultsInterface
         $total_skipped = $this->getSkippedFiles();
         $total_skipped_tests = $this->getSkippedTests();
 
+        $invalid_tests = $this->suite->getInvalidTestClasses();
+
         print("Tests ran: {$total_tests}, Passed: {$total_pass}, Failed: {$total_fail}. Skipped Files: {$total_skipped} - Skipped Tests: {$total_skipped_tests}" . PHP_EOL);
+
+        if (!empty($invalid_tests)) {
+            $count = count($invalid_tests);
+            print("$count invalid test files were encountered." . PHP_EOL);
+            foreach ($invalid_tests as $invalid) {
+                $the_class = $invalid['class'];
+                assert($the_class instanceof TestClass);
+                $reason    = (string) $invalid['reason'];
+                $qualified_name = $the_class->qualifiedClassName();
+                print("'$qualified_name' - $reason.");
+            }
+        }
 
         if ($total_fail > 0) {
             print("The following tests failed:" . PHP_EOL);
