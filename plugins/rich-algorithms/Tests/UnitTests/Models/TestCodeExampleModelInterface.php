@@ -54,11 +54,4 @@ class TestCodeExampleModelInterface extends TestCase
         $code = $this->model->getCode();
         test($code)->stringMatches('<?php echo hello; ?>');
     }
-
-    #[Attributes\Skip] // This is a WP integration test
-    public function testGetContent(): void
-    {
-        //$content = $this->model->getContent();
-        //test($content)->stringContains('rich-algo-frontend-code-example');
-    }
 }
