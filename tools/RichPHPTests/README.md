@@ -28,6 +28,8 @@ Test classes should be PSR-4 compliant, meaning the namespace should match the f
 
 Each test method name must start with `test`, for example `testSomeFunction()`, have public visibility, be non-static, and return void.
 
+Any filenames that start with 'Mock' are ignored by the test suite generator.
+
 Example:
 
 ```php
