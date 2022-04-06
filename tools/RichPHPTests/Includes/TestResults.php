@@ -137,10 +137,9 @@ final class TestResults implements TestResultsInterface
 
         if ($total_fail > 0) {
             print("The following tests failed:" . PHP_EOL);
-            /** @var TestClass $tested_class */
             foreach ($results as $tested_class) {
-                /** @var TestResult $result */
                 foreach ($tested_class as $result) {
+                    assert($result instanceof TestResult);
                     if (!$result->testPassed()) {
                         $class    = $result->test_class;
                         $test     = $result->test_name;
