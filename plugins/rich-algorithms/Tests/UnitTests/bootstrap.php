@@ -21,22 +21,47 @@ use RichWeb\Algorithms\{
 
 use const DIRECTORY_SEPARATOR as SEP;
 
-$plugin_path      = dirname(dirname(dirname(__FILE__)));
-$includes         = $plugin_path . SEP . 'Includes' . SEP;
-$plugin_namespace = 'RichWeb\Algorithms';
+/**
+ * Creates the necessary objects and variables for making the project ready for testing.
+ * 
+ * 1. Includes files for the project loading.
+ * 2. Creates the plugin autoloader.
+ * 3. Defines the plugin constants.
+ * 
+ * @return void
+ */
+function loadProjectResources(): void
+{
+    $plugin_path      = dirname(dirname(dirname(__FILE__)));
+    $includes         = $plugin_path . SEP . 'Includes' . SEP;
+    $plugin_namespace = 'RichWeb\Algorithms';
+    
+    require_once $includes . 'Interfaces' . SEP . 'ProjectInterface.php';
+    require_once $includes . 'Project.php';
+    $project = new Project($plugin_path . SEP . 'project.json', $plugin_path);
+    $project->buildProject();
+    
+    require_once $includes . 'Interfaces' . SEP . 'AutoloaderInterface.php';
+    require_once $includes . 'Loaders' . SEP . 'Autoloader.php';
+    (new Autoloader($project->getAutoloaderSources()))->register();
+    
+    (new FileLoader(...$project->getFileSources()))->loadFiles();
+    
+    define($plugin_namespace . '\PLUGIN_FILE', $plugin_path . SEP . 'rich-algorithms.php');
+    define($plugin_namespace . '\VERSION', $project->getVersion());
+    define($plugin_namespace . '\PLUGIN_NAME_FULL', $project->getName());
+    define($plugin_namespace . '\TEXT_DOMAIN', 'rich-algo');
+}
 
-require_once $includes . 'Interfaces' . SEP . 'ProjectInterface.php';
-require_once $includes . 'Project.php';
-$project = new Project($plugin_path . SEP . 'project.json', $plugin_path);
-$project->buildProject();
+/**
+ * Set up an autoloader for the test classes.
+ * 
+ * @return void
+ */
+function autoloadTestClasses(): void
+{
+    (new Autoloader(['RichAlgoUnitTests' => __DIR__]))->register();
+}
 
-require_once $includes . 'Interfaces' . SEP . 'AutoloaderInterface.php';
-require_once $includes . 'Loaders' . SEP . 'Autoloader.php';
-(new Autoloader($project->getAutoloaderSources()))->register();
-
-(new FileLoader(...$project->getFileSources()))->loadFiles();
-
-define($plugin_namespace . '\PLUGIN_FILE', $plugin_path . SEP . 'rich-algorithms.php');
-define($plugin_namespace . '\VERSION', $project->getVersion());
-define($plugin_namespace . '\PLUGIN_NAME_FULL', $project->getName());
-define($plugin_namespace . '\TEXT_DOMAIN', 'rich-algo');
+loadProjectResources();
+autoloadTestClasses();
