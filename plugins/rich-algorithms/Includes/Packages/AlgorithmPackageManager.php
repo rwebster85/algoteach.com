@@ -63,21 +63,23 @@ final class AlgorithmPackageManager implements AlgorithmPackageManagerInterface
     {
         $packages = [];
 
-        $files = new RecursiveIteratorIterator(
-            new RecursiveDirectoryIterator(
-                $this->package_folder,
-                RecursiveDirectoryIterator::SKIP_DOTS
-            )
-        );
-
-        /** @var \SplFileInfo $file */
-        foreach($files as $file) {
-            if ($file->getFilename() == 'algorithm.json') {
-                $algorithm = new AlgorithmPackage(
-                    $file->getPath() . SEP . $file->getFileName()
-                );
-                $name = $algorithm->getQualifiedClassName();
-                $packages[$name] = $algorithm;
+        if (file_exists($this->package_folder)) {
+            $files = new RecursiveIteratorIterator(
+                new RecursiveDirectoryIterator(
+                    $this->package_folder,
+                    RecursiveDirectoryIterator::SKIP_DOTS
+                )
+            );
+    
+            /** @var \SplFileInfo $file */
+            foreach($files as $file) {
+                if ($file->getFilename() == 'algorithm.json') {
+                    $algorithm = new AlgorithmPackage(
+                        $file->getPath() . SEP . $file->getFileName()
+                    );
+                    $name = $algorithm->getQualifiedClassName();
+                    $packages[$name] = $algorithm;
+                }
             }
         }
 
