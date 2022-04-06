@@ -21,6 +21,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/RichPHPTests-Application.html#method___construct"
         },                {
+            "fqsen": "\\RichPHPTests\\Application\u003A\u003Abootstrap\u0028\u0029",
+            "name": "bootstrap",
+            "summary": "",
+            "url": "classes/RichPHPTests-Application.html#method_bootstrap"
+        },                {
             "fqsen": "\\RichPHPTests\\Application\u003A\u003Arun\u0028\u0029",
             "name": "run",
             "summary": "",
@@ -326,11 +331,6 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/RichPHPTests-Project.html#property_requirements"
         },                {
-            "fqsen": "\\RichPHPTests\\Project\u003A\u003A\u0024sep",
-            "name": "sep",
-            "summary": "",
-            "url": "classes/RichPHPTests-Project.html#property_sep"
-        },                {
             "fqsen": "\\RichPHPTests\\Project\u003A\u003A\u0024config_path",
             "name": "config_path",
             "summary": "",
@@ -455,6 +455,11 @@ Search.appendIndex(
             "name": "isNotObject",
             "summary": "",
             "url": "classes/RichPHPTests-Test.html#method_isNotObject"
+        },                {
+            "fqsen": "\\RichPHPTests\\Test\u003A\u003AisObjectOfType\u0028\u0029",
+            "name": "isObjectOfType",
+            "summary": "",
+            "url": "classes/RichPHPTests-Test.html#method_isObjectOfType"
         },                {
             "fqsen": "\\RichPHPTests\\Test\u003A\u003AisString\u0028\u0029",
             "name": "isString",
@@ -651,6 +656,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/RichPHPTests-TestClass.html#method_qualifiedClassName"
         },                {
+            "fqsen": "\\RichPHPTests\\TestClass\u003A\u003AgetTestsPath\u0028\u0029",
+            "name": "getTestsPath",
+            "summary": "",
+            "url": "classes/RichPHPTests-TestClass.html#method_getTestsPath"
+        },                {
             "fqsen": "\\RichPHPTests\\TestClass\u003A\u003A\u0024file",
             "name": "file",
             "summary": "",
@@ -670,6 +680,11 @@ Search.appendIndex(
             "name": "path",
             "summary": "",
             "url": "classes/RichPHPTests-TestClass.html#property_path"
+        },                {
+            "fqsen": "\\RichPHPTests\\TestClass\u003A\u003A\u0024tests_path",
+            "name": "tests_path",
+            "summary": "",
+            "url": "classes/RichPHPTests-TestClass.html#property_tests_path"
         },                {
             "fqsen": "\\RichPHPTests\\TestResult",
             "name": "TestResult",
@@ -740,6 +755,11 @@ Search.appendIndex(
             "name": "TestResults",
             "summary": "",
             "url": "classes/RichPHPTests-TestResults.html"
+        },                {
+            "fqsen": "\\RichPHPTests\\TestResults\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/RichPHPTests-TestResults.html#method___construct"
         },                {
             "fqsen": "\\RichPHPTests\\TestResults\u003A\u003AaddResult\u0028\u0029",
             "name": "addResult",
@@ -820,6 +840,11 @@ Search.appendIndex(
             "name": "skipped_tests",
             "summary": "",
             "url": "classes/RichPHPTests-TestResults.html#property_skipped_tests"
+        },                {
+            "fqsen": "\\RichPHPTests\\TestResults\u003A\u003A\u0024suite",
+            "name": "suite",
+            "summary": "",
+            "url": "classes/RichPHPTests-TestResults.html#property_suite"
         },                {
             "fqsen": "\\RichPHPTests\\TestsConfiguration",
             "name": "TestsConfiguration",
@@ -951,6 +976,21 @@ Search.appendIndex(
             "summary": "Get\u0020an\u0020array\u0020of\u0020stored\u0020TestClass\u0020objects.",
             "url": "classes/RichPHPTests-TestSuite.html#method_getTestClasses"
         },                {
+            "fqsen": "\\RichPHPTests\\TestSuite\u003A\u003AgetInvalidTestClasses\u0028\u0029",
+            "name": "getInvalidTestClasses",
+            "summary": "Get\u0020an\u0020array\u0020of\u0020arrays\u0020with\u0020stored\u0020TestClass\u0020objects\u0020whose\u0020classes\u0020were\u0020not\u0020able\u0020to\u0020be\u0020instantiated.",
+            "url": "classes/RichPHPTests-TestSuite.html#method_getInvalidTestClasses"
+        },                {
+            "fqsen": "\\RichPHPTests\\TestSuite\u003A\u003AaddInvalidTest\u0028\u0029",
+            "name": "addInvalidTest",
+            "summary": "Adds\u0020a\u0020new\u0020invalid\u0020test\u0020class.",
+            "url": "classes/RichPHPTests-TestSuite.html#method_addInvalidTest"
+        },                {
+            "fqsen": "\\RichPHPTests\\TestSuite\u003A\u003AgetInstantiatedTestsCount\u0028\u0029",
+            "name": "getInstantiatedTestsCount",
+            "summary": "",
+            "url": "classes/RichPHPTests-TestSuite.html#method_getInstantiatedTestsCount"
+        },                {
             "fqsen": "\\RichPHPTests\\TestSuite\u003A\u003Arun\u0028\u0029",
             "name": "run",
             "summary": "Iterates\u0020over\u0020TestSuite\u003A\u003A\u0024test_classes,\u0020verifies\u0020the\u0020files\u0020exist,\u0020includes\u0020them,\u0020then\u0020calls\u0020run\u0028\u0029\u0020on\u0020each\u0020of\u0020the\u0020classes.",
@@ -963,13 +1003,23 @@ Search.appendIndex(
         },                {
             "fqsen": "\\RichPHPTests\\TestSuite\u003A\u003A\u0024test_classes",
             "name": "test_classes",
-            "summary": "Array\u0020of\u0020TestClass\u0020objects.",
+            "summary": "Array\u0020of\u0020TestClass\u0020objects.\u0020These\u0020are\u0020potential\u0020classes\u0020for\u0020testing.",
             "url": "classes/RichPHPTests-TestSuite.html#property_test_classes"
+        },                {
+            "fqsen": "\\RichPHPTests\\TestSuite\u003A\u003A\u0024test_classes_invalid",
+            "name": "test_classes_invalid",
+            "summary": "Array\u0020of\u0020TestClass\u0020objects\u0020that\u0020were\u0020not\u0020valid\u0020tests\u0020to\u0020run.",
+            "url": "classes/RichPHPTests-TestSuite.html#property_test_classes_invalid"
         },                {
             "fqsen": "\\RichPHPTests\\TestSuite\u003A\u003A\u0024excluded_classes",
             "name": "excluded_classes",
             "summary": "An\u0020array\u0020of\u0020strings\u0020containing\u0020the\u0020fully\u0020qualified\u0020class\u0020names\u0020of\u0020each\u0020test\u0020class\u0020to\u0020skip,\u0020given\u0020in\u0020the\u0020config\u0020file.",
             "url": "classes/RichPHPTests-TestSuite.html#property_excluded_classes"
+        },                {
+            "fqsen": "\\RichPHPTests\\TestSuite\u003A\u003A\u0024instantiated_tests",
+            "name": "instantiated_tests",
+            "summary": "The\u0020number\u0020of\u0020test\u0020files\u0020that\u0020were\u0020instantiated\u0020\u0028valid\u0020test\u0020classes\u0029.",
+            "url": "classes/RichPHPTests-TestSuite.html#property_instantiated_tests"
         },                {
             "fqsen": "\\RichPHPTests\\TestSuite\u003A\u003A\u0024excluded_tests",
             "name": "excluded_tests",

@@ -29,15 +29,15 @@
 <polygon fill="none" stroke="black" points="265,-744 265,-924 385,-924 385,-744 265,-744"/>
 <text text-anchor="middle" x="325" y="-911.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Attributes</text>
 </g>
-<g id="clust5" class="cluster">
-<title>cluster_\RichPHPTests\Autoload</title>
-<polygon fill="none" stroke="black" points="275,-664 275,-736 375,-736 375,-664 275,-664"/>
-<text text-anchor="middle" x="325" y="-723.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Autoload</text>
-</g>
 <g id="clust6" class="cluster">
 <title>cluster_\RichPHPTests\Interfaces</title>
 <polygon fill="none" stroke="black" points="24,-178 24,-250 192,-250 192,-178 24,-178"/>
 <text text-anchor="middle" x="108" y="-237.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Interfaces</text>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_\RichPHPTests\Autoload</title>
+<polygon fill="none" stroke="black" points="275,-664 275,-736 375,-736 375,-664 275,-664"/>
+<text text-anchor="middle" x="325" y="-723.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Autoload</text>
 </g>
 <!-- \\RichPHPTests\\Abstracts\\AbstractTest -->
 <g id="node1" class="node">
