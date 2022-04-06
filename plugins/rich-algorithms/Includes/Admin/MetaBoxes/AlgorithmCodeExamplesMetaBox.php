@@ -56,7 +56,7 @@ final class AlgorithmCodeExamplesMetaBox extends AbstractMetaBox
 
         wp_nonce_field('_richweb_algorithm_code_examples_nonce', 'richweb_algorithm_code_examples_nonce');
 
-        $path = $this->formatSlashes(dirname(__FILE__) . '\..\Content\CodeExamplesMetaDetails.php');
+        $path = $this->formatSlashes(__DIR__ . '\..\Content\CodeExamplesMetaDetails.php');
         $loader = new ContentLoader($path, $this);
         $loader->loadFile();
     }
@@ -74,7 +74,7 @@ final class AlgorithmCodeExamplesMetaBox extends AbstractMetaBox
     {
         ob_start();
 
-        include dirname(__FILE__) . $this->formatSlashes('\..\Content\CodeExamplesMetaField.php');
+        include __DIR__ . $this->formatSlashes('\..\Content\CodeExamplesMetaField.php');
 
         $content = ob_get_clean();
 

@@ -43,11 +43,10 @@ class CodeExamplesModel implements CodeExamplesModelInterface, ModelInterface
      */
     public function getContent(): string
     {
-        ob_start();
-
-        $path = dirname(__FILE__) . $this->formatSlashes('\..\Content\CodeExamplesContent.php');
-
+        $path = __DIR__ . $this->formatSlashes('\..\Content\CodeExamplesContent.php');
         $loader = new ContentLoader($path, $this);
+        
+        ob_start();
         $loader->loadFile();
 
         return ob_get_clean();
