@@ -55,7 +55,7 @@ Available test methods can be found in the [Includes\Test.php](Includes/Test.php
 
 Inside the `path\to\tests` folder is where you place your required tests `config.json` file.
 
-Namespacing unit tests is supported. Ensure the namespace of your test files matches that specified in the `config.json` folder.
+Namespacing unit tests is supported. Ensure the root namespace of your test files matches that specified in the `config.json` folder. When a namespace is specified then the file/folder structure of your tests should be PSR-4 compliant.
 
 This accepts the name for the test suite as well as any excluded test classes or methods (comma separated arrays), like so:
 
