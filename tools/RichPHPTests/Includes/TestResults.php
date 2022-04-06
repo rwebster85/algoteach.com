@@ -113,19 +113,25 @@ final class TestResults implements TestResultsInterface
         $total_skipped = $this->getSkippedFiles();
         $total_skipped_tests = $this->getSkippedTests();
 
+        $instantiated_tests = $this->suite->getInstantiatedTestsCount();
         $invalid_tests = $this->suite->getInvalidTestClasses();
 
-        print("Tests ran: {$total_tests}, Passed: {$total_pass}, Failed: {$total_fail}. Skipped Files: {$total_skipped} - Skipped Tests: {$total_skipped_tests}" . PHP_EOL);
+        print("Test classes: $instantiated_tests, Tests ran: $total_tests, Passed: $total_pass, Failed: $total_fail. Skipped Files: $total_skipped - Skipped Tests: $total_skipped_tests" . PHP_EOL);
 
         if (!empty($invalid_tests)) {
             $count = count($invalid_tests);
-            print("$count invalid test files were encountered." . PHP_EOL);
+            $message = ($count > 1 ? 'files were' : 'file was');
+            echo sprintf(
+                '%1$s invalid test %2$s encountered.' . PHP_EOL,
+                $count,
+                $message
+            );
             foreach ($invalid_tests as $invalid) {
                 $the_class = $invalid['class'];
                 assert($the_class instanceof TestClass);
                 $reason = (string) $invalid['reason'];
                 $qualified_name = $the_class->qualifiedClassName();
-                print("'$qualified_name' - $reason.");
+                print("'$qualified_name' - $reason." . PHP_EOL);
             }
         }
 
@@ -143,7 +149,7 @@ final class TestResults implements TestResultsInterface
                         $expected = $result->parseVarForOutput($result->expected);
                         $actual   = $result->parseVarForOutput($result->actual);
                         $file     = substr($result->test_file, strrpos($result->test_file, DIRECTORY_SEPARATOR) + 1);
-                        print("$class::$test : File: {$file} - Line: {$line} - Expected: {$expected} - Actual: {$actual} - Error: {$error}" . PHP_EOL);
+                        print("$class::$test : File: $file - Line: $line - Expected: $expected - Actual: $actual - Error: $error" . PHP_EOL);
                     }
                 }
             }

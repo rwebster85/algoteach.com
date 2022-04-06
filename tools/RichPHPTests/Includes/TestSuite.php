@@ -41,6 +41,13 @@ final class TestSuite
     private array $excluded_classes;
 
     /**
+     * The number of test files that were instantiated (valid test classes).
+     * 
+     * @var int
+     */
+    private int $instantiated_tests = 0;
+
+    /**
      * An array of strings containing the fully qualified method names of each test to skip, given in the config file.
      * 
      * @var string[]
@@ -159,6 +166,11 @@ final class TestSuite
         ];
     }
 
+    public function getInstantiatedTestsCount(): int
+    {
+        return $this->instantiated_tests;
+    }
+
     /**
      * Iterates over TestSuite::$test_classes, verifies the files exist, includes them, then calls run() on each of the classes.
      * 
@@ -201,6 +213,7 @@ final class TestSuite
             }
 
             $test_class = new $qualified_name($this->config);
+            $this->instantiated_tests++;
         }
     }
 
