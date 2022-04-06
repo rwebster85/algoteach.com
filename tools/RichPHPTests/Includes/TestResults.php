@@ -123,7 +123,7 @@ final class TestResults implements TestResultsInterface
             foreach ($invalid_tests as $invalid) {
                 $the_class = $invalid['class'];
                 assert($the_class instanceof TestClass);
-                $reason    = (string) $invalid['reason'];
+                $reason = (string) $invalid['reason'];
                 $qualified_name = $the_class->qualifiedClassName();
                 print("'$qualified_name' - $reason.");
             }
