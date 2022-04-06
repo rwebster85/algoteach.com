@@ -36,8 +36,8 @@ use function file_exists;
  * ```php
  * <?php
  * // Content file
- * // @var ContentLoader $loader
- * // @var ModelClass    $model
+ * // @var ContentLoader  $loader
+ * // @var ModelClassName $model
  * ?>
  * <div>
  *     <p><?php echo $loader->escHtml($content->someMethod()); ?></p>
