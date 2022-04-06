@@ -44,9 +44,17 @@ final class Application
     {
         $this->is_cli = SourceChecker::isCli();
         $this->configuration = $config;
+        $this->bootstrap();
         $this->test_suite = new TestSuite($this->configuration);
-        
-        self::$test_results = new TestResults();
+        self::$test_results = new TestResults($this->test_suite);
+    }
+
+    private function bootstrap(): void
+    {
+        $bootstrap = $this->configuration->getBootstrap();
+        if (file_exists($bootstrap)) {
+            include_once $bootstrap;
+        }
     }
 
     private function run(): void
@@ -60,11 +68,6 @@ final class Application
 
         if ($this->is_cli) {
             print('Running test suite: ' . $this->configuration->getName() . PHP_EOL);
-        }
-
-        $bootstrap = $this->configuration->getBootstrap();
-        if (file_exists($bootstrap)) {
-            include_once $bootstrap;
         }
 
         $this->test_suite->run();
