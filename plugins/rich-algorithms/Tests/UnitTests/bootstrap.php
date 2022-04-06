@@ -32,7 +32,7 @@ use const DIRECTORY_SEPARATOR as SEP;
  */
 function loadProjectResources(): void
 {
-    $plugin_path      = dirname(dirname(dirname(__FILE__)));
+    $plugin_path      = dirname(dirname(__DIR__));
     $includes         = $plugin_path . SEP . 'Includes' . SEP;
     $plugin_namespace = 'RichWeb\Algorithms';
     
