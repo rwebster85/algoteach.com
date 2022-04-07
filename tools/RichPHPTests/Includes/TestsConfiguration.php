@@ -19,6 +19,10 @@ final class TestsConfiguration
 
     private string $name;
 
+    private array $included_classes;
+
+    private array $included_tests;
+
     private array $excluded_classes;
 
     private array $excluded_tests;
@@ -39,6 +43,8 @@ final class TestsConfiguration
             $this->setName();
             $this->setNameSpace();
             $this->setBootstrap();
+            $this->setIncludedClasses();
+            $this->setIncludedTests();
             $this->setExcludedClasses();
             $this->setExcludedTests();
         }
@@ -79,14 +85,34 @@ final class TestsConfiguration
         return $this->bootstrap;
     }
 
+    private function setIncludedClasses(): void
+    {
+        $this->included_classes = (array) array_filter(($this->config['included_classes'] ?? []));
+    }
+
+    private function setIncludedTests(): void
+    {
+        $this->included_tests = (array) array_filter(($this->config['included_tests'] ?? []));
+    }
+
+    public function getIncludedClasses(): array
+    {
+        return $this->included_classes;
+    }
+
+    public function getIncludedTests(): array
+    {
+        return $this->included_tests;
+    }
+
     private function setExcludedClasses(): void
     {
-        $this->excluded_classes = (array) ($this->config['excluded_classes'] ?? []);
+        $this->excluded_classes = (array) array_filter(($this->config['excluded_classes'] ?? []));
     }
 
     private function setExcludedTests(): void
     {
-        $this->excluded_tests = (array) ($this->config['excluded_tests'] ?? []);
+        $this->excluded_tests = (array) array_filter(($this->config['excluded_tests'] ?? []));
     }
 
     public function getExcludedClasses(): array

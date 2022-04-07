@@ -34,6 +34,24 @@ final class TestSuite
     private array $test_classes_invalid = [];
 
     /**
+     * An array of strings containing the fully qualified class names of each test class to included, given in the config file.
+     * 
+     * If this contains any test classes, only those classes will be run.
+     * 
+     * @var string[]
+     */
+    private array $included_classes;
+
+    /**
+     * An array of strings containing the fully qualified method names of each test to included, given in the config file.
+     * 
+     * If this contains any test methods, only those methods will be run.
+     * 
+     * @var string[]
+     */
+    private array $included_tests;
+
+    /**
      * An array of strings containing the fully qualified class names of each test class to skip, given in the config file.
      * 
      * @var string[]
@@ -64,6 +82,8 @@ final class TestSuite
     public function __construct(
         private TestsConfiguration $config
     ) {
+        $this->included_classes = $config->getIncludedClasses();
+        $this->included_tests = $config->getIncludedTests();
         $this->excluded_classes = $config->getExcludedClasses();
         $this->excluded_tests = $config->getExcludedTests();
         $this->setTests();
@@ -183,12 +203,22 @@ final class TestSuite
      */
     public function run(): void
     {
+        //var_dump($this->included_classes);
+
         $autoload = (!empty($this->config->getNamespace()));
 
-        foreach ($this->test_classes as $test_class) {
+        $any_included = false;
+
+        /**
+         * This first loop filters out any invalid or excluded tests, raising errors if necessary.
+         */
+        foreach ($this->test_classes as $key => $test_class) {
+            $qualified_name = $test_class->qualifiedClassName();
+
             $path = $test_class->getFullPath();
             if (!file_exists($path)) {
                 $this->addInvalidTest($test_class, "File '$path' does not exist");
+                unset($this->test_classes[$key]);
                 continue;
             }
 
@@ -196,21 +226,38 @@ final class TestSuite
                 include_once $path;
             }
 
-            $qualified_name = $test_class->qualifiedClassName();
-
             if (!class_exists($qualified_name)) {
                 $this->addInvalidTest($test_class, "Class '$qualified_name' does not exist");
+                unset($this->test_classes[$key]);
                 continue;
             }
 
             if (!TestUtil::isTestClass($qualified_name)) {
-                //$this->addInvalidTest($test_class, "Class '$qualified_name' is not a valid test class");
+                unset($this->test_classes[$key]);
                 continue;
             }
 
             if ($this->isTestClassExcluded($qualified_name)) {
                 Application::getTestResults()->addSkippedFile();
+                unset($this->test_classes[$key]);
                 continue;
+            }
+
+            if ($this->hasTestClassIncluded($qualified_name)) {
+                $any_included = true;
+            }
+        }
+
+        $this->test_classes = array_filter($this->test_classes);
+
+        foreach ($this->test_classes as $test_class) {
+            $qualified_name = $test_class->qualifiedClassName();
+
+            if ($any_included || !empty($this->included_classes)) {
+                if (!$this->isTestClassIncluded($qualified_name)) {
+                    Application::getTestResults()->addSkippedFile();
+                    continue;
+                }
             }
 
             $test_class = new $qualified_name($this->config);
@@ -223,6 +270,21 @@ final class TestSuite
         return (
             in_array($qualified_name, $this->excluded_classes)
             || TestUtil::hasSkippedAttribute(new ReflectionClass($qualified_name))
+        );
+    }
+
+    private function isTestClassIncluded(string $qualified_name): bool
+    {
+        return (
+            in_array($qualified_name, $this->included_classes)
+            || $this->hasTestClassIncluded($qualified_name)
+        );
+    }
+
+    private function hasTestClassIncluded(string $qualified_name): bool
+    {
+        return (
+            TestUtil::hasIncludedAttribute(new ReflectionClass($qualified_name))
         );
     }
 }

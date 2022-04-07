@@ -27,6 +27,13 @@ abstract class TestCase
      * @var string[]
      */
     private array $testMethods = [];
+
+    /**
+     * The array of all included tests found in the test class.
+     * 
+     * @var array
+     */
+    private array $included_tests = [];
     
     /**
      * The array of all excluded tests found in the test class.
@@ -72,6 +79,7 @@ abstract class TestCase
      */
     final public function __construct(TestsConfiguration $config)
     {
+        $this->included_tests = $config->getIncludedTests();
         $this->excluded_tests = $config->getExcludedTests();
         $this->buildTests();
         $this->run();
@@ -267,7 +275,13 @@ abstract class TestCase
 
     private function isTestSkipped(string $test_name, ReflectionMethod $method): bool
     {
-        return (in_array($test_name, $this->excluded_tests) || TestUtil::hasSkippedAttribute($method));
+        //var_dump(count($this->included_tests));
+        //print(PHP_EOL);
+        return (
+            (!empty($this->included_tests) && !in_array($test_name, $this->included_tests))
+            || in_array($test_name, $this->excluded_tests)
+            || TestUtil::hasSkippedAttribute($method)
+        );
     }
 
     private function addMethod(ReflectionMethod $method): void

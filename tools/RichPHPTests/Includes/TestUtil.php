@@ -67,4 +67,10 @@ class TestUtil
         $attributes = $class_or_method->getAttributes('RichPHPTests\Attributes\Skip');
         return !empty($attributes);
     }
+
+    public static function hasIncludedAttribute(ReflectionClass|ReflectionMethod $class_or_method): bool
+    {
+        $attributes = $class_or_method->getAttributes('RichPHPTests\Attributes\Run');
+        return !empty($attributes);
+    }
 }
