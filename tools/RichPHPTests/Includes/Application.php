@@ -68,6 +68,7 @@ final class Application
 
         if ($this->is_cli) {
             print('Running test suite: ' . $this->configuration->getName() . PHP_EOL);
+            print('PHP Version: ' . PHP_VERSION . PHP_EOL);
         }
 
         $this->test_suite->run();
