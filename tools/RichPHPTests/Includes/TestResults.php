@@ -116,27 +116,29 @@ final class TestResults implements TestResultsInterface
         $instantiated_tests = $this->suite->getInstantiatedTestsCount();
         $invalid_tests = $this->suite->getInvalidTestClasses();
 
-        print("Test classes: $instantiated_tests, Tests ran: $total_tests, Passed: $total_pass, Failed: $total_fail. Skipped Files: $total_skipped - Skipped Tests: $total_skipped_tests" . PHP_EOL);
+        print("Test classes: $instantiated_tests\nTests ran: $total_tests\nPassed: $total_pass\nFailed: $total_fail\nSkipped Files: $total_skipped\nSkipped Tests: $total_skipped_tests" . PHP_EOL);
 
         if (!empty($invalid_tests)) {
             $count = count($invalid_tests);
             $message = ($count > 1 ? 'files were' : 'file was');
             echo sprintf(
-                '%1$s invalid test %2$s encountered.' . PHP_EOL,
+                PHP_EOL . '%1$s invalid test %2$s encountered.' . PHP_EOL,
                 $count,
                 $message
             );
+            print(PHP_EOL);
             foreach ($invalid_tests as $invalid) {
                 $the_class = $invalid['class'];
                 assert($the_class instanceof TestClass);
                 $reason = (string) $invalid['reason'];
                 $qualified_name = $the_class->qualifiedClassName();
-                print("'$qualified_name' - $reason." . PHP_EOL);
+                print("$reason." . PHP_EOL);
             }
+            print(PHP_EOL);
         }
 
         if ($total_fail > 0) {
-            print("The following tests failed:" . PHP_EOL);
+            print("The following tests failed:" . PHP_EOL . PHP_EOL);
             foreach ($results as $tested_class) {
                 foreach ($tested_class as $result) {
                     assert($result instanceof TestResult);
