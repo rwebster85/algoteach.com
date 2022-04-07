@@ -37,7 +37,9 @@ class TestResult
         $this->test_class = ($trace['class'] ?? '');
 
         if ($this->test_name && $this->test_class) {
-            $reflection_method = new ReflectionMethod($this->test_class, $this->test_name);
+            $reflection_method = new ReflectionMethod(
+                $this->test_class, $this->test_name
+            );
             $this->line = strval($reflection_method->getStartLine());
             $this->test_file = $reflection_method->getFileName();
         }
