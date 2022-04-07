@@ -11,6 +11,8 @@ class TestCodeExamplesModelInterface extends TestCase
 {
     public function testGetCodeExamplesModelInArray(): void
     {
+        $examples = [];
+        
         $code_example = [
             'code' => '<?php echo hello; ?>',
             'lang' => 'php',
@@ -18,18 +20,22 @@ class TestCodeExamplesModelInterface extends TestCase
             'info' => 'This is a PHP example.',
         ];
 
-        $example_model = new CodeExampleModel($code_example, ['php' => 'PHP']);
+        $example_model = new CodeExampleModel(
+            $code_example,
+            ['php' => 'PHP']
+        );
 
         $examples[] = $example_model;
 
         $model = new CodeExamplesModel($examples);
 
-        $examples = $model->getCodeExamples();
-        test($examples)->arrayHasValue($example_model);
+        test($model->getCodeExamples())->arrayHasValue($example_model);
     }
 
     public function testGetCodeExamplesOne(): void
     {
+        $examples = [];
+
         $code_example = [
             'code' => '<?php echo hello; ?>',
             'lang' => 'php',
@@ -37,18 +43,22 @@ class TestCodeExamplesModelInterface extends TestCase
             'info' => 'This is a PHP example.',
         ];
 
-        $example_model = new CodeExampleModel($code_example, ['php' => 'PHP']);
+        $example_model = new CodeExampleModel(
+            $code_example,
+            ['php' => 'PHP']
+        );
 
         $examples[] = $example_model;
 
         $model = new CodeExamplesModel($examples);
 
-        $examples = $model->getCodeExamples();
-        test($examples)->arrayIsSize(1);
+        test($model->getCodeExamples())->arrayIsSize(1);
     }
 
     public function testGetCodeExamplesTwo(): void
     {
+        $examples = [];
+
         $code_example = [
             'code' => '<?php echo hello; ?>',
             'lang' => 'php',
@@ -56,21 +66,23 @@ class TestCodeExamplesModelInterface extends TestCase
             'info' => 'This is a PHP example.',
         ];
 
-        $example_model = new CodeExampleModel($code_example, ['php' => 'PHP']);
+        $example_model = new CodeExampleModel(
+            $code_example,
+            ['php' => 'PHP']
+        );
 
         $examples[] = $example_model;
         $examples[] = $example_model;
 
         $model = new CodeExamplesModel($examples);
 
-        $examples = $model->getCodeExamples();
-        test($examples)->arrayIsSize(2);
+        test($model->getCodeExamples())->arrayIsSize(2);
     }
 
     public function testGetCodeExamplesEmpty(): void
     {
         $model = new CodeExamplesModel([]);
-        $examples = $model->getCodeExamples();
-        test($examples)->arrayIsSize(0);
+
+        test($model->getCodeExamples())->arrayIsSize(0);
     }
 }
