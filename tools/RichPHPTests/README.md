@@ -70,15 +70,29 @@ This accepts the name for the test suite as well as any excluded test classes or
     ],
     "excluded_tests": [
         "MyUnitTests\\SomeTest::testIsTrue"
-    ]
+    ],
+    "included_classes": [
+        ""
+    ],
+    "included_tests": [
+        ""
+    ],
 }
 ```
+
+Test classes and methods can be included or excluded. Inclusion overrides any exclusion. For example, if you include a specific class, only that class will have its tests run.
 
 Excluded class names do not need the `.php` extension added, but should be fully qualified including namespace if applicable.
 
 Excluded tests (methods) need the fully qualified test class name with the method name, separated by a double colon.
 
 Test classes and methods can also be skipped by using the `Skip` attribute.
+
+Included class names do not need the `.php` extension added, but should be fully qualified including namespace if applicable.
+
+Included tests (methods) need the fully qualified test class name with the method name, separated by a double colon.
+
+Test classes and methods can also be included by using the `Run` attribute. If any methods have the `Run` attribute, the class must also be given the `Run` attribute.
 
 ```php
 <?php
