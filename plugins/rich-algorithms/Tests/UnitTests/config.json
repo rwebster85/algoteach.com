@@ -1,6 +1,10 @@
 {
     "name": "Rich Algorithms Unit Tests",
     "namespace": "RichAlgoUnitTests",
+    "included_classes": [
+    ],
+    "included_tests": [
+    ],
     "excluded_classes": [
     ],
     "excluded_tests": [
