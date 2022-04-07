@@ -92,6 +92,7 @@ Classes and methods can be included by using the `Run` attribute. If any methods
 
 Classes and methods can also be skipped by using the `Skip` attribute.
 
+Skip example:
 ```php
 <?php
 
@@ -109,6 +110,7 @@ class SomeTest extends TestCase
 }
 ```
 
+Run example:
 ```php
 <?php
 
