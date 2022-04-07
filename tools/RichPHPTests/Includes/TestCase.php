@@ -259,15 +259,42 @@ abstract class TestCase
 
         $reflection_class = new ReflectionClass($this);
         $methods = $reflection_class->getMethods(ReflectionMethod::IS_PUBLIC);
+
+        $any_included = false;
+
+        $class_has_included = false;
+
+        if (TestUtil::hasIncludedAttribute($reflection_class)) {
+            $class_has_included = true;
+        }
+
+        foreach ($methods as $key => $method) {
+            $test_name = $reflection_class->getName() . '::' . $method->getName();
+            if (!TestUtil::isTestMethod($method)) {
+                unset($methods[$key]);
+                continue;
+            }
+            if ($this->isTestSkipped($test_name, $method)) {
+                Application::getTestResults()->addSkippedTest();
+                unset($methods[$key]);
+                continue;
+            }
+            if ($class_has_included && TestUtil::hasIncludedAttribute($method)) {
+                $any_included = true;
+            }
+        }
+
+        $methods = array_filter($methods);
+
         foreach ($methods as $method) {
-            if (TestUtil::isTestMethod($method)) {
-                $test_name = $reflection_class->getName() . '::' . $method->getName();
-                if (!$this->isTestSkipped($test_name, $method)) {
-                    $this->addMethod($method);
-                } else {
+            $test_name = $reflection_class->getName() . '::' . $method->getName();
+            if ($any_included || !empty($this->included_tests)) {
+                if (!$this->isTestIncluded($test_name)) {
                     Application::getTestResults()->addSkippedTest();
+                    continue;
                 }
             }
+            $this->addMethod($method);
         }
 
         $this->built = true;
@@ -275,12 +302,24 @@ abstract class TestCase
 
     private function isTestSkipped(string $test_name, ReflectionMethod $method): bool
     {
-        //var_dump(count($this->included_tests));
-        //print(PHP_EOL);
         return (
-            (!empty($this->included_tests) && !in_array($test_name, $this->included_tests))
-            || in_array($test_name, $this->excluded_tests)
+            in_array($test_name, $this->excluded_tests)
             || TestUtil::hasSkippedAttribute($method)
+        );
+    }
+
+    private function isTestIncluded(string $test_name): bool
+    {
+        return (
+            in_array($test_name, $this->included_tests)
+            || $this->hasTestIncluded($test_name)
+        );
+    }
+
+    private function hasTestIncluded(string $test_name): bool
+    {
+        return (
+            TestUtil::hasIncludedAttribute(new ReflectionMethod($test_name))
         );
     }
 
