@@ -22,7 +22,10 @@ class TestCodeExampleModelInterface extends TestCase
             'info' => 'This is a PHP example.',
         ];
 
-        $this->model = new CodeExampleModel($this->example, ['php' => 'PHP']);
+        $this->model = new CodeExampleModel(
+            $this->example,
+            ['php' => 'PHP']
+        );
     }
 
     public function testGetLanguage(): void
