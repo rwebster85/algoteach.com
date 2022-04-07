@@ -20,7 +20,7 @@ use RichWeb\Algorithms\Interfaces\{
 };
 
 use RichWeb\Algorithms\Traits\Formatting\{
-    FilePaths,
+    FilePathsTrait,
     Strings
 };
 
@@ -29,7 +29,7 @@ use RichWeb\Algorithms\Traits\Formatting\{
  */
 class Languages implements LanguagesInterface, HasRunnerInterface
 {
-    use FilePaths;
+    use FilePathsTrait;
     use Strings;
 
     public function __construct(
@@ -77,7 +77,7 @@ class Languages implements LanguagesInterface, HasRunnerInterface
      * 1. wp-content/languages/{text-domain}/
      * 2. {plugin_folder}/I18n/Languages/
      * 
-     * @uses \RichWeb\Algorithms\Traits\Formatting\FilePaths::formatSlashes()
+     * @uses \RichWeb\Algorithms\Traits\Formatting\FilePathsTrait::formatSlashes()
      * @uses \RichWeb\Algorithms\Traits\Formatting\Strings::sanitise()
      * @uses Languages::locale()
      * @uses \apply_filters() WP Function

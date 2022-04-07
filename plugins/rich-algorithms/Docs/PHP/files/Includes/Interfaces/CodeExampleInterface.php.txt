@@ -44,23 +44,9 @@ interface CodeExampleInterface
     public function getInfo(): string;
 
     /**
-     * Returns the additional info attached to this code snippet, formatted with <p> tags.
-     * 
-     * @return string
-     */
-    public function getInfoAutoP(): string;
-
-    /**
      * Returns the code for this code example.
      * 
      * @return string
      */
     public function getCode(): string;
-    
-    /**
-     * Returns the stringable value of this code example.
-     * 
-     * @return string
-     */
-    public function __toString(): string;
 }

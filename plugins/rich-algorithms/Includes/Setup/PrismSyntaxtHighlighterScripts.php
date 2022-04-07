@@ -15,22 +15,20 @@ namespace RichWeb\Algorithms\Setup;
 
 use RichWeb\Algorithms\Abstracts\AbstractScripts;
 
-use const RichWeb\Algorithms\PLUGIN_FILE;
-
 class PrismSyntaxtHighlighterScripts extends AbstractScripts
 {
     public function __construct() {}
+
+    public function registerAdminScripts(): void {}
+
+    public function registerFrontendScripts(): void {}
 
     public function enqueueAdminScripts(string $hook): void {}
 
     public function enqueueFrontendScripts(): void
     {
-        $assets = plugins_url('/Assets/', PLUGIN_FILE);
-        
-        $js_file = $assets . 'JS/prism.js';
         $js_cdn = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/prism.min.js';
         
-        $css_file = $assets . 'CSS/prism.css';
         $css_cdn = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/themes/prism-okaidia.min.css';
 
 
@@ -38,8 +36,6 @@ class PrismSyntaxtHighlighterScripts extends AbstractScripts
 
         $line_numbers_css_cdn = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/plugins/line-numbers/prism-line-numbers.min.css';
         $line_numbers_js_cdn = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/plugins/line-numbers/prism-line-numbers.min.js';
-
-        $timestamp = time();
 
         wp_enqueue_script('rich-algo-prism-script', $js_cdn, [], '1.27.0', true);
         wp_enqueue_script('rich-algo-prism-linenumbers-script', $line_numbers_js_cdn, [], '1.27.0', true);

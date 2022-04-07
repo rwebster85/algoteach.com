@@ -26,19 +26,26 @@ class PrismSyntaxtHighlighterScripts extends AbstractScripts
     public function enqueueFrontendScripts(): void
     {
         $assets = plugins_url('/Assets/', PLUGIN_FILE);
+        
+        $js_file = $assets . 'JS/prism.js';
+        $js_cdn = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/prism.min.js';
+        
+        $css_file = $assets . 'CSS/prism.css';
+        $css_cdn = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/themes/prism-okaidia.min.css';
+
+
+        $js_autoload = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/plugins/autoloader/prism-autoloader.min.js';
+
+        $line_numbers_css_cdn = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/plugins/line-numbers/prism-line-numbers.min.css';
+        $line_numbers_js_cdn = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/plugins/line-numbers/prism-line-numbers.min.js';
 
         $timestamp = time();
 
-        wp_register_script(
-            'rich-algo-prism-script',
-            $assets . 'JS/prism.js',
-            ['jquery'],
-            $timestamp,
-            true
-        );
-        wp_enqueue_script('rich-algo-prism-script');
+        wp_enqueue_script('rich-algo-prism-script', $js_cdn, [], '1.27.0', true);
+        wp_enqueue_script('rich-algo-prism-linenumbers-script', $line_numbers_js_cdn, [], '1.27.0', true);
+        wp_enqueue_script('rich-algo-prism-auto-script', $js_autoload, [], '1.27.0', true);
         
-        wp_register_style('rich-algo-prism-style', $assets . 'CSS/prism.css', [], $timestamp);
-        wp_enqueue_style('rich-algo-prism-style');
+        wp_enqueue_style('rich-algo-prism-style', $css_cdn, [], '1.27.0');
+        wp_enqueue_style('rich-algo-prism-linenumbers-style', $line_numbers_css_cdn, [], '1.27.0');
     }
 }

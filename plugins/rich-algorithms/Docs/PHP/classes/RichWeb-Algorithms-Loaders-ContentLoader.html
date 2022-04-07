@@ -108,28 +108,38 @@
         </div>
     
     
+            <span class="phpdocumentor-element__extends">
+            Uses
+                            <a href="classes/RichWeb-Algorithms-Traits-Formatting-FilePathsTrait.html"><abbr title="\RichWeb\Algorithms\Traits\Formatting\FilePathsTrait">FilePathsTrait</abbr></a>,                             <a href="classes/RichWeb-Algorithms-Traits-Formatting-Strings.html"><abbr title="\RichWeb\Algorithms\Traits\Formatting\Strings">Strings</abbr></a>                    </span>
     </h2>
 
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Loaders/ContentLoader.php"><a href="files/includes-loaders-contentloader.html"><abbr title="Includes/Loaders/ContentLoader.php">ContentLoader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">36</span>
+    <span class="phpdocumentor-element-found-in__line">48</span>
 
-            <a href="classes/RichWeb-Algorithms-Loaders-ContentLoader.html#source-view.36"  class="phpdocumentor-element-found-in__source" data-line="36" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Loaders-ContentLoader.html#source-view.48"  class="phpdocumentor-element-found-in__source" data-line="48" data-modal="source-view"></a>
     </aside>
 
             <p class="phpdocumentor-summary">Content loader includes/requires Content PHP files (views).</p>
 
     <section class="phpdocumentor-description"><p>Accepts a string path to a content file.</p>
 <p>Example usage:</p>
-<pre class="prettyprint"><code class="language-php">$files = [
-    'File1.php',
-    'Files2.php'
-];
+<pre class="prettyprint"><code class="language-php">$path = 'path/to/some/file.php';
 
-$file_loader = new FileLoader(...$files);
-$file_loader-&gt;loadFiles();
+$loader = new ContentLoader($path, $this);
+$loader-&gt;loadFile();
 </code></pre>
+<p>Within the content file being loaded, to reference the object passed as <code class="prettyprint">$this</code>, use <code class="prettyprint">$content</code>.</p>
+<pre class="prettyprint"><code class="language-php">&lt;?php
+// Content file
+// @var ContentLoader $loader
+?&gt;
+&lt;div&gt;
+    &lt;p&gt;&lt;?php echo $loader-&gt;escHtml($content-&gt;someMethod()); ?&gt;&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Public methods on the ContentLoader class be can accessed from within content pages by using the <code class="prettyprint">$loader</code> variable or <code class="prettyprint">$this</code>.</p>
 </section>
 
 
@@ -146,6 +156,13 @@ $file_loader-&gt;loadFiles();
 
 <dl class="phpdocumentor-table-of-contents">
                     <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/RichWeb-Algorithms-Loaders-ContentLoader.html#property_content">$content</a>
+    <span>
+                        &nbsp;: object|null            </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a href="classes/RichWeb-Algorithms-Loaders-ContentLoader.html#property_path">$path</a>
     <span>
                         &nbsp;: string            </span>
@@ -164,14 +181,63 @@ $file_loader-&gt;loadFiles();
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd>The path to a content file to load.</dd>
+<dd>Creates a new content loader.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/RichWeb-Algorithms-Loaders-ContentLoader.html#method_loadFile">loadFile()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
-<dd>Iterates through $files and passes each to requireFile().</dd>
+<dd>Loads the file in the ContentLoader::$path variable.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
+    <a href="classes/RichWeb-Algorithms-Traits-Formatting-Strings.html#method_autoP">autoP()</a>
+    <span>
+                                &nbsp;: string    </span>
+</dt>
+<dd>Returns the string formatted with &lt;p&gt; tags, parsed from newlines.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
+    <a href="classes/RichWeb-Algorithms-Traits-Formatting-Strings.html#method_escAttr">escAttr()</a>
+    <span>
+                                &nbsp;: string    </span>
+</dt>
+<dd>Escapes any HTML entities within a string for safe output as an HTML attribute.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
+    <a href="classes/RichWeb-Algorithms-Traits-Formatting-Strings.html#method_escHtml">escHtml()</a>
+    <span>
+                                &nbsp;: string    </span>
+</dt>
+<dd>Escapes any HTML entities within a string for safe output.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
+    <a href="classes/RichWeb-Algorithms-Traits-Formatting-Strings.html#method_escTextarea">escTextarea()</a>
+    <span>
+                                &nbsp;: string    </span>
+</dt>
+<dd>Escapes any HTML entities within a string for safe output to a textarea element.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
+    <a href="classes/RichWeb-Algorithms-Traits-Formatting-FilePathsTrait.html#method_formatSlashes">formatSlashes()</a>
+    <span>
+                                &nbsp;: string    </span>
+</dt>
+<dd>Normalises forward and/or backward slashes to the system directory separator.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
+    <a href="classes/RichWeb-Algorithms-Traits-Formatting-Strings.html#method_ksesPost">ksesPost()</a>
+    <span>
+                                &nbsp;: string    </span>
+</dt>
+<dd>Sanitise content for allowed HTML elements, usually from post content.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
+    <a href="classes/RichWeb-Algorithms-Traits-Formatting-Strings.html#method_sanitise">sanitise()</a>
+    <span>
+                                &nbsp;: string    </span>
+</dt>
+<dd>Sanitise a string for safe usage and database storage.</dd>
 
         </dl>
 
@@ -192,6 +258,41 @@ $file_loader-&gt;loadFiles();
             -private
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="property_content">
+        $content
+        <a href="classes/RichWeb-Algorithms-Loaders-ContentLoader.html#property_content" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Loaders/ContentLoader.php"><a href="files/includes-loaders-contentloader.html"><abbr title="Includes/Loaders/ContentLoader.php">ContentLoader.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">62</span>
+
+            <a href="classes/RichWeb-Algorithms-Loaders-ContentLoader.html#source-view.62"  class="phpdocumentor-element-found-in__source" data-line="62" data-modal="source-view"></a>
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">object|null</span>
+    <span class="phpdocumentor-signature__name">$content</span>
+     = <span class="phpdocumentor-signature__default-value">null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="property_path">
         $path
         <a href="classes/RichWeb-Algorithms-Loaders-ContentLoader.html#property_path" class="headerlink"><i class="fas fa-link"></i></a>
@@ -201,9 +302,9 @@ $file_loader-&gt;loadFiles();
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Loaders/ContentLoader.php"><a href="files/includes-loaders-contentloader.html"><abbr title="Includes/Loaders/ContentLoader.php">ContentLoader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">45</span>
+    <span class="phpdocumentor-element-found-in__line">61</span>
 
-            <a href="classes/RichWeb-Algorithms-Loaders-ContentLoader.html#source-view.45"  class="phpdocumentor-element-found-in__source" data-line="45" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Loaders-ContentLoader.html#source-view.61"  class="phpdocumentor-element-found-in__source" data-line="61" data-modal="source-view"></a>
     </aside>
 
     
@@ -236,9 +337,9 @@ $file_loader-&gt;loadFiles();
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Loaders/ContentLoader.php"><a href="files/includes-loaders-contentloader.html"><abbr title="Includes/Loaders/ContentLoader.php">ContentLoader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">46</span>
+    <span class="phpdocumentor-element-found-in__line">63</span>
 
-            <a href="classes/RichWeb-Algorithms-Loaders-ContentLoader.html#source-view.46"  class="phpdocumentor-element-found-in__source" data-line="46" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Loaders-ContentLoader.html#source-view.63"  class="phpdocumentor-element-found-in__source" data-line="63" data-modal="source-view"></a>
     </aside>
 
     
@@ -275,16 +376,16 @@ $file_loader-&gt;loadFiles();
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Loaders/ContentLoader.php"><a href="files/includes-loaders-contentloader.html"><abbr title="Includes/Loaders/ContentLoader.php">ContentLoader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">44</span>
+    <span class="phpdocumentor-element-found-in__line">60</span>
 
-            <a href="classes/RichWeb-Algorithms-Loaders-ContentLoader.html#source-view.44"  class="phpdocumentor-element-found-in__source" data-line="44" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Loaders-ContentLoader.html#source-view.60"  class="phpdocumentor-element-found-in__source" data-line="60" data-modal="source-view"></a>
     </aside>
 
-        <p class="phpdocumentor-summary">The path to a content file to load.</p>
+        <p class="phpdocumentor-summary">Creates a new content loader.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$path</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$require</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$path</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">object&nbsp;</span><span class="phpdocumentor-signature__argument__name">$content</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$require</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
@@ -294,7 +395,17 @@ $file_loader-&gt;loadFiles();
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>The filepath of a content file to load.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$content</span>
+                : <span class="phpdocumentor-signature__argument__return-type">object</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The object the content file relates to.</p>
+</section>
 
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
@@ -302,7 +413,8 @@ $file_loader-&gt;loadFiles();
                 : <span class="phpdocumentor-signature__argument__return-type">bool</span>
                  = <span class="phpdocumentor-signature__argument__default-value">false</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>Whether to use require or include</p>
+</section>
 
             </dd>
             </dl>
@@ -328,18 +440,20 @@ $file_loader-&gt;loadFiles();
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/Loaders/ContentLoader.php"><a href="files/includes-loaders-contentloader.html"><abbr title="Includes/Loaders/ContentLoader.php">ContentLoader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">57</span>
+    <span class="phpdocumentor-element-found-in__line">75</span>
 
-            <a href="classes/RichWeb-Algorithms-Loaders-ContentLoader.html#source-view.57"  class="phpdocumentor-element-found-in__source" data-line="57" data-modal="source-view"></a>
+            <a href="classes/RichWeb-Algorithms-Loaders-ContentLoader.html#source-view.75"  class="phpdocumentor-element-found-in__source" data-line="75" data-modal="source-view"></a>
     </aside>
 
-        <p class="phpdocumentor-summary">Iterates through $files and passes each to requireFile().</p>
+        <p class="phpdocumentor-summary">Loads the file in the ContentLoader::$path variable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                 <span class="phpdocumentor-signature__name">loadFile</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
-    
+        <section class="phpdocumentor-description"><p>Also declares two local variables for use within a content file. <code class="prettyprint">$loader</code> is this content loader, and <code class="prettyprint">$content</code> is the object passed in the constructor.</p>
+</section>
+
     
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
@@ -351,15 +465,7 @@ $file_loader-&gt;loadFiles();
                     <span class="phpdocumentor-tag__name">uses</span>
                 </dt>
                 <dd class="phpdocumentor-tag-list__definition">
-                                                                                    <span class="phpdocumentor-tag-link"><a href="classes/RichWeb-Algorithms-Loaders-FileLoader.html#property_files"><abbr title="\RichWeb\Algorithms\Loaders\FileLoader::$files">FileLoader::$files</abbr></a></span>
-                                        
-                                             
-                                    </dd>
-                            <dt class="phpdocumentor-tag-list__entry">
-                    <span class="phpdocumentor-tag__name">uses</span>
-                </dt>
-                <dd class="phpdocumentor-tag-list__definition">
-                                                                                    <span class="phpdocumentor-tag-link"><a href="classes/RichWeb-Algorithms-Loaders-FileLoader.html#method_requireFile"><abbr title="\RichWeb\Algorithms\Loaders\FileLoader::requireFile()">FileLoader::requireFile()</abbr></a></span>
+                                                                                    <span class="phpdocumentor-tag-link"><a href="classes/RichWeb-Algorithms-Loaders-ContentLoader.html#property_path"><abbr title="\RichWeb\Algorithms\Loaders\ContentLoader::$path">ContentLoader::$path</abbr></a></span>
                                         
                                              
                                     </dd>
@@ -367,6 +473,426 @@ $file_loader-&gt;loadFiles();
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_autoP">
+        autoP()
+        <a href="classes/RichWeb-Algorithms-Traits-Formatting-Strings.html#method_autoP" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Traits/Formatting/Strings.php"><a href="files/includes-traits-formatting-strings.html"><abbr title="Includes/Traits/Formatting/Strings.php">Strings.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">97</span>
+
+            <a href="classes/RichWeb-Algorithms-Loaders-ContentLoader.html#source-view.97"  class="phpdocumentor-element-found-in__source" data-line="97" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">Returns the string formatted with &lt;p&gt; tags, parsed from newlines.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+                <span class="phpdocumentor-signature__name">autoP</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$var</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$var</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">uses</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                    <span class="phpdocumentor-tag-link"><abbr title="\wpautop">wpautop</abbr></span>
+                                        
+                                                 <section class="phpdocumentor-description"><p>WP Function</p>
+</section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_escAttr">
+        escAttr()
+        <a href="classes/RichWeb-Algorithms-Traits-Formatting-Strings.html#method_escAttr" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Traits/Formatting/Strings.php"><a href="files/includes-traits-formatting-strings.html"><abbr title="Includes/Traits/Formatting/Strings.php">Strings.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">55</span>
+
+            <a href="classes/RichWeb-Algorithms-Loaders-ContentLoader.html#source-view.55"  class="phpdocumentor-element-found-in__source" data-line="55" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">Escapes any HTML entities within a string for safe output as an HTML attribute.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+                <span class="phpdocumentor-signature__name">escAttr</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$var</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$var</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">uses</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                    <span class="phpdocumentor-tag-link"><abbr title="\esc_attr()">esc_attr()</abbr></span>
+                                        
+                                                 <section class="phpdocumentor-description"><p>WP Function</p>
+</section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_escHtml">
+        escHtml()
+        <a href="classes/RichWeb-Algorithms-Traits-Formatting-Strings.html#method_escHtml" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Traits/Formatting/Strings.php"><a href="files/includes-traits-formatting-strings.html"><abbr title="Includes/Traits/Formatting/Strings.php">Strings.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">41</span>
+
+            <a href="classes/RichWeb-Algorithms-Loaders-ContentLoader.html#source-view.41"  class="phpdocumentor-element-found-in__source" data-line="41" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">Escapes any HTML entities within a string for safe output.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+                <span class="phpdocumentor-signature__name">escHtml</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$var</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$var</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">uses</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                    <span class="phpdocumentor-tag-link"><abbr title="\esc_html()">esc_html()</abbr></span>
+                                        
+                                                 <section class="phpdocumentor-description"><p>WP Function</p>
+</section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_escTextarea">
+        escTextarea()
+        <a href="classes/RichWeb-Algorithms-Traits-Formatting-Strings.html#method_escTextarea" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Traits/Formatting/Strings.php"><a href="files/includes-traits-formatting-strings.html"><abbr title="Includes/Traits/Formatting/Strings.php">Strings.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">69</span>
+
+            <a href="classes/RichWeb-Algorithms-Loaders-ContentLoader.html#source-view.69"  class="phpdocumentor-element-found-in__source" data-line="69" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">Escapes any HTML entities within a string for safe output to a textarea element.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+                <span class="phpdocumentor-signature__name">escTextarea</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$var</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$var</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">uses</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                    <span class="phpdocumentor-tag-link"><abbr title="\esc_textarea()">esc_textarea()</abbr></span>
+                                        
+                                                 <section class="phpdocumentor-description"><p>WP Function</p>
+</section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_formatSlashes">
+        formatSlashes()
+        <a href="classes/RichWeb-Algorithms-Traits-Formatting-FilePathsTrait.html#method_formatSlashes" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Traits/Formatting/FilePathsTrait.php"><a href="files/includes-traits-formatting-filepathstrait.html"><abbr title="Includes/Traits/Formatting/FilePathsTrait.php">FilePathsTrait.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">29</span>
+
+            <a href="classes/RichWeb-Algorithms-Loaders-ContentLoader.html#source-view.29"  class="phpdocumentor-element-found-in__source" data-line="29" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">Normalises forward and/or backward slashes to the system directory separator.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+                <span class="phpdocumentor-signature__name">formatSlashes</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$path</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$path</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">uses</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                    <span class="phpdocumentor-tag-link"><abbr title="\str_replace()">str_replace()</abbr></span>
+                                        
+                                             
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The normalised path</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_ksesPost">
+        ksesPost()
+        <a href="classes/RichWeb-Algorithms-Traits-Formatting-Strings.html#method_ksesPost" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Traits/Formatting/Strings.php"><a href="files/includes-traits-formatting-strings.html"><abbr title="Includes/Traits/Formatting/Strings.php">Strings.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">83</span>
+
+            <a href="classes/RichWeb-Algorithms-Loaders-ContentLoader.html#source-view.83"  class="phpdocumentor-element-found-in__source" data-line="83" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">Sanitise content for allowed HTML elements, usually from post content.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+                <span class="phpdocumentor-signature__name">ksesPost</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$var</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$var</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">uses</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                    <span class="phpdocumentor-tag-link"><abbr title="\wp_kses_post()">wp_kses_post()</abbr></span>
+                                        
+                                                 <section class="phpdocumentor-description"><p>WP Function</p>
+</section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_sanitise">
+        sanitise()
+        <a href="classes/RichWeb-Algorithms-Traits-Formatting-Strings.html#method_sanitise" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Traits/Formatting/Strings.php"><a href="files/includes-traits-formatting-strings.html"><abbr title="Includes/Traits/Formatting/Strings.php">Strings.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">27</span>
+
+            <a href="classes/RichWeb-Algorithms-Loaders-ContentLoader.html#source-view.27"  class="phpdocumentor-element-found-in__source" data-line="27" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">Sanitise a string for safe usage and database storage.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+                <span class="phpdocumentor-signature__name">sanitise</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$var</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$var</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">uses</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                    <span class="phpdocumentor-tag-link"><abbr title="\sanitize_text_field()">sanitize_text_field()</abbr></span>
+                                        
+                                                 <section class="phpdocumentor-description"><p>WP Function</p>
+</section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string</span>
             &mdash;
         
     

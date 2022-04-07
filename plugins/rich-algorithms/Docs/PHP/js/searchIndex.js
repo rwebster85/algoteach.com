@@ -436,11 +436,6 @@ Search.appendIndex(
             "summary": "Returns\u0020the\u0020additional\u0020info\u0020attached\u0020to\u0020this\u0020code\u0020snippet.",
             "url": "classes/RichWeb-Algorithms-CodeExamples-CodeExample.html#method_getInfo"
         },                {
-            "fqsen": "\\RichWeb\\Algorithms\\CodeExamples\\CodeExample\u003A\u003AgetInfoAutoP\u0028\u0029",
-            "name": "getInfoAutoP",
-            "summary": "Returns\u0020the\u0020additional\u0020info\u0020attached\u0020to\u0020this\u0020code\u0020snippet,\u0020formatted\u0020with\u0020\u003Cp\u003E\u0020tags.",
-            "url": "classes/RichWeb-Algorithms-CodeExamples-CodeExample.html#method_getInfoAutoP"
-        },                {
             "fqsen": "\\RichWeb\\Algorithms\\CodeExamples\\CodeExample\u003A\u003AgetCode\u0028\u0029",
             "name": "getCode",
             "summary": "Returns\u0020the\u0020code\u0020for\u0020this\u0020code\u0020example.",
@@ -691,20 +686,10 @@ Search.appendIndex(
             "summary": "Returns\u0020the\u0020additional\u0020info\u0020attached\u0020to\u0020this\u0020code\u0020snippet.",
             "url": "classes/RichWeb-Algorithms-Interfaces-CodeExampleInterface.html#method_getInfo"
         },                {
-            "fqsen": "\\RichWeb\\Algorithms\\Interfaces\\CodeExampleInterface\u003A\u003AgetInfoAutoP\u0028\u0029",
-            "name": "getInfoAutoP",
-            "summary": "Returns\u0020the\u0020additional\u0020info\u0020attached\u0020to\u0020this\u0020code\u0020snippet,\u0020formatted\u0020with\u0020\u003Cp\u003E\u0020tags.",
-            "url": "classes/RichWeb-Algorithms-Interfaces-CodeExampleInterface.html#method_getInfoAutoP"
-        },                {
             "fqsen": "\\RichWeb\\Algorithms\\Interfaces\\CodeExampleInterface\u003A\u003AgetCode\u0028\u0029",
             "name": "getCode",
             "summary": "Returns\u0020the\u0020code\u0020for\u0020this\u0020code\u0020example.",
             "url": "classes/RichWeb-Algorithms-Interfaces-CodeExampleInterface.html#method_getCode"
-        },                {
-            "fqsen": "\\RichWeb\\Algorithms\\Interfaces\\CodeExampleInterface\u003A\u003A__toString\u0028\u0029",
-            "name": "__toString",
-            "summary": "Returns\u0020the\u0020stringable\u0020value\u0020of\u0020this\u0020code\u0020example.",
-            "url": "classes/RichWeb-Algorithms-Interfaces-CodeExampleInterface.html#method___toString"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Interfaces\\CodeExamplesLoaderInterface",
             "name": "CodeExamplesLoaderInterface",
@@ -928,18 +913,23 @@ Search.appendIndex(
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Loaders\\ContentLoader\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "The\u0020path\u0020to\u0020a\u0020content\u0020file\u0020to\u0020load.",
+            "summary": "Creates\u0020a\u0020new\u0020content\u0020loader.",
             "url": "classes/RichWeb-Algorithms-Loaders-ContentLoader.html#method___construct"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Loaders\\ContentLoader\u003A\u003AloadFile\u0028\u0029",
             "name": "loadFile",
-            "summary": "Iterates\u0020through\u0020\u0024files\u0020and\u0020passes\u0020each\u0020to\u0020requireFile\u0028\u0029.",
+            "summary": "Loads\u0020the\u0020file\u0020in\u0020the\u0020ContentLoader\u003A\u003A\u0024path\u0020variable.",
             "url": "classes/RichWeb-Algorithms-Loaders-ContentLoader.html#method_loadFile"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Loaders\\ContentLoader\u003A\u003A\u0024path",
             "name": "path",
             "summary": "",
             "url": "classes/RichWeb-Algorithms-Loaders-ContentLoader.html#property_path"
+        },                {
+            "fqsen": "\\RichWeb\\Algorithms\\Loaders\\ContentLoader\u003A\u003A\u0024content",
+            "name": "content",
+            "summary": "",
+            "url": "classes/RichWeb-Algorithms-Loaders-ContentLoader.html#property_content"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Loaders\\ContentLoader\u003A\u003A\u0024require",
             "name": "require",
@@ -1546,15 +1536,15 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/RichWeb-Algorithms-Setup-Setup.html#property_subscriber"
         },                {
-            "fqsen": "\\RichWeb\\Algorithms\\Traits\\Formatting\\FilePaths",
-            "name": "FilePaths",
+            "fqsen": "\\RichWeb\\Algorithms\\Traits\\Formatting\\FilePathsTrait",
+            "name": "FilePathsTrait",
             "summary": "",
-            "url": "classes/RichWeb-Algorithms-Traits-Formatting-FilePaths.html"
+            "url": "classes/RichWeb-Algorithms-Traits-Formatting-FilePathsTrait.html"
         },                {
-            "fqsen": "\\RichWeb\\Algorithms\\Traits\\Formatting\\FilePaths\u003A\u003AformatSlashes\u0028\u0029",
+            "fqsen": "\\RichWeb\\Algorithms\\Traits\\Formatting\\FilePathsTrait\u003A\u003AformatSlashes\u0028\u0029",
             "name": "formatSlashes",
             "summary": "Normalises\u0020forward\u0020and\/or\u0020backward\u0020slashes\u0020to\u0020the\u0020system\u0020directory\u0020separator.",
-            "url": "classes/RichWeb-Algorithms-Traits-Formatting-FilePaths.html#method_formatSlashes"
+            "url": "classes/RichWeb-Algorithms-Traits-Formatting-FilePathsTrait.html#method_formatSlashes"
         },                {
             "fqsen": "\\RichWeb\\Algorithms\\Traits\\Formatting\\Strings",
             "name": "Strings",

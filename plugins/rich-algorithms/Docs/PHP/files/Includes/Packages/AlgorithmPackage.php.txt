@@ -14,7 +14,7 @@ declare(strict_types=1);
 namespace RichWeb\Algorithms\Packages;
 
 use RichWeb\Algorithms\Interfaces\AlgorithmPackageInterface;
-use RichWeb\Algorithms\Traits\Formatting\FilePaths;
+use RichWeb\Algorithms\Traits\Formatting\FilePathsTrait;
 
 /**
  * Represents the system level information for an algorithm package.
@@ -23,7 +23,7 @@ use RichWeb\Algorithms\Traits\Formatting\FilePaths;
  */
 final class AlgorithmPackage implements AlgorithmPackageInterface
 {
-    use FilePaths;
+    use FilePathsTrait;
 
     private array $config = [];
 

@@ -18,6 +18,8 @@ use RichWeb\Algorithms\Interfaces\ScriptsInterface;
 
 abstract class AbstractScripts implements ScriptsInterface, HasRunnerInterface
 {
+    abstract public function registerAdminScripts(): void;
+    abstract public function registerFrontendScripts(): void;
     abstract public function enqueueAdminScripts(string $hook): void;
     abstract public function enqueueFrontendScripts(): void;
 
@@ -31,6 +33,8 @@ abstract class AbstractScripts implements ScriptsInterface, HasRunnerInterface
      */
     private function actions(): void
     {
+        add_action('init', [$this, 'registerAdminScripts'], 10);
+        add_action('init', [$this, 'registerFrontendScripts'], 10);
         add_action('admin_enqueue_scripts', [$this, 'enqueueAdminScripts'], 10, 1);
         add_action('wp_enqueue_scripts', [$this, 'enqueueFrontendScripts']);
     }
