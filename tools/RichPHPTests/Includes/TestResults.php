@@ -137,22 +137,26 @@ final class TestResults implements TestResultsInterface
             print(PHP_EOL);
         }
 
-        if ($total_fail > 0) {
-            print("The following tests failed:" . PHP_EOL . PHP_EOL);
-            foreach ($results as $tested_class) {
-                foreach ($tested_class as $result) {
-                    assert($result instanceof TestResult);
-                    if (!$result->testPassed()) {
-                        $class    = $result->test_class;
-                        $test     = $result->test_name;
-                        $line     = $result->line;
-                        $error    = $result->errorMessage();
-                        $expected = $result->parseVarForOutput($result->expected);
-                        $actual   = $result->parseVarForOutput($result->actual);
-                        $file     = substr($result->test_file, strrpos($result->test_file, DIRECTORY_SEPARATOR) + 1);
-                        print("$class::$test : File: $file - Line: $line - Expected: $expected - Actual: $actual - Error: $error" . PHP_EOL);
-                    }
+        if ($total_fail <= 0) {
+            return;
+        }
+
+        print("The following tests failed:" . PHP_EOL . PHP_EOL);
+
+        foreach ($results as $tested_class) {
+            foreach ($tested_class as $result) {
+                assert($result instanceof TestResult);
+                if ($result->testPassed()) {
+                    return;
                 }
+                $class    = $result->test_class;
+                $test     = $result->test_name;
+                $line     = $result->line;
+                $error    = $result->errorMessage();
+                $expected = $result->parseVarForOutput($result->expected);
+                $actual   = $result->parseVarForOutput($result->actual);
+                $file     = substr($result->test_file, strrpos($result->test_file, DIRECTORY_SEPARATOR) + 1);
+                print("$class::$test : File: $file - Line: $line - Expected: $expected - Actual: $actual - Error: $error" . PHP_EOL);
             }
         }
     }
