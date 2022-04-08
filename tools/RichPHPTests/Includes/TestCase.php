@@ -289,7 +289,7 @@ abstract class TestCase
         foreach ($methods as $method) {
             $test_name = $reflection_class->getName() . '::' . $method->getName();
             if ($any_included || !empty($this->included_tests)) {
-                if (!$this->isTestIncluded($test_name)) {
+                if (!$this->isTestIncluded($test_name, $method)) {
                     Application::getTestResults()->addSkippedTest();
                     continue;
                 }
@@ -308,18 +308,11 @@ abstract class TestCase
         );
     }
 
-    private function isTestIncluded(string $test_name): bool
+    private function isTestIncluded(string $test_name, ReflectionMethod $method): bool
     {
         return (
             in_array($test_name, $this->included_tests)
-            || $this->hasTestIncluded($test_name)
-        );
-    }
-
-    private function hasTestIncluded(string $test_name): bool
-    {
-        return (
-            TestUtil::hasIncludedAttribute(new ReflectionMethod($test_name))
+            || TestUtil::hasIncludedAttribute($method)
         );
     }
 
