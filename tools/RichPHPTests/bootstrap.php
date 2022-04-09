@@ -13,22 +13,24 @@ namespace RichPHPTests;
 
 use const DIRECTORY_SEPARATOR as SEP;
 
-$path = __DIR__ . SEP;
-$includes = $path . 'Includes' . SEP;
+(function() use ($tests_folder, $config_file) {
+    $path = __DIR__ . SEP;
+    $includes = $path . 'Includes' . SEP;
 
-require_once $includes . 'Project.php';
-$project = new Project($path . 'project.json', __DIR__);
+    require_once $includes . 'Project.php';
+    $project = new Project($path . 'project.json', __DIR__);
 
-require_once $includes . 'Autoload' . SEP . 'Autoloader.php';
-(new Autoload\Autoloader($project->getAutoloaderSources()))->register();
+    require_once $includes . 'Autoload' . SEP . 'Autoloader.php';
+    (new Autoload\Autoloader($project->getAutoloaderSources()))->register();
 
-(new FileLoader(...$project->getFileSources()))->loadFiles();
+    (new FileLoader(...$project->getFileSources()))->loadFiles();
 
-$config = new TestsConfiguration($config_file, $tests_folder);
+    $config = new TestsConfiguration($config_file, $tests_folder);
 
-$app = Application::instance($config);
+    Application::instance($config);
 
-if (SourceChecker::isCli()) {
-    print('Tests complete.' . PHP_EOL);
-    Application::getTestResults()->printResults();
-}
+    if (SourceChecker::isCli()) {
+        print('Tests complete.' . PHP_EOL);
+        Application::getTestResults()->printResults();
+    }
+})();
