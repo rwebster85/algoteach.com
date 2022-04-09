@@ -116,7 +116,13 @@ final class TestResults implements TestResultsInterface
         $instantiated_tests = $this->suite->getInstantiatedTestsCount();
         $invalid_tests = $this->suite->getInvalidTestClasses();
 
-        print("Test classes: $instantiated_tests\nTests ran: $total_tests\nPassed: $total_pass\nFailed: $total_fail\nSkipped Files: $total_skipped\nSkipped Tests: $total_skipped_tests" . PHP_EOL);
+        $failed = "Failed: $total_fail";
+
+        if ($total_fail > 0) {
+            $failed = "\e[0;31m" . $failed . "\e[0m";
+        }
+
+        print("Test classes: $instantiated_tests\nTests ran: $total_tests\nPassed: $total_pass\n$failed\nSkipped Files: $total_skipped\nSkipped Tests: $total_skipped_tests" . PHP_EOL);
 
         if (!empty($invalid_tests)) {
             $count = count($invalid_tests);
@@ -141,13 +147,13 @@ final class TestResults implements TestResultsInterface
             return;
         }
 
-        print("The following tests failed:" . PHP_EOL . PHP_EOL);
+        print(PHP_EOL . "\e[0;31mThe following tests failed:\e[0m" . PHP_EOL . PHP_EOL);
 
         foreach ($results as $tested_class) {
             foreach ($tested_class as $result) {
-                assert($result instanceof TestResult);
+                //assert($result instanceof TestResult);
                 if ($result->testPassed()) {
-                    return;
+                    continue;
                 }
                 $class    = $result->test_class;
                 $test     = $result->test_name;
