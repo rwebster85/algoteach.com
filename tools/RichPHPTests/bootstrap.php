@@ -30,7 +30,12 @@ use const DIRECTORY_SEPARATOR as SEP;
     Application::instance($config);
 
     if (SourceChecker::isCli()) {
-        print('Tests complete.' . PHP_EOL);
+        if (Application::getTestResults()->getTotalFailed() > 0) {
+            print("\e[0;31mTests complete.\e[0m");
+        } else {
+            print("\e[0;32mTests complete.\e[0m");
+        }
+        print(PHP_EOL);
         Application::getTestResults()->printResults();
     }
 })();
