@@ -59,10 +59,10 @@
             var in_poly = pointInPolygon(point_pos.x, point_pos.y, polyX, polyY);
 
             if (in_poly == true) {
-                var result = 'Result: Point is inside polygon <span class="dashicons dashicons-yes"></span>';
+                var result = 'Result: Point is inside polygon';
                 $('#demo-result p').html(result);
             } else {
-                var result = 'Result: Point is not inside polygon <span class="dashicons dashicons-no"></span>';
+                var result = 'Result: Point is not inside polygon';
                 $('#demo-result p').html(result);
             }
 
