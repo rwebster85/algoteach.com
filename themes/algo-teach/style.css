@@ -20,3 +20,7 @@
         max-width: 80em;
     }
 }
+
+.site-footer .widget .added_to_cart {
+    color: #fff!important;
+}
