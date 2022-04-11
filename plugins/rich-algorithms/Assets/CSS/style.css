@@ -1,5 +1,6 @@
-pre[class*=language-] {
+pre[class*=language-].line-numbers {
     margin-bottom: 1em!important;
+    padding-top: 25px;
 }
 
 code[class*=language-]  {
