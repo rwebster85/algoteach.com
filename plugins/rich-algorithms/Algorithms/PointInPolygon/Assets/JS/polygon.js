@@ -72,6 +72,7 @@
         });
     });
 
+    // Code adpated from Hajibaba, 2019
     function drawPolygon(polyX, polyY, fill, stroke) {
         demo.width = min_width;
         demo.height = $('.demo-outer').height();
@@ -92,6 +93,7 @@
             context.stroke();
         }
     }
+    //end of adapted code
 
     function drawPoint(x, y, atElement) {
         var point = $('<div class="demo-point" style="left:'+x+'px; top: '+y+'px;"></div>');
@@ -107,7 +109,7 @@
         };
     }
 
-    // Code adapted from Darel Rex Finley and Lascha Lagidse, 2007
+    // Code adapted from Finley and Lagidse, 2007
     function pointInPolygon(x, y, polyX, polyY) {
         var in_polygon = false;
 
