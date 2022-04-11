@@ -104,7 +104,12 @@
 }
 
 #rich-algo-example-sortable .rich-algo-example-wrap:first-of-type {
-    margin-top: 20px;
+    /*margin-top: 20px;*/
+}
+
+#richweb_algorithm_code_examples #rich-algo-example-sortable {
+    padding-top: 20px;
+    box-sizing: border-box;
 }
 
 #rich-algo-example-sortable .rich-algo-example-wrap.placeholder {

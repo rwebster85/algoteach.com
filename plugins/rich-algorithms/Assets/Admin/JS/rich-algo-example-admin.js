@@ -1,5 +1,6 @@
 (function($) {
-    var sort_height = $('#rich-algo-example-sortable').height();
+    var offset = 32;
+    var sort_height = $('#rich-algo-example-sortable').height() + offset;
     const nonce = rich_algo_example_params.rich_algo_example_add_new_nonce;
 
     $('#rich-algo-example-sortable').sortable({
@@ -36,7 +37,7 @@
             $('#rich-algo-example-sortable').height('');
         });
         $(document).on('mouseup', '#rich-algo-example-sortable textarea', function() {
-            sort_height = $('#rich-algo-example-sortable').height();
+            sort_height = $('#rich-algo-example-sortable').height() + offset;
         });
 
         $(document).on('click', '.rich-algo-example-remove', function(e) {
