@@ -49,6 +49,8 @@
         });
 
         $(document).on('click', '#rich-algo-example-add', function(e) {
+            $(this).attr('disabled', 'true');
+            $(this).addClass('disabled loading');
             e.preventDefault();
             addNewCodeExample(e)
         });
@@ -77,6 +79,8 @@
                     sort_height = $('#rich-algo-example-sortable').height();
                     recalculateExampleNumbers();
                 }
+                $('#rich-algo-example-add').attr('disabled', false);
+                $('#rich-algo-example-add').removeClass('disabled loading');
             }
         });
     }
