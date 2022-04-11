@@ -14,6 +14,7 @@ declare(strict_types=1);
 namespace RichWeb\Algorithms\Algorithm;
 
 use RichWeb\Algorithms\Abstracts\AbstractAlgorithm;
+use RichWeb\Algorithms\Loaders\ContentLoader;
 
 use const RichWeb\Algorithms\PLUGIN_FILE;
 
@@ -26,6 +27,11 @@ final class PointInPolygon extends AbstractAlgorithm
 
     public function demo(?string $content = ''): string
     {
-        return $content;
+        $path = __DIR__ . $this->formatSlashes('\DemoContent.php');
+        $loader = new ContentLoader($path, $this);
+        
+        ob_start();
+        $loader->loadFile();
+        return ob_get_clean() . $content;
     }
 }

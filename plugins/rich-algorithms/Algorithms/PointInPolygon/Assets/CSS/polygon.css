@@ -1,0 +1,59 @@
+:root {
+    --border-colour: #ddd;
+    --bg-color: #fafafa;
+    --point-color: #35495c;
+}
+
+.demo-outer {
+    position: relative;
+    overflow: auto;
+    padding-bottom: 15px;
+}
+
+.demo-wrapper {
+    position: relative;
+    min-height: 400px;
+    width: auto;
+}
+
+#demo {
+    position: relative;
+    overflow: hidden;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-colour);
+}
+
+.demo-point {
+    background-color: var(--point-color);
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#demo-result {
+    width: 100%;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-colour);
+    position: relative;
+    margin-bottom: 40px;
+    padding: 10px;
+    font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
+}
+
+#demo-result p {
+    margin: 0;
+    position: relative;
+}
+
+#demo-result .dashicons {
+    font-size: 30px;
+    position: relative;
+    top: -2px;
+    right: 5px;
+}
