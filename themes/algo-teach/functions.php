@@ -12,3 +12,5 @@ add_action('init', function() {
     remove_action('storefront_header', 'storefront_product_search', 40);
     remove_action('storefront_footer', 'storefront_handheld_footer_bar', 999);
 });
+
+add_filter('wp_lazy_loading_enabled', '__return_false');
