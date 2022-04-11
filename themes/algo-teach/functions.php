@@ -10,4 +10,5 @@ add_action('algo_homepage', 'storefront_best_selling_products', 70);
 
 add_action('init', function() {
     remove_action('storefront_header', 'storefront_product_search', 40);
+    remove_action('storefront_footer', 'storefront_handheld_footer_bar', 999);
 });
