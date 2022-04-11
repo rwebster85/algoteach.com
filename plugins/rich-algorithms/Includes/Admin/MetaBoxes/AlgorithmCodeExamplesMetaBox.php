@@ -145,7 +145,7 @@ final class AlgorithmCodeExamplesMetaBox extends AbstractMetaBox
 
         $code_examples = (array) ($_POST['richweb_algorithm_code_examples'] ?? []);
 
-        var_dump($code_examples);
+        //var_dump($code_examples);
 
         // Remove empty code examples before saving.
         foreach ($code_examples as $key => $example) {
