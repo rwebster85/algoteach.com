@@ -72,7 +72,7 @@ class AlgorithmScripts extends AbstractScripts
                     $class = $this->package->getClass();
                     $file = pathinfo($style, PATHINFO_FILENAME);
                     $style_name = $this->escAttr(strtolower($class . '-' . $file .'-' . 'style'));
-                    wp_enqueue_style($style_name, $style_url, [], $timestamp);
+                    wp_enqueue_style($style_name, $style_url, ['dashicons'], $timestamp);
                 }
             }
         }
