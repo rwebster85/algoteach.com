@@ -6,35 +6,50 @@
 
     let point_offset = 3;
 
-    let polyX = [
-        20.0,
-        70.0,
-        303.0,
-        446.0,
-        429.0,
-        511.0,
-        245.0
-    ];
+    let polyX_l = [20.0, 70.0, 303.0, 446.0, 429.0, 511.0, 245.0];
+    let polyY_l = [40.0, 320.0, 261.0, 299.0, 160.0, 59.0, 135.0];
 
-    let polyY = [
-        40.0,
-        320.0,
-        261.0,
-        299.0,
-        160.0,
-        59.0,
-        135.0
-    ];
+    let polyX_s = [20.0, 70.0, 303.0, 245.0];
+    let polyY_s = [40.0, 320.0, 261.0, 135.0];
 
-    let min_width = 530.0;
+    let polyX = [];
+    let polyY = [];
+
+    let min_width;
+
+    let height;
+
+    function init() {
+        var window_width = $(window).width();
+        if (window_width > 600) {
+            polyX = polyX_l;
+            polyY = polyY_l;
+            min_width = 530;
+        } else {
+            polyX = polyX_s;
+            polyY = polyY_s;
+            min_width = 330;
+        }
+        if ($('#new-point').length) {
+            $('#new-point').remove();
+        }
+        $('.demo-wrapper .demo-point').each(function() {
+            $(this).remove();
+        });
+        $('#demo-result p').html('Result:');
+        drawPolygon(polyX, polyY, 'rgb(255, 102, 0, 0.6)', 'rgb(156, 85, 33, 1.0)');
+        $('#demo-result').css('max-width', min_width);
+    }
 
     $(document).ready(function() {
 
+        $(window).resize(function() {
+            init();
+        });
+
         $('.entry-content .wp-post-image').css('display', 'none');
-
-        drawPolygon(polyX, polyY, 'rgb(255, 102, 0, 0.6)', 'rgb(156, 85, 33, 1.0)');
-
-        $('#demo-result').css('max-width', min_width);
+        height = $('.demo-outer').height();
+        init();
 
         $('body').on('click', '#demo', function (e) {
             e.stopImmediatePropagation();
@@ -59,10 +74,10 @@
             var in_poly = pointInPolygon(point_pos.x, point_pos.y, polyX, polyY);
 
             if (in_poly == true) {
-                var result = 'Result: Point is inside polygon';
+                var result = 'Point is inside polygon';
                 $('#demo-result p').html(result);
             } else {
-                var result = 'Result: Point is not inside polygon';
+                var result = 'Point is not inside polygon';
                 $('#demo-result p').html(result);
             }
 
@@ -75,7 +90,7 @@
     // Code adpated from Hajibaba, 2019
     function drawPolygon(polyX, polyY, fill, stroke) {
         demo.width = min_width;
-        demo.height = $('.demo-outer').height();
+        demo.height = height;
         if (polyX.length > 0) {
             context.fillStyle = fill;
             context.strokeStyle = stroke;
@@ -110,20 +125,20 @@
     }
 
     // Code adapted from Finley and Lagidse, 2007
-    function pointInPolygon(x, y, polyX, polyY) {
-        var in_polygon = false;
+function pointInPolygon(x, y, polyX, polyY) {
+    var in_polygon = false;
 
-        var poly_corners = polyX.length;
-        var j = poly_corners - 1;
+    var poly_corners = polyX.length;
+    var j = poly_corners - 1;
 
-        for (let i = 0; i < poly_corners; i++) {
-            if ((polyY[i]< y && polyY[j]>=y || polyY[j]< y && polyY[i]>=y) && (polyX[i]<=x || polyX[j]<=x)) {
-                in_polygon ^= (polyX[i]+(y-polyY[i])/(polyY[j]-polyY[i])*(polyX[j]-polyX[i])<x);
-            }
-            j=i;
+    for (let i = 0; i < poly_corners; i++) {
+        if ((polyY[i]< y && polyY[j]>=y || polyY[j]< y && polyY[i]>=y) && (polyX[i]<=x || polyX[j]<=x)) {
+            in_polygon ^= (polyX[i]+(y-polyY[i])/(polyY[j]-polyY[i])*(polyX[j]-polyX[i])<x);
         }
-        
-        return in_polygon;
+        j=i;
     }
+    
+    return in_polygon;
+}
     //end of adapted code
 })(jQuery);
