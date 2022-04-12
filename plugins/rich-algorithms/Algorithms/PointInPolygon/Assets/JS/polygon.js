@@ -125,20 +125,20 @@
     }
 
     // Code adapted from Finley and Lagidse, 2007
-function pointInPolygon(x, y, polyX, polyY) {
-    var in_polygon = false;
+    function pointInPolygon(x, y, polyX, polyY) {
+        var in_polygon = false;
 
-    var poly_corners = polyX.length;
-    var j = poly_corners - 1;
+        var poly_corners = polyX.length;
+        var j = poly_corners - 1;
 
-    for (let i = 0; i < poly_corners; i++) {
-        if ((polyY[i]< y && polyY[j]>=y || polyY[j]< y && polyY[i]>=y) && (polyX[i]<=x || polyX[j]<=x)) {
-            in_polygon ^= (polyX[i]+(y-polyY[i])/(polyY[j]-polyY[i])*(polyX[j]-polyX[i])<x);
+        for (let i = 0; i < poly_corners; i++) {
+            if ((polyY[i]< y && polyY[j]>=y || polyY[j]< y && polyY[i]>=y) && (polyX[i]<=x || polyX[j]<=x)) {
+                in_polygon ^= (polyX[i]+(y-polyY[i])/(polyY[j]-polyY[i])*(polyX[j]-polyX[i])<x);
+            }
+            j=i;
         }
-        j=i;
+        
+        return in_polygon;
     }
-    
-    return in_polygon;
-}
     //end of adapted code
 })(jQuery);
