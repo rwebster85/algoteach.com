@@ -3,6 +3,12 @@ pre[class*=language-].line-numbers {
     padding-top: 25px;
 }
 
+@media (max-width: 1023px) {
+    pre[class*=language-].line-numbers {
+        font-size: 14px;
+    }
+}
+
 code[class*=language-]  {
     padding-left: 0;
 }
