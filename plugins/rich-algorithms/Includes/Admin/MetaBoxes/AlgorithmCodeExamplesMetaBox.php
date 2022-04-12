@@ -158,7 +158,7 @@ final class AlgorithmCodeExamplesMetaBox extends AbstractMetaBox
         // Clean and sanitise the input fields (except code as it is supposed to be raw)
         foreach ($code_examples as $key => $example) {
             if (!empty($example['code'])) {
-                $code_examples[$key]['code'] = $this->ksesPost($example['code']);
+                $code_examples[$key]['code'] = $example['code'];
             }
             if (!empty($example['lang'])) {
                 $code_examples[$key]['lang'] = $this->sanitise($example['lang']);
