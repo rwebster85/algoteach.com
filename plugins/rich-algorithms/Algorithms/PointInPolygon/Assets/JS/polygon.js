@@ -19,8 +19,10 @@
 
     let height;
 
+    let window_width;
+
     function init() {
-        var window_width = $(window).width();
+        window_width = $(window).width();
         if (window_width > 600) {
             polyX = polyX_l;
             polyY = polyY_l;
@@ -43,7 +45,12 @@
 
     $(document).ready(function() {
 
+        window_width = $(window).width();
+
         $(window).resize(function() {
+            if ($(window).width() == window_width) {
+                return;
+            }
             init();
         });
 
