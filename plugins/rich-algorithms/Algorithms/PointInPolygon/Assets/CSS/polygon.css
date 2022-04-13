@@ -1,7 +1,7 @@
 :root {
     --border-colour: #ddd;
     --bg-color: #fafafa;
-    --point-color: #35495c;
+    --point-color: #2679ce;
 }
 
 .demo-outer {
@@ -28,8 +28,8 @@
 
 .demo-point {
     background-color: var(--point-color);
-    width: 7px;
-    height: 7px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     position: absolute;
     top: 0;

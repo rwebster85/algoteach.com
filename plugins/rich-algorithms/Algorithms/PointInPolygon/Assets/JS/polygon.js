@@ -4,7 +4,10 @@
 
     var working = false;
 
-    let point_offset = 3;
+    let point_offset = 5;
+
+    let pi2 = Math.PI * 2;
+    let radius = 5;
 
     let polyX_l = [20.0, 70.0, 303.0, 446.0, 429.0, 511.0, 245.0];
     let polyY_l = [40.0, 320.0, 261.0, 299.0, 160.0, 59.0, 135.0];
@@ -39,7 +42,8 @@
             $(this).remove();
         });
         $('#demo-result p').html('Result:');
-        drawPolygon(polyX, polyY, 'rgb(255, 102, 0, 0.6)', 'rgb(156, 85, 33, 1.0)');
+        drawPolygon(polyX, polyY, 'rgb(255, 102, 0, 0.5)', 'rgb(156, 85, 33, 1.0)');
+        drawPoints(polyX, polyY);
         $('#demo-result').css('max-width', min_width);
     }
 
@@ -107,7 +111,6 @@
 
             for (var i = 0; i < polyX.length; i++) {
                 context.lineTo(polyX[i], polyY[i]);
-                drawPoint((polyX[i] - point_offset), (polyY[i] - point_offset), $('.demo-wrapper'));
             }
 
             context.closePath();
@@ -116,6 +119,24 @@
         }
     }
     //end of adapted code
+
+    function drawPoints(polyX, polyY) {
+        if (polyX.length > 0) {
+            context.fillStyle = '#35495c';
+            context.beginPath();
+            for (var i = 0; i < polyX.length; i++) {
+                x = polyX[i],
+                y = polyY[i];
+                drawSinglePoint(x, y, radius, 0, pi2);
+            }
+            context.fill();
+        }
+    }
+
+    function drawSinglePoint(x, y, radius, start, end) {
+        context.moveTo(x + radius, y);
+        context.arc(x, y, radius, start, end);
+    }
 
     function drawPoint(x, y, atElement) {
         var point = $('<div class="demo-point" style="left:'+x+'px; top: '+y+'px;"></div>');
