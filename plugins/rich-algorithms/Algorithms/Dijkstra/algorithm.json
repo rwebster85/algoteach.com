@@ -4,8 +4,6 @@
     "class": "Dijkstra",
     "namespace": "RichWeb\\Algorithms\\Algorithm",
     "scripts": [
-        "dijkstra-demo-graph.js",
-        "dijkstra-demo.js",
         "dijkstra.js"
     ],
     "styles": [
