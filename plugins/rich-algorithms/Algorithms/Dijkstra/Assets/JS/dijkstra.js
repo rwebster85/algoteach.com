@@ -1,3 +1,11 @@
+let demo_width;
+(function($) {
+	$(document).ready(function() {
+		$('.entry-content .wp-post-image').css('display', 'none');
+	});
+})(jQuery);
+
+
 // https://levelup.gitconnected.com/finding-the-shortest-path-in-javascript-dijkstras-algorithm-8d16451eea34
 // https://github.com/noamsauerutley/shortest-path
 
@@ -81,6 +89,17 @@ const findShortestPath = (graph, startNode, endNode) => {
 	return results;
 };
 
+const graph = {
+	A: { B: 5, C: 2 },
+	B: { A: 1, D: 4, E: 2 },
+	C: { B: 8, E: 7 },
+	D: { E: 6, F: 3 },
+	E: { F: 1 },
+	F: {},
+};
+
+// end of adapted code
+
 function pathFormatted(path) {
     let formatted_path = '';
 
@@ -95,17 +114,7 @@ function pathFormatted(path) {
     return formatted_path;
 }
 
-const graph = {
-	A: { B: 5, C: 2 },
-	B: { A: 1, D: 4, E: 2 },
-	C: { B: 8, E: 7 },
-	D: { E: 6, F: 3 },
-	E: { F: 1 },
-	F: {},
-};
-
-// end of adapted code
-
+// Tests
 var start_end = findShortestPath(graph, "A", "F");
 console.log(start_end);
 console.log("start_end.path: " + start_end.path);
