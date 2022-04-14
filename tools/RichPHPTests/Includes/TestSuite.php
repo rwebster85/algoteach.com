@@ -187,6 +187,11 @@ final class TestSuite
         ];
     }
 
+    /**
+     * Returns the number of test classes that were actually instantiated.
+     * 
+     * @return int
+     */
     public function getInstantiatedTestsCount(): int
     {
         return $this->instantiated_tests;
@@ -203,8 +208,6 @@ final class TestSuite
      */
     public function run(): void
     {
-        //var_dump($this->included_classes);
-
         $autoload = (!empty($this->config->getNamespace()));
 
         $any_included = false;
