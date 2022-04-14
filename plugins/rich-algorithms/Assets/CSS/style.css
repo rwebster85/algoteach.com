@@ -83,3 +83,25 @@ p.rich-algo-frontend-code-toolbar {
 .rich-algo-frontend-code-example:last-child {
     border-bottom: 1px solid #ccc;
 }
+
+#demo-result {
+    width: 100%;
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    position: relative;
+    margin-bottom: 40px;
+    padding: 10px;
+    font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
+}
+
+#demo-result p {
+    margin: 0;
+    position: relative;
+}
+
+#demo-result .dashicons {
+    font-size: 30px;
+    position: relative;
+    top: -2px;
+    right: 5px;
+}
