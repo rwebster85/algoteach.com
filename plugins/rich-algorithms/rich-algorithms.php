@@ -34,22 +34,23 @@ namespace RichWeb\Algorithms;
 
 defined('WPINC') || exit;
 
-if (version_compare('8.0.0', PHP_VERSION, '>')) {
-    add_action('admin_notices', function() {
-        printf(
-            '<div class="notice notice-error">' .
-            '<p style="font-size: 16px;"><strong>%1s</strong> is currently not running.</p>' .
-            '<p style="font-size: 16px;">This plugin requires a minimum PHP version of %2s. '.
-            'You are running version %3s.</p>' .
-            '</div>',
-            'Rich Algorithms',
-            '8.0.0',
-            PHP_VERSION
-        );
-    });
-    return;
-}
+(function() {
+    if (version_compare('8.0.0', PHP_VERSION, '>')) {
+        add_action('admin_notices', function() {
+            printf(
+                '<div class="notice notice-error">' .
+                '<p style="font-size: 16px;"><strong>%1s</strong> is currently not running.</p>' .
+                '<p style="font-size: 16px;">This plugin requires a minimum PHP version of %2s. '.
+                'You are running version %3s.</p>' .
+                '</div>',
+                'Rich Algorithms',
+                '8.0.0',
+                PHP_VERSION
+            );
+        });
+        return;
+    }
 
-define(__NAMESPACE__ . '\PLUGIN_FILE', __FILE__);
-
-require_once 'bootstrap.php';
+    define(__NAMESPACE__ . '\PLUGIN_FILE', __FILE__);
+    require_once 'bootstrap.php';
+})();
