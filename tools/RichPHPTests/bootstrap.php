@@ -19,8 +19,10 @@ use const DIRECTORY_SEPARATOR as SEP;
     $path = __DIR__ . SEP;
     $includes = $path . 'Includes' . SEP;
 
+    require_once $includes . SEP . 'Interfaces' . SEP . 'ProjectInterface.php';
     require_once $includes . 'Project.php';
     $project = new Project($path . 'project.json', __DIR__);
+    $project->buildProject();
 
     require_once $includes . 'Autoload' . SEP . 'Autoloader.php';
     (new Autoload\Autoloader($project->getAutoloaderSources()))->register();

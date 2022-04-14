@@ -13,6 +13,8 @@ declare(strict_types=1);
 
 namespace RichPHPTests;
 
+use RichPHPTests\Interfaces\ProjectInterface;
+
 use const DIRECTORY_SEPARATOR as SEP;
 
 /**
@@ -72,7 +74,7 @@ use const DIRECTORY_SEPARATOR as SEP;
  * (new FileLoader(...$project->getFileSources()))->loadFiles();
  * ```
  */
-final class Project
+final class Project implements ProjectInterface
 {
     private array $config = [];
 
@@ -86,29 +88,21 @@ final class Project
 
     private array $requirements;
 
-    /**
-     * Builds a new Project containing the paths for files and the autoloader. Also assigns project specific details such as name and version number.
-     * 
-     * @param $config_path The path to the project.json configuration file
-     * @param $main_directory The full path to the main directory of the project
-     */
     public function __construct(
         private string $config_path,
         private string $main_directory
-    ) {
+    ) {}
+
+    public function buildProject(): void
+    {
         if (file_exists($this->config_path)) {
-            $this->config = $this->parseConfig();
+            $this->config = json_decode(file_get_contents($this->config_path), true);
             $this->setName();
             $this->setVersion();
             $this->setRequirements();
             $this->setAutoloaderSources();
             $this->setFileSources();
         }
-    }
-
-    private function parseConfig(): array
-    {
-        return json_decode(file_get_contents($this->config_path), true);
     }
 
     public function getMainDirectory(): string
