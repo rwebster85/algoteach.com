@@ -1,5 +1,5 @@
 {
-    "name": "Dijkstra's algorithm",
+    "name": "Dijkstra's Shortest Path",
     "version": "1.0.0",
     "class": "Dijkstra",
     "namespace": "RichWeb\\Algorithms\\Algorithm",
