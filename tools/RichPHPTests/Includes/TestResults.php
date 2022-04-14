@@ -101,11 +101,14 @@ final class TestResults implements TestResultsInterface
         return $this->skipped_tests;
     }
 
+    /**
+     * Prints the full test report results. Used within a command line interface.
+     * 
+     * @return void
+     */
     public function printResults(): void
     {
         $results = $this->getResults();
-
-        //var_dump($results);
 
         $total_tests = $this->getTotalTests();
         $total_pass = $this->getTotalPassed();
