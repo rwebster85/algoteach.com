@@ -15,18 +15,53 @@ namespace RichPHPTests;
 
 final class TestsConfiguration
 {
+    /**
+     * The JSON decoded test configuration.
+     * 
+     * @var array
+     */
     private array $config;
 
+    /**
+     * The name of the test suite.
+     * 
+     * @var string
+     */
     private string $name;
 
+    /**
+     * The classes within the 'included_classes' array of the config.
+     * 
+     * @var array
+     */
     private array $included_classes;
 
+    /**
+     * The tests within the 'included_tests' array of the config.
+     * 
+     * @var array
+     */
     private array $included_tests;
 
+    /**
+     * The classes within the 'excluded_classes' array of the config.
+     * 
+     * @var array
+     */
     private array $excluded_classes;
 
+    /**
+     * The tests within the 'excluded_tests' array of the config.
+     * 
+     * @var array
+     */
     private array $excluded_tests;
 
+    /**
+     * The filepath to the test bootstrap file, if one exists.
+     * 
+     * @var string
+     */
     private string $bootstrap = '';
 
     public function __construct(
@@ -36,6 +71,11 @@ final class TestsConfiguration
         $this->buildConfig();
     }
 
+    /**
+     * Builds this object and sets all the variables related to the test suite.
+     * 
+     * @return bool
+     */
     public function buildConfig(): bool
     {
         if (file_exists($this->config_file)) {
