@@ -16,8 +16,6 @@ namespace RichWeb\Algorithms\Algorithm;
 use RichWeb\Algorithms\Abstracts\AbstractAlgorithm;
 use RichWeb\Algorithms\Loaders\ContentLoader;
 
-use const RichWeb\Algorithms\PLUGIN_FILE;
-
 final class Dijkstra extends AbstractAlgorithm
 {
     protected function load(): void
