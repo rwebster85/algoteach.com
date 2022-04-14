@@ -103,32 +103,29 @@
             <div class="phpdocumentor-column -eight phpdocumentor-content">
                     <ul class="phpdocumentor-breadcrumbs">
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/richphptests.html">RichPHPTests</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/richphptests-interfaces.html">Interfaces</a></li>
     </ul>
 
-    <article class="phpdocumentor-element -class">
+    <article class="phpdocumentor-element -interface">
         <h2 class="phpdocumentor-content__title">
-    TestUtil
-
-    
-            <div class="phpdocumentor-element__package">
-            in package
+    ProjectInterface
+                <div class="phpdocumentor-element__package">
+            in
             <ul class="phpdocumentor-breadcrumbs">
-                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Application.html">Application</a></li>
+                                    <li><a href="packages/Application.html">Application</a></li>
                             </ul>
         </div>
-    
-    
     </h2>
 
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestUtil.php"><a href="files/includes-testutil.html"><abbr title="Includes/TestUtil.php">TestUtil.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Interfaces/ProjectInterface.php"><a href="files/includes-interfaces-projectinterface.html"><abbr title="Includes/Interfaces/ProjectInterface.php">ProjectInterface.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">22</span>
+    <span class="phpdocumentor-element-found-in__line">16</span>
 
     </aside>
 
-            <p class="phpdocumentor-summary">TestUtil contains general utility static methods.</p>
-
+        
+    <section class="phpdocumentor-description"></section>
 
 
 
@@ -144,39 +141,53 @@
 
 <dl class="phpdocumentor-table-of-contents">
                         <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichPHPTests-TestUtil.html#method_hasIncludedAttribute">hasIncludedAttribute()</a>
+    <a href="classes/RichPHPTests-Interfaces-ProjectInterface.html#method_buildProject">buildProject()</a>
     <span>
-                                &nbsp;: bool    </span>
+                                &nbsp;: void    </span>
 </dt>
-<dd>Returns whether a class or method has the `Run` attribute.</dd>
+<dd>Builds the project information.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichPHPTests-TestUtil.html#method_hasSkippedAttribute">hasSkippedAttribute()</a>
+    <a href="classes/RichPHPTests-Interfaces-ProjectInterface.html#method_getAutoloaderSources">getAutoloaderSources()</a>
     <span>
-                                &nbsp;: bool    </span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
-<dd>Returns whether a class or method has the `Skip` attribute.</dd>
+<dd>Returns the sources used by the Autoloader.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichPHPTests-TestUtil.html#method_isTestClass">isTestClass()</a>
+    <a href="classes/RichPHPTests-Interfaces-ProjectInterface.html#method_getFileSources">getFileSources()</a>
     <span>
-                                &nbsp;: bool    </span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
-<dd>Verifies that a class (object or a class name) is a sub class of TestCase.</dd>
+<dd>Returns the sources used by the Fileloader.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichPHPTests-TestUtil.html#method_isTestMethod">isTestMethod()</a>
+    <a href="classes/RichPHPTests-Interfaces-ProjectInterface.html#method_getMainDirectory">getMainDirectory()</a>
     <span>
-                                &nbsp;: bool    </span>
+                                &nbsp;: string    </span>
 </dt>
-<dd>Verifies that a test method from a test class meets the necessary criteria.</dd>
+<dd>Returns the full path to the main project directory.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/RichPHPTests-TestUtil.html#method_testClassHasMethod">testClassHasMethod()</a>
+    <a href="classes/RichPHPTests-Interfaces-ProjectInterface.html#method_getName">getName()</a>
     <span>
-                                &nbsp;: bool    </span>
+                                &nbsp;: string    </span>
 </dt>
-<dd>Checks that a concrete test class has a method, rather than the parent TestCase class.</dd>
+<dd>Returns the name of this project.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/RichPHPTests-Interfaces-ProjectInterface.html#method_getRequirements">getRequirements()</a>
+    <span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
+</dt>
+<dd>Returns an array of the requirements needed for this project to run.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/RichPHPTests-Interfaces-ProjectInterface.html#method_getVersion">getVersion()</a>
+    <span>
+                                &nbsp;: string    </span>
+</dt>
+<dd>Returns the version of this project.</dd>
 
         </dl>
 
@@ -184,52 +195,40 @@
 
         
 
-        
-
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
-            <a href="classes/RichPHPTests-TestUtil.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/RichPHPTests-Interfaces-ProjectInterface.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
                     <article
         class="phpdocumentor-element
             -method
             -public
-                                    -static                    "
+                                                        "
 >
-    <h4 class="phpdocumentor-element__name" id="method_hasIncludedAttribute">
-        hasIncludedAttribute()
-        <a href="classes/RichPHPTests-TestUtil.html#method_hasIncludedAttribute" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_buildProject">
+        buildProject()
+        <a href="classes/RichPHPTests-Interfaces-ProjectInterface.html#method_buildProject" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestUtil.php"><a href="files/includes-testutil.html"><abbr title="Includes/TestUtil.php">TestUtil.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Interfaces/ProjectInterface.php"><a href="files/includes-interfaces-projectinterface.html"><abbr title="Includes/Interfaces/ProjectInterface.php">ProjectInterface.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">85</span>
+    <span class="phpdocumentor-element-found-in__line">23</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Returns whether a class or method has the `Run` attribute.</p>
+        <p class="phpdocumentor-summary">Builds the project information.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">hasIncludedAttribute</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\ReflectionClass">ReflectionClass</abbr>|<abbr title="\ReflectionMethod">ReflectionMethod</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$class_or_method</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+                <span class="phpdocumentor-signature__name">buildProject</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$class_or_method</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\ReflectionClass">ReflectionClass</abbr>|<abbr title="\ReflectionMethod">ReflectionMethod</abbr></span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                
-            </dd>
-            </dl>
-
+    
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">bool</span>
+    <span class="phpdocumentor-signature__response_type">void</span>
             &mdash;
         
     
@@ -238,41 +237,31 @@
         class="phpdocumentor-element
             -method
             -public
-                                    -static                    "
+                                                        "
 >
-    <h4 class="phpdocumentor-element__name" id="method_hasSkippedAttribute">
-        hasSkippedAttribute()
-        <a href="classes/RichPHPTests-TestUtil.html#method_hasSkippedAttribute" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_getAutoloaderSources">
+        getAutoloaderSources()
+        <a href="classes/RichPHPTests-Interfaces-ProjectInterface.html#method_getAutoloaderSources" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestUtil.php"><a href="files/includes-testutil.html"><abbr title="Includes/TestUtil.php">TestUtil.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Interfaces/ProjectInterface.php"><a href="files/includes-interfaces-projectinterface.html"><abbr title="Includes/Interfaces/ProjectInterface.php">ProjectInterface.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">72</span>
+    <span class="phpdocumentor-element-found-in__line">58</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Returns whether a class or method has the `Skip` attribute.</p>
+        <p class="phpdocumentor-summary">Returns the sources used by the Autoloader.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">hasSkippedAttribute</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\ReflectionClass">ReflectionClass</abbr>|<abbr title="\ReflectionMethod">ReflectionMethod</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$class_or_method</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+                <span class="phpdocumentor-signature__name">getAutoloaderSources</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
     
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$class_or_method</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\ReflectionClass">ReflectionClass</abbr>|<abbr title="\ReflectionMethod">ReflectionMethod</abbr></span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                
-            </dd>
-            </dl>
-
+    
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">bool</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
             &mdash;
         
     
@@ -281,41 +270,31 @@
         class="phpdocumentor-element
             -method
             -public
-                                    -static                    "
+                                                        "
 >
-    <h4 class="phpdocumentor-element__name" id="method_isTestClass">
-        isTestClass()
-        <a href="classes/RichPHPTests-TestUtil.html#method_isTestClass" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_getFileSources">
+        getFileSources()
+        <a href="classes/RichPHPTests-Interfaces-ProjectInterface.html#method_getFileSources" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestUtil.php"><a href="files/includes-testutil.html"><abbr title="Includes/TestUtil.php">TestUtil.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Interfaces/ProjectInterface.php"><a href="files/includes-interfaces-projectinterface.html"><abbr title="Includes/Interfaces/ProjectInterface.php">ProjectInterface.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">57</span>
+    <span class="phpdocumentor-element-found-in__line">65</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Verifies that a class (object or a class name) is a sub class of TestCase.</p>
+        <p class="phpdocumentor-summary">Returns the sources used by the Fileloader.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">isTestClass</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">object|string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$class</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+                <span class="phpdocumentor-signature__name">getFileSources</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
     
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$class</span>
-                : <span class="phpdocumentor-signature__argument__return-type">object|string</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                
-            </dd>
-            </dl>
-
+    
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">bool</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
             &mdash;
         
     
@@ -324,41 +303,31 @@
         class="phpdocumentor-element
             -method
             -public
-                                    -static                    "
+                                                        "
 >
-    <h4 class="phpdocumentor-element__name" id="method_isTestMethod">
-        isTestMethod()
-        <a href="classes/RichPHPTests-TestUtil.html#method_isTestMethod" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_getMainDirectory">
+        getMainDirectory()
+        <a href="classes/RichPHPTests-Interfaces-ProjectInterface.html#method_getMainDirectory" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestUtil.php"><a href="files/includes-testutil.html"><abbr title="Includes/TestUtil.php">TestUtil.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Interfaces/ProjectInterface.php"><a href="files/includes-interfaces-projectinterface.html"><abbr title="Includes/Interfaces/ProjectInterface.php">ProjectInterface.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">32</span>
+    <span class="phpdocumentor-element-found-in__line">30</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Verifies that a test method from a test class meets the necessary criteria.</p>
+        <p class="phpdocumentor-summary">Returns the full path to the main project directory.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">isTestMethod</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\ReflectionMethod">ReflectionMethod</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$method</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+                <span class="phpdocumentor-signature__name">getMainDirectory</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
 
     
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$method</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\ReflectionMethod">ReflectionMethod</abbr></span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                
-            </dd>
-            </dl>
-
+    
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">bool</span>
+    <span class="phpdocumentor-signature__response_type">string</span>
             &mdash;
         
     
@@ -367,41 +336,97 @@
         class="phpdocumentor-element
             -method
             -public
-                                    -static                    "
+                                                        "
 >
-    <h4 class="phpdocumentor-element__name" id="method_testClassHasMethod">
-        testClassHasMethod()
-        <a href="classes/RichPHPTests-TestUtil.html#method_testClassHasMethod" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_getName">
+        getName()
+        <a href="classes/RichPHPTests-Interfaces-ProjectInterface.html#method_getName" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestUtil.php"><a href="files/includes-testutil.html"><abbr title="Includes/TestUtil.php">TestUtil.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Interfaces/ProjectInterface.php"><a href="files/includes-interfaces-projectinterface.html"><abbr title="Includes/Interfaces/ProjectInterface.php">ProjectInterface.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">45</span>
+    <span class="phpdocumentor-element-found-in__line">37</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Checks that a concrete test class has a method, rather than the parent TestCase class.</p>
+        <p class="phpdocumentor-summary">Returns the name of this project.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">testClassHasMethod</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\ReflectionMethod">ReflectionMethod</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$method</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+                <span class="phpdocumentor-signature__name">getName</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
 
     
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$method</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\ReflectionMethod">ReflectionMethod</abbr></span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                
-            </dd>
-            </dl>
-
+    
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">bool</span>
+    <span class="phpdocumentor-signature__response_type">string</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getRequirements">
+        getRequirements()
+        <a href="classes/RichPHPTests-Interfaces-ProjectInterface.html#method_getRequirements" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Interfaces/ProjectInterface.php"><a href="files/includes-interfaces-projectinterface.html"><abbr title="Includes/Interfaces/ProjectInterface.php">ProjectInterface.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">51</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Returns an array of the requirements needed for this project to run.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getRequirements</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getVersion">
+        getVersion()
+        <a href="classes/RichPHPTests-Interfaces-ProjectInterface.html#method_getVersion" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Interfaces/ProjectInterface.php"><a href="files/includes-interfaces-projectinterface.html"><abbr title="Includes/Interfaces/ProjectInterface.php">ProjectInterface.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">44</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Returns the version of this project.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getVersion</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string</span>
             &mdash;
         
     
@@ -484,7 +509,7 @@
 </section>
             </div>
         </div>
-        <a href="classes/RichPHPTests-TestUtil.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/RichPHPTests-Interfaces-ProjectInterface.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 

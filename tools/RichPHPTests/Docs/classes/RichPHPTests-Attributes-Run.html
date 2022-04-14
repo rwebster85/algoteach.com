@@ -72,7 +72,7 @@
                 
             </li>
                     <li>
-                <a href="namespaces/richphptests-interfaces.html" class="-active">Interfaces</a>
+                <a href="namespaces/richphptests-interfaces.html" class="">Interfaces</a>
                 
             </li>
             </ul>
@@ -103,33 +103,180 @@
             <div class="phpdocumentor-column -eight phpdocumentor-content">
                     <ul class="phpdocumentor-breadcrumbs">
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/richphptests.html">RichPHPTests</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/richphptests-attributes.html">Attributes</a></li>
     </ul>
 
-    <article class="phpdocumentor-element -namespace">
-        <h2 class="phpdocumentor-content__title">Interfaces</h2>
+    <article class="phpdocumentor-element -class">
+        <h2 class="phpdocumentor-content__title">
+    Run
 
-        
+    
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Application.html">Application</a></li>
+                            </ul>
+        </div>
+    
+    
+    </h2>
 
-<h3 id="interfaces_class_traits">
-    Interfaces, Classes, Traits and Enums
-    <a href="#interfaces_class_traits" class="headerlink"><i class="fas fa-link"></i></a>
+        <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Attributes/Run.php"><a href="files/includes-attributes-run.html"><abbr title="Includes/Attributes/Run.php">Run.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">39</span>
+
+    </aside>
+
+            <p class="phpdocumentor-summary">The Run attribute can be applied to test classes or methods to have them exclusively included in the test run.</p>
+
+    <section class="phpdocumentor-description"><p>If applied to a method, that class must also have the attribute.</p>
+<p>Example Usage:</p>
+<pre class="prettyprint"><code class="language-php">use RichPHPTests\Attributes; // import the attributes namespace
+use RichPHPTests\TestCase;
+
+#[Attributes\Run] // include this class
+class SomeTest extends TestCase
+{
+    #[Attributes\Run] // include this test
+    public function testSomeFunction(): void
+    {
+        // ...
+    }
+}
+</code></pre>
+</section>
+
+
+
+
+
+
+
+
+<h3 id="toc">
+    Table of Contents
+    <a href="#toc" class="headerlink"><i class="fas fa-link"></i></a>
 </h3>
 
 <dl class="phpdocumentor-table-of-contents">
-            <dt class="phpdocumentor-table-of-contents__entry -interface"><a href="classes/RichPHPTests-Interfaces-ProjectInterface.html"><abbr title="\RichPHPTests\Interfaces\ProjectInterface">ProjectInterface</abbr></a></dt>
-        <dd></dd>
-            <dt class="phpdocumentor-table-of-contents__entry -interface"><a href="classes/RichPHPTests-Interfaces-TestResultsInterface.html"><abbr title="\RichPHPTests\Interfaces\TestResultsInterface">TestResultsInterface</abbr></a></dt>
-        <dd></dd>
-    
-    
-    
-    </dl>
+                        <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/RichPHPTests-Attributes-Run.html#method___construct">__construct()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+<dd></dd>
+
+        </dl>
 
 
 
         
 
         
+
+            <section class="phpdocumentor-methods">
+        <h3 class="phpdocumentor-elements__header" id="methods">
+            Methods
+            <a href="classes/RichPHPTests-Attributes-Run.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+        </h3>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method___construct">
+        __construct()
+        <a href="classes/RichPHPTests-Attributes-Run.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/Attributes/Run.php"><a href="files/includes-attributes-run.html"><abbr title="Includes/Attributes/Run.php">Run.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">42</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+            &mdash;
+        
+    
+</article>
+            </section>
+
+        
+    <script type="text/javascript">
+        function loadExternalCodeSnippets(line) {
+            Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach((pre) => {
+                var src = pre.getAttribute('data-src').replace( /\\/g, '/');
+                var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+                var language = 'php';
+
+                var code = document.createElement('code');
+                code.className = 'language-' + language;
+
+                pre.textContent = '';
+
+                pre.setAttribute('data-line', line)
+                code.textContent = 'Loading…';
+
+                pre.appendChild(code);
+
+                var xhr = new XMLHttpRequest();
+
+                xhr.open('GET', src, true);
+
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4) {
+
+                        if (xhr.status < 400 && xhr.responseText) {
+                            code.textContent = xhr.responseText;
+
+                            Prism.highlightElement(code);
+                        }
+                        else if (xhr.status >= 400) {
+                            code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                        }
+                        else {
+                            code.textContent = '✖ Error: File does not exist, is empty or trying to view from localhost';
+                        }
+                    }
+                };
+
+                xhr.send(null);
+            });
+        }
+
+        var modals = document.querySelectorAll("[data-modal]");
+
+        modals.forEach(function (trigger) {
+            trigger.addEventListener("click", function (event) {
+                //event.preventDefault();
+                const modal = document.getElementById(trigger.dataset.modal);
+                modal.classList.add("phpdocumentor-modal__open");
+                loadExternalCodeSnippets(trigger.dataset.line)
+                const exits = modal.querySelectorAll("[data-exit-button]");
+                exits.forEach(function (exit) {
+                    exit.addEventListener("click", function (event) {
+                        event.preventDefault();
+                        modal.classList.remove("phpdocumentor-modal__open");
+                    });
+                });
+            });
+        });
+    </script>
+
     </article>
                 <section data-search-results class="phpdocumentor-search-results phpdocumentor-search-results--hidden">
     <section class="phpdocumentor-search-results__dialog">
@@ -144,7 +291,7 @@
 </section>
             </div>
         </div>
-        <a href="namespaces/richphptests-interfaces.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/RichPHPTests-Attributes-Run.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 

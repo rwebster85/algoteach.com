@@ -13,7 +13,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\RichPHPTests\\Application\u003A\u003A\u0024instance",
             "name": "instance",
-            "summary": "",
+            "summary": "Program\u0020uses\u0020the\u0020Singleton\u0020design\u0020pattern.",
             "url": "classes/RichPHPTests-Application.html#property_instance"
         },                {
             "fqsen": "\\RichPHPTests\\Application\u003A\u003A__construct\u0028\u0029",
@@ -23,53 +23,48 @@ Search.appendIndex(
         },                {
             "fqsen": "\\RichPHPTests\\Application\u003A\u003Abootstrap\u0028\u0029",
             "name": "bootstrap",
-            "summary": "",
+            "summary": "Loads\u0020the\u0020test\u0020bootstrap\u0020file\u0020prior\u0020to\u0020running\u0020any\u0020tests.",
             "url": "classes/RichPHPTests-Application.html#method_bootstrap"
         },                {
             "fqsen": "\\RichPHPTests\\Application\u003A\u003Arun\u0028\u0029",
             "name": "run",
-            "summary": "",
+            "summary": "Run\u0020from\u0020the\u0020instance\u0028\u0029\u0020method.\u0020Runs\u0020the\u0020test\u0020suite.",
             "url": "classes/RichPHPTests-Application.html#method_run"
         },                {
             "fqsen": "\\RichPHPTests\\Application\u003A\u003AgetTestResults\u0028\u0029",
             "name": "getTestResults",
-            "summary": "",
+            "summary": "Returns\u0020the\u0020object\u0020containing\u0020the\u0020completed\u0020test\u0020results.",
             "url": "classes/RichPHPTests-Application.html#method_getTestResults"
-        },                {
-            "fqsen": "\\RichPHPTests\\Application\u003A\u003AparseArgs\u0028\u0029",
-            "name": "parseArgs",
-            "summary": "",
-            "url": "classes/RichPHPTests-Application.html#method_parseArgs"
-        },                {
-            "fqsen": "\\RichPHPTests\\Application\u003A\u003AgetExit\u0028\u0029",
-            "name": "getExit",
-            "summary": "",
-            "url": "classes/RichPHPTests-Application.html#method_getExit"
         },                {
             "fqsen": "\\RichPHPTests\\Application\u003A\u003A\u0024is_cli",
             "name": "is_cli",
-            "summary": "",
+            "summary": "Whether\u0020the\u0020application\u0020was\u0020launched\u0020from\u0020command\u0020line.",
             "url": "classes/RichPHPTests-Application.html#property_is_cli"
-        },                {
-            "fqsen": "\\RichPHPTests\\Application\u003A\u003A\u0024code",
-            "name": "code",
-            "summary": "",
-            "url": "classes/RichPHPTests-Application.html#property_code"
         },                {
             "fqsen": "\\RichPHPTests\\Application\u003A\u003A\u0024test_results",
             "name": "test_results",
-            "summary": "",
+            "summary": "The\u0020storage\u0020of\u0020completed\u0020test\u0020results.",
             "url": "classes/RichPHPTests-Application.html#property_test_results"
         },                {
             "fqsen": "\\RichPHPTests\\Application\u003A\u003A\u0024test_suite",
             "name": "test_suite",
-            "summary": "",
+            "summary": "The\u0020test\u0020suite\u0020object.",
             "url": "classes/RichPHPTests-Application.html#property_test_suite"
         },                {
             "fqsen": "\\RichPHPTests\\Application\u003A\u003A\u0024configuration",
             "name": "configuration",
-            "summary": "",
+            "summary": "The\u0020configuration\u0020object\u0020for\u0020the\u0020tests.",
             "url": "classes/RichPHPTests-Application.html#property_configuration"
+        },                {
+            "fqsen": "\\RichPHPTests\\Attributes\\Run",
+            "name": "Run",
+            "summary": "The\u0020Run\u0020attribute\u0020can\u0020be\u0020applied\u0020to\u0020test\u0020classes\u0020or\u0020methods\u0020to\u0020have\u0020them\u0020exclusively\u0020included\u0020in\u0020the\u0020test\u0020run.",
+            "url": "classes/RichPHPTests-Attributes-Run.html"
+        },                {
+            "fqsen": "\\RichPHPTests\\Attributes\\Run\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/RichPHPTests-Attributes-Run.html#method___construct"
         },                {
             "fqsen": "\\RichPHPTests\\Attributes\\Skip",
             "name": "Skip",
@@ -171,6 +166,46 @@ Search.appendIndex(
             "summary": "Creates\u0020a\u0020new\u0020test.\u0020Called\u0020from\u0020test\u0020functions\u0020in\u0020test\u0020classes.",
             "url": "namespaces/default.html#function_test"
         },                {
+            "fqsen": "\\RichPHPTests\\Interfaces\\ProjectInterface",
+            "name": "ProjectInterface",
+            "summary": "",
+            "url": "classes/RichPHPTests-Interfaces-ProjectInterface.html"
+        },                {
+            "fqsen": "\\RichPHPTests\\Interfaces\\ProjectInterface\u003A\u003AbuildProject\u0028\u0029",
+            "name": "buildProject",
+            "summary": "Builds\u0020the\u0020project\u0020information.",
+            "url": "classes/RichPHPTests-Interfaces-ProjectInterface.html#method_buildProject"
+        },                {
+            "fqsen": "\\RichPHPTests\\Interfaces\\ProjectInterface\u003A\u003AgetMainDirectory\u0028\u0029",
+            "name": "getMainDirectory",
+            "summary": "Returns\u0020the\u0020full\u0020path\u0020to\u0020the\u0020main\u0020project\u0020directory.",
+            "url": "classes/RichPHPTests-Interfaces-ProjectInterface.html#method_getMainDirectory"
+        },                {
+            "fqsen": "\\RichPHPTests\\Interfaces\\ProjectInterface\u003A\u003AgetName\u0028\u0029",
+            "name": "getName",
+            "summary": "Returns\u0020the\u0020name\u0020of\u0020this\u0020project.",
+            "url": "classes/RichPHPTests-Interfaces-ProjectInterface.html#method_getName"
+        },                {
+            "fqsen": "\\RichPHPTests\\Interfaces\\ProjectInterface\u003A\u003AgetVersion\u0028\u0029",
+            "name": "getVersion",
+            "summary": "Returns\u0020the\u0020version\u0020of\u0020this\u0020project.",
+            "url": "classes/RichPHPTests-Interfaces-ProjectInterface.html#method_getVersion"
+        },                {
+            "fqsen": "\\RichPHPTests\\Interfaces\\ProjectInterface\u003A\u003AgetRequirements\u0028\u0029",
+            "name": "getRequirements",
+            "summary": "Returns\u0020an\u0020array\u0020of\u0020the\u0020requirements\u0020needed\u0020for\u0020this\u0020project\u0020to\u0020run.",
+            "url": "classes/RichPHPTests-Interfaces-ProjectInterface.html#method_getRequirements"
+        },                {
+            "fqsen": "\\RichPHPTests\\Interfaces\\ProjectInterface\u003A\u003AgetAutoloaderSources\u0028\u0029",
+            "name": "getAutoloaderSources",
+            "summary": "Returns\u0020the\u0020sources\u0020used\u0020by\u0020the\u0020Autoloader.",
+            "url": "classes/RichPHPTests-Interfaces-ProjectInterface.html#method_getAutoloaderSources"
+        },                {
+            "fqsen": "\\RichPHPTests\\Interfaces\\ProjectInterface\u003A\u003AgetFileSources\u0028\u0029",
+            "name": "getFileSources",
+            "summary": "Returns\u0020the\u0020sources\u0020used\u0020by\u0020the\u0020Fileloader.",
+            "url": "classes/RichPHPTests-Interfaces-ProjectInterface.html#method_getFileSources"
+        },                {
             "fqsen": "\\RichPHPTests\\Interfaces\\TestResultsInterface",
             "name": "TestResultsInterface",
             "summary": "",
@@ -233,17 +268,17 @@ Search.appendIndex(
         },                {
             "fqsen": "\\RichPHPTests\\Project\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "Builds\u0020a\u0020new\u0020Project\u0020containing\u0020the\u0020paths\u0020for\u0020files\u0020and\u0020the\u0020autoloader.\u0020Also\u0020assigns\u0020project\u0020specific\u0020details\u0020such\u0020as\u0020name\u0020and\u0020version\u0020number.",
+            "summary": "",
             "url": "classes/RichPHPTests-Project.html#method___construct"
         },                {
-            "fqsen": "\\RichPHPTests\\Project\u003A\u003AparseConfig\u0028\u0029",
-            "name": "parseConfig",
-            "summary": "",
-            "url": "classes/RichPHPTests-Project.html#method_parseConfig"
+            "fqsen": "\\RichPHPTests\\Project\u003A\u003AbuildProject\u0028\u0029",
+            "name": "buildProject",
+            "summary": "Builds\u0020the\u0020project\u0020information.",
+            "url": "classes/RichPHPTests-Project.html#method_buildProject"
         },                {
             "fqsen": "\\RichPHPTests\\Project\u003A\u003AgetMainDirectory\u0028\u0029",
             "name": "getMainDirectory",
-            "summary": "",
+            "summary": "Returns\u0020the\u0020full\u0020path\u0020to\u0020the\u0020main\u0020project\u0020directory.",
             "url": "classes/RichPHPTests-Project.html#method_getMainDirectory"
         },                {
             "fqsen": "\\RichPHPTests\\Project\u003A\u003AsetName\u0028\u0029",
@@ -253,7 +288,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\RichPHPTests\\Project\u003A\u003AgetName\u0028\u0029",
             "name": "getName",
-            "summary": "",
+            "summary": "Returns\u0020the\u0020name\u0020of\u0020this\u0020project.",
             "url": "classes/RichPHPTests-Project.html#method_getName"
         },                {
             "fqsen": "\\RichPHPTests\\Project\u003A\u003AsetVersion\u0028\u0029",
@@ -263,7 +298,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\RichPHPTests\\Project\u003A\u003AgetVersion\u0028\u0029",
             "name": "getVersion",
-            "summary": "",
+            "summary": "Returns\u0020the\u0020version\u0020of\u0020this\u0020project.",
             "url": "classes/RichPHPTests-Project.html#method_getVersion"
         },                {
             "fqsen": "\\RichPHPTests\\Project\u003A\u003AsetRequirements\u0028\u0029",
@@ -273,7 +308,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\RichPHPTests\\Project\u003A\u003AgetRequirements\u0028\u0029",
             "name": "getRequirements",
-            "summary": "",
+            "summary": "Returns\u0020an\u0020array\u0020of\u0020the\u0020requirements\u0020needed\u0020for\u0020this\u0020project\u0020to\u0020run.",
             "url": "classes/RichPHPTests-Project.html#method_getRequirements"
         },                {
             "fqsen": "\\RichPHPTests\\Project\u003A\u003AsetAutoloaderSources\u0028\u0029",
@@ -288,12 +323,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\RichPHPTests\\Project\u003A\u003AgetAutoloaderSources\u0028\u0029",
             "name": "getAutoloaderSources",
-            "summary": "",
+            "summary": "Returns\u0020the\u0020sources\u0020used\u0020by\u0020the\u0020Autoloader.",
             "url": "classes/RichPHPTests-Project.html#method_getAutoloaderSources"
         },                {
             "fqsen": "\\RichPHPTests\\Project\u003A\u003AgetFileSources\u0028\u0029",
             "name": "getFileSources",
-            "summary": "",
+            "summary": "Returns\u0020the\u0020sources\u0020used\u0020by\u0020the\u0020Fileloader.",
             "url": "classes/RichPHPTests-Project.html#method_getFileSources"
         },                {
             "fqsen": "\\RichPHPTests\\Project\u003A\u003AformatSlashes\u0028\u0029",
@@ -576,6 +611,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/RichPHPTests-TestCase.html#method_isTestSkipped"
         },                {
+            "fqsen": "\\RichPHPTests\\TestCase\u003A\u003AisTestIncluded\u0028\u0029",
+            "name": "isTestIncluded",
+            "summary": "",
+            "url": "classes/RichPHPTests-TestCase.html#method_isTestIncluded"
+        },                {
             "fqsen": "\\RichPHPTests\\TestCase\u003A\u003AaddMethod\u0028\u0029",
             "name": "addMethod",
             "summary": "",
@@ -590,6 +630,11 @@ Search.appendIndex(
             "name": "testMethods",
             "summary": "The\u0020array\u0020of\u0020all\u0020the\u0020test\u0020methods\u0020that\u0020will\u0020be\u0020called.",
             "url": "classes/RichPHPTests-TestCase.html#property_testMethods"
+        },                {
+            "fqsen": "\\RichPHPTests\\TestCase\u003A\u003A\u0024included_tests",
+            "name": "included_tests",
+            "summary": "The\u0020array\u0020of\u0020all\u0020included\u0020tests\u0020found\u0020in\u0020the\u0020test\u0020class.",
+            "url": "classes/RichPHPTests-TestCase.html#property_included_tests"
         },                {
             "fqsen": "\\RichPHPTests\\TestCase\u003A\u003A\u0024excluded_tests",
             "name": "excluded_tests",
@@ -713,22 +758,22 @@ Search.appendIndex(
         },                {
             "fqsen": "\\RichPHPTests\\TestResult\u003A\u003A\u0024line",
             "name": "line",
-            "summary": "",
+            "summary": "The\u0020line\u0020number\u0020the\u0020test\u0020method\u0020appears\u0020on.",
             "url": "classes/RichPHPTests-TestResult.html#property_line"
         },                {
             "fqsen": "\\RichPHPTests\\TestResult\u003A\u003A\u0024test_name",
             "name": "test_name",
-            "summary": "",
+            "summary": "The\u0020name\u0020of\u0020the\u0020test\u0020method.",
             "url": "classes/RichPHPTests-TestResult.html#property_test_name"
         },                {
             "fqsen": "\\RichPHPTests\\TestResult\u003A\u003A\u0024test_class",
             "name": "test_class",
-            "summary": "",
+            "summary": "The\u0020class\u0020name\u0020the\u0020test\u0020belongs\u0020to.",
             "url": "classes/RichPHPTests-TestResult.html#property_test_class"
         },                {
             "fqsen": "\\RichPHPTests\\TestResult\u003A\u003A\u0024test_file",
             "name": "test_file",
-            "summary": "",
+            "summary": "The\u0020filename\u0020containing\u0020the\u0020test.",
             "url": "classes/RichPHPTests-TestResult.html#property_test_file"
         },                {
             "fqsen": "\\RichPHPTests\\TestResult\u003A\u003A\u0024actual",
@@ -808,7 +853,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\RichPHPTests\\TestResults\u003A\u003AprintResults\u0028\u0029",
             "name": "printResults",
-            "summary": "",
+            "summary": "Prints\u0020the\u0020full\u0020test\u0020report\u0020results.\u0020Used\u0020within\u0020a\u0020command\u0020line\u0020interface.",
             "url": "classes/RichPHPTests-TestResults.html#method_printResults"
         },                {
             "fqsen": "\\RichPHPTests\\TestResults\u003A\u003A\u0024results",
@@ -858,7 +903,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\RichPHPTests\\TestsConfiguration\u003A\u003AbuildConfig\u0028\u0029",
             "name": "buildConfig",
-            "summary": "",
+            "summary": "Builds\u0020this\u0020object\u0020and\u0020sets\u0020all\u0020the\u0020variables\u0020related\u0020to\u0020the\u0020test\u0020suite.",
             "url": "classes/RichPHPTests-TestsConfiguration.html#method_buildConfig"
         },                {
             "fqsen": "\\RichPHPTests\\TestsConfiguration\u003A\u003AsetName\u0028\u0029",
@@ -891,6 +936,26 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/RichPHPTests-TestsConfiguration.html#method_getBootstrap"
         },                {
+            "fqsen": "\\RichPHPTests\\TestsConfiguration\u003A\u003AsetIncludedClasses\u0028\u0029",
+            "name": "setIncludedClasses",
+            "summary": "",
+            "url": "classes/RichPHPTests-TestsConfiguration.html#method_setIncludedClasses"
+        },                {
+            "fqsen": "\\RichPHPTests\\TestsConfiguration\u003A\u003AsetIncludedTests\u0028\u0029",
+            "name": "setIncludedTests",
+            "summary": "",
+            "url": "classes/RichPHPTests-TestsConfiguration.html#method_setIncludedTests"
+        },                {
+            "fqsen": "\\RichPHPTests\\TestsConfiguration\u003A\u003AgetIncludedClasses\u0028\u0029",
+            "name": "getIncludedClasses",
+            "summary": "",
+            "url": "classes/RichPHPTests-TestsConfiguration.html#method_getIncludedClasses"
+        },                {
+            "fqsen": "\\RichPHPTests\\TestsConfiguration\u003A\u003AgetIncludedTests\u0028\u0029",
+            "name": "getIncludedTests",
+            "summary": "",
+            "url": "classes/RichPHPTests-TestsConfiguration.html#method_getIncludedTests"
+        },                {
             "fqsen": "\\RichPHPTests\\TestsConfiguration\u003A\u003AsetExcludedClasses\u0028\u0029",
             "name": "setExcludedClasses",
             "summary": "",
@@ -918,27 +983,37 @@ Search.appendIndex(
         },                {
             "fqsen": "\\RichPHPTests\\TestsConfiguration\u003A\u003A\u0024config",
             "name": "config",
-            "summary": "",
+            "summary": "The\u0020JSON\u0020decoded\u0020test\u0020configuration.",
             "url": "classes/RichPHPTests-TestsConfiguration.html#property_config"
         },                {
             "fqsen": "\\RichPHPTests\\TestsConfiguration\u003A\u003A\u0024name",
             "name": "name",
-            "summary": "",
+            "summary": "The\u0020name\u0020of\u0020the\u0020test\u0020suite.",
             "url": "classes/RichPHPTests-TestsConfiguration.html#property_name"
+        },                {
+            "fqsen": "\\RichPHPTests\\TestsConfiguration\u003A\u003A\u0024included_classes",
+            "name": "included_classes",
+            "summary": "The\u0020classes\u0020within\u0020the\u0020\u0027included_classes\u0027\u0020array\u0020of\u0020the\u0020config.",
+            "url": "classes/RichPHPTests-TestsConfiguration.html#property_included_classes"
+        },                {
+            "fqsen": "\\RichPHPTests\\TestsConfiguration\u003A\u003A\u0024included_tests",
+            "name": "included_tests",
+            "summary": "The\u0020tests\u0020within\u0020the\u0020\u0027included_tests\u0027\u0020array\u0020of\u0020the\u0020config.",
+            "url": "classes/RichPHPTests-TestsConfiguration.html#property_included_tests"
         },                {
             "fqsen": "\\RichPHPTests\\TestsConfiguration\u003A\u003A\u0024excluded_classes",
             "name": "excluded_classes",
-            "summary": "",
+            "summary": "The\u0020classes\u0020within\u0020the\u0020\u0027excluded_classes\u0027\u0020array\u0020of\u0020the\u0020config.",
             "url": "classes/RichPHPTests-TestsConfiguration.html#property_excluded_classes"
         },                {
             "fqsen": "\\RichPHPTests\\TestsConfiguration\u003A\u003A\u0024excluded_tests",
             "name": "excluded_tests",
-            "summary": "",
+            "summary": "The\u0020tests\u0020within\u0020the\u0020\u0027excluded_tests\u0027\u0020array\u0020of\u0020the\u0020config.",
             "url": "classes/RichPHPTests-TestsConfiguration.html#property_excluded_tests"
         },                {
             "fqsen": "\\RichPHPTests\\TestsConfiguration\u003A\u003A\u0024bootstrap",
             "name": "bootstrap",
-            "summary": "",
+            "summary": "The\u0020filepath\u0020to\u0020the\u0020test\u0020bootstrap\u0020file,\u0020if\u0020one\u0020exists.",
             "url": "classes/RichPHPTests-TestsConfiguration.html#property_bootstrap"
         },                {
             "fqsen": "\\RichPHPTests\\TestsConfiguration\u003A\u003A\u0024config_file",
@@ -988,7 +1063,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\RichPHPTests\\TestSuite\u003A\u003AgetInstantiatedTestsCount\u0028\u0029",
             "name": "getInstantiatedTestsCount",
-            "summary": "",
+            "summary": "Returns\u0020the\u0020number\u0020of\u0020test\u0020classes\u0020that\u0020were\u0020actually\u0020instantiated.",
             "url": "classes/RichPHPTests-TestSuite.html#method_getInstantiatedTestsCount"
         },                {
             "fqsen": "\\RichPHPTests\\TestSuite\u003A\u003Arun\u0028\u0029",
@@ -1001,6 +1076,16 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/RichPHPTests-TestSuite.html#method_isTestClassExcluded"
         },                {
+            "fqsen": "\\RichPHPTests\\TestSuite\u003A\u003AisTestClassIncluded\u0028\u0029",
+            "name": "isTestClassIncluded",
+            "summary": "",
+            "url": "classes/RichPHPTests-TestSuite.html#method_isTestClassIncluded"
+        },                {
+            "fqsen": "\\RichPHPTests\\TestSuite\u003A\u003AhasTestClassIncluded\u0028\u0029",
+            "name": "hasTestClassIncluded",
+            "summary": "",
+            "url": "classes/RichPHPTests-TestSuite.html#method_hasTestClassIncluded"
+        },                {
             "fqsen": "\\RichPHPTests\\TestSuite\u003A\u003A\u0024test_classes",
             "name": "test_classes",
             "summary": "Array\u0020of\u0020TestClass\u0020objects.\u0020These\u0020are\u0020potential\u0020classes\u0020for\u0020testing.",
@@ -1010,6 +1095,16 @@ Search.appendIndex(
             "name": "test_classes_invalid",
             "summary": "Array\u0020of\u0020TestClass\u0020objects\u0020that\u0020were\u0020not\u0020valid\u0020tests\u0020to\u0020run.",
             "url": "classes/RichPHPTests-TestSuite.html#property_test_classes_invalid"
+        },                {
+            "fqsen": "\\RichPHPTests\\TestSuite\u003A\u003A\u0024included_classes",
+            "name": "included_classes",
+            "summary": "An\u0020array\u0020of\u0020strings\u0020containing\u0020the\u0020fully\u0020qualified\u0020class\u0020names\u0020of\u0020each\u0020test\u0020class\u0020to\u0020included,\u0020given\u0020in\u0020the\u0020config\u0020file.",
+            "url": "classes/RichPHPTests-TestSuite.html#property_included_classes"
+        },                {
+            "fqsen": "\\RichPHPTests\\TestSuite\u003A\u003A\u0024included_tests",
+            "name": "included_tests",
+            "summary": "An\u0020array\u0020of\u0020strings\u0020containing\u0020the\u0020fully\u0020qualified\u0020method\u0020names\u0020of\u0020each\u0020test\u0020to\u0020included,\u0020given\u0020in\u0020the\u0020config\u0020file.",
+            "url": "classes/RichPHPTests-TestSuite.html#property_included_tests"
         },                {
             "fqsen": "\\RichPHPTests\\TestSuite\u003A\u003A\u0024excluded_classes",
             "name": "excluded_classes",
@@ -1053,8 +1148,13 @@ Search.appendIndex(
         },                {
             "fqsen": "\\RichPHPTests\\TestUtil\u003A\u003AhasSkippedAttribute\u0028\u0029",
             "name": "hasSkippedAttribute",
-            "summary": "",
+            "summary": "Returns\u0020whether\u0020a\u0020class\u0020or\u0020method\u0020has\u0020the\u0020\u0060Skip\u0060\u0020attribute.",
             "url": "classes/RichPHPTests-TestUtil.html#method_hasSkippedAttribute"
+        },                {
+            "fqsen": "\\RichPHPTests\\TestUtil\u003A\u003AhasIncludedAttribute\u0028\u0029",
+            "name": "hasIncludedAttribute",
+            "summary": "Returns\u0020whether\u0020a\u0020class\u0020or\u0020method\u0020has\u0020the\u0020\u0060Run\u0060\u0020attribute.",
+            "url": "classes/RichPHPTests-TestUtil.html#method_hasIncludedAttribute"
         },                {
             "fqsen": "\\",
             "name": "\\",

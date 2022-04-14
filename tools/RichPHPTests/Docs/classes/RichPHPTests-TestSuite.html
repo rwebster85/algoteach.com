@@ -165,6 +165,20 @@
 <dd>An array of strings containing the fully qualified method names of each test to skip, given in the config file.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/RichPHPTests-TestSuite.html#property_included_classes">$included_classes</a>
+    <span>
+                        &nbsp;: array&lt;string|int, mixed&gt;            </span>
+</dt>
+<dd>An array of strings containing the fully qualified class names of each test class to included, given in the config file.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/RichPHPTests-TestSuite.html#property_included_tests">$included_tests</a>
+    <span>
+                        &nbsp;: array&lt;string|int, mixed&gt;            </span>
+</dt>
+<dd>An array of strings containing the fully qualified method names of each test to included, given in the config file.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a href="classes/RichPHPTests-TestSuite.html#property_instantiated_tests">$instantiated_tests</a>
     <span>
                         &nbsp;: int            </span>
@@ -197,7 +211,7 @@
     <span>
                                 &nbsp;: int    </span>
 </dt>
-<dd></dd>
+<dd>Returns the number of test classes that were actually instantiated.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/RichPHPTests-TestSuite.html#method_getInvalidTestClasses">getInvalidTestClasses()</a>
@@ -235,7 +249,21 @@
 <dd>Generates an array of TestClass objects for all valid test classes in the given $path.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a href="classes/RichPHPTests-TestSuite.html#method_hasTestClassIncluded">hasTestClassIncluded()</a>
+    <span>
+                                &nbsp;: bool    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
     <a href="classes/RichPHPTests-TestSuite.html#method_isTestClassExcluded">isTestClassExcluded()</a>
+    <span>
+                                &nbsp;: bool    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a href="classes/RichPHPTests-TestSuite.html#method_isTestClassIncluded">isTestClassIncluded()</a>
     <span>
                                 &nbsp;: bool    </span>
 </dt>
@@ -276,7 +304,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestSuite.php"><a href="files/includes-testsuite.html"><abbr title="Includes/TestSuite.php">TestSuite.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">65</span>
+    <span class="phpdocumentor-element-found-in__line">83</span>
 
     </aside>
 
@@ -310,7 +338,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestSuite.php"><a href="files/includes-testsuite.html"><abbr title="Includes/TestSuite.php">TestSuite.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">41</span>
+    <span class="phpdocumentor-element-found-in__line">59</span>
 
     </aside>
 
@@ -343,7 +371,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestSuite.php"><a href="files/includes-testsuite.html"><abbr title="Includes/TestSuite.php">TestSuite.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">55</span>
+    <span class="phpdocumentor-element-found-in__line">73</span>
 
     </aside>
 
@@ -367,6 +395,76 @@
             -private
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="property_included_classes">
+        $included_classes
+        <a href="classes/RichPHPTests-TestSuite.html#property_included_classes" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestSuite.php"><a href="files/includes-testsuite.html"><abbr title="Includes/TestSuite.php">TestSuite.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">43</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">An array of strings containing the fully qualified class names of each test class to included, given in the config file.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
+    <span class="phpdocumentor-signature__name">$included_classes</span>
+    </code>
+
+        <section class="phpdocumentor-description"><p>If this contains any test classes, only those classes will be run.</p>
+</section>
+
+    
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_included_tests">
+        $included_tests
+        <a href="classes/RichPHPTests-TestSuite.html#property_included_tests" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestSuite.php"><a href="files/includes-testsuite.html"><abbr title="Includes/TestSuite.php">TestSuite.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">52</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">An array of strings containing the fully qualified method names of each test to included, given in the config file.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
+    <span class="phpdocumentor-signature__name">$included_tests</span>
+    </code>
+
+        <section class="phpdocumentor-description"><p>If this contains any test methods, only those methods will be run.</p>
+</section>
+
+    
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="property_instantiated_tests">
         $instantiated_tests
         <a href="classes/RichPHPTests-TestSuite.html#property_instantiated_tests" class="headerlink"><i class="fas fa-link"></i></a>
@@ -376,7 +474,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestSuite.php"><a href="files/includes-testsuite.html"><abbr title="Includes/TestSuite.php">TestSuite.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">48</span>
+    <span class="phpdocumentor-element-found-in__line">66</span>
 
     </aside>
 
@@ -479,7 +577,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestSuite.php"><a href="files/includes-testsuite.html"><abbr title="Includes/TestSuite.php">TestSuite.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">64</span>
+    <span class="phpdocumentor-element-found-in__line">82</span>
 
     </aside>
 
@@ -552,17 +650,17 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestSuite.php"><a href="files/includes-testsuite.html"><abbr title="Includes/TestSuite.php">TestSuite.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">169</span>
+    <span class="phpdocumentor-element-found-in__line">195</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Returns the number of test classes that were actually instantiated.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                 <span class="phpdocumentor-signature__name">getInstantiatedTestsCount</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
     
     
 
@@ -585,7 +683,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestSuite.php"><a href="files/includes-testsuite.html"><abbr title="Includes/TestSuite.php">TestSuite.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">148</span>
+    <span class="phpdocumentor-element-found-in__line">169</span>
 
     </aside>
 
@@ -620,7 +718,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestSuite.php"><a href="files/includes-testsuite.html"><abbr title="Includes/TestSuite.php">TestSuite.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">136</span>
+    <span class="phpdocumentor-element-found-in__line">157</span>
 
     </aside>
 
@@ -667,7 +765,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestSuite.php"><a href="files/includes-testsuite.html"><abbr title="Includes/TestSuite.php">TestSuite.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">183</span>
+    <span class="phpdocumentor-element-found-in__line">209</span>
 
     </aside>
 
@@ -730,7 +828,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestSuite.php"><a href="files/includes-testsuite.html"><abbr title="Includes/TestSuite.php">TestSuite.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">161</span>
+    <span class="phpdocumentor-element-found-in__line">182</span>
 
     </aside>
 
@@ -780,7 +878,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestSuite.php"><a href="files/includes-testsuite.html"><abbr title="Includes/TestSuite.php">TestSuite.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">98</span>
+    <span class="phpdocumentor-element-found-in__line">118</span>
 
     </aside>
 
@@ -854,6 +952,50 @@
             -private
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_hasTestClassIncluded">
+        hasTestClassIncluded()
+        <a href="classes/RichPHPTests-TestSuite.html#method_hasTestClassIncluded" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestSuite.php"><a href="files/includes-testsuite.html"><abbr title="Includes/TestSuite.php">TestSuite.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">287</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+                <span class="phpdocumentor-signature__name">hasTestClassIncluded</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$qualified_name</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$qualified_name</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">bool</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -private
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_isTestClassExcluded">
         isTestClassExcluded()
         <a href="classes/RichPHPTests-TestSuite.html#method_isTestClassExcluded" class="headerlink"><i class="fas fa-link"></i></a>
@@ -861,7 +1003,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestSuite.php"><a href="files/includes-testsuite.html"><abbr title="Includes/TestSuite.php">TestSuite.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">220</span>
+    <span class="phpdocumentor-element-found-in__line">271</span>
 
     </aside>
 
@@ -898,6 +1040,50 @@
             -private
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_isTestClassIncluded">
+        isTestClassIncluded()
+        <a href="classes/RichPHPTests-TestSuite.html#method_isTestClassIncluded" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestSuite.php"><a href="files/includes-testsuite.html"><abbr title="Includes/TestSuite.php">TestSuite.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">279</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+                <span class="phpdocumentor-signature__name">isTestClassIncluded</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$qualified_name</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$qualified_name</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">bool</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -private
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setTests">
         setTests()
         <a href="classes/RichPHPTests-TestSuite.html#method_setTests" class="headerlink"><i class="fas fa-link"></i></a>
@@ -905,7 +1091,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Includes/TestSuite.php"><a href="files/includes-testsuite.html"><abbr title="Includes/TestSuite.php">TestSuite.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">80</span>
+    <span class="phpdocumentor-element-found-in__line">100</span>
 
     </aside>
 
