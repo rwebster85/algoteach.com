@@ -30,3 +30,6 @@ $demo_url = esc_url(plugins_url('/Algorithms/Dijkstra/Example/index.php', PLUGIN
         <iframe src="<?php echo $demo_url; ?>" width="100%" height="600" style="border:1px solid #ddd;"></iframe>
     </div>
 </div>
+<div id="demo-result">
+    <p>Shortest Path: </p>
+</div>

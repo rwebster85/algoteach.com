@@ -735,15 +735,12 @@ function on_load( )
 					path_string += " --> ";
 				}
 			}
-			path_string = "Path: " + path_string;
 		} else {
 			path_string = "No path found."
 		}
 
-		console.log(path_string);
-		//console.log(shortest_path);
-		//console.log(distances);
-
+		//console.log(path_string);
+		window.top.postMessage(path_string, '*')
 		return distances;
 
 	}
