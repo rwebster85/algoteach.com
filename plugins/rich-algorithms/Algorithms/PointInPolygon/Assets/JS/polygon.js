@@ -80,8 +80,6 @@
             var point = drawPoint(point_pos.x - point_offset, point_pos.y - point_offset, target.parentElement);
             $(point).attr('id', 'new-point');
 
-            //console.log('New point = x: ' + point_pos.x + ', y: ' + point_pos.y);
-
             var in_poly = pointInPolygon(point_pos.x, point_pos.y, polyX, polyY);
 
             if (in_poly == true) {
@@ -98,7 +96,7 @@
         });
     });
 
-    // Code adpated from Hajibaba, 2019
+    // Code adapted from Hajibaba, 2019
     function drawPolygon(polyX, polyY, fill, stroke) {
         demo.width = min_width;
         demo.height = height;
