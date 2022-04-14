@@ -13,13 +13,15 @@ declare(strict_types=1);
 
 use RichWeb\Algorithms\Admin\MetaBoxes\AlgorithmCodeExamplesMetaBox;
 use RichWeb\Algorithms\ContentLoader;
+use RichWeb\Algorithms\CodeExamples\CodeExampleModel;
 
 /**
- * @var AlgorithmCodeExamplesMetaBox $content
+ * @var AlgorithmCodeExamplesMetaBox $model
  * @var ContentLoader                $loader
+ * @var array<string|int, CodeExampleModel> $code_examples
  */
 
-$code_examples = $content->getCodeExamples();
+$code_examples = $model->getCodeExamples();
 
 ?>
 
@@ -32,7 +34,7 @@ $code_examples = $content->getCodeExamples();
                 $vers = $loader->escHtml(($example['vers'] ?? ''));
                 $code = ($example['code'] ?? '');
                 $info = ($example['info'] ?? '');
-                echo $content->getCodeExampleElement($key, $lang, $vers, $code, $info);
+                echo $model->getCodeExampleElement($key, $lang, $vers, $code, $info);
             }
         } ?>
     </div>

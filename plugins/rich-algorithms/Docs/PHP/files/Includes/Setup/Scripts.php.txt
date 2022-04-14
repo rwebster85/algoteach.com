@@ -24,7 +24,7 @@ class Scripts extends AbstractScripts
 {
     public function __construct() {}
 
-    public function enqueueAdminScripts(string $hook): void
+    public function registerAdminScripts(): void
     {
         // Add the current timestamp as a file version number
         // Prevents browser being able to cache the file
@@ -34,16 +34,31 @@ class Scripts extends AbstractScripts
 
         // Admin CSS files, register first then enqueue
         wp_register_style('rich-algo-admin', $admin_assets . 'CSS/rich-algo-admin.css', [], $timestamp);
+
+        wp_register_script('rich-algo-example-admin', $admin_assets . 'JS/rich-algo-example-admin.js', ['jquery-ui-sortable', 'jquery'], $timestamp, true);
+        wp_localize_script('rich-algo-example-admin', 'rich_algo_example_params', [
+            'rich_algo_example_add_new_nonce' => wp_create_nonce('rich-algo-example-add-new'),
+            'ajax_url' => admin_url('admin-ajax.php')
+        ]);
+    }
+
+    public function registerFrontendScripts(): void
+    {
+        $assets = plugins_url('/Assets/', PLUGIN_FILE);
+
+        $timestamp = time();
+
+        wp_register_script('rich-algo-script', $assets . 'JS/rich-algo.js', ['jquery'], $timestamp, true);
+        wp_register_style('rich-algo-style', $assets . 'CSS/style.css', [], $timestamp);
+    }
+
+    public function enqueueAdminScripts(string $hook): void
+    {
         wp_enqueue_style('rich-algo-admin');
 
         global $post;
         if ($hook == 'post-new.php' || $hook == 'post.php') {
             if ($post->post_type === 'richweb_algorithm') {
-                wp_register_script('rich-algo-example-admin', $admin_assets . 'JS/rich-algo-example-admin.js', ['jquery-ui-sortable', 'jquery'], $timestamp, true);
-                wp_localize_script('rich-algo-example-admin', 'rich_algo_example_params', [
-                    'rich_algo_example_add_new_nonce' => wp_create_nonce('rich-algo-example-add-new'),
-                    'ajax_url' => admin_url('admin-ajax.php')
-                ]);
                 wp_enqueue_script('rich-algo-example-admin');
             }
         }
@@ -51,14 +66,7 @@ class Scripts extends AbstractScripts
 
     public function enqueueFrontendScripts(): void
     {
-        $assets = plugins_url('/Assets/', PLUGIN_FILE);
-
-        $timestamp = time();
-
-        wp_register_script('rich-algo-script', $assets . 'JS/rich-algo.js', ['jquery'], $timestamp, true);
         wp_enqueue_script('rich-algo-script');
-
-        wp_register_style('rich-algo-style', $assets . 'CSS/style.css', [], $timestamp);
         wp_enqueue_style('rich-algo-style');
     }
 }

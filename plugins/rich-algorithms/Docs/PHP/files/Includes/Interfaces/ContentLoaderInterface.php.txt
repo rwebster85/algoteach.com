@@ -13,14 +13,12 @@ declare(strict_types=1);
 
 namespace RichWeb\Algorithms\Interfaces;
 
-use RichWeb\Algorithms\Interfaces\ProjectInterface;
-
-interface SingletonPluginInterface
+interface ContentLoaderInterface
 {
     /**
-     * Main Class Instance.
-     *
-     * Ensures only one instance of this class is loaded or can be loaded.
+     * Loads the file passed to the constructor.
+     * 
+     * @return void
      */
-    public static function instance(?ProjectInterface $project);
+    public function loadFile(): void;
 }

@@ -27,7 +27,7 @@ interface CodeExamplesLoaderInterface
     public function appendExamplesToContent(?string $content): ?string;
 
     /**
-     * Returns an array of \RichWeb\Algorithms\CodeExample objects for a post.
+     * Returns an array of \RichWeb\Algorithms\CodeExampleModel objects for a post.
      * 
      * @return array
      */

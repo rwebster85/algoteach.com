@@ -20,4 +20,12 @@ interface PluginInterface
     public function getName(): string;
 
     public function getMainFile(): string;
+
+    public function activated(): void;
+
+    public function deactivated(): void;
+
+    public function pluginsLoadedSetup(): void;
+
+    public function initSetup(): void;
 }

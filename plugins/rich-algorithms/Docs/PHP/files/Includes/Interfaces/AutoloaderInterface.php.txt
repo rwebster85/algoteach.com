@@ -38,7 +38,7 @@ interface AutoloaderInterface
      * 
      * @return void
      */
-    public function addNamespace($prefix, $base_dir, $prepend = false);
+    public function addNamespace(string $prefix, string $base_dir, bool $prepend = false): void;
 
     /**
      * Loads the class file for a given class name.
@@ -47,6 +47,6 @@ interface AutoloaderInterface
      * 
      * @return string|bool The mapped file name on success, or boolean false on failure.
      */
-    public function loadClass($class): string|bool;
+    public function loadClass(string $class): string|bool;
 }
 //end of adapted code

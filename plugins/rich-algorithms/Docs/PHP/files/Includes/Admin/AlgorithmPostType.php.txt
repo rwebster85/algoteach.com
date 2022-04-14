@@ -85,7 +85,7 @@ final class AlgorithmPostType extends AbstractPostType
             'label'               => __('Algorithm', 'rich-algo'),
             'description'         => __('Algorithms', 'rich-algo'),
             'labels'              => apply_filters('richweb_algorithm_labels', $labels),
-            'supports'            => array('title', 'editor', 'excerpt', 'thumbnail'),
+            'supports'            => array('title', 'editor', 'excerpt', 'thumbnail', 'comments'),
             'hierarchical'        => false,
             'public'              => true,
             'show_ui'             => true,

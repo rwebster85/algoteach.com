@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace RichWeb\Algorithms\Abstracts;
 
-use RichWeb\Algorithms\Project;
+use RichWeb\Algorithms\Interfaces\ProjectInterface;
 use RichWeb\Algorithms\Interfaces\SingletonPluginInterface;
 
 abstract class AbstractSingletonPlugin extends AbstractPlugin implements SingletonPluginInterface
@@ -30,7 +30,7 @@ abstract class AbstractSingletonPlugin extends AbstractPlugin implements Singlet
      * 
      * @return self
      */
-    public static function instance(?Project $project): ?self
+    public static function instance(?ProjectInterface $project): ?self
     {
         if (is_null(self::$instance)) {
             self::$instance = new static($project);
@@ -39,5 +39,5 @@ abstract class AbstractSingletonPlugin extends AbstractPlugin implements Singlet
         return self::$instance;
     }
 
-    abstract protected function __construct(Project $project);
+    abstract protected function __construct(ProjectInterface $project);
 }

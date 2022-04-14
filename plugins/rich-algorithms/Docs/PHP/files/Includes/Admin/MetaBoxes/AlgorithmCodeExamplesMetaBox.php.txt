@@ -56,7 +56,7 @@ final class AlgorithmCodeExamplesMetaBox extends AbstractMetaBox
 
         wp_nonce_field('_richweb_algorithm_code_examples_nonce', 'richweb_algorithm_code_examples_nonce');
 
-        $path = $this->formatSlashes(dirname(__FILE__) . '\..\Content\CodeExamplesMetaDetails.php');
+        $path = $this->formatSlashes(__DIR__ . '\..\Content\CodeExamplesMetaDetails.php');
         $loader = new ContentLoader($path, $this);
         $loader->loadFile();
     }
@@ -74,7 +74,7 @@ final class AlgorithmCodeExamplesMetaBox extends AbstractMetaBox
     {
         ob_start();
 
-        include dirname(__FILE__) . $this->formatSlashes('\..\Content\CodeExamplesMetaField.php');
+        include __DIR__ . $this->formatSlashes('\..\Content\CodeExamplesMetaField.php');
 
         $content = ob_get_clean();
 
@@ -145,8 +145,6 @@ final class AlgorithmCodeExamplesMetaBox extends AbstractMetaBox
 
         $code_examples = (array) ($_POST['richweb_algorithm_code_examples'] ?? []);
 
-        var_dump($code_examples);
-
         // Remove empty code examples before saving.
         foreach ($code_examples as $key => $example) {
             if (!array_filter($example)) {
@@ -160,7 +158,7 @@ final class AlgorithmCodeExamplesMetaBox extends AbstractMetaBox
         // Clean and sanitise the input fields (except code as it is supposed to be raw)
         foreach ($code_examples as $key => $example) {
             if (!empty($example['code'])) {
-                $code_examples[$key]['code'] = $this->ksesPost($example['code']);
+                $code_examples[$key]['code'] = $example['code'];
             }
             if (!empty($example['lang'])) {
                 $code_examples[$key]['lang'] = $this->sanitise($example['lang']);

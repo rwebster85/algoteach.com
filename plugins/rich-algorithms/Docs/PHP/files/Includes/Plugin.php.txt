@@ -21,6 +21,7 @@ use RichWeb\Algorithms\Events\WPEventCreator;
 use RichWeb\Algorithms\Events\WPEventSubscriber;
 use RichWeb\Algorithms\Interfaces\AlgorithmPackageManagerInterface;
 use RichWeb\Algorithms\Interfaces\EventSubscriberInterface;
+use RichWeb\Algorithms\Interfaces\ProjectInterface;
 use RichWeb\Algorithms\Interfaces\SyntaxHighlighterInterface;
 use RichWeb\Algorithms\Packages\AlgorithmPackageLoader;
 use RichWeb\Algorithms\Packages\AlgorithmPackageManager;
@@ -42,7 +43,7 @@ final class Plugin extends AbstractSingletonPlugin
 
     private SyntaxHighlighterInterface $syntax;
 
-    protected function __construct(Project $project)
+    protected function __construct(ProjectInterface $project)
     {
         $this->project          = $project;
         $this->name             = $project->getName();
@@ -118,7 +119,7 @@ final class Plugin extends AbstractSingletonPlugin
 
         $packages = $this->algorithm_package_manager->getPackages();
 
-        $package_loader = new AlgorithmPackageLoader($packages);
+        $package_loader = new AlgorithmPackageLoader($packages, new WPEventSubscriber());
         $package_loader->run();
 
         (new AlgorithmPostType())->run();
@@ -134,15 +135,5 @@ final class Plugin extends AbstractSingletonPlugin
     private function loadModules(): void
     {
         $this->event_creator->create(__CLASS__ . '\ModulesLoaded');
-    }
-
-    public function syntaxHighlighter(): SyntaxHighlighterInterface
-    {
-        return $this->syntax;
-    }
-
-    public function packageManager(): AlgorithmPackageManagerInterface
-    {
-        return $this->algorithm_package_manager;
     }
 }

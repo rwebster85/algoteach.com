@@ -17,17 +17,19 @@ use RichWeb\Algorithms\Interfaces\EventCreatorInterface;
 use RichWeb\Algorithms\Interfaces\EventSubscriberInterface;
 use RichWeb\Algorithms\Interfaces\PluginInterface;
 use RichWeb\Algorithms\Interfaces\SubscribesToEventsInterface;
-use RichWeb\Algorithms\Project;
+use RichWeb\Algorithms\Interfaces\ProjectInterface;
 
 abstract class AbstractPlugin implements PluginInterface, SubscribesToEventsInterface
 {
-    protected Project $project;
+    protected ProjectInterface $project;
 
     protected string $name = '';
 
     protected string $version = '';
 
     protected string $main_directory;
+
+    protected string $text_domain;
 
     protected EventSubscriberInterface $event_subscriber;
 
@@ -59,4 +61,12 @@ abstract class AbstractPlugin implements PluginInterface, SubscribesToEventsInte
     {
         return $this->file;
     }
+
+    abstract public function activated(): void;
+
+    abstract public function deactivated(): void;
+
+    abstract public function pluginsLoadedSetup(): void;
+
+    abstract public function initSetup(): void;
 }
