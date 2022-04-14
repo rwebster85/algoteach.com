@@ -28,6 +28,7 @@ use const DIRECTORY_SEPARATOR as SEP;
  * ```php
  * $path = __DIR__ . DIRECTORY_SEPARATOR;
  * $project = new Project($path . 'project.json', __DIR__);
+ * $project->buildProject();
  * ```
  * 
  * Eample `project.json` file:
