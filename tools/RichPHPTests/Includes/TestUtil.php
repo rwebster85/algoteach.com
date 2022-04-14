@@ -62,12 +62,26 @@ class TestUtil
         return ($class->isSubclassOf('RichPHPTests\TestCase'));
     }
 
+    /**
+     * Returns whether a class or method has the `Skip` attribute.
+     * 
+     * @param ReflectionClass|ReflectionMethod $class_or_method
+     * 
+     * @return bool
+     */
     public static function hasSkippedAttribute(ReflectionClass|ReflectionMethod $class_or_method): bool
     {
         $attributes = $class_or_method->getAttributes('RichPHPTests\Attributes\Skip');
         return !empty($attributes);
     }
 
+    /**
+     * Returns whether a class or method has the `Run` attribute.
+     * 
+     * @param ReflectionClass|ReflectionMethod $class_or_method
+     * 
+     * @return bool
+     */
     public static function hasIncludedAttribute(ReflectionClass|ReflectionMethod $class_or_method): bool
     {
         $attributes = $class_or_method->getAttributes('RichPHPTests\Attributes\Run');
