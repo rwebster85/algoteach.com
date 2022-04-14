@@ -19,18 +19,48 @@ use RichPHPTests\Interfaces\TestResultsInterface;
 
 final class Application
 {
+    /**
+     * Whether the application was launched from command line.
+     * 
+     * @var bool
+     */
     private bool $is_cli = false;
 
+    /**
+     * Program uses the Singleton design pattern.
+     * 
+     * @var Application|null|null
+     */
     private static ?Application $instance = null;
 
-    public int $code = -1;
-
+    /**
+     * The storage of completed test results.
+     * 
+     * @var TestResults
+     */
     private static TestResults $test_results;
 
+    /**
+     * The test suite object.
+     * 
+     * @var TestSuite
+     */
     private TestSuite $test_suite;
 
+    /**
+     * The configuration object for the tests.
+     * 
+     * @var TestsConfiguration|null|null
+     */
     private ?TestsConfiguration $configuration = null;
 
+    /**
+     * Singleton pattern application.
+     * 
+     * @param TestsConfiguration|null $config
+     * 
+     * @return self
+     */
     public static function instance(?TestsConfiguration $config = null): self
     {
         if (is_null(self::$instance)) {
@@ -49,6 +79,11 @@ final class Application
         self::$test_results = new TestResults($this->test_suite);
     }
 
+    /**
+     * Loads the test bootstrap file prior to running any tests.
+     * 
+     * @return void
+     */
     private function bootstrap(): void
     {
         $bootstrap = $this->configuration->getBootstrap();
@@ -57,9 +92,13 @@ final class Application
         }
     }
 
+    /**
+     * Run from the instance() method. Runs the test suite.
+     * 
+     * @return void
+     */
     private function run(): void
     {
-        $this->code = 2;
         $args = [];
 
         if ($this->is_cli) {
@@ -72,27 +111,15 @@ final class Application
         }
 
         $this->test_suite->run();
-
-        //var_dump($args);
     }
 
+    /**
+     * Returns the object containing the completed test results.
+     * 
+     * @return TestResultsInterface
+     */
     public static function getTestResults(): TestResultsInterface
     {
         return self::$test_results;
-    }
-
-    private function parseArgs(mixed $args): void
-    {
-
-    }
-
-    public function getExit(): void
-    {
-        //$exit_desc = AppErrors::tryFrom($this->code);
-        //return (
-        //    !is_null($exit_desc)
-        //    ? $exit_desc->getErrorDesc()
-        //    : ''
-        //);
     }
 }
