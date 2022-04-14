@@ -17,12 +17,32 @@ use ReflectionMethod;
 
 class TestResult
 {
+    /**
+     * The line number the test method appears on.
+     * 
+     * @var string
+     */
     public string $line;
 
+    /**
+     * The name of the test method.
+     * 
+     * @var string
+     */
     public string $test_name;
 
+    /**
+     * The class name the test belongs to.
+     * 
+     * @var string
+     */
     public string $test_class;
 
+    /**
+     * The filename containing the test.
+     * 
+     * @var string
+     */
     public string $test_file;
 
     public function __construct(
