@@ -76,6 +76,7 @@
 
             let target = e.target;
             point_pos = getClickedPointFromEvent(e, target);
+            //console.log(point_pos);
 
             var point = drawPoint(point_pos.x - point_offset, point_pos.y - point_offset, target.parentElement);
             $(point).attr('id', 'new-point');
