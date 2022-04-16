@@ -1,0 +1,12 @@
+{
+    "name": "Greedy Colouring",
+    "version": "1.0.0",
+    "class": "GreedyColouring",
+    "namespace": "RichWeb\\Algorithms\\Algorithm",
+    "scripts": [
+        "greedycolouring.js"
+    ],
+    "styles": [
+        "greedycolouring.css"
+    ]
+}

@@ -1,0 +1,37 @@
+:root {
+    --border-colour: #ddd;
+    --bg-color: #fafafa;
+    --point-color: #2679ce;
+}
+
+.demo-outer {
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.demo-wrapper {
+    position: relative;
+    min-height: 400px;
+    width: auto;
+    overflow: auto;
+}
+
+#demo {
+    position: relative;
+    overflow: hidden;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-colour);
+}
+
+.demo-point {
+    background-color: var(--point-color);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
