@@ -2,6 +2,7 @@
     --border-colour: #ddd;
     --bg-color: #fafafa;
     --point-color: #2679ce;
+    --demo-width: 700px;
 }
 
 .demo-outer {
@@ -11,9 +12,8 @@
 
 .demo-wrapper {
     position: relative;
-    min-height: 400px;
     width: auto;
-    overflow: auto;
+    max-width: var(--demo-width);
 }
 
 #demo {
@@ -24,6 +24,8 @@
     word-wrap: normal;
     background-color: var(--bg-color);
     border: 1px solid var(--border-colour);
+    width: 100%;
+    max-width: var(--demo-width);
 }
 
 .demo-point {
@@ -34,4 +36,8 @@
     position: absolute;
     top: 0;
     left: 0;
+}
+
+#demo-result {
+    max-width: var(--demo-width);
 }
