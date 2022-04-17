@@ -49,12 +49,9 @@
 
         drawLines(graph_custom);
         drawCircles(graph_custom);
-        
-        //$('#demo-result').css('max-width', min_width);
     }
 
     $(document).ready(function() {
-        $('.entry-content .wp-post-image').css('display', 'none');
         height = $('.demo-outer').height();
         init();
 

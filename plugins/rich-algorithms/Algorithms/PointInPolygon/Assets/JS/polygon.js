@@ -58,7 +58,6 @@
             init();
         });
 
-        $('.entry-content .wp-post-image').css('display', 'none');
         height = $('.demo-outer').height();
         init();
 

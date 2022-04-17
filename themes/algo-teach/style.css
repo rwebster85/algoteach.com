@@ -24,3 +24,14 @@
 .site-footer .widget .added_to_cart {
     color: #fff!important;
 }
+
+.post-type-archive-richweb_algorithm .entry-content .wp-post-image {
+    margin-left: initial;
+    margin-right: initial;
+    max-width: 700px;
+    border: 1px solid #ddd;
+}
+
+.single-richweb_algorithm .entry-content .wp-post-image {
+    display: none;
+}
