@@ -27,7 +27,6 @@ use RichWeb\Algorithms\ContentLoader;
 
         </canvas>
         <p class="demo-controls"><button class="button alt" id="reset-colours">Reset Colours</button></p>
-        <p>Click the "Reset Colours" button above to redraw the graph using a randomised selection of available colours. While the selected colours for the graph will be different, the maximum number of colours used will always be four.</p>
     </div>
 </div>
 <div id="demo-result">
