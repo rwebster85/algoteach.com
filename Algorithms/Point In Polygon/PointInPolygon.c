@@ -1,3 +1,7 @@
+// Point In Polygon
+
+// Finley, D. R., & Lagidse, L. (2007). Determining Whether A Point Is Inside A Complex Polygon. Alien Ryder Flex. Retrieved 11 April 2022, from http://alienryderflex.com/polygon/
+
 // Code adapted from Finley and Lagidse, 2007
 #include <stdio.h>
 #include <stdbool.h>

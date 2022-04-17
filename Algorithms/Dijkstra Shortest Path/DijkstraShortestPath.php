@@ -1,8 +1,7 @@
 <?php
 // Dijkstra's Shortest Path
 
-// https://levelup.gitconnected.com/finding-the-shortest-path-in-javascript-dijkstras-algorithm-8d16451eea34
-// https://github.com/noamsauerutley/shortest-path
+// Sauer-Utley, N. (2021, December 14). Finding the Shortest Path in Javascript: Dijkstra's Algorithm. Level Up Coding. Retrieved 12 April 2022, from https://levelup.gitconnected.com/finding-the-shortest-path-in-javascript-dijkstras-algorithm-8d16451eea34
 
 // PHP 7+
 

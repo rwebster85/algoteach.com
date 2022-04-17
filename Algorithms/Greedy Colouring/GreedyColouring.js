@@ -1,4 +1,4 @@
-// Greedy Colouing Algorithm
+// Greedy Colouring Algorithm
 
 // Mudiyanto, F. (2022, January 15). Solve Graph Coloring Problem with Greedy Algorithm and Python. Python in Plain English. Retrieved 15 April 2022, from https://python.plainenglish.io/solve-graph-coloring-problem-with-greedy-algorithm-and-python-6661ab4154bd
 
