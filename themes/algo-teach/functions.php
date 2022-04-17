@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 add_action('algo_homepage', 'storefront_homepage_content', 10);
 add_action('algo_homepage', 'storefront_product_categories', 20);
@@ -14,3 +14,12 @@ add_action('init', function() {
 });
 
 add_filter('wp_lazy_loading_enabled', '__return_false');
+
+
+add_action('init', function() {
+    add_action('wp_enqueue_scripts', function() {
+        $timestamp = time();
+        $style_url = get_stylesheet_directory_uri() . '/Assets/CSS/style.css';
+        wp_enqueue_style('rich-algo-theme-style', $style_url, [], $timestamp);
+    });
+});

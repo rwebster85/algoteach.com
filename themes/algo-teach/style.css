@@ -10,28 +10,3 @@
  License URI:  https://www.gnu.org/licenses/gpl-3.0.html
  Text Domain:  algo-teach-theme
 */
-
-.site-footer .wp-block-social-links a {
-    color: #fff!important;
-}
-
-@media (min-width: 768px) {
-    .col-full {
-        max-width: 80em;
-    }
-}
-
-.site-footer .widget .added_to_cart {
-    color: #fff!important;
-}
-
-.post-type-archive-richweb_algorithm .entry-content .wp-post-image {
-    margin-left: initial;
-    margin-right: initial;
-    max-width: 700px;
-    border: 1px solid #ddd;
-}
-
-.single-richweb_algorithm .entry-content .wp-post-image {
-    display: none;
-}
