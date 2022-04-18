@@ -5,11 +5,10 @@
 # Code adapted from Finley and Lagidse, 2007
 def pointInPolygon(x, y, polyX, polyY):
 	in_polygon = False
-	i = 0
 	poly_corners = len(polyX)
 	j = poly_corners - 1
 
-	while i < poly_corners:
+	for i in range(poly_corners):
 		if (
 			(polyY[i] < y and polyY[j] >= y
 			or polyY[j] < y and polyY[i] >= y)
@@ -21,7 +20,6 @@ def pointInPolygon(x, y, polyX, polyY):
 				* (polyX[j] - polyX[i]) < x
 			)
 		j = i
-		i += 1
 
 	return in_polygon
 
