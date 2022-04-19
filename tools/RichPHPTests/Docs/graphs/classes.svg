@@ -24,6 +24,11 @@
 <polygon fill="none" stroke="black" points="51,-502 51,-574 165,-574 165,-502 51,-502"/>
 <text text-anchor="middle" x="108" y="-561.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Abstracts</text>
 </g>
+<g id="clust5" class="cluster">
+<title>cluster_\RichPHPTests\Autoload</title>
+<polygon fill="none" stroke="black" points="275,-906 275,-978 375,-978 375,-906 275,-906"/>
+<text text-anchor="middle" x="325" y="-965.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Autoload</text>
+</g>
 <g id="clust6" class="cluster">
 <title>cluster_\RichPHPTests\Interfaces</title>
 <polygon fill="none" stroke="black" points="24,-259 24,-385 192,-385 192,-259 24,-259"/>
@@ -31,13 +36,8 @@
 </g>
 <g id="clust4" class="cluster">
 <title>cluster_\RichPHPTests\Attributes</title>
-<polygon fill="none" stroke="black" points="265,-744 265,-978 385,-978 385,-744 265,-744"/>
-<text text-anchor="middle" x="325" y="-965.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Attributes</text>
-</g>
-<g id="clust5" class="cluster">
-<title>cluster_\RichPHPTests\Autoload</title>
-<polygon fill="none" stroke="black" points="275,-664 275,-736 375,-736 375,-664 275,-664"/>
-<text text-anchor="middle" x="325" y="-723.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Autoload</text>
+<polygon fill="none" stroke="black" points="265,-664 265,-898 385,-898 385,-664 265,-664"/>
+<text text-anchor="middle" x="325" y="-885.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Attributes</text>
 </g>
 <!-- \\RichPHPTests\\Abstracts\\AbstractTest -->
 <g id="node1" class="node">
@@ -49,32 +49,32 @@
 <!-- \\RichPHPTests\\Attributes\\Run -->
 <g id="node2" class="node">
 <title>\\RichPHPTests\\Attributes\\Run</title>
-<polygon fill="none" stroke="black" points="352,-950 298,-950 298,-914 352,-914 352,-950"/>
-<text text-anchor="middle" x="325" y="-929.2" font-family="Courier,monospace" font-size="11.00">Run</text>
+<polygon fill="none" stroke="black" points="352,-870 298,-870 298,-834 352,-834 352,-870"/>
+<text text-anchor="middle" x="325" y="-849.2" font-family="Courier,monospace" font-size="11.00">Run</text>
 </g>
 <!-- \\RichPHPTests\\Attributes\\Skip -->
 <g id="node3" class="node">
 <title>\\RichPHPTests\\Attributes\\Skip</title>
-<polygon fill="none" stroke="black" points="352,-896 298,-896 298,-860 352,-860 352,-896"/>
-<text text-anchor="middle" x="325" y="-875.2" font-family="Courier,monospace" font-size="11.00">Skip</text>
+<polygon fill="none" stroke="black" points="352,-816 298,-816 298,-780 352,-780 352,-816"/>
+<text text-anchor="middle" x="325" y="-795.2" font-family="Courier,monospace" font-size="11.00">Skip</text>
 </g>
 <!-- \\RichPHPTests\\Attributes\\TestHasAfter -->
 <g id="node4" class="node">
 <title>\\RichPHPTests\\Attributes\\TestHasAfter</title>
-<polygon fill="none" stroke="black" points="374,-842 276,-842 276,-806 374,-806 374,-842"/>
-<text text-anchor="middle" x="325" y="-821.2" font-family="Courier,monospace" font-size="11.00">TestHasAfter</text>
+<polygon fill="none" stroke="black" points="374,-762 276,-762 276,-726 374,-726 374,-762"/>
+<text text-anchor="middle" x="325" y="-741.2" font-family="Courier,monospace" font-size="11.00">TestHasAfter</text>
 </g>
 <!-- \\RichPHPTests\\Attributes\\TestHasBefore -->
 <g id="node5" class="node">
 <title>\\RichPHPTests\\Attributes\\TestHasBefore</title>
-<polygon fill="none" stroke="black" points="377,-788 273,-788 273,-752 377,-752 377,-788"/>
-<text text-anchor="middle" x="325" y="-767.2" font-family="Courier,monospace" font-size="11.00">TestHasBefore</text>
+<polygon fill="none" stroke="black" points="377,-708 273,-708 273,-672 377,-672 377,-708"/>
+<text text-anchor="middle" x="325" y="-687.2" font-family="Courier,monospace" font-size="11.00">TestHasBefore</text>
 </g>
 <!-- \\RichPHPTests\\Autoload\\Autoloader -->
 <g id="node6" class="node">
 <title>\\RichPHPTests\\Autoload\\Autoloader</title>
-<polygon fill="none" stroke="black" points="367,-708 283,-708 283,-672 367,-672 367,-708"/>
-<text text-anchor="middle" x="325" y="-687.2" font-family="Courier,monospace" font-size="11.00">Autoloader</text>
+<polygon fill="none" stroke="black" points="367,-950 283,-950 283,-914 367,-914 367,-950"/>
+<text text-anchor="middle" x="325" y="-929.2" font-family="Courier,monospace" font-size="11.00">Autoloader</text>
 </g>
 <!-- \\RichPHPTests\\Interfaces\\ProjectInterface -->
 <g id="node7" class="node">

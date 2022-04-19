@@ -85,7 +85,7 @@ final class AlgorithmPostType extends AbstractPostType
             'label'               => __('Algorithm', 'rich-algo'),
             'description'         => __('Algorithms', 'rich-algo'),
             'labels'              => apply_filters('richweb_algorithm_labels', $labels),
-            'supports'            => array('title', 'editor', 'excerpt', 'thumbnail', 'comments'),
+            'supports'            => array('title', 'editor', 'excerpt', 'thumbnail', 'comments', 'custom-fields', 'publicize', 'wpcom-markdown'),
             'hierarchical'        => false,
             'public'              => true,
             'show_ui'             => true,
@@ -100,7 +100,9 @@ final class AlgorithmPostType extends AbstractPostType
             'publicly_queryable'  => true,
             'capabilities'        => $this->capabilities(),
             'rewrite'             => $rewrite,
-            'map_meta_cap'        => true
+            'map_meta_cap'        => true,
+            'query_var'           => true,
+            'show_in_rest'        => true
         ];
         register_post_type('richweb_algorithm', apply_filters('richweb_algorithm_args', $args));
     }
