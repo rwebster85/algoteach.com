@@ -36,7 +36,7 @@ function greedyColour(graph) {
     }
 
     for (let node in sorted) {
-        colour = colours[node];
+        let colour = colours[node];
         results[node] = colour[0];
         adjacent = sorted[node];
         for (let adj_node in adjacent) {
