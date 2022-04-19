@@ -5,7 +5,9 @@
     let min_width = 700;
     let height;
 
-    let colours_selection = ["Blue", "Red", "Yellow", "Green", "White", "Purple", "Pink", "Orange"];
+    let colours_selection = ["White", "Pink", "Yellow", "Purple", "Red", "Green", "Blue", "Orange"];
+
+    let first_run = false;
 
     const graph = {
         'A': {x: 92.0, y: 101.0, adj: ["B", "C", "E"]},
@@ -44,8 +46,16 @@
         demo.width = min_width;
         demo.height = demo.width * 0.75;
 
-        random_colours = shuffle(colours_selection.slice()).slice(0, 4);
-        filled = greedyColour(graph_adj, random_colours);
+        let colours;
+
+        if (first_run == false) {
+            colours = colours_selection.slice();
+            first_run = true;
+        } else {
+            colours = shuffle(colours_selection.slice()).slice();
+        }
+
+        filled = greedyColour(graph_adj, colours);
 
         drawLines(graph_custom);
         drawCircles(graph_custom);
