@@ -1,6 +1,6 @@
 # AlgoTeach.com
 
-**AlgoTeach.com** is an online learning platform that provides visual demonstrations of complex algorithms, predominantly related to graph theory, pathfinding, edge colouring, and geometry. The content is targeted towards software developers and includes code examples for various languages to assist with implementations.
+**AlgoTeach.com** is an online learning platform that provides visual demonstrations of complex algorithms, predominantly related to graph theory and geometry. The content is targeted towards software developers and includes code examples for various languages to assist with implementations.
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
