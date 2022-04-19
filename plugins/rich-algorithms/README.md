@@ -35,7 +35,7 @@ PSR-4 Compliant PHP Autoloader class adapted from PHP FIG group.
 Syntax highlighter by PrismJS.
 * PrismJS. (2022, February 17). PrismJS (1.27.0) [Code Syntax Highlighter]. PrismJS. https://prismjs.com/
 
-### Algorithms
+### Included Algorithms
 
 #### Greedy Colouring
 
