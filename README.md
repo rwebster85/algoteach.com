@@ -9,12 +9,12 @@ This project serves as the Innovation Project submission for Richard Webster's d
 
 ## WordPress Plugin
 
-The WordPress plugin is called Rich Algorithms, and is located in the `plugins` folder. Full usage documentation is provided in the [README.md](plugins\rich-algorithms\README.md) file, as well as generated documentation in the [Docs](plugins\rich-algorithms\Docs) folder.
+The WordPress plugin is called Rich Algorithms, and is located in the `plugins` folder. Full usage documentation is provided in the [README.md](plugins/rich-algorithms/README.md) file, as well as generated documentation in the [Docs](plugins/rich-algorithms/Docs) folder.
 
 ## WordPress Theme
 
-The WordPress theme is called AlgoTeach.com, and is located in the `themes` folder. It is a child theme of [Storefront](https://en-gb.wordpress.org/themes/storefront/), so that theme will also need to be installed to use this one. Full usage documentation is provided in the [README.md](themes\algo-teach\README.md) file.
+The WordPress theme is called AlgoTeach.com, and is located in the `themes` folder. It is a child theme of [Storefront](https://en-gb.wordpress.org/themes/storefront/), so that theme will also need to be installed to use this one. Full usage documentation is provided in the [README.md](themes/algo-teach/README.md) file.
 
 ## Unit Test Framework
 
-The custom unit test framework is called RichPHPTests, and is located in the `tools\RichPHPTests` folder. Full usage documentation is provided in the [README.md](tools\RichPHPTests\README.md) file, as well as generated documentation in the [Docs](tools\RichPHPTests\Docs) folder.
+The custom unit test framework is called RichPHPTests, and is located in the `tools\RichPHPTests` folder. Full usage documentation is provided in the [README.md](tools/RichPHPTests/README.md) file, as well as generated documentation in the [Docs](tools/RichPHPTests/Docs) folder.
