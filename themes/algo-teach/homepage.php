@@ -13,12 +13,11 @@
  */
 
 get_header(); ?>
-
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<?php do_action('algo_homepage'); ?>
-		</main><!-- #main -->
-	</div><!-- #primary -->
+		</main>
+	</div>
 <?php
-do_action( 'storefront_sidebar' );
+do_action('storefront_sidebar');
 get_footer();
