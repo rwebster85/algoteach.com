@@ -1,3 +1,7 @@
+hr {
+    background-color: rgba(0,0,0,.05);
+}
+
 .site-footer .wp-block-social-links a {
     color: #fff!important;
 }
@@ -30,6 +34,12 @@
     margin: 1.41575em 0 0;
     padding: 1em 0;
     border-bottom: 1px solid rgba(0,0,0,.05);
+}
+
+.hentry .entry-content .algo-home-latest-loop li > a {
+    font-size: 2em;
+    text-decoration: none;
+    font-weight: 300;
 }
 
 .post-type-archive-richweb_algorithm .page-header {
