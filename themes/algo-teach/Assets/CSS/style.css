@@ -12,12 +12,24 @@
     color: #fff!important;
 }
 
-.post-type-archive-richweb_algorithm .entry-content .wp-post-image {
+.post-type-archive-richweb_algorithm .entry-content .wp-post-image,
+.algo-home-latest-loop .wp-post-image {
     margin-left: initial;
     margin-right: initial;
     max-width: 700px;
     border: 1px solid #ddd;
     width: 100%;
+}
+
+.algo-home-latest-loop {
+    margin-left: 0;
+    border-top: 1px solid rgba(0,0,0,.05);
+}
+
+.algo-home-latest-loop li {
+    margin: 1.41575em 0 0;
+    padding: 1em 0;
+    border-bottom: 1px solid rgba(0,0,0,.05);
 }
 
 .post-type-archive-richweb_algorithm .page-header {
@@ -38,5 +50,17 @@
 }
 
 .single-richweb_algorithm .entry-content .wp-post-image {
+    display: none;
+}
+
+.page-template-homepage .entry-header {
+    display: none;
+}
+
+.page-template-homepage .storefront-product-section.storefront-recent-products .section-title {
+    text-align: left;
+}
+
+.page-template-homepage .button.storefront-hero__button-edit {
     display: none;
 }
