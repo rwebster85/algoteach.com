@@ -74,3 +74,19 @@ hr {
 .page-template-homepage .button.storefront-hero__button-edit {
     display: none;
 }
+
+.site-header .custom-logo-link {
+    display: inline-block;
+}
+
+.site-header .site-branding img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 150px;
+    max-width: 100%;
+}
+
+.site-header .site-branding .site-title {
+    vertical-align: middle;
+    display: inline-block;
+}

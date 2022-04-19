@@ -7,6 +7,8 @@ add_action('init', function() {
         $timestamp = time();
         $style_url = get_stylesheet_directory_uri() . '/Assets/CSS/style.css';
         wp_enqueue_style('rich-algo-theme-style', $style_url, [], $timestamp);
+        $script_url = get_stylesheet_directory_uri() . '/Assets/JS/script.js';
+        wp_enqueue_script('rich-algo-theme-script', $script_url, ['jquery'], $timestamp, true);
     });
 });
 
