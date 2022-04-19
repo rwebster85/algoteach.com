@@ -7,6 +7,23 @@ A WordPress plugin for showing algorithms with code implementation examples.
 ## Purpose
 **Rich Algorithms** is part of Richard Webster's Innovation Project dissertation for 2022, University of Chester module CO6008.
 
+## Installation
+
+**Manually in WordPress**
+
+1. Download the plugin ZIP file
+2. From the WordPress admin dashboard go to Plugins, Add New
+3. Click Upload Plugin, locate the file, upload
+4. In the WordPress dashboard go to Plugins, Installed Plugins, and activate **Rich Algorithms**
+
+**Manually using FTP**
+
+1. Download the plugin ZIP file, extract it
+2. FTP to your server and go to your root WordPress directory
+3. Navigate to wp-content/plugins
+4. Upload the parent directory *rich-algorithms* - the folder that contains the file rich-algorithms.php - to that location
+5. In the WordPress dashboard go to Plugins, Installed Plugins, and activate **Rich Algorithms**
+
 ## Credits & APA References
 
 PHP documentation generated using phpDocumentor.
@@ -19,6 +36,14 @@ Syntax highlighter by PrismJS.
 * PrismJS. (2022, February 17). PrismJS (1.27.0) [Code Syntax Highlighter]. PrismJS. https://prismjs.com/
 
 ### Algorithms
+
+#### Greedy Colouring
+
+Greedy Colouring code example and implementation in `Algorithms\GreedyColouring\Assets\JS\greedycolour.js` adapted from Mudiyanto, 2022. Converted from Python by Richard Webster.
+* Mudiyanto, F. (2022, January 15). Solve Graph Coloring Problem with Greedy Algorithm and Python. Python in Plain English. Retrieved 15 April 2022, from https://python.plainenglish.io/solve-graph-coloring-problem-with-greedy-algorithm-and-python-6661ab4154bd
+
+Fisher–Yates Shuffle function adapted from Bostock, 2012.
+* Bostock, M. (2012, January 14). Fisher–Yates Shuffle. Mike Bostock. Retrieved 17 April 2022, from https://bost.ocks.org/mike/shuffle/
 
 #### Dijkstra's Shortest Path
 

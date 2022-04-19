@@ -6,3 +6,11 @@
 
 ## Purpose
 This project serves as the Innovation Project submission for Richard Webster's dissertation for 2022, University of Chester module CO6008.
+
+## WordPress Plugin
+
+The WordPress plugin is called Rich Algorithms, and is located in the `plugins` folder.
+
+## WordPress Theme
+
+The WordPress theme is called AlgoTeach.com, and is located in the `themes` folder. It is a child theme of [Storefront](https://en-gb.wordpress.org/themes/storefront/), so that theme will also need to be installed to use this one.
