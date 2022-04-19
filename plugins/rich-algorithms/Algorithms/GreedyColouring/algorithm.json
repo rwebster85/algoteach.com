@@ -4,7 +4,8 @@
     "class": "GreedyColouring",
     "namespace": "RichWeb\\Algorithms\\Algorithm",
     "scripts": [
-        "greedycolouring.js"
+        "greedycolouring.js",
+        "greedycolour.js"
     ],
     "styles": [
         "greedycolouring.css"
