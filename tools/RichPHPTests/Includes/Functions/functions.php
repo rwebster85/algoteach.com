@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 use RichPHPTests\Test;
 
-// Code adapted from Pest, 2022
+// Code adapted from Maduro, 2022
 if (!function_exists('test')) {
     /**
      * Creates a new test. Called from test functions in test classes.
