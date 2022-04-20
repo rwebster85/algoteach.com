@@ -27,4 +27,4 @@ A custom child theme based on Storefront by Automattic.
 ## Credits & APA References
 
 AlgoTeach.com WordPress theme is a child theme based on Storefront by Automattic.
-* Automattic. (2022). Storefront Theme (4.0.0) [WordPress Theme]. Automattic. https://en-gb.wordpress.org/themes/storefront/
+* Automattic, Inc. (2022). Storefront (4.1.0) [WordPress Theme]. Automattic, Inc. https://en-gb.wordpress.org/themes/storefront/
