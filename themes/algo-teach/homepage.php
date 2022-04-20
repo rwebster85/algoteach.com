@@ -2,6 +2,7 @@
 /**
  * Template name: Algo Homepage
  */
+// Code adapted from Automattic, Inc, 2022
 get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -11,3 +12,4 @@ get_header(); ?>
 <?php
 do_action('storefront_sidebar');
 get_footer();
+// end of adapted code

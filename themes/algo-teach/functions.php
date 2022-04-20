@@ -1,5 +1,5 @@
 <?php
-
+// Code adapted from Automattic, Inc, 2022
 add_action('init', function() {
     remove_action('storefront_header', 'storefront_product_search', 40);
     remove_action('storefront_footer', 'storefront_handheld_footer_bar', 999);
@@ -20,3 +20,4 @@ add_action('algo_homepage', function() {
 }, 10);
 
 add_filter('wp_lazy_loading_enabled', '__return_false');
+// end of adapted code
